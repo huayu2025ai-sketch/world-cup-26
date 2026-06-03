@@ -58,7 +58,7 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "巴西", englishName: "Brazil", code: "BRA", flag: "🇧🇷", confederation: "CONMEBOL", pot: 1 },
       { name: "摩洛哥", englishName: "Morocco", code: "MAR", flag: "🇲🇦", confederation: "CAF", pot: 2 },
       { name: "海地", englishName: "Haiti", code: "HAI", flag: "🇭🇹", confederation: "CONCACAF", pot: 4 },
-      { name: "苏格兰", englishName: "Scotland", code: "SCO", flag: "🏴", confederation: "UEFA", pot: 3 }
+      { name: "苏格兰", englishName: "Scotland", code: "SCO", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", confederation: "UEFA", pot: 3 }
     ]
   },
   {
@@ -181,7 +181,7 @@ export const worldCupGroups: WorldCupGroup[] = [
       "英格兰被分入克罗地亚、加纳、巴拿马所在小组。图赫尔放弃福登、帕尔默等人的名单争议会放大每一次进攻选择的讨论。",
     watchPoints: ["英格兰无福登、帕尔默后的创造力分配", "克罗地亚大赛经验依然是顶级考验", "加纳和巴拿马会把转换进攻作为抢分路径"],
     teams: [
-      { name: "英格兰", englishName: "England", code: "ENG", flag: "🏴", confederation: "UEFA", pot: 1 },
+      { name: "英格兰", englishName: "England", code: "ENG", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", confederation: "UEFA", pot: 1 },
       { name: "克罗地亚", englishName: "Croatia", code: "CRO", flag: "🇭🇷", confederation: "UEFA", pot: 2 },
       { name: "加纳", englishName: "Ghana", code: "GHA", flag: "🇬🇭", confederation: "CAF", pot: 4 },
       { name: "巴拿马", englishName: "Panama", code: "PAN", flag: "🇵🇦", confederation: "CONCACAF", pot: 3 }

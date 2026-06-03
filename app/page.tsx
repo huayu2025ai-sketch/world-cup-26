@@ -2,9 +2,45 @@
 
 import { useMemo, useState } from "react";
 import GroupCard from "@/components/GroupCard";
-import { playerProfileMeta, playerProfiles } from "@/constants/playerProfiles";
-import { officialSquadsNotice, rosterPositions, teamRosters } from "@/constants/teamRosters";
+import { playerProfileMeta, playerProfiles, type PlayerProfile } from "@/constants/playerProfiles";
+import { officialSquadsNotice, rosterPositions, teamRosters, type RosterPlayer } from "@/constants/teamRosters";
 import { worldCupGroups, type WorldCupGroup } from "@/constants/worldcupData";
+
+const profileTemplate: Record<RosterPlayer["position"], Pick<PlayerProfile, "role" | "bio" | "strengths">> = {
+  门将: {
+    role: "门将 / 阵容成员",
+    bio: "该球员入选了 2026 世界杯最终名单。当前应用已录入基础身份信息，详细履历仍需继续核实补充。",
+    strengths: ["门线反应", "禁区保护", "后场沟通"]
+  },
+  后卫: {
+    role: "后卫 / 防线轮换",
+    bio: "该球员入选了 2026 世界杯最终名单。当前应用已录入基础身份信息，详细履历仍需继续核实补充。",
+    strengths: ["防守站位", "对抗", "防线协作"]
+  },
+  中场: {
+    role: "中场 / 连接与覆盖",
+    bio: "该球员入选了 2026 世界杯最终名单。当前应用已录入基础身份信息，详细履历仍需继续核实补充。",
+    strengths: ["传接球", "跑动覆盖", "攻防转换"]
+  },
+  前锋: {
+    role: "前锋 / 进攻选择",
+    bio: "该球员入选了 2026 世界杯最终名单。当前应用已录入基础身份信息，详细履历仍需继续核实补充。",
+    strengths: ["前场跑位", "终结", "冲击防线"]
+  }
+};
+
+const buildBasicProfile = (player: RosterPlayer, teamName: string): PlayerProfile => {
+  const template = profileTemplate[player.position];
+
+  return {
+    name: player.name,
+    chineseName: player.chineseName,
+    position: player.position,
+    role: template.role,
+    bio: `${player.chineseName}入选${teamName} 2026 世界杯最终名单。当前应用已录入其基础身份、位置和阵容信息；俱乐部、年龄、国家队出场等易变字段如未核实会显示为“待核实”。`,
+    strengths: template.strengths
+  };
+};
 
 export default function HomePage() {
   const [query, setQuery] = useState("");
@@ -45,11 +81,14 @@ export default function HomePage() {
 
   const selectedTeam = selectedGroup?.teams.find((team) => team.code === selectedTeamCode) ?? selectedGroup?.teams[0];
   const selectedRoster = selectedTeam ? teamRosters[selectedTeam.code] : undefined;
+  const selectedRosterPlayer = selectedRoster?.players.find((player) => player.name === selectedPlayerName);
   const selectedPlayer =
-    selectedPlayerName && selectedRoster?.players.some((player) => player.name === selectedPlayerName)
-      ? playerProfiles[selectedPlayerName]
+    selectedPlayerName && selectedRosterPlayer
+      ? playerProfiles[selectedPlayerName] ?? buildBasicProfile(selectedRosterPlayer, selectedTeam?.name ?? "该队")
       : undefined;
-  const selectedPlayerMeta = selectedPlayer ? playerProfileMeta[selectedPlayer.name] : undefined;
+  const selectedPlayerMeta = selectedPlayer
+    ? playerProfileMeta[selectedPlayer.name] ?? { club: "待核实", age: "待核实", caps: "待核实" }
+    : undefined;
 
   return (
     <main className="mx-auto max-w-7xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
@@ -202,7 +241,18 @@ export default function HomePage() {
                                           : "bg-slate-950/60 hover:bg-slate-800"
                                       }`}
                                     >
-                                      <span className="block font-bold">{player.chineseName}</span>
+                                      <span className="flex items-center gap-2 font-bold">
+                                        <span
+                                          className={`rounded px-1.5 py-0.5 text-[10px] ${
+                                            selectedPlayerName === player.name
+                                              ? "bg-slate-950/15 text-slate-800"
+                                              : "bg-slate-800 text-cyan-100"
+                                          }`}
+                                        >
+                                          #{player.number ?? "待核实"}
+                                        </span>
+                                        <span>{player.chineseName}</span>
+                                      </span>
                                       <span
                                         className={`mt-0.5 block text-xs ${
                                           selectedPlayerName === player.name ? "text-slate-700" : "text-slate-500"
@@ -228,7 +278,13 @@ export default function HomePage() {
                             <h4 className="mt-2 text-xl font-black text-slate-100">{selectedPlayer.chineseName}</h4>
                             <p className="mt-1 text-sm text-slate-400">{selectedPlayer.name}</p>
                             {selectedPlayerMeta && (
-                              <div className="mt-4 grid grid-cols-3 gap-2">
+                              <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                                <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
+                                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">号码</p>
+                                  <p className="mt-1 truncate text-xs font-black text-slate-100">
+                                    #{selectedRosterPlayer?.number ?? "待核实"}
+                                  </p>
+                                </div>
                                 <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
                                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">俱乐部</p>
                                   <p className="mt-1 truncate text-xs font-black text-slate-100">{selectedPlayerMeta.club}</p>
@@ -249,6 +305,9 @@ export default function HomePage() {
                               </span>
                               <span className="rounded-full bg-slate-950/70 px-3 py-1 text-xs font-black text-slate-300">
                                 {selectedPlayer.role}
+                              </span>
+                              <span className="rounded-full bg-slate-950/70 px-3 py-1 text-xs font-black text-slate-400">
+                                球员档案
                               </span>
                             </div>
                             <p className="mt-4 text-sm leading-6 text-slate-300">{selectedPlayer.bio}</p>
