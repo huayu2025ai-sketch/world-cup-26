@@ -18,6 +18,30 @@ export type WorldCupGroup = {
   watchPoints: string[];
 };
 
+export type GroupOverviewUpdate = {
+  updatedAt: string;
+  updatedAtLabel: string;
+  title: string;
+  summary: string;
+  changes: string[];
+};
+
+export const groupOverviewUpdate: GroupOverviewUpdate = {
+  updatedAt: "2026-06-04T23:35:00+08:00",
+  updatedAtLabel: "2026年6月4日 23:35",
+  title: "小组总览数据更新",
+  summary: "本次更新复核了 2026 美加墨世界杯 48 队与 12 个小组，并重点同步 D 组澳大利亚、巴拉圭的最终名单来源与球员信息。",
+  changes: [
+    "按 FIFA 巴拉圭单队公告更新巴拉圭 26 人，补入 Orlando Gill、Roberto Fernandez、Gustavo Velazquez、Alejandro Gamarra、Gabriel Avalos 等，号码继续待核实。",
+    "按 Football Australia/Socceroos 官方公告更新澳大利亚来源，修正 Maty Ryan、Paul Okon-Engstler、Tete Yengi 等姓名字段，号码继续待核实。",
+    "同步更新 Maty Ryan、Harry Souttar、Alejandro Gamarra、Gabriel Avalos、Tete Yengi 等重点球员档案与 meta。",
+    "刷新 A-L 组全部 48 支球队的小组归属、展示顺序、档位、洲际足联与东道主/新军标记。",
+    "重写每个小组的标题摘要和详情说明，让总览卡片与详情弹窗保持一致。",
+    "补充每个小组的 3 条晋级形势与核心看点，方便点击组别后快速查看。",
+    "同步搜索索引覆盖中文队名、英文队名、三字母代码、组别名称和组别看点。"
+  ]
+};
+
 export const worldCupGroups: WorldCupGroup[] = [
   {
     id: "A",
