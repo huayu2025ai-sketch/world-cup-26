@@ -27,18 +27,15 @@ export type GroupOverviewUpdate = {
 };
 
 export const groupOverviewUpdate: GroupOverviewUpdate = {
-  updatedAt: "2026-06-04T23:35:00+08:00",
-  updatedAtLabel: "2026年6月4日 23:35",
+  updatedAt: "2026-06-05T00:18:00+08:00",
+  updatedAtLabel: "2026年6月5日 00:18",
   title: "小组总览数据更新",
-  summary: "本次更新复核了 2026 美加墨世界杯 48 队与 12 个小组，并重点同步 D 组澳大利亚、巴拉圭的最终名单来源与球员信息。",
+  summary: "本次更新复核了 2026 美加墨世界杯 48 队与 12 个小组，并重点同步 J 组奥地利最终名单变动与球员信息。",
   changes: [
-    "按 FIFA 巴拉圭单队公告更新巴拉圭 26 人，补入 Orlando Gill、Roberto Fernandez、Gustavo Velazquez、Alejandro Gamarra、Gabriel Avalos 等，号码继续待核实。",
-    "按 Football Australia/Socceroos 官方公告更新澳大利亚来源，修正 Maty Ryan、Paul Okon-Engstler、Tete Yengi 等姓名字段，号码继续待核实。",
-    "同步更新 Maty Ryan、Harry Souttar、Alejandro Gamarra、Gabriel Avalos、Tete Yengi 等重点球员档案与 meta。",
-    "刷新 A-L 组全部 48 支球队的小组归属、展示顺序、档位、洲际足联与东道主/新军标记。",
-    "重写每个小组的标题摘要和详情说明，让总览卡片与详情弹窗保持一致。",
-    "补充每个小组的 3 条晋级形势与核心看点，方便点击组别后快速查看。",
-    "同步搜索索引覆盖中文队名、英文队名、三字母代码、组别名称和组别看点。"
+    "按 Reuters/SRN 可访问名单更新奥地利 26 人结构，补入 Florian Wiegele、David Affengruber、Marco Friedl、Alexander Prass、Michael Svoboda、Carney Chukwuemeka、Alessandro Schopf、Paul Wanner 等。",
+    "移出 Heinz Lindner、Maximilian Wober、Gernot Trauner、Andreas Weimann、Junior Adamu、Karim Onisiwo、Marco Grull 等未出现在最新奥地利名单中的球员。",
+    "Christoph Baumgartner 已有伤缺报道，但未找到 FIFA/ÖFB 官方替补确认，暂保留在 26 人结构并标注待官方替换确认；奥地利号码继续待核实。",
+    "同步更新 Paul Wanner、Carney Chukwuemeka、Marcel Sabitzer、Marko Arnautovic 等奥地利球员档案与 meta。"
   ]
 };
 

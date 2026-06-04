@@ -18,10 +18,10 @@ export type TeamRoster = {
 
 export const officialSquadsNotice = {
   confirmedDate: "2026-06-02",
-  lastChecked: "2026-06-04",
+  lastChecked: "2026-06-05",
   source: "FIFA",
   sourceUrl: "https://www.fifa.com/en/articles/fifa-world-cup-2026-squads-confirmed",
-  text: "FIFA 已确认 48 支参赛队的最终名单；本地数据已覆盖全部球队，并已在 2026-06-04 追加核对墨西哥、加拿大、美国、韩国、澳大利亚、巴拉圭等队的官方名单与号码信息。"
+  text: "FIFA 已确认 48 支参赛队的最终名单；本地数据已覆盖全部球队，并已在 2026-06-05 追加核对墨西哥、加拿大、美国、韩国、澳大利亚、巴拉圭、奥地利等队的官方或可信名单与号码信息。"
 };
 
 const p = (
@@ -959,14 +959,14 @@ export const teamRosters: Record<string, TeamRoster> = {
     teamName: "奥地利",
     confirmed: true,
     publishedDate: "2026-06-02",
-    source: "FIFA / NBC Sports",
-    sourceUrl: "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
-    note: "奥地利最终 26 人名单已确认。当前未找到完整可靠号码源，号码暂标为待核实。",
+    source: "Reuters / SRN News",
+    sourceUrl: "https://srnnews.com/factbox-soccer-world-cup-2026-list-of-26-man-squads-at-the-finals/",
+    note: "奥地利最终名单已按 Reuters/SRN 可访问名单复核，补入 Florian Wiegele、David Affengruber、Marco Friedl、Alexander Prass、Michael Svoboda、Carney Chukwuemeka、Alessandro Schopf、Paul Wanner 等；Christoph Baumgartner 因肌肉伤势预计无缘赛事，但当前未找到 FIFA/ÖFB 官方替补确认，暂保留在名单并标注待官方替换确认。完整号码仍待核实。",
     players: [
-      p("Patrick Pentz", "帕特里克·彭茨", "门将"), p("Heinz Lindner", "海因茨·林德纳", "门将"), p("Alexander Schlager", "亚历山大·施拉格尔", "门将"),
-      p("David Alaba", "大卫·阿拉巴", "后卫"), p("Kevin Danso", "凯文·丹索", "后卫"), p("Philipp Lienhart", "菲利普·林哈特", "后卫"), p("Stefan Posch", "斯特凡·波施", "后卫"), p("Maximilian Wober", "马克西米利安·沃贝尔", "后卫"), p("Phillipp Mwene", "菲利普·姆韦内", "后卫"), p("Gernot Trauner", "格诺特·特劳纳", "后卫"), p("Flavius Daniliuc", "弗拉维乌斯·达尼柳克", "后卫"),
-      p("Marcel Sabitzer", "马塞尔·萨比策", "中场"), p("Konrad Laimer", "康拉德·莱默", "中场"), p("Xaver Schlager", "克萨弗·施拉格尔", "中场"), p("Nicolas Seiwald", "尼古拉斯·塞瓦尔德", "中场"), p("Christoph Baumgartner", "克里斯托夫·鲍姆加特纳", "中场"), p("Florian Grillitsch", "弗洛里安·格里利奇", "中场"), p("Romano Schmid", "罗马诺·施密德", "中场"), p("Patrick Wimmer", "帕特里克·维默", "中场"),
-      p("Marko Arnautovic", "马尔科·阿瑙托维奇", "前锋"), p("Michael Gregoritsch", "米夏埃尔·格雷戈里奇", "前锋"), p("Sasa Kalajdzic", "萨沙·卡拉季奇", "前锋"), p("Andreas Weimann", "安德烈亚斯·魏曼", "前锋"), p("Junior Adamu", "儒尼奥尔·阿达穆", "前锋"), p("Karim Onisiwo", "卡里姆·奥尼西沃", "前锋"), p("Marco Grull", "马尔科·格吕尔", "前锋")
+      p("Patrick Pentz", "帕特里克·彭茨", "门将"), p("Alexander Schlager", "亚历山大·施拉格尔", "门将"), p("Florian Wiegele", "弗洛里安·维格勒", "门将"),
+      p("David Affengruber", "大卫·阿芬格鲁伯", "后卫"), p("David Alaba", "大卫·阿拉巴", "后卫"), p("Kevin Danso", "凯文·丹索", "后卫"), p("Marco Friedl", "马尔科·弗里德尔", "后卫"), p("Philipp Lienhart", "菲利普·林哈特", "后卫"), p("Phillipp Mwene", "菲利普·姆韦内", "后卫"), p("Stefan Posch", "斯特凡·波施", "后卫"), p("Alexander Prass", "亚历山大·普拉斯", "后卫"), p("Michael Svoboda", "米夏埃尔·斯沃博达", "后卫"),
+      p("Carney Chukwuemeka", "卡尼·楚克维梅卡", "中场"), p("Florian Grillitsch", "弗洛里安·格里利奇", "中场"), p("Konrad Laimer", "康拉德·莱默", "中场"), p("Marcel Sabitzer", "马塞尔·萨比策", "中场"), p("Xaver Schlager", "克萨弗·施拉格尔", "中场"), p("Romano Schmid", "罗马诺·施密德", "中场"), p("Alessandro Schopf", "亚历山德罗·舍普夫", "中场"), p("Nicolas Seiwald", "尼古拉斯·塞瓦尔德", "中场"), p("Paul Wanner", "保罗·万纳", "中场"), p("Patrick Wimmer", "帕特里克·维默", "中场"), p("Christoph Baumgartner", "克里斯托夫·鲍姆加特纳", "中场"),
+      p("Marko Arnautovic", "马尔科·阿瑙托维奇", "前锋"), p("Michael Gregoritsch", "米夏埃尔·格雷戈里奇", "前锋"), p("Sasa Kalajdzic", "萨沙·卡拉季奇", "前锋")
     ]
   },
   JOR: {
