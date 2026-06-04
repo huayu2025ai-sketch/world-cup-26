@@ -1094,14 +1094,14 @@ export const teamRosters: Record<string, TeamRoster> = {
     teamName: "英格兰",
     confirmed: true,
     publishedDate: "2026-06-02",
-    source: "BBC Sport / England Football",
+    source: "England Football",
     sourceUrl: "https://learn.englandfootball.com/sitecore/content/EnglandFootball/Home/articles/2026/Jun/02/england-men-fifa-world-cup-2026-squad-numbers-revealed-20260206",
-    note: "英格兰最终 26 人名单和球衣号码已更新。福登、帕尔默、阿诺德、马奎尔等人落选，托尼、沃特金斯、埃泽、马杜埃凯入选。",
+    note: "England Football 于 2026-06-02 公布英格兰世界杯 26 人名单号码。福登、帕尔默、阿诺德、马奎尔等人未列入当前最终名单。",
     players: [
       p("Jordan Pickford", "乔丹·皮克福德", "门将", 1), p("Dean Henderson", "迪恩·亨德森", "门将", 13), p("James Trafford", "詹姆斯·特拉福德", "门将", 23),
-      p("Reece James", "里斯·詹姆斯", "后卫", 2), p("Tino Livramento", "蒂诺·利夫拉门托", "后卫", 3), p("Marc Guehi", "马克·格伊", "后卫", 5), p("Ezri Konsa", "埃兹里·孔萨", "后卫", 6), p("John Stones", "约翰·斯通斯", "后卫", 14), p("Jarell Quansah", "贾雷尔·宽萨", "后卫", 15), p("Nico O'Reilly", "尼科·奥赖利", "后卫", 16), p("Dan Burn", "丹·伯恩", "后卫", 21), p("Djed Spence", "杰德·斯彭斯", "后卫", 24),
-      p("Declan Rice", "德克兰·赖斯", "中场", 4), p("Elliot Anderson", "埃利奥特·安德森", "中场", 8), p("Jude Bellingham", "裘德·贝林厄姆", "中场", 10), p("Jordan Henderson", "乔丹·亨德森", "中场", 12), p("Morgan Rogers", "摩根·罗杰斯", "中场", 18), p("Kobbie Mainoo", "科比·梅努", "中场", 26),
-      p("Harry Kane", "哈里·凯恩", "前锋", 9), p("Ivan Toney", "伊万·托尼", "前锋", 17), p("Ollie Watkins", "奥利·沃特金斯", "前锋", 19), p("Bukayo Saka", "布卡约·萨卡", "前锋", 7), p("Noni Madueke", "诺尼·马杜埃凯", "前锋", 11), p("Marcus Rashford", "马库斯·拉什福德", "前锋", 20), p("Anthony Gordon", "安东尼·戈登", "前锋", 22), p("Eberechi Eze", "埃贝雷奇·埃泽", "前锋", 25)
+      p("Reece James", "里斯·詹姆斯", "后卫", 24), p("Tino Livramento", "蒂诺·利夫拉门托", "后卫", 12), p("Marc Guehi", "马克·格伊", "后卫", 6), p("Ezri Konsa", "埃兹里·孔萨", "后卫", 2), p("John Stones", "约翰·斯通斯", "后卫", 5), p("Jarell Quansah", "贾雷尔·宽萨", "后卫", 26), p("Nico O'Reilly", "尼科·奥赖利", "后卫", 3), p("Dan Burn", "丹·伯恩", "后卫", 15), p("Djed Spence", "杰德·斯彭斯", "后卫", 25),
+      p("Declan Rice", "德克兰·赖斯", "中场", 4), p("Elliot Anderson", "埃利奥特·安德森", "中场", 8), p("Jude Bellingham", "裘德·贝林厄姆", "中场", 10), p("Jordan Henderson", "乔丹·亨德森", "中场", 14), p("Morgan Rogers", "摩根·罗杰斯", "中场", 17), p("Kobbie Mainoo", "科比·梅努", "中场", 16),
+      p("Harry Kane", "哈里·凯恩", "前锋", 9), p("Ivan Toney", "伊万·托尼", "前锋", 22), p("Ollie Watkins", "奥利·沃特金斯", "前锋", 19), p("Bukayo Saka", "布卡约·萨卡", "前锋", 7), p("Noni Madueke", "诺尼·马杜埃凯", "前锋", 20), p("Marcus Rashford", "马库斯·拉什福德", "前锋", 11), p("Anthony Gordon", "安东尼·戈登", "前锋", 18), p("Eberechi Eze", "埃贝雷奇·埃泽", "前锋", 21)
     ]
   }
 };
