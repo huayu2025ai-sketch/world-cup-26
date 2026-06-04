@@ -21,7 +21,7 @@ export const officialSquadsNotice = {
   lastChecked: "2026-06-04",
   source: "FIFA",
   sourceUrl: "https://www.fifa.com/en/articles/fifa-world-cup-2026-squads-confirmed",
-  text: "FIFA 已确认 48 支参赛队的最终名单；本地数据已覆盖全部球队，并已在 2026-06-04 追加核对韩国、加拿大、美国等队的官方名单与号码信息。"
+  text: "FIFA 已确认 48 支参赛队的最终名单；本地数据已覆盖全部球队，并已在 2026-06-04 追加核对墨西哥、加拿大、美国、韩国等队的官方名单与号码信息。"
 };
 
 const p = (
@@ -36,10 +36,10 @@ export const teamRosters: Record<string, TeamRoster> = {
     teamCode: "MEX",
     teamName: "墨西哥",
     confirmed: true,
-    publishedDate: "2026-06-02",
-    source: "FIFA / El Financiero",
-    sourceUrl: "https://www.elfinanciero.com.mx/deportes/2026/06/02/lista-de-convocados-de-mexico-en-mundial-2026-quienes-son-los-jugadores-de-seleccion-mexicana/",
-    note: "A组东道主之一。墨西哥名单和球衣号码已公开，奥乔亚、希门尼斯、圣地亚哥·希门尼斯等人入选。",
+    publishedDate: "2026-05-31",
+    source: "Selección Nacional de México",
+    sourceUrl: "https://miseleccion.mx/noticia/6463-Al-Llamado-%7C-Convocatoria-de-la-SNM-para-la-Copa-Mundial-de-la-FIFA-2026",
+    note: "A组东道主之一。2026-05-31 官方最终名单确认后，已按 Selección Mayor 官方页面复核当前 26 人与号码；马特奥·查韦斯、布赖恩·古铁雷斯、路易斯·查韦斯、罗伯托·阿尔瓦拉多、吉列尔莫·马丁内斯入选，赫苏斯·奥罗斯科·奇克特、罗德里戈·韦斯卡斯、马塞尔·鲁伊斯、卡洛斯·罗德里格斯、埃里克·桑切斯落选。",
     players: [
       { number: 1, name: "Raul Rangel", chineseName: "劳尔·兰赫尔", position: "门将" },
       { number: 12, name: "Carlos Acevedo", chineseName: "卡洛斯·阿塞韦多", position: "门将" },
@@ -48,25 +48,25 @@ export const teamRosters: Record<string, TeamRoster> = {
       { number: 3, name: "Cesar Montes", chineseName: "塞萨尔·蒙特斯", position: "后卫" },
       { number: 5, name: "Johan Vasquez", chineseName: "约翰·巴斯克斯", position: "后卫" },
       { number: 15, name: "Israel Reyes", chineseName: "伊斯拉埃尔·雷耶斯", position: "后卫" },
-      { number: 19, name: "Jesus Orozco Chiquete", chineseName: "赫苏斯·奥罗斯科·奇克特", position: "后卫" },
-      { number: 22, name: "Jesus Gallardo", chineseName: "赫苏斯·加利亚多", position: "后卫" },
-      { number: 23, name: "Rodrigo Huescas", chineseName: "罗德里戈·韦斯卡斯", position: "后卫" },
+      { number: 23, name: "Jesus Gallardo", chineseName: "赫苏斯·加利亚多", position: "后卫" },
+      { number: 20, name: "Mateo Chavez", chineseName: "马特奥·查韦斯", position: "后卫" },
       { number: 4, name: "Edson Alvarez", chineseName: "埃德松·阿尔瓦雷斯", position: "中场" },
       { number: 6, name: "Erik Lira", chineseName: "埃里克·利拉", position: "中场" },
       { number: 7, name: "Luis Romo", chineseName: "路易斯·罗莫", position: "中场" },
       { number: 8, name: "Alvaro Fidalgo", chineseName: "阿尔瓦罗·菲达尔戈", position: "中场" },
+      { number: 26, name: "Brian Gutierrez", chineseName: "布赖恩·古铁雷斯", position: "中场" },
       { number: 17, name: "Orbelin Pineda", chineseName: "奥尔韦林·皮内达", position: "中场" },
       { number: 18, name: "Obed Vargas", chineseName: "奥贝德·巴尔加斯", position: "中场" },
-      { number: 20, name: "Gilberto Mora", chineseName: "希尔伯托·莫拉", position: "中场" },
-      { number: 24, name: "Marcel Ruiz", chineseName: "马塞尔·鲁伊斯", position: "中场" },
-      { number: 25, name: "Carlos Rodriguez", chineseName: "卡洛斯·罗德里格斯", position: "中场" },
-      { number: 26, name: "Erick Sanchez", chineseName: "埃里克·桑切斯", position: "中场" },
+      { number: 19, name: "Gilberto Mora", chineseName: "希尔伯托·莫拉", position: "中场" },
+      { number: 21, name: "Cesar Huerta", chineseName: "塞萨尔·韦尔塔", position: "中场" },
+      { number: 24, name: "Luis Chavez", chineseName: "路易斯·查韦斯", position: "中场" },
       { number: 9, name: "Raul Jimenez", chineseName: "劳尔·希门尼斯", position: "前锋" },
       { number: 10, name: "Alexis Vega", chineseName: "亚历克西斯·贝加", position: "前锋" },
       { number: 11, name: "Santiago Gimenez", chineseName: "圣地亚哥·希门尼斯", position: "前锋" },
+      { number: 22, name: "Guillermo Martinez", chineseName: "吉列尔莫·马丁内斯", position: "前锋" },
       { number: 14, name: "Armando Gonzalez", chineseName: "阿曼多·冈萨雷斯", position: "前锋" },
       { number: 16, name: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", position: "前锋" },
-      { number: 21, name: "Cesar Huerta", chineseName: "塞萨尔·韦尔塔", position: "前锋" }
+      { number: 25, name: "Roberto Alvarado", chineseName: "罗伯托·阿尔瓦拉多", position: "前锋" }
     ]
   },
   RSA: {
