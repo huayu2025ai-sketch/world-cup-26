@@ -18,9 +18,10 @@ export type TeamRoster = {
 
 export const officialSquadsNotice = {
   confirmedDate: "2026-06-02",
+  lastChecked: "2026-06-04",
   source: "FIFA",
   sourceUrl: "https://www.fifa.com/en/articles/fifa-world-cup-2026-squads-confirmed",
-  text: "FIFA 已确认 48 支参赛队的最终名单。"
+  text: "FIFA 已确认 48 支参赛队的最终名单；本地数据已覆盖全部球队，未找到可靠公开号码源的球员继续标注为“待核实”。"
 };
 
 const p = (
@@ -852,15 +853,15 @@ export const teamRosters: Record<string, TeamRoster> = {
     teamCode: "URU",
     teamName: "乌拉圭",
     confirmed: true,
-    publishedDate: "2026-06-02",
-    source: "FIFA / NBC Sports",
-    sourceUrl: "https://www.nbcsports.com/soccer/news/2026-world-cup-squads-confirmed-rosters-for-all-48-teams",
-    note: "乌拉圭最终 26 人名单已确认。当前未找到完整可靠号码源，号码暂标为待核实。",
+    publishedDate: "2026-06-01",
+    source: "FourFourTwo",
+    sourceUrl: "https://www.fourfourtwo.com/team/uruguay-world-cup-2026-squad",
+    note: "乌拉圭最终 26 人名单已更新；苏亚雷斯和卡瓦尼均未入选，努涅斯、巴尔韦德、乌加特领衔。当前未找到完整可靠号码源，号码暂标为待核实。",
     players: [
-      p("Sergio Rochet", "塞尔吉奥·罗切特", "门将"), p("Franco Israel", "弗朗科·伊斯拉埃尔", "门将"), p("Santiago Mele", "圣地亚哥·梅莱", "门将"),
-      p("Jose Maria Gimenez", "何塞·玛利亚·希门尼斯", "后卫"), p("Ronald Araujo", "罗纳德·阿劳霍", "后卫"), p("Mathias Olivera", "马蒂亚斯·奥利韦拉", "后卫"), p("Sebastian Caceres", "塞巴斯蒂安·卡塞雷斯", "后卫"), p("Guillermo Varela", "吉列尔莫·巴雷拉", "后卫"), p("Matias Vina", "马蒂亚斯·比尼亚", "后卫"), p("Lucas Olaza", "卢卡斯·奥拉萨", "后卫"), p("Bruno Mendez", "布鲁诺·门德斯", "后卫"),
-      p("Federico Valverde", "费德里科·巴尔韦德", "中场"), p("Rodrigo Bentancur", "罗德里戈·本坦库尔", "中场"), p("Manuel Ugarte", "曼努埃尔·乌加特", "中场"), p("Nicolas de la Cruz", "尼古拉斯·德拉克鲁斯", "中场"), p("Giorgian de Arrascaeta", "乔治安·德阿拉斯凯塔", "中场"), p("Facundo Pellistri", "法昆多·佩利斯特里", "中场"), p("Nahitan Nandez", "纳希坦·南德斯", "中场"), p("Matias Vecino", "马蒂亚斯·贝西诺", "中场"),
-      p("Darwin Nunez", "达尔文·努涅斯", "前锋"), p("Luis Suarez", "路易斯·苏亚雷斯", "前锋"), p("Maximiliano Araujo", "马克西米利亚诺·阿劳霍", "前锋"), p("Brian Rodriguez", "布赖恩·罗德里格斯", "前锋"), p("Agustin Canobbio", "阿古斯丁·卡诺比奥", "前锋"), p("Cristian Olivera", "克里斯蒂安·奥利韦拉", "前锋"), p("Luciano Rodriguez", "卢西亚诺·罗德里格斯", "前锋")
+      p("Sergio Rochet", "塞尔吉奥·罗切特", "门将"), p("Santiago Mele", "圣地亚哥·梅莱", "门将"), p("Fernando Muslera", "费尔南多·穆斯莱拉", "门将"),
+      p("Ronald Araujo", "罗纳德·阿劳霍", "后卫"), p("Jose Maria Gimenez", "何塞·玛利亚·希门尼斯", "后卫"), p("Santiago Bueno", "圣地亚哥·布埃诺", "后卫"), p("Sebastian Caceres", "塞巴斯蒂安·卡塞雷斯", "后卫"), p("Mathias Olivera", "马蒂亚斯·奥利韦拉", "后卫"), p("Guillermo Varela", "吉列尔莫·巴雷拉", "后卫"), p("Matias Vina", "马蒂亚斯·比尼亚", "后卫"), p("Joaquin Piquerez", "华金·皮克雷斯", "后卫"), p("Juan Manuel Sanabria", "胡安·曼努埃尔·萨纳布里亚", "后卫"),
+      p("Federico Valverde", "费德里科·巴尔韦德", "中场"), p("Rodrigo Bentancur", "罗德里戈·本坦库尔", "中场"), p("Manuel Ugarte", "曼努埃尔·乌加特", "中场"), p("Emiliano Martinez Toranza", "埃米利亚诺·马丁内斯", "中场"), p("Rodrigo Zalazar", "罗德里戈·萨拉萨尔", "中场"), p("Giorgian de Arrascaeta", "乔治安·德阿拉斯凯塔", "中场"), p("Nicolas de la Cruz", "尼古拉斯·德拉克鲁斯", "中场"), p("Agustin Canobbio", "阿古斯丁·卡诺比奥", "中场"), p("Maximiliano Araujo", "马克西米利亚诺·阿劳霍", "中场"), p("Brian Rodriguez", "布赖恩·罗德里格斯", "中场"), p("Facundo Pellistri", "法昆多·佩利斯特里", "中场"),
+      p("Darwin Nunez", "达尔文·努涅斯", "前锋"), p("Federico Vinas", "费德里科·比尼亚斯", "前锋"), p("Rodrigo Aguirre", "罗德里戈·阿吉雷", "前锋")
     ]
   },
   FRA: {
@@ -1092,15 +1093,15 @@ export const teamRosters: Record<string, TeamRoster> = {
     teamCode: "ENG",
     teamName: "英格兰",
     confirmed: true,
-    publishedDate: "2026-05-22",
+    publishedDate: "2026-06-02",
     source: "BBC Sport / England Football",
-    sourceUrl: "https://www.bbc.co.uk/sport/football/articles/c1728r0l218o",
-    note: "福登、帕尔默、阿诺德、马奎尔等人落选，托尼、沃特金斯、埃泽、马杜埃凯入选。",
+    sourceUrl: "https://learn.englandfootball.com/sitecore/content/EnglandFootball/Home/articles/2026/Jun/02/england-men-fifa-world-cup-2026-squad-numbers-revealed-20260206",
+    note: "英格兰最终 26 人名单和球衣号码已更新。福登、帕尔默、阿诺德、马奎尔等人落选，托尼、沃特金斯、埃泽、马杜埃凯入选。",
     players: [
-      p("Jordan Pickford", "乔丹·皮克福德", "门将"), p("Dean Henderson", "迪恩·亨德森", "门将"), p("James Trafford", "詹姆斯·特拉福德", "门将"),
-      p("Reece James", "里斯·詹姆斯", "后卫"), p("Tino Livramento", "蒂诺·利夫拉门托", "后卫"), p("Marc Guehi", "马克·格伊", "后卫"), p("Ezri Konsa", "埃兹里·孔萨", "后卫"), p("John Stones", "约翰·斯通斯", "后卫"), p("Jarell Quansah", "贾雷尔·宽萨", "后卫"), p("Nico O'Reilly", "尼科·奥赖利", "后卫"), p("Dan Burn", "丹·伯恩", "后卫"), p("Djed Spence", "杰德·斯彭斯", "后卫"),
-      p("Declan Rice", "德克兰·赖斯", "中场"), p("Elliot Anderson", "埃利奥特·安德森", "中场"), p("Jude Bellingham", "裘德·贝林厄姆", "中场"), p("Jordan Henderson", "乔丹·亨德森", "中场"), p("Morgan Rogers", "摩根·罗杰斯", "中场"), p("Kobbie Mainoo", "科比·梅努", "中场"),
-      p("Harry Kane", "哈里·凯恩", "前锋"), p("Ivan Toney", "伊万·托尼", "前锋"), p("Ollie Watkins", "奥利·沃特金斯", "前锋"), p("Bukayo Saka", "布卡约·萨卡", "前锋"), p("Noni Madueke", "诺尼·马杜埃凯", "前锋"), p("Marcus Rashford", "马库斯·拉什福德", "前锋"), p("Anthony Gordon", "安东尼·戈登", "前锋"), p("Eberechi Eze", "埃贝雷奇·埃泽", "前锋")
+      p("Jordan Pickford", "乔丹·皮克福德", "门将", 1), p("Dean Henderson", "迪恩·亨德森", "门将", 13), p("James Trafford", "詹姆斯·特拉福德", "门将", 23),
+      p("Reece James", "里斯·詹姆斯", "后卫", 2), p("Tino Livramento", "蒂诺·利夫拉门托", "后卫", 3), p("Marc Guehi", "马克·格伊", "后卫", 5), p("Ezri Konsa", "埃兹里·孔萨", "后卫", 6), p("John Stones", "约翰·斯通斯", "后卫", 14), p("Jarell Quansah", "贾雷尔·宽萨", "后卫", 15), p("Nico O'Reilly", "尼科·奥赖利", "后卫", 16), p("Dan Burn", "丹·伯恩", "后卫", 21), p("Djed Spence", "杰德·斯彭斯", "后卫", 24),
+      p("Declan Rice", "德克兰·赖斯", "中场", 4), p("Elliot Anderson", "埃利奥特·安德森", "中场", 8), p("Jude Bellingham", "裘德·贝林厄姆", "中场", 10), p("Jordan Henderson", "乔丹·亨德森", "中场", 12), p("Morgan Rogers", "摩根·罗杰斯", "中场", 18), p("Kobbie Mainoo", "科比·梅努", "中场", 26),
+      p("Harry Kane", "哈里·凯恩", "前锋", 9), p("Ivan Toney", "伊万·托尼", "前锋", 17), p("Ollie Watkins", "奥利·沃特金斯", "前锋", 19), p("Bukayo Saka", "布卡约·萨卡", "前锋", 7), p("Noni Madueke", "诺尼·马杜埃凯", "前锋", 11), p("Marcus Rashford", "马库斯·拉什福德", "前锋", 20), p("Anthony Gordon", "安东尼·戈登", "前锋", 22), p("Eberechi Eze", "埃贝雷奇·埃泽", "前锋", 25)
     ]
   }
 };
