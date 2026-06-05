@@ -28,6 +28,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-05T11:52:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月5日 11:52",
+    title: "小组总览数据更新",
+    summary: "本次更新复核了 2026 美加墨世界杯 48 队与 12 个小组，并按 FIFA 2026-06-03 完整名单同步 A 组南非、韩国、捷克名单结构与重点球员信息。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "按 FIFA 完整名单页重写南非 26 人结构，补入 Trevor Doornbusch、Mbekezeli Mbokazi、Patrick Maswanganyi、Ashley Cupido 等，移出多名未在最终名单中的旧名单球员。",
+      "按 FIFA 完整名单页复核韩国 26 人，并保留 AFC 确认的 Cho Wi-je 伤退递补；补入 Jens Castrop、Tae-Hyon Kim、Jin-Gyu Kim、Dong-Gyeong Lee、Min-Kyu Joo 等。",
+      "按 FIFA 完整名单页重写捷克 26 人结构，补入 Lukas Hornicek、Lukas Hejda、Tomas Vlcek、Vaclav Jemelka、Michal Beran、David Pavelka 等；同步 Jens Castrop、Mbekezeli Mbokazi、Relebohile Mofokeng、Ladislav Krejci、Pavel Sulc 等球员档案。"
+    ]
+  },
+  {
     updatedAt: "2026-06-05T10:30:00+08:00",
     updatedAtLabel: "北京时间 2026年6月5日 10:30",
     title: "小组总览数据更新",
