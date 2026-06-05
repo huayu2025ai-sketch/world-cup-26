@@ -2,6 +2,10 @@ services:
   fifa26:
     container_name: fifa26
     build: .
+    environment:
+      VISIT_STATS_FILE: /data/visit-stats.json
+    volumes:
+      - ./data:/data
     expose:
       - "3000"
     networks:

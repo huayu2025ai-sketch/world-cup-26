@@ -31,6 +31,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/app ./app
 COPY --from=builder /app/components ./components
 COPY --from=builder /app/constants ./constants
+COPY --from=builder /app/lib ./lib
 COPY --from=builder /app/postcss.config.js ./postcss.config.js
 COPY --from=builder /app/tailwind.config.ts ./tailwind.config.ts
 COPY --from=builder /app/tsconfig.json ./tsconfig.json

@@ -10,6 +10,7 @@
 - 比赛时间表：展示 104 场比赛，支持按阶段和关键词筛选。
 - 数据榜：预留进球榜和助攻榜页面，比赛开始后可录入真实数据。
 - 顶部倒计时：导航栏中央显示世界杯揭幕倒计时。
+- 访问统计：展示总访问量和今日访问量，支持 Upstash Redis 存储，本地开发会自动使用 `.data/visit-stats.json` 兜底。
 
 ## 技术栈
 
@@ -86,6 +87,27 @@ http://localhost:3000
 - 进球榜和助攻榜：`constants/tournamentStats.ts`
 
 当前应用不会编造未录入的阵容或赛事统计。未录入完整名单的球队会显示提示信息；世界杯开赛前，进球榜和助攻榜保持为空。
+
+## 访问统计
+
+访问统计接口为 `POST /api/visits`。展示值会在真实计数基础上增加默认基数：总访问量 `+2026`，今日访问量 `+30`。
+
+部署到 Vercel 等无服务器环境时，建议配置 Upstash Redis：
+
+```text
+UPSTASH_REDIS_REST_URL=...
+UPSTASH_REDIS_REST_TOKEN=...
+```
+
+未配置 Redis 时，应用会把本地开发计数写入 `.data/visit-stats.json`。该文件仅适合本机或单实例运行，不适合作为生产多实例存储。
+
+也可以用 `VISIT_STATS_FILE` 指定计数文件路径。Docker Compose 默认配置为：
+
+```text
+VISIT_STATS_FILE=/data/visit-stats.json
+```
+
+并把宿主机项目目录下的 `./data` 挂载到容器 `/data`，所以 Docker 下的计数文件会保存在宿主机 `data/visit-stats.json`，不会只留在容器内部。
 
 ## 构建检查
 

@@ -1,6 +1,8 @@
 node_modules/
 .next/
 .npm-cache/
+.data/
+data/
 .next-dev.pid
 npm-debug.log*
 yarn-debug.log*

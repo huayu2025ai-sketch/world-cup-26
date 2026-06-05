@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import GroupCard from "@/components/GroupCard";
+import VisitCounter from "@/components/VisitCounter";
 import { playerProfileMeta, playerProfiles, type PlayerProfile } from "@/constants/playerProfiles";
 import { officialSquadsNotice, rosterPositions, teamRosters, type RosterPlayer } from "@/constants/teamRosters";
 import { groupOverviewUpdate, groupOverviewUpdates, worldCupGroups, type WorldCupGroup } from "@/constants/worldcupData";
@@ -133,7 +134,7 @@ export default function HomePage() {
         </div>
       )}
 
-      <div className="mt-12 flex justify-center">
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-2">
         <button
           type="button"
           onClick={() => {
@@ -145,6 +146,7 @@ export default function HomePage() {
         >
           最后数据更新时间：{groupOverviewUpdate.updatedAtLabel}
         </button>
+        <VisitCounter />
       </div>
 
       {isUpdateModalOpen && (
@@ -368,16 +370,12 @@ export default function HomePage() {
                             <h4 className="mt-2 text-xl font-black text-slate-100">{selectedPlayer.chineseName}</h4>
                             <p className="mt-1 text-sm text-slate-400">{selectedPlayer.name}</p>
                             {selectedPlayerMeta && (
-                              <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                              <div className="mt-4 grid grid-cols-3 gap-2">
                                 <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
                                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">号码</p>
                                   <p className="mt-1 truncate text-xs font-black text-slate-100">
                                     #{selectedRosterPlayer?.number ?? "待核实"}
                                   </p>
-                                </div>
-                                <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
-                                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">俱乐部</p>
-                                  <p className="mt-1 truncate text-xs font-black text-slate-100">{selectedPlayerMeta.club}</p>
                                 </div>
                                 <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
                                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">年龄</p>
@@ -386,6 +384,12 @@ export default function HomePage() {
                                 <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
                                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">出场</p>
                                   <p className="mt-1 text-xs font-black text-slate-100">{selectedPlayerMeta.caps}</p>
+                                </div>
+                                <div className="col-span-3 rounded-md border border-slate-700 bg-slate-950/60 p-2">
+                                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">俱乐部</p>
+                                  <p className="mt-1 break-words text-xs font-black leading-5 text-slate-100">
+                                    {selectedPlayerMeta.club}
+                                  </p>
                                 </div>
                               </div>
                             )}
