@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import GroupCard from "@/components/GroupCard";
 import { playerProfileMeta, playerProfiles, type PlayerProfile } from "@/constants/playerProfiles";
 import { officialSquadsNotice, rosterPositions, teamRosters, type RosterPlayer } from "@/constants/teamRosters";
-import { groupOverviewUpdate, worldCupGroups, type WorldCupGroup } from "@/constants/worldcupData";
+import { groupOverviewUpdate, groupOverviewUpdates, worldCupGroups, type WorldCupGroup } from "@/constants/worldcupData";
 
 const profileTemplate: Record<RosterPlayer["position"], Pick<PlayerProfile, "role" | "bio" | "strengths">> = {
   门将: {
@@ -48,6 +48,7 @@ export default function HomePage() {
   const [selectedTeamCode, setSelectedTeamCode] = useState<string | null>(null);
   const [selectedPlayerName, setSelectedPlayerName] = useState<string | null>(null);
   const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
+  const [selectedUpdateIndex, setSelectedUpdateIndex] = useState(0);
 
   const normalizedQuery = query.trim().toLowerCase();
   const filteredGroups = useMemo(() => {
@@ -90,6 +91,9 @@ export default function HomePage() {
   const selectedPlayerMeta = selectedPlayer
     ? playerProfileMeta[selectedPlayer.name] ?? { club: "待核实", age: "待核实", caps: "待核实" }
     : undefined;
+  const selectedUpdate = groupOverviewUpdates[selectedUpdateIndex] ?? groupOverviewUpdate;
+  const canShowPreviousUpdate = selectedUpdateIndex < groupOverviewUpdates.length - 1;
+  const canShowNextUpdate = selectedUpdateIndex > 0;
 
   return (
     <main className="mx-auto max-w-7xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
@@ -132,7 +136,10 @@ export default function HomePage() {
       <div className="mt-12 flex justify-center">
         <button
           type="button"
-          onClick={() => setIsUpdateModalOpen(true)}
+          onClick={() => {
+            setSelectedUpdateIndex(0);
+            setIsUpdateModalOpen(true);
+          }}
           className="rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 text-xs font-bold text-slate-400 shadow-lg shadow-slate-950/20 backdrop-blur-md transition hover:border-cyan-300/60 hover:text-cyan-100 focus:outline-none focus:ring-2 focus:ring-cyan-300/70"
           aria-haspopup="dialog"
         >
@@ -158,10 +165,10 @@ export default function HomePage() {
                   Last Updated
                 </p>
                 <h2 id="update-modal-title" className="mt-2 text-2xl font-black text-slate-100">
-                  {groupOverviewUpdate.title}
+                  {selectedUpdate.title}
                 </h2>
-                <time dateTime={groupOverviewUpdate.updatedAt} className="mt-2 block text-sm text-slate-400">
-                  {groupOverviewUpdate.updatedAtLabel}
+                <time dateTime={selectedUpdate.updatedAt} className="mt-2 block text-sm text-slate-400">
+                  {selectedUpdate.updatedAtLabel}
                 </time>
               </div>
               <button
@@ -174,15 +181,39 @@ export default function HomePage() {
               </button>
             </div>
 
-            <p className="mt-5 text-sm leading-7 text-slate-300">{groupOverviewUpdate.summary}</p>
+            <p className="mt-5 text-sm leading-7 text-slate-300">{selectedUpdate.summary}</p>
             <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
-              {groupOverviewUpdate.changes.map((change) => (
+              {selectedUpdate.changes.map((change) => (
                 <li key={change} className="flex gap-3 rounded-lg border border-slate-700 bg-slate-800/50 p-3">
                   <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-cyan-200" aria-hidden="true" />
                   <span>{change}</span>
                 </li>
               ))}
             </ul>
+
+            <div className="mt-5 flex items-center justify-between border-t border-slate-800 pt-4">
+              <button
+                type="button"
+                onClick={() => setSelectedUpdateIndex((index) => Math.min(index + 1, groupOverviewUpdates.length - 1))}
+                disabled={!canShowPreviousUpdate}
+                className="grid h-9 w-9 place-items-center rounded-full border border-slate-700 bg-slate-800 text-lg font-black text-slate-300 transition hover:border-cyan-300/60 hover:text-cyan-100 disabled:cursor-not-allowed disabled:border-slate-800 disabled:bg-slate-900 disabled:text-slate-700"
+                aria-label="查看上一条更新记录"
+              >
+                ‹
+              </button>
+              <p className="text-center text-xs font-bold uppercase tracking-[0.22em] text-slate-500">
+                最近1天更新 {selectedUpdateIndex + 1} / {groupOverviewUpdates.length}
+              </p>
+              <button
+                type="button"
+                onClick={() => setSelectedUpdateIndex((index) => Math.max(index - 1, 0))}
+                disabled={!canShowNextUpdate}
+                className="grid h-9 w-9 place-items-center rounded-full border border-slate-700 bg-slate-800 text-lg font-black text-slate-300 transition hover:border-cyan-300/60 hover:text-cyan-100 disabled:cursor-not-allowed disabled:border-slate-800 disabled:bg-slate-900 disabled:text-slate-700"
+                aria-label="查看下一条更新记录"
+              >
+                ›
+              </button>
+            </div>
           </div>
         </div>
       )}

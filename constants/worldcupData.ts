@@ -26,18 +26,46 @@ export type GroupOverviewUpdate = {
   changes: string[];
 };
 
-export const groupOverviewUpdate: GroupOverviewUpdate = {
-  updatedAt: "2026-06-05T10:30:00+08:00",
-  updatedAtLabel: "北京时间 2026年6月5日 10:30",
-  title: "小组总览数据更新",
-  summary: "本次更新复核了 2026 美加墨世界杯 48 队与 12 个小组，并按 FIFA 官方 2026-06-04 squad list 同步澳大利亚、奥地利号码与重点球员信息。",
-  changes: [
-    "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
-    "按 FIFA 官方 PDF 为澳大利亚 26 人补齐 1-26 号码，并将来源切换到 FIFA 官方 squad list；同步 Maty Ryan、Ajdin Hrustic、Nestory Irankunda、Cristian Volpato 等球员俱乐部/出场数据。",
-    "按 FIFA 官方 PDF 为奥地利 26 人补齐 1-26 号码；Christoph Baumgartner 仍列入 FIFA 官方名单，保留其伤情备注但不做替换。",
-    "同步更新 Paul Wanner、Carney Chukwuemeka、Marcel Sabitzer、Marko Arnautovic、Christoph Baumgartner 等奥地利球员俱乐部与 caps。"
-  ]
-};
+export const groupOverviewUpdates: GroupOverviewUpdate[] = [
+  {
+    updatedAt: "2026-06-05T10:30:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月5日 10:30",
+    title: "小组总览数据更新",
+    summary: "本次更新复核了 2026 美加墨世界杯 48 队与 12 个小组，并按 FIFA 官方 2026-06-04 squad list 同步澳大利亚、奥地利号码与重点球员信息。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "按 FIFA 官方 PDF 为澳大利亚 26 人补齐 1-26 号码，并将来源切换到 FIFA 官方 squad list；同步 Maty Ryan、Ajdin Hrustic、Nestory Irankunda、Cristian Volpato 等球员俱乐部/出场数据。",
+      "按 FIFA 官方 PDF 为奥地利 26 人补齐 1-26 号码；Christoph Baumgartner 仍列入 FIFA 官方名单，保留其伤情备注但不做替换。",
+      "同步更新 Paul Wanner、Carney Chukwuemeka、Marcel Sabitzer、Marko Arnautovic、Christoph Baumgartner 等奥地利球员俱乐部与 caps。"
+    ]
+  },
+  {
+    updatedAt: "2026-06-05T07:08:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月5日 07:08",
+    title: "小组总览数据更新",
+    summary: "本次更新复核 48 队与 12 个小组，并重点同步 J 组奥地利最终名单结构与球员信息。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "按 Reuters/SRN 可访问名单更新奥地利 26 人结构，补入 Florian Wiegele、David Affengruber、Marco Friedl、Alexander Prass、Michael Svoboda、Carney Chukwuemeka、Alessandro Schopf、Paul Wanner 等。",
+      "移出 Heinz Lindner、Maximilian Wober、Gernot Trauner、Andreas Weimann、Junior Adamu、Karim Onisiwo、Marco Grull 等未出现在最新奥地利名单中的球员。",
+      "Christoph Baumgartner 已有伤缺报道，但当时未找到 FIFA/ÖFB 官方替补确认，暂保留在 26 人结构并标注待官方替换确认。"
+    ]
+  },
+  {
+    updatedAt: "2026-06-04T23:41:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月4日 23:41",
+    title: "小组总览数据更新",
+    summary: "本次更新继续复核 FIFA 48 队与 12 个小组，并重点更新 D 组澳大利亚、巴拉圭名单。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "澳大利亚切换到 Football Australia/Socceroos 官方来源，修正 Maty Ryan、Paul Okon-Engstler、Tete Yengi 等姓名；号码当时继续待核实。",
+      "按 FIFA 2026-06-01 单队公告重写巴拉圭 26 人名单，补入 Orlando Gill、Roberto Fernandez、Gaston Olveira、Gustavo Velazquez、Jose Canale、Alexandro Maidana、Mauricio Magalhaes、Alejandro Gamarra、Gustavo Caballero、Gabriel Avalos 等。",
+      "同步更新 Alejandro Gamarra、Gabriel Avalos、Maty Ryan、Harry Souttar、Tete Yengi 等球员档案与 meta。"
+    ]
+  }
+];
+
+export const groupOverviewUpdate: GroupOverviewUpdate = groupOverviewUpdates[0];
 
 export const worldCupGroups: WorldCupGroup[] = [
   {
