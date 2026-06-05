@@ -1,0 +1,13 @@
+services:
+  fifa26:
+    container_name: fifa26
+    build: .
+    expose:
+      - "3000"
+    networks:
+      - npm-network
+    restart: unless-stopped
+
+networks:
+  npm-network:
+    external: true
