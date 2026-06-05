@@ -1,16 +1,18 @@
 # 2026 美加墨世界杯 Web App
 
-一个基于 Next.js 14 App Router 和 Tailwind CSS 构建的 2026 世界杯响应式前端应用。项目使用本地静态数据，不调用外部 API。
+一个基于 Next.js 14 App Router、React 18、TypeScript 和 Tailwind CSS 构建的 2026 世界杯响应式前端应用。项目使用本地静态数据展示 48 支球队、12 个小组、完整赛程、球队名单、球员资料和赛事统计占位，不依赖外部业务 API。
 
 ## 功能
 
-- 小组总览：展示 48 支球队、12 个小组、搜索球队或组别。
-- 小组详情：点击小组卡片查看晋级形势和核心看点。
-- 阵容信息：在小组详情中点击球队查看阵容，点击球员查看球员资料。
-- 比赛时间表：展示 104 场比赛，支持按阶段和关键词筛选。
-- 数据榜：预留进球榜和助攻榜页面，比赛开始后可录入真实数据。
-- 顶部倒计时：导航栏中央显示世界杯揭幕倒计时。
-- 访问统计：展示总访问量和今日访问量，支持 Upstash Redis 存储，本地开发会自动使用 `.data/visit-stats.json` 兜底。
+- 小组总览：展示 48 支球队、12 个小组，支持按中文队名、英文队名、三字母代码、洲际足联和组别搜索。
+- 小组详情：点击小组卡片打开弹窗，查看小组看点、晋级形势描述和队伍列表。
+- 阵容信息：在小组详情中切换球队，查看 26 人名单、号码、位置、来源和维护备注。
+- 球员资料：点击阵容球员查看球员档案；已精修球员读取 `playerProfiles.ts`，其余球员由阵容基础信息生成兜底资料。
+- 数据更新记录：首页底部展示最后数据更新时间，可打开弹窗查看最近更新记录。
+- 比赛时间表：展示 104 场比赛，支持按阶段、球队、组别、日期、城市和球场筛选。
+- 数据榜：展示进球榜和助攻榜；赛事未开赛时保持空榜并显示维护提示。
+- 顶部导航：提供小组总览、比赛时间表、数据榜入口，并显示揭幕倒计时。
+- 访问统计：调用 `POST /api/visits` 记录总访问量和今日访问量，支持 Upstash Redis；未配置 Redis 时使用本地文件兜底。
 
 ## 技术栈
 
@@ -18,29 +20,44 @@
 - React 18
 - TypeScript
 - Tailwind CSS
+- Node.js 20（Docker 镜像使用 `node:20-alpine`）
 
 ## 目录结构
 
 ```text
-app/
-  layout.tsx
-  page.tsx
-  schedule/page.tsx
-  stats/page.tsx
-  globals.css
-components/
-  GroupCard.tsx
-  Navbar.tsx
-constants/
-  worldcupData.ts
-  scheduleData.ts
-  teamRosters.ts
-  playerProfiles.ts
-  tournamentStats.ts
-run.sh
+.
+├── app/
+│   ├── api/
+│   │   └── visits/route.ts        # 访问统计 API
+│   ├── schedule/page.tsx          # 比赛时间表页面
+│   ├── stats/page.tsx             # 进球榜/助攻榜页面
+│   ├── globals.css                # Tailwind 全局样式
+│   ├── layout.tsx                 # 根布局、metadata、Navbar
+│   └── page.tsx                   # 小组总览、详情弹窗、阵容和球员资料
+├── components/
+│   ├── GroupCard.tsx              # 小组卡片
+│   ├── Navbar.tsx                 # 顶部导航和倒计时
+│   └── VisitCounter.tsx           # 访问统计展示组件
+├── constants/
+│   ├── playerProfiles.ts          # 球员档案和 club/age/caps 元信息
+│   ├── scheduleData.ts            # 104 场比赛赛程和阶段列表
+│   ├── teamRosters.ts             # 48 队 26 人名单、来源和备注
+│   ├── tournamentStats.ts         # 进球榜、助攻榜和空榜提示
+│   └── worldcupData.ts            # 12 个小组、球队信息和更新记录
+├── lib/
+│   └── visitStats.ts              # Redis/本地文件访问统计逻辑
+├── public/                        # 静态资源目录
+├── Dockerfile                     # 生产镜像构建
+├── docker-compose.yml             # Docker Compose 部署示例
+├── run.sh                         # 本地安装、启动、停止、状态脚本
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── tailwind.config.ts
+└── tsconfig.json
 ```
 
-## 启动
+## 本地启动
 
 首次安装依赖：
 
@@ -54,63 +71,144 @@ run.sh
 ./run.sh start
 ```
 
-查看状态：
-
-```bash
-./run.sh status
-```
-
-停止服务：
-
-```bash
-./run.sh stop
-```
-
-重启服务：
-
-```bash
-./run.sh restart
-```
-
 默认地址：
 
 ```text
 http://localhost:3000
 ```
 
+其他脚本：
+
+```bash
+./run.sh status
+./run.sh stop
+./run.sh restart
+```
+
+也可以直接使用 npm：
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run start
+```
+
+## 页面与组件
+
+- `/`：小组总览页，使用 `GroupCard`、`VisitCounter`，读取 `worldcupData.ts`、`teamRosters.ts`、`playerProfiles.ts`。
+- `/schedule`：比赛时间表页，读取 `scheduleData.ts`。
+- `/stats`：进球榜和助攻榜页，读取 `tournamentStats.ts`。
+- `Navbar`：在 `app/layout.tsx` 中全站挂载，倒计时目标为北京时间 `2026-06-12 03:00`。
+- `POST /api/visits`：动态 Node.js API 路由，调用 `lib/visitStats.ts` 写入访问统计。
+
 ## 数据维护
 
-- 小组和球队数据：`constants/worldcupData.ts`
-- 比赛时间表：`constants/scheduleData.ts`
-- 球队阵容：`constants/teamRosters.ts`
-- 球员资料：`constants/playerProfiles.ts`
-- 进球榜和助攻榜：`constants/tournamentStats.ts`
+- 小组和球队数据：维护 `constants/worldcupData.ts` 中的 `worldCupGroups`。每组包含 `id`、`name`、`headline`、`detail`、`watchPoints` 和 `teams`。
+- 数据更新记录：维护 `constants/worldcupData.ts` 中的 `groupOverviewUpdates`。首页默认读取数组第一项作为最后更新时间。
+- 比赛时间表：维护 `constants/scheduleData.ts` 中的 `scheduleMatches` 和 `scheduleStages`。当前页面按 `stage`、`group`、`date`、`etTime`、`beijingTime`、`home`、`away`、`venue`、`city` 搜索。
+- 球队阵容：维护 `constants/teamRosters.ts` 中的 `teamRosters`。每支球队包含 `teamCode`、`teamName`、`confirmed`、`publishedDate`、`source`、`sourceUrl`、`note` 和 `players`。
+- 阵容来源提示：维护 `constants/teamRosters.ts` 中的 `officialSquadsNotice`。首页阵容区域会显示该说明。
+- 球员资料：维护 `constants/playerProfiles.ts` 中的 `playerProfiles` 和 `playerProfileMeta`。未精修球员会基于 `teamRosters` 自动生成基础档案，`club`、`age`、`caps` 默认为“待核实”。
+- 进球榜和助攻榜：维护 `constants/tournamentStats.ts` 中的 `goalsRanking`、`assistsRanking` 和 `statsNotice`。比赛开始前保持空数组，避免展示模拟统计。
 
-当前应用不会编造未录入的阵容或赛事统计。未录入完整名单的球队会显示提示信息；世界杯开赛前，进球榜和助攻榜保持为空。
+当前应用不会编造未录入的阵容或赛事统计。阵容基础信息以 `teamRosters.ts` 为准；赛事统计只展示 `tournamentStats.ts` 中实际录入的数据。
 
 ## 访问统计
 
-访问统计接口为 `POST /api/visits`。展示值会在真实计数基础上增加默认基数：总访问量 `+2026`，今日访问量 `+30`。
+访问统计接口为 `POST /api/visits`。展示值会在真实计数基础上增加默认基数：
 
-部署到 Vercel 等无服务器环境时，建议配置 Upstash Redis：
+```text
+总访问量 +2026
+今日访问量 +30
+```
+
+生产部署建议配置 Upstash Redis：
 
 ```text
 UPSTASH_REDIS_REST_URL=...
 UPSTASH_REDIS_REST_TOKEN=...
 ```
 
-未配置 Redis 时，应用会把本地开发计数写入 `.data/visit-stats.json`。该文件仅适合本机或单实例运行，不适合作为生产多实例存储。
+未配置 Redis 时，应用会把计数写入本地文件。默认路径为：
 
-也可以用 `VISIT_STATS_FILE` 指定计数文件路径。Docker Compose 默认配置为：
+```text
+.data/visit-stats.json
+```
+
+也可以用 `VISIT_STATS_FILE` 指定计数文件路径。该文件方案只适合本地或单实例部署；Vercel 等无服务器环境应使用 Redis，否则本地文件不会持久可靠保存。
+
+## Docker 部署
+
+构建镜像：
+
+```bash
+docker build -t world-cup-26 .
+```
+
+直接运行容器：
+
+```bash
+docker run --rm -p 3000:3000 \
+  -e VISIT_STATS_FILE=/data/visit-stats.json \
+  -v "$(pwd)/data:/data" \
+  world-cup-26
+```
+
+使用 Docker Compose：
+
+```bash
+docker compose up -d --build
+```
+
+当前 `docker-compose.yml` 使用外部网络 `npm-network`，适合接入已有反向代理。如果本机没有该网络，需要先创建：
+
+```bash
+docker network create npm-network
+```
+
+Compose 默认设置：
 
 ```text
 VISIT_STATS_FILE=/data/visit-stats.json
+./data -> /data
 ```
 
-并把宿主机项目目录下的 `./data` 挂载到容器 `/data`，所以 Docker 下的计数文件会保存在宿主机 `data/visit-stats.json`，不会只留在容器内部。
+因此 Docker 下的访问统计会保存在宿主机 `data/visit-stats.json`。
+
+## Vercel 部署
+
+本项目是标准 Next.js App Router 应用，不需要额外的 Vercel 配置文件即可部署。
+
+推荐设置：
+
+```text
+Framework Preset: Next.js
+Install Command: npm ci
+Build Command: npm run build
+Output Directory: .next
+Node.js Version: 20.x
+```
+
+如果要在 Vercel 上启用访问统计，请在项目环境变量中配置：
+
+```text
+UPSTASH_REDIS_REST_URL
+UPSTASH_REDIS_REST_TOKEN
+```
+
+不要依赖 `VISIT_STATS_FILE` 作为 Vercel 生产存储；无服务器运行环境中的本地文件不适合保存长期计数。
 
 ## 构建检查
 
 ```bash
 npm run build
 ```
+
+## 维护检查清单
+
+- 新增页面时，同步更新“目录结构”和“页面与组件”。
+- 新增组件时，同步更新 `components/` 目录说明。
+- 新增数据文件或导出字段时，同步更新“数据维护”。
+- 修改访问统计存储方式时，同步更新“访问统计”“Docker 部署”和“Vercel 部署”。
+- 修改运行脚本或端口时，同步更新“本地启动”和部署命令。
