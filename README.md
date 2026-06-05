@@ -10,6 +10,7 @@
 - 球员资料：点击阵容球员查看球员档案；已精修球员读取 `playerProfiles.ts`，其余球员由阵容基础信息生成兜底资料。
 - 数据更新记录：首页底部展示最后数据更新时间，可打开弹窗查看最近更新记录。
 - 比赛时间表：展示 104 场比赛，支持按阶段、球队、组别、日期、城市和球场筛选。
+- 胜负预测：基于 Pinnacle、Betfair Exchange、bet365、SBOBet、DraftKings 五家 1/X/2 赔率，计算去水概率、平均市场概率、最高概率赛果和置信度。
 - 数据榜：展示进球榜和助攻榜；赛事未开赛时保持空榜并显示维护提示。
 - 顶部导航：提供小组总览、比赛时间表、数据榜入口，并显示揭幕倒计时。
 - 访问统计：调用 `POST /api/visits` 记录总访问量和今日访问量，支持 Upstash Redis；未配置 Redis 时使用本地文件兜底。
@@ -29,6 +30,7 @@
 ├── app/
 │   ├── api/
 │   │   └── visits/route.ts        # 访问统计 API
+│   ├── predictions/page.tsx       # 五家赔率源胜平负预测页面
 │   ├── schedule/page.tsx          # 比赛时间表页面
 │   ├── stats/page.tsx             # 进球榜/助攻榜页面
 │   ├── globals.css                # Tailwind 全局样式
@@ -40,11 +42,13 @@
 │   └── VisitCounter.tsx           # 访问统计展示组件
 ├── constants/
 │   ├── playerProfiles.ts          # 球员档案和 club/age/caps 元信息
+│   ├── oddsData.ts                # 五家博彩公司 1/X/2 赔率录入
 │   ├── scheduleData.ts            # 104 场比赛赛程和阶段列表
 │   ├── teamRosters.ts             # 48 队 26 人名单、来源和备注
 │   ├── tournamentStats.ts         # 进球榜、助攻榜和空榜提示
 │   └── worldcupData.ts            # 12 个小组、球队信息和更新记录
 ├── lib/
+│   ├── oddsPrediction.ts          # 赔率去水、平均概率和预测逻辑
 │   └── visitStats.ts              # Redis/本地文件访问统计逻辑
 ├── public/                        # 静态资源目录
 ├── Dockerfile                     # 生产镜像构建
@@ -98,6 +102,7 @@ npm run start
 
 - `/`：小组总览页，使用 `GroupCard`、`VisitCounter`，读取 `worldcupData.ts`、`teamRosters.ts`、`playerProfiles.ts`。
 - `/schedule`：比赛时间表页，读取 `scheduleData.ts`。
+- `/predictions`：胜负预测页，读取 `scheduleData.ts`、`oddsData.ts`，调用 `oddsPrediction.ts` 计算市场概率。
 - `/stats`：进球榜和助攻榜页，读取 `tournamentStats.ts`。
 - `Navbar`：在 `app/layout.tsx` 中全站挂载，倒计时目标为北京时间 `2026-06-12 03:00`。
 - `POST /api/visits`：动态 Node.js API 路由，调用 `lib/visitStats.ts` 写入访问统计。
@@ -107,6 +112,7 @@ npm run start
 - 小组和球队数据：维护 `constants/worldcupData.ts` 中的 `worldCupGroups`。每组包含 `id`、`name`、`headline`、`detail`、`watchPoints` 和 `teams`。
 - 数据更新记录：维护 `constants/worldcupData.ts` 中的 `groupOverviewUpdates`。首页默认读取数组第一项作为最后更新时间。
 - 比赛时间表：维护 `constants/scheduleData.ts` 中的 `scheduleMatches` 和 `scheduleStages`。当前页面按 `stage`、`group`、`date`、`etTime`、`beijingTime`、`home`、`away`、`venue`、`city` 搜索。
+- 赔率预测：维护 `constants/oddsData.ts` 中的 `matchOddsById`。每场比赛按 `scheduleMatches` 的 `id` 录入 Pinnacle、Betfair Exchange、bet365、SBOBet、DraftKings 五家 `home/draw/away` 十进制赔率；`lib/oddsPrediction.ts` 会自动计算隐含概率、去水概率、平均概率、预测结果和置信度。
 - 球队阵容：维护 `constants/teamRosters.ts` 中的 `teamRosters`。每支球队包含 `teamCode`、`teamName`、`confirmed`、`publishedDate`、`source`、`sourceUrl`、`note` 和 `players`。
 - 阵容来源提示：维护 `constants/teamRosters.ts` 中的 `officialSquadsNotice`。首页阵容区域会显示该说明。
 - 球员资料：维护 `constants/playerProfiles.ts` 中的 `playerProfiles` 和 `playerProfileMeta`。未精修球员会基于 `teamRosters` 自动生成基础档案，`club`、`age`、`caps` 默认为“待核实”。
