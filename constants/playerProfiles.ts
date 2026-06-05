@@ -80,6 +80,54 @@ const basePlayerMeta: Record<string, PlayerProfileMeta> = Object.fromEntries(
 
 export const playerProfiles: Record<string, PlayerProfile> = {
   ...basePlayerProfiles,
+  "Heungmin Son": {
+    name: "Heungmin Son",
+    chineseName: "孙兴慜",
+    position: "前锋",
+    role: "队长 / 前场核心",
+    bio: "韩国前场核心和精神领袖，既能在转换中冲击身后，也能回撤串联并完成关键终结。",
+    strengths: ["无球前插", "射门", "反击推进"]
+  },
+  "Minjae Kim": {
+    name: "Minjae Kim",
+    chineseName: "金玟哉",
+    position: "后卫",
+    role: "中后卫 / 防线核心",
+    bio: "韩国防线核心，兼具身体对抗、回追速度和正面防守能力，是球队高位防守的重要保险。",
+    strengths: ["身体对抗", "回追", "正面防守"]
+  },
+  "Kangin Lee": {
+    name: "Kangin Lee",
+    chineseName: "李刚仁",
+    position: "中场",
+    role: "攻击中场 / 创造力来源",
+    bio: "韩国进攻端的重要创造者，左脚技术细腻，能在肋部传球、持球和定位球中制造机会。",
+    strengths: ["左脚传球", "定位球", "肋部创造"]
+  },
+  "Emiliano Martinez (ARG)": {
+    name: "Emiliano Martinez (ARG)",
+    chineseName: "埃米利亚诺·马丁内斯",
+    position: "门将",
+    role: "一号门将 / 淘汰赛保险",
+    bio: "阿根廷主力门将，大赛心理素质和点球表现突出，是卫冕冠军后场稳定性的关键。",
+    strengths: ["关键扑救", "点球", "比赛气质"]
+  },
+  "Ngolo Kante": {
+    name: "Ngolo Kante",
+    chineseName: "恩戈洛·坎特",
+    position: "中场",
+    role: "防守中场 / 覆盖型中场",
+    bio: "法国中场经验型防守核心，覆盖、拦截和二点球能力仍能显著提升球队中路强度。",
+    strengths: ["覆盖", "拦截", "二点球"]
+  },
+  "Michael Olise": {
+    name: "Michael Olise",
+    chineseName: "迈克尔·奥利塞",
+    position: "前锋",
+    role: "右路攻击手 / 内切创造",
+    bio: "法国右路技术型攻击手，擅长内切传射和小空间处理，可为阵地战提供变化。",
+    strengths: ["内切", "传射", "小空间处理"]
+  },
   "Jordan Pickford": {
     name: "Jordan Pickford",
     chineseName: "乔丹·皮克福德",
@@ -625,6 +673,21 @@ export const playerProfiles: Record<string, PlayerProfile> = {
 
 export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
   ...basePlayerMeta,
+  "Heungmin Son": { club: "Tottenham Hotspur FC", age: 33, caps: 130 },
+  "Minjae Kim": { club: "FC Bayern München", age: 29, caps: 70 },
+  "Kangin Lee": { club: "Paris Saint-Germain", age: 25, caps: 40 },
+  "Heechan Hwang": { club: "Wolverhampton Wanderers", age: 30, caps: 70 },
+  "Guesung Cho": { club: "FC Midtjylland", age: 28, caps: 40 },
+  "Hyeongyu Oh": { club: "KRC Genk", age: 25, caps: 20 },
+  "Emiliano Martinez (ARG)": { club: "Aston Villa FC", age: 33, caps: 50 },
+  "Emiliano Martinez (URU)": { club: "FC Midtjylland", age: 26, caps: "待核实" },
+  "Ngolo Kante": { club: "Fenerbahçe SK", age: 35, caps: "待核实" },
+  "Michael Olise": { club: "FC Bayern München", age: 24, caps: "待核实" },
+  "Desire Doue": { club: "Paris Saint-Germain", age: 21, caps: "待核实" },
+  "Rayan Cherki": { club: "Manchester City FC", age: 22, caps: "待核实" },
+  "Maghnes Akliouche": { club: "AS Monaco", age: 24, caps: "待核实" },
+  "Manu Kone": { club: "AS Roma", age: 25, caps: "待核实" },
+  "Jean-Philippe Mateta": { club: "Crystal Palace FC", age: 28, caps: "待核实" },
   "Jordan Pickford": { club: "埃弗顿", age: 32, caps: 80 },
   "Dean Henderson": { club: "水晶宫", age: 29, caps: 2 },
   "James Trafford": { club: "伯恩利", age: 23, caps: 0 },

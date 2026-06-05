@@ -1,0 +1,18 @@
+{
+  "last_hash_roster": "90fd42bba1e951ee8725ae6139720d9c",
+  "last_run": "2026-06-05T08:00:59.295188+00:00",
+  "fifa_skipped": true,
+  "fifa_skip_reason": "FIFA 官方页本次未能自动渲染（JS 反爬虫），待人工核验",
+  "changes": [
+    {
+      "tag": "⚠️",
+      "team": "FIFA 官方页",
+      "detail": "FIFA 官方页本次未能自动渲染（JS 反爬虫），待人工核验"
+    },
+    {
+      "tag": "📋",
+      "team": "Wikipedia 名单",
+      "detail": "已解析 12 组, 54 队\n来源: https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads"
+    }
+  ]
+}
