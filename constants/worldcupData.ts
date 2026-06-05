@@ -27,8 +27,8 @@ export type GroupOverviewUpdate = {
 };
 
 export const groupOverviewUpdate: GroupOverviewUpdate = {
-  updatedAt: "2026-06-05T15:18:00+08:00",
-  updatedAtLabel: "2026年6月5日 15:18",
+  updatedAt: "2026-06-05T10:30:00+08:00",
+  updatedAtLabel: "北京时间 2026年6月5日 10:30",
   title: "小组总览数据更新",
   summary: "本次更新复核了 2026 美加墨世界杯 48 队与 12 个小组，并按 FIFA 官方 2026-06-04 squad list 同步澳大利亚、奥地利号码与重点球员信息。",
   changes: [
