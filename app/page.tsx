@@ -92,8 +92,9 @@ export default function HomePage() {
   const selectedPlayerMeta = selectedPlayer
     ? playerProfileMeta[selectedPlayer.name] ?? { club: "待核实", age: "待核实", caps: "待核实" }
     : undefined;
-  const selectedUpdate = groupOverviewUpdates[selectedUpdateIndex] ?? groupOverviewUpdate;
-  const canShowPreviousUpdate = selectedUpdateIndex < groupOverviewUpdates.length - 1;
+  const recentUpdateHistory = groupOverviewUpdates.slice(0, 5);
+  const selectedUpdate = recentUpdateHistory[selectedUpdateIndex] ?? groupOverviewUpdate;
+  const canShowPreviousUpdate = selectedUpdateIndex < recentUpdateHistory.length - 1;
   const canShowNextUpdate = selectedUpdateIndex > 0;
 
   return (
@@ -196,7 +197,7 @@ export default function HomePage() {
             <div className="mt-5 flex items-center justify-between border-t border-slate-800 pt-4">
               <button
                 type="button"
-                onClick={() => setSelectedUpdateIndex((index) => Math.min(index + 1, groupOverviewUpdates.length - 1))}
+                onClick={() => setSelectedUpdateIndex((index) => Math.min(index + 1, recentUpdateHistory.length - 1))}
                 disabled={!canShowPreviousUpdate}
                 className="grid h-9 w-9 place-items-center rounded-full border border-slate-700 bg-slate-800 text-lg font-black text-slate-300 transition hover:border-cyan-300/60 hover:text-cyan-100 disabled:cursor-not-allowed disabled:border-slate-800 disabled:bg-slate-900 disabled:text-slate-700"
                 aria-label="查看上一条更新记录"
@@ -204,7 +205,7 @@ export default function HomePage() {
                 ‹
               </button>
               <p className="text-center text-xs font-bold uppercase tracking-[0.22em] text-slate-500">
-                最近1天更新 {selectedUpdateIndex + 1} / {groupOverviewUpdates.length}
+                最近5次更新 {selectedUpdateIndex + 1} / {recentUpdateHistory.length}
               </p>
               <button
                 type="button"
