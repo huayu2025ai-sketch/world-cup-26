@@ -24,3 +24,37 @@ body {
   background: rgba(20, 184, 166, 0.45);
   color: #f8fafc;
 }
+
+.england-flag {
+  position: relative;
+  display: block;
+  width: 1.85rem;
+  height: 1.2rem;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #f8fafc;
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.16);
+}
+
+.england-flag::before,
+.england-flag::after {
+  position: absolute;
+  content: "";
+  background: #cf142b;
+}
+
+.england-flag::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.26rem;
+  transform: translateY(-50%);
+}
+
+.england-flag::after {
+  top: 0;
+  left: 50%;
+  width: 0.26rem;
+  height: 100%;
+  transform: translateX(-50%);
+}

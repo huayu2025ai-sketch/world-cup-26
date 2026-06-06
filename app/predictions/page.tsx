@@ -1,7 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { matchOddsById, oddsDataUpdatedAt, recommendedBookmakers, type BookmakerKey } from "@/constants/oddsData";
+import {
+  championFavorites,
+  championFavoritesUpdatedAt,
+  matchOddsById,
+  oddsDataUpdatedAt,
+  recommendedBookmakers,
+  type BookmakerKey
+} from "@/constants/oddsData";
 import { scheduleMatches, type ScheduleMatch } from "@/constants/scheduleData";
 import { formatPercent, getMatchPrediction, type OutcomeKey } from "@/lib/oddsPrediction";
 
@@ -37,9 +44,13 @@ const confidenceClass: Record<"高" | "中" | "低", string> = {
   低: "border-rose-300/30 bg-rose-300/12 text-rose-100"
 };
 
+const formatSignedIndex = (value: number) => (value > 0 ? `+${value}` : `${value}`);
+
 export default function PredictionsPage() {
   const [query, setQuery] = useState("");
-  const [coverage, setCoverage] = useState<"有赔率" | "全部">("有赔率");
+  const [coverage, setCoverage] = useState<"有数据" | "全部">("有数据");
+  const [championIndex, setChampionIndex] = useState(0);
+  const [championDragStart, setChampionDragStart] = useState<number | null>(null);
 
   const predictionRows = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -73,35 +84,55 @@ export default function PredictionsPage() {
   }, [coverage, query]);
 
   const predictionCount = Object.keys(matchOddsById).length;
-  const averageConfidence =
-    predictionRows.filter((row) => row.prediction?.confidence === "高").length > 0
-      ? "有高置信度场次"
-      : "以中低置信度为主";
+  const currentChampion = championFavorites[championIndex];
+
+  const goToChampion = (direction: -1 | 1) => {
+    setChampionIndex((current) => (current + direction + championFavorites.length) % championFavorites.length);
+  };
+
+  const finishChampionDrag = (clientX: number) => {
+    if (championDragStart === null) {
+      return;
+    }
+
+    const distance = clientX - championDragStart;
+    setChampionDragStart(null);
+
+    if (Math.abs(distance) < 40) {
+      return;
+    }
+
+    goToChampion(distance > 0 ? -1 : 1);
+  };
 
   return (
     <main className="mx-auto max-w-7xl px-3 pb-10 pt-5 sm:px-5 lg:px-6">
       <section className="grid gap-4 py-4 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
         <div>
-          <p className="text-[11px] font-black uppercase tracking-[0.36em] text-cyan-200">Odds Model</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.36em] text-cyan-200">Probability Model</p>
           <h1 className="mt-2 text-2xl font-black leading-tight text-slate-100 sm:text-3xl lg:text-4xl">
-            5 家赔率源胜平负预测
+            5 组市场数据胜平负预测
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
-            每场比赛先按博彩公司分别计算 1/X/2 隐含概率并去水，再对 5 家去水概率取平均，输出最高概率赛果和置信度。
+            每场比赛先按 5 组市场数据分别计算 1/X/2 隐含概率并校正，再对校正概率取平均，输出最高概率赛果和置信度。
           </p>
         </div>
 
         <div className="grid grid-cols-3 gap-2">
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xl font-black text-cyan-200">{predictionCount}</p>
-            <p className="mt-1 text-xs text-slate-400">已录赔率</p>
+            <p className="mt-1 text-xs text-slate-400">已录数据</p>
           </div>
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xl font-black text-cyan-200">{recommendedBookmakers.length}</p>
-            <p className="mt-1 text-xs text-slate-400">赔率源</p>
+            <p className="mt-1 text-xs text-slate-400">数据源</p>
           </div>
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
-            <p className="text-sm font-black text-cyan-200">{oddsDataUpdatedAt}</p>
+            <p className="text-xs font-black text-cyan-200">
+              单场 {oddsDataUpdatedAt}
+              <br />
+              冠军 {championFavoritesUpdatedAt}
+            </p>
             <p className="mt-1 text-xs text-slate-400">数据日期</p>
           </div>
         </div>
@@ -128,7 +159,7 @@ export default function PredictionsPage() {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {(["有赔率", "全部"] as const).map((item) => (
+            {(["有数据", "全部"] as const).map((item) => (
               <button
                 key={item}
                 type="button"
@@ -196,8 +227,8 @@ export default function PredictionsPage() {
                   </div>
                 ) : (
                   <div className="rounded-lg border border-slate-700 bg-slate-950/50 p-3">
-                    <p className="text-sm font-black text-slate-300">待录入赔率</p>
-                    <p className="mt-1 text-xs leading-5 text-slate-500">录入 5 家 1/X/2 赔率后自动生成预测。</p>
+                    <p className="text-sm font-black text-slate-300">待录入数据</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">录入 5 组 1/X/2 指数后自动生成预测。</p>
                   </div>
                 )}
               </div>
@@ -234,10 +265,10 @@ export default function PredictionsPage() {
                     <table className="min-w-full divide-y divide-slate-700 text-left text-xs">
                       <thead className="bg-slate-950/60 text-slate-400">
                         <tr>
-                          <th className="px-3 py-2 font-black">公司</th>
-                          <th className="px-3 py-2 font-black">赔率 1/X/2</th>
-                          <th className="px-3 py-2 font-black">去水概率 1/X/2</th>
-                          <th className="px-3 py-2 font-black">水钱</th>
+                          <th className="px-3 py-2 font-black">数据源</th>
+                          <th className="px-3 py-2 font-black">指数 1/X/2</th>
+                          <th className="px-3 py-2 font-black">校正概率 1/X/2</th>
+                          <th className="px-3 py-2 font-black">市场偏差</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-800 bg-slate-900/40">
@@ -269,27 +300,112 @@ export default function PredictionsPage() {
         </div>
 
         <aside className="rounded-lg border border-slate-700 bg-slate-800/50 p-4 backdrop-blur-md lg:sticky lg:top-24">
+          <section className="mb-4 rounded-lg border border-cyan-300/20 bg-slate-950/45 p-3">
+            <div className="flex items-start justify-between gap-2">
+              <div>
+                <p className="text-[11px] font-black uppercase tracking-[0.24em] text-cyan-200">Title Forecast</p>
+                <h2 className="mt-1 text-base font-black text-slate-100">冠军热门 Top 5</h2>
+              </div>
+              <span className="rounded-full border border-slate-700 bg-slate-900 px-2 py-1 text-[10px] font-black text-slate-400">
+                {championIndex + 1}/5
+              </span>
+            </div>
+
+            <article
+              className="mt-3 touch-pan-y select-none rounded-lg border border-slate-700 bg-slate-900/70 p-3"
+              onPointerDown={(event) => setChampionDragStart(event.clientX)}
+              onPointerCancel={() => setChampionDragStart(null)}
+              onPointerLeave={(event) => finishChampionDrag(event.clientX)}
+              onPointerUp={(event) => finishChampionDrag(event.clientX)}
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md border border-slate-700 bg-slate-950 text-3xl">
+                  {currentChampion.code === "ENG" ? (
+                    <span className="england-flag" role="img" aria-label="England flag" />
+                  ) : (
+                    currentChampion.flag
+                  )}
+                </div>
+                <div className="min-w-0">
+                  <p className="truncate text-lg font-black text-slate-100">
+                    #{currentChampion.rank} {currentChampion.team}
+                  </p>
+                  <p className="text-xs font-bold text-slate-500">
+                    {currentChampion.englishName} · {currentChampion.code}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+                <div className="rounded-md border border-slate-700 bg-slate-950/55 p-2">
+                  <p className="text-slate-500">美式指数</p>
+                  <p className="mt-1 font-mono text-base font-black text-cyan-100">
+                    {formatSignedIndex(currentChampion.consensusAmericanOdds)}
+                  </p>
+                </div>
+                <div className="rounded-md border border-slate-700 bg-slate-950/55 p-2">
+                  <p className="text-slate-500">欧洲指数</p>
+                  <p className="mt-1 font-mono text-base font-black text-slate-100">
+                    {currentChampion.consensusDecimalOdds.toFixed(2)}
+                  </p>
+                </div>
+                <div className="rounded-md border border-slate-700 bg-slate-950/55 p-2">
+                  <p className="text-slate-500">隐含概率</p>
+                  <p className="mt-1 font-mono text-base font-black text-slate-100">
+                    {formatPercent(currentChampion.marketImpliedProbability)}
+                  </p>
+                </div>
+                <div className="rounded-md border border-slate-700 bg-slate-950/55 p-2">
+                  <p className="text-slate-500">模型概率</p>
+                  <p className="mt-1 font-mono text-base font-black text-amber-100">
+                    {formatPercent(currentChampion.modelProbability)}
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-3 text-xs leading-5 text-slate-400">{currentChampion.sourceNote}</p>
+            </article>
+
+            <div className="mt-3 flex items-center justify-between gap-2">
+              <button
+                type="button"
+                onClick={() => goToChampion(-1)}
+                className="rounded-full border border-slate-700 bg-slate-900 px-3 py-2 text-sm font-black text-slate-200 transition hover:border-cyan-300/60 hover:text-cyan-100"
+                aria-label="查看上一个冠军热门"
+              >
+                ←
+              </button>
+              <div className="flex gap-1.5" aria-label="冠军热门位置">
+                {championFavorites.map((team, index) => (
+                  <button
+                    key={team.code}
+                    type="button"
+                    onClick={() => setChampionIndex(index)}
+                    className={`h-2 rounded-full transition ${
+                      championIndex === index ? "w-6 bg-cyan-300" : "w-2 bg-slate-600 hover:bg-slate-400"
+                    }`}
+                    aria-label={`查看${team.team}`}
+                  />
+                ))}
+              </div>
+              <button
+                type="button"
+                onClick={() => goToChampion(1)}
+                className="rounded-full border border-slate-700 bg-slate-900 px-3 py-2 text-sm font-black text-slate-200 transition hover:border-cyan-300/60 hover:text-cyan-100"
+                aria-label="查看下一个冠军热门"
+              >
+                →
+              </button>
+            </div>
+          </section>
+
           <p className="text-[11px] font-black uppercase tracking-[0.28em] text-cyan-200">Model Notes</p>
           <h2 className="mt-2 text-lg font-black text-slate-100">计算规则</h2>
           <div className="mt-3 space-y-3 text-sm leading-6 text-slate-300">
-            <p>1. 单家公司隐含概率 = 1 / 十进制赔率。</p>
-            <p>2. 将 1/X/2 概率总和归一化到 100%，去掉博彩公司水钱。</p>
-            <p>3. 对 5 家去水概率取平均，最高的一项作为预测结果。</p>
-            <p>4. 置信度由最高概率和第二高概率差距决定，盘口接近时会自动降为低。</p>
-          </div>
-
-          <div className="mt-4 rounded-lg border border-amber-300/25 bg-amber-300/10 p-3">
-            <p className="text-sm font-black text-amber-100">当前覆盖</p>
-            <p className="mt-1 text-xs leading-5 text-amber-50/80">
-              已录入揭幕阶段样例赔率；后续只需维护 `constants/oddsData.ts`，页面会自动覆盖更多场次。
-            </p>
-          </div>
-
-          <div className="mt-4 rounded-lg border border-slate-700 bg-slate-950/50 p-3">
-            <p className="text-sm font-black text-slate-100">筛选结果</p>
-            <p className="mt-1 text-xs text-slate-400">
-              当前显示 {predictionRows.length} 场，{averageConfidence}。
-            </p>
+            <p>1. 单个数据源隐含概率 = 1 / 十进制指数。</p>
+            <p>2. 将 1/X/2 概率总和归一化到 100%，校正不同数据源的市场偏差。</p>
+            <p>3. 对 5 组校正概率取平均，最高的一项作为预测结果。</p>
+            <p>4. 置信度由最高概率和第二高概率差距决定，数据接近时会自动降为低。</p>
           </div>
         </aside>
       </section>

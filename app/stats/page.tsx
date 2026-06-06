@@ -53,7 +53,7 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
       ) : (
         <div className="mt-4 rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-center">
           <p className="font-black text-slate-100">{statsNotice.title}</p>
-          <p className="mt-2 text-sm leading-6 text-slate-400">{statsNotice.body}</p>
+          {statsNotice.body && <p className="mt-2 text-sm leading-6 text-slate-400">{statsNotice.body}</p>}
         </div>
       )}
     </section>
