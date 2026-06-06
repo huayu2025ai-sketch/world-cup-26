@@ -28,16 +28,15 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
-    updatedAt: "2026-06-05T16:05:00+08:00",
-    updatedAtLabel: "北京时间 2026年6月5日 16:05",
+    updatedAt: "2026-06-06T08:16:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月6日 08:16",
     title: "小组总览数据更新",
-    summary: "本次更新按 FIFA 官方 2026-06-04 Squad Lists-English.pdf Version 1 全量复核 2026 美加墨世界杯 48 队、12 个小组与全部 26 人名单。",
+    summary: "本次更新按 FIFA 官方 2026-06-06 Squad Lists-English.pdf Version 1 复核 2026 美加墨世界杯 48 队、12 个小组与全部 26 人名单。",
     changes: [
-      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
-      "teamRosters.ts 已按 FIFA 官方 PDF 重建全部 48 队 26 人名单，并将各队 source、sourceUrl、publishedDate、note 统一更新到 FIFA 2026-06-04 版本。",
-      "球衣号码改用 FIFA 官方 PDF 的 # 列；本次不再保留号码待核实字段。",
-      "按官方名单移除各队旧名单球员并补入最新入选球员；对 Emiliano Martinez 等跨队同名英文 key 增加队别后缀，避免 playerProfiles.ts 串数据。",
-      "同步更新自动生成的球员基础档案覆盖面，并继续保留未找到官方中文译名或国家队出场数的球员后续精修空间。"
+      "48 队、12 个小组、1248 名球员、号码、位置和俱乐部未发现变化，本地仍覆盖全部球队。",
+      "teamRosters.ts 已将各队 source、sourceUrl、publishedDate、note 统一更新到 FIFA 2026-06-06 00:16 UTC 版本。",
+      "按 2026-06-06 口径更新今日生日球员年龄：Yvon Mvogo、Rayan Ait-Nouri、Abdul Mumin。",
+      "国家队出场数 caps 未在 FIFA 官方 PDF 中提供，继续保留已核实值与待核实标记。"
     ]
   },
   {
