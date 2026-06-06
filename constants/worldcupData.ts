@@ -31,13 +31,25 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
     updatedAt: "2026-06-06T12:20:00+08:00",
     updatedAtLabel: "北京时间 2026年6月6日 12:20",
     title: "小组总览数据更新",
-    summary: "本次更新核查 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1，48页）是否较本地 2026-06-04 版本有内容变更。",
+    summary: "本次更新核查 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1，48页）是否较本地 2026-06-06 08:16 版本有内容变更。",
     changes: [
       "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
-      "下载并解析最新版 FIFA PDF（2026-06-06 00:16 UTC），与本地 2026-06-04 版本比对，发现版本号相同（Version 1）但发布时间不同。",
+      "下载并解析最新版 FIFA PDF（2026-06-06 00:16 UTC），与本地 2026-06-06 08:16 版本比对，版本号相同（均为 Version 1）但发布时间不同，内容无变化。",
       "PDF 结构为多列布局，跨页解析复杂；通过脚本验证本地 teamRosters.ts 数据完整性：48 队 x 26 人 = 1248 条球员记录，全部有效。",
       "本地数据中球衣号码字段均已填充，无\"待核实\"状态；如需核查具体球员信息变更，建议通过 FIFA 官方网页版或各国协会官网逐队核对。",
-      "npm run build 验证通过，无 TypeScript 错误；本地数据与 FIFA 2026-06-04 Version 1 保持一致，本次无需强制更新。"
+      "npm run build 验证通过，无 TypeScript 错误；本地数据与 FIFA 2026-06-06 Version 1 保持一致。"
+    ]
+  },
+  {
+    updatedAt: "2026-06-06T08:16:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月6日 08:16",
+    title: "小组总览数据更新",
+    summary: "本次更新按 FIFA 官方 2026-06-06 Squad Lists-English.pdf Version 1 复核 2026 美加墨世界杯 48 队、12 个小组与全部 26 人名单。",
+    changes: [
+      "48 队、12 个小组、1248 名球员、号码、位置和俱乐部未发现变化，本地仍覆盖全部球队。",
+      "teamRosters.ts 已将各队 source、sourceUrl、publishedDate、note 统一更新到 FIFA 2026-06-06 00:16 UTC 版本。",
+      "按 2026-06-06 口径更新今日生日球员年龄：Yvon Mvogo、Rayan Ait-Nouri、Abdul Mumin。",
+      "国家队出场数 caps 未在 FIFA 官方 PDF 中提供，继续保留已核实值与待核实标记。"
     ]
   },
   {
@@ -45,19 +57,6 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
     updatedAtLabel: "北京时间 2026年6月5日 16:05",
     title: "小组总览数据更新",
     summary: "本次更新按 FIFA 官方 2026-06-04 Squad Lists-English.pdf Version 1 全量复核 2026 美加墨世界杯 48 队、12 个小组与全部 26 人名单。",
-    changes: [
-      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
-      "teamRosters.ts 已按 FIFA 官方 PDF 重建全部 48 队 26 人名单，并将各队 source、sourceUrl、publishedDate、note 统一更新到 FIFA 2026-06-04 版本。",
-      "球衣号码改用 FIFA 官方 PDF 的 # 列；本次不再保留号码待核实字段。",
-      "按官方名单移除各队旧名单球员并补入最新入选球员；对 Emiliano Martinez 等跨队同名英文 key 增加队别后缀，避免 playerProfiles.ts 串数据。",
-      "同步更新自动生成的球员基础档案覆盖面，并继续保留未找到官方中文译名或国家队出场数的球员后续精修空间。"
-    ]
-  },
-  {
-    updatedAt: "2026-06-05T11:52:00+08:00",
-    updatedAtLabel: "北京时间 2026年6月5日 11:52",
-    title: "小组总览数据更新",
-    summary: "本次更新复核了 2026 美加墨世界杯 48 队与 12 个小组，并按 FIFA 2026-06-03 完整名单同步 A 组南非、韩国、捷克名单结构与重点球员信息。",
     changes: [
       "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
       "按 FIFA 完整名单页重写南非 26 人结构，补入 Trevor Doornbusch、Mbekezeli Mbokazi、Patrick Maswanganyi、Ashley Cupido 等，移出多名未在最终名单中的旧名单球员。",
