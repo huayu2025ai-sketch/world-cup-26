@@ -28,16 +28,15 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
-    updatedAt: "2026-06-07T08:00:00+08:00",
-    updatedAtLabel: "北京时间 2026年6月7日 08:00",
-    title: "小组总览数据更新",
-    summary: "本次更新再次确认本地数据与 FIFA 2026-06-06 Version 1 保持一致，今日 FIFA 未发布新版本。",
+    updatedAt: "2026-06-07T13:35:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月7日 13:35",
+    title: "球员数据维护更新",
+    summary: "本次更新按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1，48页）复核全部 48 队球员数据。",
     changes: [
-      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
-      "FIFA 今日（2026-06-07）未发布新版本 Squad List，本地数据与昨日版本一致。",
-      "teamRosters.ts 中球衣号码字段均已填充，无\"待核实\"状态。",
-      "playerProfiles.ts 中 caps 字段大量保留\"待核实\"（FIFA PDF 不提供此项），club 和 age 字段大部分已填充。",
-      "npm run build 验证通过，无 TypeScript 错误。"
+      "48 队、1248 名球员、球衣号码和位置与本地数据全部匹配，未发现阵容结构变化。",
+      "teamRosters.ts 已将官方名单核查日期更新到 2026-06-07，并把来源备注同步到 FIFA 2026-06-06 20:30 UTC 版本。",
+      "playerProfiles.ts 已按官方 PDF 重新同步球员俱乐部字段，并按 2026-06-07 更新生日已过球员的年龄。",
+      "国家队出场数 caps 不在 FIFA 官方 PDF 中提供，继续保留已核实值与待核实标记。"
     ]
   },
   {

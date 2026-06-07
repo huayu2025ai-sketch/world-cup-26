@@ -143,6 +143,7 @@ const clubChineseNames: Record<string, string> = {
   "Atlético Mineiro": "米内罗竞技",
   "Atlético Nacional": "国民竞技",
   "BSC Young Boys": "伯尔尼年轻人",
+  "Bayer 04 Leverkusen": "勒沃库森",
   "Bayer Leverkusen": "勒沃库森",
   "Beşiktaş JK": "贝西克塔斯",
   "Birmingham City FC": "伯明翰城",

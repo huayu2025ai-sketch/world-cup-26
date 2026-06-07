@@ -18,10 +18,10 @@ export type TeamRoster = {
 
 export const officialSquadsNotice = {
   confirmedDate: "2026-06-06",
-  lastChecked: "2026-06-06",
+  lastChecked: "2026-06-07",
   source: "FIFA",
   sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-  text: "FIFA 官方 Squad Lists-English.pdf（Saturday, 6 June 2026 | 00:16 UTC | Version 1）已覆盖 48 支参赛队最终 26 人名单；本地 teamRosters 已按该版本重建全部球队、号码、来源与备注。"
+  text: "FIFA 官方 Squad Lists-English.pdf（Saturday, 6 June 2026 | 20:30 UTC | Version 1）已覆盖 48 支参赛队最终 26 人名单；本地 teamRosters 已按该版本复核全部球队、号码、来源与备注。"
 };
 
 const p = (
@@ -39,7 +39,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Raul Rangel", chineseName: "劳尔·兰赫尔", position: "门将" },
       { number: 2, name: "Jorge Sanchez", chineseName: "豪尔赫·桑切斯", position: "后卫" },
@@ -76,7 +76,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Ronwen Williams", chineseName: "朗文·威廉姆斯", position: "门将" },
       { number: 2, name: "Thabang Matuludi", chineseName: "Thabang Matuludi", position: "后卫" },
@@ -113,7 +113,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Seunggyu Kim", chineseName: "Seunggyu Kim", position: "门将" },
       { number: 2, name: "Hanbeom Lee", chineseName: "Hanbeom Lee", position: "后卫" },
@@ -150,7 +150,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Matej Kovar", chineseName: "马捷伊·科瓦日", position: "门将" },
       { number: 2, name: "David Zima", chineseName: "大卫·齐马", position: "后卫" },
@@ -187,7 +187,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Dayne St. Clair", chineseName: "戴恩·圣克莱尔", position: "门将" },
       { number: 2, name: "Alistair Johnston", chineseName: "阿利斯泰尔·约翰斯顿", position: "后卫" },
@@ -224,7 +224,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Nikola Vasilj", chineseName: "尼科拉·瓦西利", position: "门将" },
       { number: 2, name: "Nihad Mujakic", chineseName: "尼哈德·穆亚基奇", position: "后卫" },
@@ -261,7 +261,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Mahmoud Abunada", chineseName: "马哈茂德·阿布纳达", position: "门将" },
       { number: 2, name: "Pedro Miguel", chineseName: "佩德罗·米格尔", position: "后卫" },
@@ -298,7 +298,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Gregor Kobel", chineseName: "格雷戈尔·科贝尔", position: "门将" },
       { number: 2, name: "Miro Muheim", chineseName: "米罗·穆海姆", position: "后卫" },
@@ -335,7 +335,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Alisson", chineseName: "阿利松", position: "门将" },
       { number: 2, name: "Wesley", chineseName: "韦斯利", position: "后卫" },
@@ -372,7 +372,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Yassine Bounou", chineseName: "亚辛·布努", position: "门将" },
       { number: 2, name: "Achraf Hakimi", chineseName: "阿什拉夫·哈基米", position: "后卫" },
@@ -409,7 +409,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Johny Placide", chineseName: "约翰尼·普拉西德", position: "门将" },
       { number: 2, name: "Carlens Arcus", chineseName: "卡伦斯·阿尔屈斯", position: "后卫" },
@@ -446,7 +446,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Angus Gunn", chineseName: "安格斯·冈恩", position: "门将" },
       { number: 2, name: "Aaron Hickey", chineseName: "阿伦·希基", position: "后卫" },
@@ -483,7 +483,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Matt Turner", chineseName: "马特·特纳", position: "门将" },
       { number: 2, name: "Sergino Dest", chineseName: "塞尔吉尼奥·德斯特", position: "后卫" },
@@ -520,7 +520,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Gatito Fernandez", chineseName: "Gatito Fernandez", position: "门将" },
       { number: 2, name: "Gustavo Velazquez", chineseName: "古斯塔沃·贝拉斯克斯", position: "后卫" },
@@ -557,7 +557,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Mathew Ryan", chineseName: "马蒂·瑞安", position: "门将" },
       { number: 2, name: "Milos Degenek", chineseName: "米洛什·德格内克", position: "后卫" },
@@ -594,7 +594,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Mert Gunok", chineseName: "梅尔特·居诺克", position: "门将" },
       { number: 2, name: "Zeki Celik", chineseName: "泽基·切利克", position: "后卫" },
@@ -631,7 +631,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Manuel Neuer", chineseName: "曼努埃尔·诺伊尔", position: "门将" },
       { number: 2, name: "Antonio Ruediger", chineseName: "安东尼奥·吕迪格", position: "后卫" },
@@ -668,7 +668,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Eloy Room", chineseName: "埃洛伊·罗姆", position: "门将" },
       { number: 2, name: "Shurandy Sambo", chineseName: "舒兰迪·桑博", position: "后卫" },
@@ -705,7 +705,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Yahia Fofana", chineseName: "亚希亚·福法纳", position: "门将" },
       { number: 2, name: "Ousmane Diomande", chineseName: "奥斯曼·迪奥曼德", position: "后卫" },
@@ -742,7 +742,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Hernan Galindez", chineseName: "埃尔南·加林德斯", position: "门将" },
       { number: 2, name: "Felix Torres", chineseName: "费利克斯·托雷斯", position: "后卫" },
@@ -779,7 +779,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Bart Verbruggen", chineseName: "巴特·费布鲁亨", position: "门将" },
       { number: 2, name: "Jurrien Timber", chineseName: "尤里恩·廷伯", position: "后卫" },
@@ -816,7 +816,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Zion Suzuki", chineseName: "铃木彩艳", position: "门将" },
       { number: 2, name: "Yukinari Sugawara", chineseName: "菅原由势", position: "后卫" },
@@ -853,7 +853,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Jacob Widell Zetterstrom", chineseName: "雅各布·维德尔·泽特斯特伦", position: "门将" },
       { number: 2, name: "Gustaf Lagerbielke", chineseName: "Gustaf Lagerbielke", position: "后卫" },
@@ -890,7 +890,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Mouhib Chamakh", chineseName: "Mouhib Chamakh", position: "门将" },
       { number: 2, name: "Ali Abdi", chineseName: "阿里·阿卜迪", position: "后卫" },
@@ -927,7 +927,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Thibaut Courtois", chineseName: "蒂博·库尔图瓦", position: "门将" },
       { number: 2, name: "Zeno Debast", chineseName: "泽诺·德巴斯特", position: "后卫" },
@@ -964,7 +964,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Mohamed Elshenawy", chineseName: "Mohamed Elshenawy", position: "门将" },
       { number: 2, name: "Yasser Ibrahim", chineseName: "亚西尔·易卜拉欣", position: "后卫" },
@@ -1001,7 +1001,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Alireza Beiranvand", chineseName: "阿里雷扎·贝兰万德", position: "门将" },
       { number: 2, name: "Saleh Hardani", chineseName: "萨利赫·哈达尼", position: "后卫" },
@@ -1038,7 +1038,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Max Crocombe", chineseName: "马克斯·克罗科姆", position: "门将" },
       { number: 2, name: "Tim Payne", chineseName: "蒂姆·佩恩", position: "后卫" },
@@ -1075,7 +1075,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "David Raya", chineseName: "大卫·拉亚", position: "门将" },
       { number: 2, name: "Marc Pubill", chineseName: "Marc Pubill", position: "后卫" },
@@ -1112,7 +1112,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Vozinha", chineseName: "沃齐尼亚", position: "门将" },
       { number: 2, name: "Stopira", chineseName: "Stopira", position: "后卫" },
@@ -1149,7 +1149,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Nawaf Alaqidi", chineseName: "Nawaf Alaqidi", position: "门将" },
       { number: 2, name: "Ali Majrashi", chineseName: "Ali Majrashi", position: "后卫" },
@@ -1186,7 +1186,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。 为避免英文名重名串档，Emiliano Martinez 使用 Emiliano Martinez (URU) 作为本地 key。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。 为避免英文名重名串档，Emiliano Martinez 使用 Emiliano Martinez (URU) 作为本地 key。",
     players: [
       { number: 1, name: "Sergio Rochet", chineseName: "塞尔吉奥·罗切特", position: "门将" },
       { number: 2, name: "Jose Maria Gimenez", chineseName: "何塞·玛利亚·希门尼斯", position: "后卫" },
@@ -1223,7 +1223,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Brice Samba", chineseName: "布里斯·桑巴", position: "门将" },
       { number: 2, name: "Malo Gusto", chineseName: "Malo Gusto", position: "后卫" },
@@ -1260,7 +1260,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Yehvann Diouf", chineseName: "Yehvann Diouf", position: "门将" },
       { number: 2, name: "Mamadou Sarr", chineseName: "Mamadou Sarr", position: "后卫" },
@@ -1297,7 +1297,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Fahad Talib", chineseName: "法赫德·塔利布", position: "门将" },
       { number: 2, name: "Rebin Ghareeb", chineseName: "Rebin Ghareeb", position: "后卫" },
@@ -1334,7 +1334,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Orjan Nyland", chineseName: "厄尔扬·尼兰", position: "门将" },
       { number: 2, name: "Morten Thorsby", chineseName: "莫滕·托尔斯比", position: "中场" },
@@ -1371,7 +1371,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。 为避免英文名重名串档，Emiliano Martinez 使用 Emiliano Martinez (ARG) 作为本地 key。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。 为避免英文名重名串档，Emiliano Martinez 使用 Emiliano Martinez (ARG) 作为本地 key。",
     players: [
       { number: 1, name: "Juan Musso", chineseName: "Juan Musso", position: "门将" },
       { number: 2, name: "Leonardo Balerdi", chineseName: "Leonardo Balerdi", position: "后卫" },
@@ -1408,7 +1408,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Melvin Mastil", chineseName: "Melvin Mastil", position: "门将" },
       { number: 2, name: "Aissa Mandi", chineseName: "艾萨·曼迪", position: "后卫" },
@@ -1445,7 +1445,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Alexander Schlager", chineseName: "亚历山大·施拉格尔", position: "门将" },
       { number: 2, name: "David Affengruber", chineseName: "大卫·阿芬格鲁伯", position: "后卫" },
@@ -1482,7 +1482,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Yazeed Abulaila", chineseName: "亚齐德·阿布莱拉", position: "门将" },
       { number: 2, name: "Mohammad Abuhasheesh", chineseName: "Mohammad Abuhasheesh", position: "后卫" },
@@ -1519,7 +1519,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Diogo Costa", chineseName: "迪奥戈·科斯塔", position: "门将" },
       { number: 2, name: "Nelson Semedo", chineseName: "内尔松·塞梅多", position: "后卫" },
@@ -1556,7 +1556,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Lionel Mpasi", chineseName: "Lionel Mpasi", position: "门将" },
       { number: 2, name: "Aaron Wan-Bissaka", chineseName: "Aaron Wan-Bissaka", position: "后卫" },
@@ -1593,7 +1593,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Utkir Yusupov", chineseName: "乌特基尔·尤苏波夫", position: "门将" },
       { number: 2, name: "Abdukodir Khusanov", chineseName: "阿卜杜科迪尔·胡萨诺夫", position: "后卫" },
@@ -1630,7 +1630,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "David Ospina", chineseName: "大卫·奥斯皮纳", position: "门将" },
       { number: 2, name: "Daniel Munoz", chineseName: "丹尼尔·穆尼奥斯", position: "后卫" },
@@ -1667,7 +1667,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Dominik Livakovic", chineseName: "多米尼克·利瓦科维奇", position: "门将" },
       { number: 2, name: "Josip Stanisic", chineseName: "约西普·斯塔尼希奇", position: "后卫" },
@@ -1704,7 +1704,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Lawrence Ati Zigi", chineseName: "劳伦斯·阿蒂-齐吉", position: "门将" },
       { number: 2, name: "Alidu Seidu", chineseName: "阿利杜·塞杜", position: "后卫" },
@@ -1741,7 +1741,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Luis Mejia", chineseName: "路易斯·梅希亚", position: "门将" },
       { number: 2, name: "Cesar Blackman", chineseName: "塞萨尔·布莱克曼", position: "后卫" },
@@ -1778,7 +1778,7 @@ export const teamRosters: Record<string, TeamRoster> = {
     publishedDate: "2026-06-06",
     source: "FIFA",
     sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 00:16 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
+    note: "按 FIFA 官方 Squad Lists-English.pdf（2026-06-06 20:30 UTC，Version 1）复核最终 26 人名单；球衣号码来自 FIFA # 列。",
     players: [
       { number: 1, name: "Jordan Pickford", chineseName: "乔丹·皮克福德", position: "门将" },
       { number: 2, name: "Ezri Konsa", chineseName: "埃兹里·孔萨", position: "后卫" },
