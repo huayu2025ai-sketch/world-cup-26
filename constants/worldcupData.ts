@@ -28,6 +28,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-07T08:00:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月7日 08:00",
+    title: "小组总览数据更新",
+    summary: "本次更新再次确认本地数据与 FIFA 2026-06-06 Version 1 保持一致，今日 FIFA 未发布新版本。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "FIFA 今日（2026-06-07）未发布新版本 Squad List，本地数据与昨日版本一致。",
+      "teamRosters.ts 中球衣号码字段均已填充，无\"待核实\"状态。",
+      "playerProfiles.ts 中 caps 字段大量保留\"待核实\"（FIFA PDF 不提供此项），club 和 age 字段大部分已填充。",
+      "npm run build 验证通过，无 TypeScript 错误。"
+    ]
+  },
+  {
     updatedAt: "2026-06-06T12:20:00+08:00",
     updatedAtLabel: "北京时间 2026年6月6日 12:20",
     title: "小组总览数据更新",
