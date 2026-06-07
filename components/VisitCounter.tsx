@@ -14,8 +14,8 @@ declare global {
 }
 
 const fallbackStats: VisitStats = {
-  total: 2026,
-  today: 30
+  total: 0,
+  today: 0
 };
 
 const numberFormatter = new Intl.NumberFormat("zh-CN");

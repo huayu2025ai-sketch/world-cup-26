@@ -10,8 +10,6 @@ type VisitStatsFile = VisitStats & {
   date: string;
 };
 
-const totalOffset = 2026;
-const todayOffset = 30;
 const redisPrefix = "fifa26:visits";
 const defaultFilePath = path.join(process.cwd(), ".data", "visit-stats.json");
 const configuredFilePath = process.env.VISIT_STATS_FILE;
@@ -29,11 +27,6 @@ const getShanghaiDateKey = () =>
     month: "2-digit",
     day: "2-digit"
   }).format(new Date());
-
-const withOffsets = (stats: VisitStats): VisitStats => ({
-  total: stats.total + totalOffset,
-  today: stats.today + todayOffset
-});
 
 const getRedisConfig = () => {
   const url = process.env.UPSTASH_REDIS_REST_URL;
@@ -123,7 +116,5 @@ const incrementFileStats = async (): Promise<VisitStats> => {
 };
 
 export const incrementVisitStats = async (): Promise<VisitStats> => {
-  const rawStats = getRedisConfig() ? await incrementRedisStats() : await incrementFileStats();
-
-  return withOffsets(rawStats);
+  return getRedisConfig() ? incrementRedisStats() : incrementFileStats();
 };
