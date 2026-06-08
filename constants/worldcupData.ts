@@ -28,6 +28,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-08T16:30:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月8日 16:30",
+    title: "球员数据维护更新",
+    summary: "本次更新按 FIFA 官方 Squad Lists-English.pdf（2026-06-08 02:29 UTC，Version 1，48页）复核全部 48 队球员数据。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "teamRosters.ts 已将官方名单核查日期更新到 2026-06-08，并把全部球队来源备注同步到 FIFA 2026-06-08 02:29 UTC 版本。",
+      "最新 FIFA PDF 未发现 26 人名单、球衣号码或位置字段相对本地数据需要调整。",
+      "playerProfiles.ts 按 2026-06-08 口径更新今日生日球员年龄：Mahdy Soliman、Joseph Anang、Jan Paul van Hecke。",
+      "国家队出场数 caps 不在 FIFA 官方 PDF 中提供，继续保留已核实值与待核实标记。"
+    ]
+  },
+  {
     updatedAt: "2026-06-07T13:35:00+08:00",
     updatedAtLabel: "北京时间 2026年6月7日 13:35",
     title: "球员数据维护更新",
