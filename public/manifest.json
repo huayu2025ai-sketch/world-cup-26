@@ -1,0 +1,13 @@
+{
+  "name": "World Cup 2026 战术地图",
+  "short_name": "世界杯2026",
+  "description": "2026 FIFA World Cup 响应式小组展示、核心看点与比赛时间表",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "lang": "zh-CN",
+  "categories": ["sports", "navigation", "utilities"]
+}
