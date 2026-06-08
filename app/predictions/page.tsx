@@ -46,6 +46,8 @@ const confidenceClass: Record<"高" | "中" | "低", string> = {
 
 const formatSignedIndex = (value: number) => (value > 0 ? `+${value}` : `${value}`);
 
+const formatMonthDay = (date: string) => date.replace(/^\d{4}-/, "");
+
 export default function PredictionsPage() {
   const [query, setQuery] = useState("");
   const [coverage, setCoverage] = useState<"有数据" | "全部">("有数据");
@@ -129,9 +131,9 @@ export default function PredictionsPage() {
           </div>
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xs font-black text-cyan-200">
-              单场 {oddsDataUpdatedAt}
+              单场 {formatMonthDay(oddsDataUpdatedAt)}
               <br />
-              冠军 {championFavoritesUpdatedAt}
+              冠军 {formatMonthDay(championFavoritesUpdatedAt)}
             </p>
             <p className="mt-1 text-xs text-slate-400">数据日期</p>
           </div>
@@ -191,7 +193,7 @@ export default function PredictionsPage() {
                       {match.stage}
                       {match.group ? ` · ${match.group}组` : ""}
                     </span>
-                    <span className="text-[11px] font-bold text-slate-500">{match.date}</span>
+                    <span className="text-[11px] font-bold text-slate-500">{formatMonthDay(match.date)}</span>
                   </div>
 
                   <div className="mt-3 grid grid-cols-[1fr_auto_1fr] items-center gap-2">

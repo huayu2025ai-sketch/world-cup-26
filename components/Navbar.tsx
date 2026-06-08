@@ -6,10 +6,9 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "分组" },
-  { href: "/schedule", label: "赛程表" },
-  { href: "/predictions", label: "预测" },
-  { href: "/export", label: "素材导出" },
-  { href: "/stats", label: "数据表" }
+  { href: "/schedule", label: "赛程" },
+  { href: "/export", label: "素材" },
+  { href: "/stats", label: "数据" }
 ];
 
 const worldCupKickoff = new Date("2026-06-12T03:00:00+08:00").getTime();
