@@ -8,6 +8,7 @@ const navItems = [
   { href: "/", label: "小组总览" },
   { href: "/schedule", label: "比赛时间表" },
   { href: "/predictions", label: "胜负预测" },
+  { href: "/export", label: "素材导出" },
   { href: "/stats", label: "数据榜" }
 ];
 
