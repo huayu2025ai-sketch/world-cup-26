@@ -588,29 +588,29 @@ export default function HomePage() {
           onClick={closeGroup}
         >
           <div
-            className="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-lg border border-slate-700 bg-slate-900 p-5 shadow-2xl shadow-black/50 sm:p-6"
+            className="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-lg border border-slate-700 bg-slate-900 p-4 shadow-2xl shadow-black/50 sm:p-5"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="flex items-start justify-between gap-4">
+            <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.35em] text-cyan-200">Group {selectedGroup.id}</p>
-                <h2 id="group-modal-title" className="mt-2 text-2xl font-black text-slate-100">
+                <p className="text-[11px] font-black uppercase tracking-[0.3em] text-cyan-200">Group {selectedGroup.id}</p>
+                <h2 id="group-modal-title" className="mt-1.5 text-xl font-black text-slate-100 sm:text-2xl">
                   {selectedGroup.name} · {selectedGroup.headline}
                 </h2>
               </div>
               <button
                 type="button"
                 onClick={closeGroup}
-                className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-slate-700 bg-slate-800 text-slate-300 transition hover:border-rose-300/60 hover:text-rose-100"
+                className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-slate-700 bg-slate-800 text-slate-300 transition hover:border-rose-300/60 hover:text-rose-100"
                 aria-label="关闭弹窗"
               >
                 ×
               </button>
             </div>
 
-            <p className="mt-5 text-sm leading-7 text-slate-300">{selectedGroup.detail}</p>
+            <p className="mt-3 text-sm leading-6 text-slate-300">{selectedGroup.detail}</p>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
               {selectedGroup.teams.map((team) => (
                 <button
                   key={team.code}
@@ -619,14 +619,14 @@ export default function HomePage() {
                     setSelectedTeamCode(team.code);
                     setSelectedPlayerName(null);
                   }}
-                  className={`rounded-lg border p-4 text-left transition focus:outline-none focus:ring-2 focus:ring-cyan-300/70 ${
+                  className={`rounded-lg border p-3 text-left transition focus:outline-none focus:ring-2 focus:ring-cyan-300/70 ${
                     selectedTeam?.code === team.code
                       ? "border-cyan-300/70 bg-cyan-300/10"
                       : "border-slate-700 bg-slate-800/50 hover:border-cyan-300/45 hover:bg-slate-800"
                   }`}
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl" aria-hidden="true">
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-2xl" aria-hidden="true">
                       {team.flag}
                     </span>
                     <div>
@@ -636,22 +636,22 @@ export default function HomePage() {
                       </p>
                     </div>
                   </div>
-                  <div className="mt-3 flex flex-wrap gap-2 text-[11px] font-bold uppercase tracking-[0.16em]">
-                    <span className="rounded-full bg-slate-900 px-2.5 py-1 text-slate-400">Pot {team.pot}</span>
-                    {team.host && <span className="rounded-full bg-cyan-300/10 px-2.5 py-1 text-cyan-100">Host</span>}
-                    {team.debut && <span className="rounded-full bg-rose-300/10 px-2.5 py-1 text-rose-100">Debut</span>}
-                    <span className="rounded-full bg-slate-900 px-2.5 py-1 text-slate-400">阵容</span>
+                  <div className="mt-2 flex flex-wrap gap-1.5 text-[10px] font-bold uppercase tracking-[0.14em]">
+                    <span className="rounded-full bg-slate-900 px-2 py-0.5 text-slate-400">Pot {team.pot}</span>
+                    {team.host && <span className="rounded-full bg-cyan-300/10 px-2 py-0.5 text-cyan-100">Host</span>}
+                    {team.debut && <span className="rounded-full bg-rose-300/10 px-2 py-0.5 text-rose-100">Debut</span>}
+                    <span className="rounded-full bg-slate-900 px-2 py-0.5 text-slate-400">阵容</span>
                   </div>
                 </button>
               ))}
             </div>
 
             {selectedTeam && (
-              <div className="mt-6 rounded-lg border border-slate-700 bg-slate-800/50 p-4">
-                <div className="flex flex-wrap items-start justify-between gap-3">
+              <div className="mt-4 rounded-lg border border-slate-700 bg-slate-800/50 p-3">
+                <div className="flex flex-wrap items-start justify-between gap-2.5">
                   <div>
-                    <p className="text-xs font-black uppercase tracking-[0.3em] text-cyan-200">Squad</p>
-                    <h3 className="mt-1 text-xl font-black text-slate-100">
+                    <p className="text-[11px] font-black uppercase tracking-[0.26em] text-cyan-200">Squad</p>
+                    <h3 className="mt-1 text-lg font-black text-slate-100">
                       {selectedTeam.flag} {selectedTeam.name} 阵容
                     </h3>
                   </div>
@@ -668,25 +668,25 @@ export default function HomePage() {
 
                 {selectedRoster?.players.length ? (
                   <>
-                    <p className="mt-3 text-sm leading-6 text-slate-300">{selectedRoster.note}</p>
-                    <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_300px]">
-                      <div className="grid gap-3 md:grid-cols-2">
+                    <p className="mt-2 text-sm leading-5 text-slate-300">{selectedRoster.note}</p>
+                    <div className="mt-3 grid gap-3 lg:grid-cols-[1fr_280px]">
+                      <div className="grid gap-2.5 md:grid-cols-2">
                         {rosterPositions.map((position) => {
                           const players = selectedRoster.players.filter((player) => player.position === position);
 
                           return (
-                            <div key={position} className="rounded-lg border border-slate-700 bg-slate-900/60 p-3">
+                            <div key={position} className="rounded-lg border border-slate-700 bg-slate-900/60 p-2.5">
                               <div className="flex items-center justify-between">
                                 <h4 className="font-black text-cyan-100">{position}</h4>
                                 <span className="text-xs font-bold text-slate-500">{players.length} 人</span>
                               </div>
-                              <ul className="mt-2 grid gap-1.5 text-sm text-slate-300">
+                              <ul className="mt-2 grid gap-1 text-sm text-slate-300">
                                 {players.map((player) => (
                                   <li key={player.name}>
                                     <button
                                       type="button"
                                       onClick={() => setSelectedPlayerName(player.name)}
-                                      className={`w-full rounded-md px-2.5 py-1.5 text-left transition ${
+                                      className={`w-full rounded-md px-2 py-1 text-left transition ${
                                         selectedPlayerName === player.name
                                           ? "bg-cyan-300 text-slate-950"
                                           : "bg-slate-950/60 hover:bg-slate-800"
@@ -720,16 +720,16 @@ export default function HomePage() {
                         })}
                       </div>
 
-                      <div className="rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-4 lg:sticky lg:top-4 lg:self-start">
+                      <div className="rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-3 lg:sticky lg:top-4 lg:self-start">
                         {selectedPlayer ? (
                           <>
                             <p className="text-[11px] font-black uppercase tracking-[0.3em] text-cyan-200">
                               Player Profile
                             </p>
-                            <h4 className="mt-2 text-xl font-black text-slate-100">{selectedPlayer.chineseName}</h4>
+                            <h4 className="mt-1.5 text-lg font-black text-slate-100">{selectedPlayer.chineseName}</h4>
                             <p className="mt-1 text-sm text-slate-400">{selectedPlayer.name}</p>
                             {selectedPlayerMeta && (
-                              <div className="mt-4 grid grid-cols-3 gap-2">
+                              <div className="mt-3 grid grid-cols-3 gap-2">
                                 <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
                                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">号码</p>
                                   <p className="mt-1 truncate text-xs font-black text-slate-100">
@@ -752,7 +752,7 @@ export default function HomePage() {
                                 </div>
                               </div>
                             )}
-                            <div className="mt-4 flex flex-wrap gap-2">
+                            <div className="mt-3 flex flex-wrap gap-1.5">
                               <span className="rounded-full bg-slate-950/70 px-3 py-1 text-xs font-black text-cyan-100">
                                 {selectedPlayer.position}
                               </span>
@@ -763,10 +763,10 @@ export default function HomePage() {
                                 球员档案
                               </span>
                             </div>
-                            <p className="mt-4 text-sm leading-6 text-slate-300">{selectedPlayer.bio}</p>
-                            <div className="mt-4">
+                            <p className="mt-3 text-sm leading-5 text-slate-300">{selectedPlayer.bio}</p>
+                            <div className="mt-3">
                               <p className="text-xs font-black uppercase tracking-[0.24em] text-slate-500">特点</p>
-                              <div className="mt-2 flex flex-wrap gap-2">
+                              <div className="mt-2 flex flex-wrap gap-1.5">
                                 {selectedPlayer.strengths.map((strength) => (
                                   <span
                                     key={strength}
@@ -792,13 +792,13 @@ export default function HomePage() {
                       href={selectedRoster.sourceUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-4 inline-flex rounded-full border border-slate-700 px-3 py-2 text-xs font-bold text-slate-300 transition hover:border-cyan-300/60 hover:text-cyan-100"
+                      className="mt-3 inline-flex rounded-full border border-slate-700 px-3 py-1.5 text-xs font-bold text-slate-300 transition hover:border-cyan-300/60 hover:text-cyan-100"
                     >
                       来源：{selectedRoster.source} · {selectedRoster.publishedDate}
                     </a>
                   </>
                 ) : (
-                  <div className="mt-4 rounded-lg border border-slate-700 bg-slate-900/60 p-4">
+                  <div className="mt-3 rounded-lg border border-slate-700 bg-slate-900/60 p-3">
                     <p className="text-sm leading-6 text-slate-300">
                       {officialSquadsNotice.text} 当前应用尚未录入 {selectedTeam.name} 的完整 26 人名单，因此不展示未经核实的阵容。
                     </p>
@@ -815,9 +815,9 @@ export default function HomePage() {
               </div>
             )}
 
-            <div className="mt-6 rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-4">
+            <div className="mt-4 rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-3">
               <h3 className="font-black text-cyan-100">晋级形势与核心看点</h3>
-              <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-300">
+              <ul className="mt-2 space-y-1.5 text-sm leading-5 text-slate-300">
                 {selectedGroup.watchPoints.map((point) => (
                   <li key={point} className="flex gap-2">
                     <span className="mt-1 text-cyan-200">◆</span>

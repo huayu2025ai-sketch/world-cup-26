@@ -894,7 +894,7 @@ export default function ExportPage() {
             >
               {dates.map((date) => (
                 <option key={date} value={date}>
-                  {date} · {formatDisplayDate(date)} · {buildExportRows(date).length} 场
+                  {formatDisplayDate(date)} · {buildExportRows(date).length} 场
                 </option>
               ))}
             </select>
