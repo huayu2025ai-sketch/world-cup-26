@@ -24,6 +24,7 @@ const groupByDate = (matches: ScheduleMatch[]) => {
 export default function SchedulePage() {
   const [query, setQuery] = useState("");
   const [stage, setStage] = useState<(typeof scheduleStages)[number]>("全部");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const filteredMatches = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -55,117 +56,138 @@ export default function SchedulePage() {
   const knockoutCount = scheduleMatches.length - groupStageCount;
 
   return (
-    <main className="mx-auto max-w-7xl px-3 pb-10 pt-5 sm:px-5 lg:px-6">
-      <section className="grid gap-4 py-4 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+    <main className="mx-auto max-w-7xl px-3 pb-8 pt-4 sm:px-5 lg:px-6">
+      <section className="grid gap-3 py-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
         <div>
           <p className="text-[11px] font-black uppercase tracking-[0.36em] text-cyan-200">Match Calendar</p>
-          <h1 className="mt-2 max-w-none text-2xl font-black leading-tight text-slate-100 sm:text-3xl lg:text-4xl xl:whitespace-nowrap">
+          <h1 className="mt-1.5 max-w-none text-2xl font-black leading-tight text-slate-100 sm:text-3xl lg:text-4xl xl:whitespace-nowrap">
             2026 世界杯比赛时间表
           </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+          <p className="mt-2 max-w-2xl text-sm leading-5 text-slate-300">
             基于当前硬编码小组生成的本地赛程视图，支持按阶段、球队、组别、城市和球场快速筛选。
           </p>
         </div>
 
         <div className="grid grid-cols-3 gap-2">
-          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
-            <p className="text-xl font-black text-cyan-200">{scheduleMatches.length}</p>
-            <p className="mt-1 text-xs text-slate-400">总场次</p>
+          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-2.5 text-center backdrop-blur-md">
+            <p className="text-lg font-black text-cyan-200">{scheduleMatches.length}</p>
+            <p className="mt-0.5 text-xs text-slate-400">总场次</p>
           </div>
-          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
-            <p className="text-xl font-black text-cyan-200">{groupStageCount}</p>
-            <p className="mt-1 text-xs text-slate-400">分组赛</p>
+          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-2.5 text-center backdrop-blur-md">
+            <p className="text-lg font-black text-cyan-200">{groupStageCount}</p>
+            <p className="mt-0.5 text-xs text-slate-400">分组赛</p>
           </div>
-          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
-            <p className="text-xl font-black text-cyan-200">{knockoutCount}</p>
-            <p className="mt-1 text-xs text-slate-400">淘汰赛</p>
+          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-2.5 text-center backdrop-blur-md">
+            <p className="text-lg font-black text-cyan-200">{knockoutCount}</p>
+            <p className="mt-0.5 text-xs text-slate-400">淘汰赛</p>
           </div>
         </div>
       </section>
 
-      <section className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 backdrop-blur-md">
-        <div className="grid gap-3 lg:grid-cols-[1fr_auto] lg:items-end">
+      <section className="rounded-lg border border-slate-700 bg-slate-800/50 p-2.5 backdrop-blur-md">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <div>
-            <label htmlFor="schedule-search" className="text-xs font-bold text-slate-200">
-              搜索比赛
-            </label>
-            <div className="mt-2 flex items-center gap-2 rounded-md border border-slate-700 bg-slate-950/70 px-3 py-2 focus-within:border-cyan-300/70">
-              <span className="text-slate-500" aria-hidden="true">
-                ⌕
-              </span>
-              <input
-                id="schedule-search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="输入 英格兰、E组、Dallas、MetLife 或 2026-06-11"
-                className="w-full bg-transparent text-sm text-slate-100 outline-none placeholder:text-slate-500"
-              />
+            <p className="text-xs font-black text-slate-100">搜索比赛条件</p>
+            <p className="mt-0.5 text-[11px] text-slate-400">
+              {filteredMatches.length} 场匹配
+              {stage !== "全部" ? ` · ${stage}` : ""}
+              {query ? ` · ${query}` : ""}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setIsFilterOpen((current) => !current)}
+            aria-expanded={isFilterOpen}
+            aria-controls="schedule-filters"
+            className="rounded-full border border-slate-600 bg-slate-900/70 px-3 py-1.5 text-xs font-black text-cyan-100 transition hover:border-cyan-300/60 hover:text-cyan-50"
+          >
+            {isFilterOpen ? "收起" : "展开"}
+          </button>
+        </div>
+
+        {isFilterOpen && (
+          <div id="schedule-filters" className="mt-2.5 grid gap-2.5 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <label htmlFor="schedule-search" className="sr-only">
+                搜索比赛
+              </label>
+              <div className="flex items-center gap-2 rounded-md border border-slate-700 bg-slate-950/70 px-3 py-1.5 focus-within:border-cyan-300/70">
+                <span className="text-slate-500" aria-hidden="true">
+                  ⌕
+                </span>
+                <input
+                  id="schedule-search"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="输入 英格兰、E组、Dallas、MetLife 或 2026-06-11"
+                  className="w-full bg-transparent text-sm text-slate-100 outline-none placeholder:text-slate-500"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-1.5">
+              {scheduleStages.map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  onClick={() => setStage(item)}
+                  className={`rounded-full border px-2.5 py-1 text-[11px] font-black transition ${
+                    stage === item
+                      ? "border-cyan-300 bg-cyan-300 text-slate-950"
+                      : "border-slate-700 bg-slate-900/60 text-slate-300 hover:border-cyan-300/60 hover:text-slate-100"
+                  }`}
+                >
+                  {item}
+                </button>
+              ))}
             </div>
           </div>
-
-          <div className="flex flex-wrap gap-2">
-            {scheduleStages.map((item) => (
-              <button
-                key={item}
-                type="button"
-                onClick={() => setStage(item)}
-                className={`rounded-full border px-2.5 py-1.5 text-[11px] font-black transition ${
-                  stage === item
-                    ? "border-cyan-300 bg-cyan-300 text-slate-950"
-                    : "border-slate-700 bg-slate-900/60 text-slate-300 hover:border-cyan-300/60 hover:text-slate-100"
-                }`}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-        </div>
+        )}
       </section>
 
-      <section className="mt-4 space-y-3">
+      <section className="mt-3 space-y-2.5">
         {dateKeys.map((date) => (
-          <article key={date} className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 backdrop-blur-md">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700 pb-2">
+          <article key={date} className="overflow-hidden rounded-lg border border-slate-700 bg-slate-800/50 backdrop-blur-md">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700 px-3 py-2">
               <div>
-                <p className="text-[11px] font-black uppercase tracking-[0.24em] text-cyan-200">{date}</p>
-                <h2 className="mt-0.5 text-base font-black text-slate-100 sm:text-lg">{formatDate(date)}</h2>
+                <h2 className="text-base font-black text-amber-200 sm:text-[17px]">{formatDate(date)}</h2>
               </div>
-              <span className="rounded-full bg-slate-900/70 px-2.5 py-1 text-[11px] font-bold text-slate-400">
+              <span className="rounded-full border border-slate-600 bg-slate-900/70 px-2.5 py-0.5 text-[11px] font-black text-cyan-100">
                 {groupedMatches[date].length} 场
               </span>
             </div>
 
-            <div className="mt-2 grid gap-2">
+            <div className="grid gap-1.5 p-2">
               {groupedMatches[date].map((match) => (
                 <div
                   key={match.id}
-                  className="grid gap-2 rounded-md border border-slate-700 bg-slate-900/55 p-2.5 md:grid-cols-[72px_1fr_128px] md:items-center md:gap-3"
+                  className="grid gap-1.5 rounded-md border border-slate-700/80 bg-slate-900/55 p-2 shadow-sm shadow-slate-950/20 md:grid-cols-[66px_1fr_118px] md:items-center md:gap-2.5"
                 >
                   <div>
                     <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">M{match.id}</p>
-                    <p className="mt-0.5 text-xs font-black text-cyan-100">{match.stage}</p>
-                    {match.group && <p className="text-[11px] text-slate-400">{match.group}组</p>}
+                    <p className="text-xs font-black text-cyan-100">{match.stage}</p>
+                    {match.group && <p className="text-[10px] font-bold text-slate-300">{match.group}组</p>}
                   </div>
 
                   <div>
                     <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
-                      <p className="truncate text-right text-sm font-black text-slate-100">{match.home}</p>
-                      <span className="rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] font-black text-slate-400">
+                      <p className="truncate text-right text-sm font-black text-slate-50">{match.home}</p>
+                      <span className="rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] font-black text-cyan-100">
                         VS
                       </span>
-                      <p className="truncate text-sm font-black text-slate-100">{match.away}</p>
+                      <p className="truncate text-sm font-black text-slate-50">{match.away}</p>
                     </div>
-                    <p className="mt-1.5 truncate text-center text-[11px] text-slate-400">
+                    <p className="mt-1 truncate text-center text-[11px] font-medium text-slate-300">
                       {match.venue} · {match.city}
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2 md:grid-cols-1 md:gap-1.5">
-                    <div className="rounded-md border border-slate-700 bg-slate-950/60 px-2 py-1.5">
+                  <div className="grid grid-cols-2 gap-1.5 md:grid-cols-1 md:gap-1">
+                    <div className="rounded-md border border-slate-700 bg-slate-950/60 px-2 py-1">
                       <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">ET</p>
                       <p className="text-xs font-black text-slate-100">{match.etTime}</p>
                     </div>
-                    <div className="rounded-md border border-cyan-300/20 bg-cyan-300/10 px-2 py-1.5">
+                    <div className="rounded-md border border-cyan-300/20 bg-cyan-300/10 px-2 py-1">
                       <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-200">北京时间</p>
                       <p className="text-xs font-black text-cyan-50">{match.beijingTime}</p>
                     </div>
