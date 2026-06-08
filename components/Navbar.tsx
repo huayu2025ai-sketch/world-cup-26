@@ -5,11 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/", label: "小组总览" },
-  { href: "/schedule", label: "比赛时间表" },
-  { href: "/predictions", label: "胜负预测" },
+  { href: "/", label: "分组" },
+  { href: "/schedule", label: "赛程表" },
+  { href: "/predictions", label: "预测" },
   { href: "/export", label: "素材导出" },
-  { href: "/stats", label: "数据榜" }
+  { href: "/stats", label: "数据表" }
 ];
 
 const worldCupKickoff = new Date("2026-06-12T03:00:00+08:00").getTime();
@@ -57,7 +57,7 @@ export default function Navbar() {
             </span>
             <span>
               <span className="block text-sm font-black uppercase tracking-[0.28em] text-cyan-200">World Cup 26</span>
-              <span className="block text-xs text-slate-400 group-hover:text-slate-200">美加墨 48 队战术地图</span>
+              <span className="block text-xs text-slate-400 group-hover:text-slate-200">48 队战术地图</span>
             </span>
           </Link>
         </div>

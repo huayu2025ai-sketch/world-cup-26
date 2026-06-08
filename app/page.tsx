@@ -459,10 +459,9 @@ export default function HomePage() {
   return (
     <main className="mx-auto max-w-7xl px-4 pb-16 pt-6 sm:px-6 lg:px-8">
       <section className="py-6">
-        <p className="text-xs font-black uppercase tracking-[0.42em] text-cyan-200">Canada · Mexico · USA</p>
         <div className="mt-4 grid gap-3 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
           <h1 className="max-w-none text-2xl font-black leading-tight text-slate-100 sm:text-3xl lg:text-4xl xl:whitespace-nowrap">
-            2026 美加墨世界杯 48 队小组全景
+            2026 世界杯 48 队小组全景
           </h1>
 
           <div className="flex h-10 items-center gap-3 rounded-lg border border-slate-700 bg-slate-800/50 px-4 backdrop-blur-md focus-within:border-cyan-300/70 lg:h-11">

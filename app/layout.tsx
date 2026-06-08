@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "2026 美加墨世界杯 48 队小组地图",
+  title: "2026 世界杯 48 队小组地图",
   description: "2026 FIFA World Cup 响应式小组展示、核心看点与比赛时间表",
   manifest: "/manifest.json",
   applicationName: "World Cup 2026 战术地图",
