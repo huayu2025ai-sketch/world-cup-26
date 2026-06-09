@@ -21,6 +21,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="zh-CN" className="dark">
+      <head>
+        <meta name="baidu-site-verification" content="codeva-lrilodarxV" />
+      </head>
       <body className="min-h-screen bg-slate-900 text-slate-100 antialiased">
         <div className="fixed inset-0 -z-10 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(20,184,166,0.16),transparent_34%),radial-gradient(circle_at_82%_18%,rgba(248,113,113,0.12),transparent_30%),linear-gradient(135deg,rgba(15,23,42,1),rgba(2,6,23,1))]" />
