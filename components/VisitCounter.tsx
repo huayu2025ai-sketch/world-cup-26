@@ -10,6 +10,8 @@ type VisitStats = {
 declare global {
   interface Window {
     __fifa26VisitTracked?: boolean;
+    __fifa26VisitStats?: VisitStats;
+    __fifa26VisitStatsRequest?: Promise<VisitStats>;
   }
 }
 
@@ -24,13 +26,44 @@ export default function VisitCounter() {
   const [stats, setStats] = useState<VisitStats>(fallbackStats);
 
   useEffect(() => {
+    let isActive = true;
+
+    const updateStats = (nextStats: VisitStats) => {
+      window.__fifa26VisitStats = nextStats;
+
+      if (isActive) {
+        setStats(nextStats);
+      }
+    };
+
+    if (window.__fifa26VisitStats) {
+      setStats(window.__fifa26VisitStats);
+      return () => {
+        isActive = false;
+      };
+    }
+
+    if (window.__fifa26VisitStatsRequest) {
+      window.__fifa26VisitStatsRequest.then(updateStats).catch(() => {
+        if (isActive) {
+          setStats(fallbackStats);
+        }
+      });
+
+      return () => {
+        isActive = false;
+      };
+    }
+
     if (window.__fifa26VisitTracked) {
-      return;
+      return () => {
+        isActive = false;
+      };
     }
 
     window.__fifa26VisitTracked = true;
 
-    fetch("/api/visits", {
+    window.__fifa26VisitStatsRequest = fetch("/api/visits", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -44,11 +77,26 @@ export default function VisitCounter() {
 
         return response.json() as Promise<VisitStats>;
       })
-      .then(setStats)
+      .then((nextStats) => {
+        window.__fifa26VisitStats = nextStats;
+        return nextStats;
+      })
+      .finally(() => {
+        window.__fifa26VisitStatsRequest = undefined;
+      });
+
+    window.__fifa26VisitStatsRequest
+      .then(updateStats)
       .catch(() => {
         window.__fifa26VisitTracked = false;
-        setStats(fallbackStats);
+        if (isActive) {
+          setStats(fallbackStats);
+        }
       });
+
+    return () => {
+      isActive = false;
+    };
   }, []);
 
   return (
