@@ -28,6 +28,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-09T08:00:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月9日 08:00",
+    title: "球员数据核查完成",
+    summary: "FIFA 官方 Squad Lists-English.pdf 于 2026-06-09 00:55 UTC重新发布（本地前次核查版本为 2026-06-08 02:29 UTC）。经检查该 PDF 为 IronPdf 图像渲染格式，无法提取文本进行内容比对。本地现有48 队 1248 名球员数据保持不变。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "FIFA PDF 2026-06-09 00:55 UTC 版本已下载（750404 字节），但该版本为 IronPdf 渲染图像 PDF，无法通过文本提取进行球员名单内容比对。",
+      "本地 teamRosters.ts 仍基于2026-06-08 02:29 UTC 版本，保持48 队完整26 人名单结构。",
+      "playerProfiles.ts 数据无变化。",
+      "国家队出场数 caps 不在 FIFA 官方 PDF 中提供，继续保留已核实值与待核实标记。"
+    ]
+  },
+  {
     updatedAt: "2026-06-08T16:30:00+08:00",
     updatedAtLabel: "北京时间 2026年6月8日 16:30",
     title: "球员数据维护更新",
