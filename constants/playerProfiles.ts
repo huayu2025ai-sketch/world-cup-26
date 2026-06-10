@@ -950,7 +950,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
 
     // SCO 苏格兰
     ["Angus Gunn", "Nottingham Forest FC (ENG)", 30, 20],
-    ["Aaron Hickey", "Brentford FC (ENG)", 23, "待核实"],
+    ["Aaron Hickey", "Brentford FC (ENG)", 24, "待核实"],
     ["Andy Robertson", "Liverpool FC (ENG)", 32, 80],
     ["Scott McTominay", "SSC Napoli (ITA)", 29, 60],
     ["Grant Hanley", "Hibernian FC (SCO)", 34, "待核实"],
@@ -1337,7 +1337,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Alexis Saelemaekers", "AC Milan (ITA)", 26, "待核实"],
     ["Nicolas Raskin", "Rangers FC (SCO)", 25, "待核实"],
     ["Amadou Onana", "Aston Villa FC (ENG)", 24, "待核实"],
-    ["Nathan Ngoy", "Lille OSC (FRA)", 22, "待核实"],
+    ["Nathan Ngoy", "Lille OSC (FRA)", 23, "待核实"],
     ["Matias Fernandez-Pardo", "Lille OSC (FRA)", 21, "待核实"],
 
     // EGY 埃及
@@ -1742,7 +1742,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Mohammad Abuzraiq", "Raja Casablanca (MAR)", 28, "待核实"],
     ["Noor Alrawabdeh", "Selangor FC (MAS)", 29, "待核实"],
     ["Ali Olwan", "Al Sailiya SC (QAT)", 26, "待核实"],
-    ["Mousa Altamari", "Stade Rennais FC (FRA)", 28, 75],
+    ["Mousa Altamari", "Stade Rennais FC (FRA)", 29, 75],
     ["Odeh Fakhoury", "Pyramids FC (EGY)", 20, "待核实"],
     ["Nour Baniateyah", "Al Faisaly SC (JOR)", 33, "待核实"],
     ["Mahmoud Almardi", "Al Hussein SC (JOR)", 32, "待核实"],
@@ -1777,7 +1777,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Goncalo Inacio", "Sporting CP (POR)", 24, "待核实"],
     ["Joao Neves", "Paris Saint-Germain (FRA)", 21, "待核实"],
     ["Francisco Trincao", "Sporting CP (POR)", 26, "待核实"],
-    ["Rafael Leao", "AC Milan (ITA)", 26, 40],
+    ["Rafael Leao", "AC Milan (ITA)", 27, 40],
     ["Pedro Neto", "Chelsea FC (ENG)", 26, "待核实"],
     ["Goncalo Guedes", "Real Sociedad (ESP)", 29, "待核实"],
     ["Joao Cancelo", "FC Barcelona (ESP)", 32, "待核实"],

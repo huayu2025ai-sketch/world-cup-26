@@ -28,6 +28,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-10T11:45:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月10日 11:45",
+    title: "球员数据维护更新",
+    summary: "本次更新按 FIFA 官方 Squad Lists-English.pdf（2026-06-10 01:34 UTC，Version 1，48页）复核全部 48 队球员数据。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "teamRosters.ts 已将官方名单核查日期更新到 2026-06-10，并把全部球队来源备注同步到 FIFA 2026-06-10 01:34 UTC 版本。",
+      "playerProfiles.ts 已按 2026-06-10 口径更新生日球员年龄：Aaron Hickey（23→24）、Nathan Ngoy（22→23）、Mousa Altamari（28→29）、Rafael Leao（26→27）。",
+      "国家队出场数 caps 不在 FIFA 官方 PDF 中提供，继续保留已核实值与待核实标记。"
+    ]
+  },
+  {
     updatedAt: "2026-06-09T16:15:00+08:00",
     updatedAtLabel: "北京时间 2026年6月9日 16:15",
     title: "球员数据维护更新",
