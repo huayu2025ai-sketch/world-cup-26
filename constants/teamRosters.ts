@@ -1313,7 +1313,7 @@ export const teamRosters: Record<string, TeamRoster> = {
       { number: 12, name: "Jalal Hassan", chineseName: "贾拉勒·哈桑", position: "门将" },
       { number: 13, name: "Ali Yousif", chineseName: "Ali Yousif", position: "前锋" },
       { number: 14, name: "Zidane Iqbal", chineseName: "齐达内·伊克巴尔", position: "中场" },
-      { number: 15, name: "Ahmed Yahya", chineseName: "艾哈迈德·叶海亚", position: "后卫" },
+      { number: 15, name: "Ahmed Maknazi", chineseName: "艾哈迈德·马克纳齐", position: "后卫" },
       { number: 16, name: "Amir Alammari", chineseName: "Amir Alammari", position: "中场" },
       { number: 17, name: "Ali Jasim", chineseName: "阿里·贾西姆", position: "前锋" },
       { number: 18, name: "Aymen Hussein", chineseName: "艾曼·侯赛因", position: "前锋" },

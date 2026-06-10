@@ -1607,7 +1607,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Jalal Hassan", "Al Zawra'a SC (IRQ)", 35, "待核实"],
     ["Ali Yousif", "Al Talaba SC (IRQ)", 30, "待核实"],
     ["Zidane Iqbal", "FC Utrecht (NED)", 23, 20],
-    ["Ahmed Yahya", "Al Shorta SC (IRQ)", 30, "待核实"],
+    ["Ahmed Maknazi", "Al Karma SC (IRQ)", 24, "待核实"],
     ["Amir Alammari", "KS Cracovia (POL)", 28, "待核实"],
     ["Ali Jasim", "Al Najmah SC (KSA)", 22, "待核实"],
     ["Aymen Hussein", "Al Karma SC (IRQ)", 30, 80],

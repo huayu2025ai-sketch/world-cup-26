@@ -28,6 +28,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-10T13:15:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月10日 13:15",
+    title: "球员数据核对修正",
+    summary: "本次按 FIFA 官方 Squad Lists-English.pdf（2026-06-10 01:34 UTC，Version 1）再次全量核对 48 队球员数据，修复了此前因同名匹配逻辑导致的遗漏。",
+    changes: [
+      "伊拉克 (IRQ) #15：Ahmed Yahya → Ahmed Maknazi（后卫，Al Karma SC，DOB 24/09/2001）。",
+      "playerProfiles.ts 同步更新该球员 meta：俱乐部由 Al Shorta SC 改为 Al Karma SC，年龄由 30 改为 24，caps 保留为待核实。",
+      "优化核对脚本逻辑，增加 DOB + 俱乐部双重校验，避免同名球员（如 Ahmed）导致误判。",
+      "其余 47 队名单、号码、位置与 FIFA 官方 PDF 完全一致，未发现新增阵容变更。",
+      "国家队出场数 caps 不在 FIFA 官方 PDF 中提供，继续保留已核实值与待核实标记。"
+    ]
+  },
+  {
     updatedAt: "2026-06-10T11:45:00+08:00",
     updatedAtLabel: "北京时间 2026年6月10日 11:45",
     title: "球员数据维护更新",
