@@ -28,6 +28,21 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-09T16:15:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月9日 16:15",
+    title: "球员数据维护更新",
+    summary: "本次更新按 FIFA 官方 Squad Lists-English.pdf（2026-06-09 00:53 UTC，Version 1，48页）复核全部 48 队球员数据。",
+    changes: [
+      "巴西 #2：Wesley（后卫）→ Ederson Silva（中场）",
+      "德国 #25：Lennart Karl → Assan Ouedraogo",
+      "约旦 #18：Ibrahim Sabra（前锋）→ Mohammad Abughoush（中场）",
+      "荷兰 #2：Jurrien Timber → Lutsharel Geertruida",
+      "playerProfiles.ts 已按 2026-06-09 口径更新生日球员年龄：Roshon van Eijma（27→28）、Gervane Kastaneer（29→30）、Findlay Curtis（19→20）、Raed Chikhaoui（21→22）。",
+      "teamRosters.ts 已将官方名单核查日期更新到 2026-06-09，并把全部球队来源备注同步到 FIFA 2026-06-09 00:53 UTC 版本。",
+      "国家队出场数 caps 不在 FIFA 官方 PDF 中提供，继续保留已核实值与待核实标记。"
+    ]
+  },
+  {
     updatedAt: "2026-06-08T16:30:00+08:00",
     updatedAtLabel: "北京时间 2026年6月8日 16:30",
     title: "球员数据维护更新",

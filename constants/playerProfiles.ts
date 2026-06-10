@@ -866,7 +866,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
 
     // BRA 巴西
     ["Alisson", "Liverpool FC (ENG)", 33, 70],
-    ["Wesley", "AS Roma (ITA)", 22, "待核实"],
+    ["Ederson Silva", "Atalanta Bergamo (ITA)", 26, "待核实"],
     ["Gabriel Magalhaes", "Arsenal FC (ENG)", 28, "待核实"],
     ["Marquinhos", "Paris Saint-Germain (FRA)", 32, 90],
     ["Casemiro", "Manchester United FC (ENG)", 34, 80],
@@ -973,7 +973,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Nathan Patterson", "Everton FC (ENG)", 24, "待核实"],
     ["Kenny McLean", "Norwich City FC (ENG)", 34, "待核实"],
     ["Anthony Ralston", "Celtic FC (SCO)", 27, "待核实"],
-    ["Findlay Curtis", "Kilmarnock FC (SCO)", 19, "待核实"],
+    ["Findlay Curtis", "Kilmarnock FC (SCO)", 20, "待核实"],
     ["Scott McKenna", "GNK Dinamo Zagreb (CRO)", 29, "待核实"],
 
     // USA 美国
@@ -1113,14 +1113,14 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["David Raum", "RB Leipzig (GER)", 28, "待核实"],
     ["Felix Nmecha", "Borussia Dortmund (GER)", 25, "待核实"],
     ["Malick Thiaw", "Newcastle United FC (ENG)", 24, "待核实"],
-    ["Lennart Karl", "FC Bayern München (GER)", 18, "待核实"],
+    ["Assan Ouedraogo", "RB Leipzig (GER)", 20, "待核实"],
     ["Deniz Undav", "VfB Stuttgart (GER)", 29, "待核实"],
 
     // CUW 库拉索
     ["Eloy Room", "Miami FC (USA)", 37, 50],
     ["Shurandy Sambo", "Sparta Rotterdam (NED)", 24, "待核实"],
     ["Jurien Gaari", "Abha Club (KSA)", 32, "待核实"],
-    ["Roshon van Eijma", "RKC Waalwijk (NED)", 27, "待核实"],
+    ["Roshon van Eijma", "RKC Waalwijk (NED)", 28, "待核实"],
     ["Sherel Floranus", "PEC Zwolle (NED)", 27, "待核实"],
     ["Godfried Roemeratoe", "RKC Waalwijk (NED)", 26, "待核实"],
     ["Juninho Bacuna", "FC Volendam (NED)", 28, "待核实"],
@@ -1135,7 +1135,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Jearl Margaritha", "SK Beveren (BEL)", 26, "待核实"],
     ["Brandley Kuwas", "FC Volendam (NED)", 33, "待核实"],
     ["Armando Obispo", "PSV Eindhoven (NED)", 27, "待核实"],
-    ["Gervane Kastaneer", "Terengganu FC (MAS)", 29, "待核实"],
+    ["Gervane Kastaneer", "Terengganu FC (MAS)", 30, "待核实"],
     ["Joshua Brenet", "Kayserispor (TUR)", 32, "待核实"],
     ["Tahith Chong", "Sheffield United FC (ENG)", 26, "待核实"],
     ["Kevin Felida", "FC Den Bosch (NED)", 26, "待核实"],
@@ -1202,7 +1202,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
 
     // NED 荷兰
     ["Bart Verbruggen", "Brighton & Hove Albion FC (ENG)", 23, "待核实"],
-    ["Jurrien Timber", "Arsenal FC (ENG)", 24, "待核实"],
+    ["Lutsharel Geertruida", "Sunderland AFC (ENG)", 25, "待核实"],
     ["Marten de Roon", "Atalanta Bergamo (ITA)", 35, "待核实"],
     ["Virgil van Dijk", "Liverpool FC (ENG)", 34, 80],
     ["Nathan Ake", "Manchester City FC (ENG)", 31, "待核实"],
@@ -1308,7 +1308,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Mohamed Amine Ben Hmida", "Espérance De Tunisie (TUN)", 30, "待核实"],
     ["Sabri Ben Hessen", "Étoile Du Sahel (TUN)", 29, "待核实"],
     ["Moutaz Neffati", "IFK Norrköping FK (SWE)", 21, "待核实"],
-    ["Raed Chikhaoui", "US Monastir (TUN)", 21, "待核实"],
+    ["Raed Chikhaoui", "US Monastir (TUN)", 22, "待核实"],
     ["Anis Slimane", "Norwich City FC (ENG)", 25, "待核实"],
     ["Sebastian Tounekti", "Celtic FC (SCO)", 23, "待核实"],
 
@@ -1750,7 +1750,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Ibrahim Sadeh", "Al Karma SC (IRQ)", 26, "待核实"],
     ["Mohammad Abualnadi", "Selangor FC (MAS)", 25, "待核实"],
     ["Saleem Obaid", "Al Hussein SC (JOR)", 34, "待核实"],
-    ["Ibrahim Sabra", "NK Lokomotiva Zagreb (CRO)", 20, "待核实"],
+    ["Mohammad Abughoush", "Al Hussein SC (JOR)", 20, "待核实"],
     ["Saed Alrosan", "Al Hussein SC (JOR)", 29, "待核实"],
     ["Mohannad Abutaha", "Al-Quwa Al-Jawiya (IRQ)", 23, "待核实"],
     ["Nizar Alrashdan", "Qatar SC (QAT)", 27, "待核实"],
