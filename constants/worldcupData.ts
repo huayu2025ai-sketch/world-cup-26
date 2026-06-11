@@ -9,10 +9,24 @@ export type Team = {
   host?: boolean;
 };
 
+export type TeamStanding = {
+  name: string;
+  code: string;
+  played: number;
+  won: number;
+  draw: number;
+  lost: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  goalDiff: number;
+  points: number;
+};
+
 export type WorldCupGroup = {
   id: string;
   name: string;
   teams: Team[];
+  standings: TeamStanding[];
   headline: string;
   detail: string;
   watchPoints: string[];
