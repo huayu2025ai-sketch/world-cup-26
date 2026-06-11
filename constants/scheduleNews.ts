@@ -22,7 +22,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 墨西哥 vs 南非 (6/11)
   1: {
     matchId: 1,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-11",
     items: [
       {
         type: "injury",
@@ -52,7 +52,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 加拿大 vs 波黑 (6/12)
   2: {
     matchId: 2,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-11",
     items: [
       {
         type: "injury",
@@ -82,7 +82,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 巴西 vs 摩洛哥 (6/13)
   3: {
     matchId: 3,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-11",
     items: [
       {
         type: "injury",
@@ -121,14 +121,15 @@ export const matchNewsMap: Record<number, MatchNews> = {
       },
       {
         type: "injury",
-        title: "摩洛哥边锋埃扎尔祖利将缺席数周",
+        title: "摩洛哥阿格尔德、埃扎尔祖利因伤无缘世界杯",
         summary:
-          "阿卜德·埃扎尔祖利在赛前训练中受伤，将缺席数周，确定无法出战对巴西的首场比赛。摩洛哥边路进攻将更多依赖阿什拉夫·哈基米和卜拉欣·迪亚斯。",
+          "摩洛哥在开赛前最后一刻对名单做出调整：纳耶夫·阿格尔德和阿卜德·埃扎尔祖利因伤被移除，由其他人递补。两人在赛前训练中受伤，最终未能进入最终26人名单。摩洛哥防线和边路进攻深度受损。",
         affectedTeam: "摩洛哥",
-        affectedPlayer: "阿卜德·埃扎尔祖利",
-        severity: "medium",
-        date: "2026-06-09",
-        channel: "ESPN / 摩洛哥足协",
+        affectedPlayer: "纳耶夫·阿格尔德 / 阿卜德·埃扎尔祖利",
+        severity: "high",
+        date: "2026-06-11",
+        channel: "ESPN / Reuters",
+        sourceUrl: "https://www.reuters.com",
       },
     ],
   },
@@ -136,7 +137,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 美国 vs 巴拉圭 (6/13)
   4: {
     matchId: 4,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-11",
     items: [
       {
         type: "injury",
@@ -166,7 +167,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 德国 vs 库拉索 (6/14)
   5: {
     matchId: 5,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-11",
     items: [
       {
         type: "injury",
@@ -207,7 +208,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 荷兰 vs 日本 (6/14)
   6: {
     matchId: 6,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-11",
     items: [
       {
         type: "injury",
@@ -230,6 +231,17 @@ export const matchNewsMap: Record<number, MatchNews> = {
         severity: "high",
         date: "2026-06-09",
         channel: "ESPN",
+      },
+      {
+        type: "injury",
+        title: "荷兰后防再伤一人，廷柏尔确认缺席世界杯",
+        summary:
+          "荷兰队伤病情况持续恶化，继廷伯之后，后防再添伤员。荷兰在备战期间遭遇严重伤病危机，多名主力球员先后退出大名单，主帅科曼的防守端选择极为有限。",
+        affectedTeam: "荷兰",
+        severity: "high",
+        date: "2026-06-10",
+        channel: "USA Today / ESPN",
+        sourceUrl: "https://www.usatoday.com",
       },
     ],
   },
@@ -281,6 +293,17 @@ export const matchNewsMap: Record<number, MatchNews> = {
         date: "2026-06-08",
         channel: "ESPN / Marca",
       },
+      {
+        type: "tactical",
+        title: "拉明·亚马尔有望出战世界杯首战",
+        summary:
+          "西班牙边锋拉明·亚马尔在俱乐部赛季末受伤后正在恢复，主帅路易斯·恩里克表示他有望在首场小组赛中出场。16岁小将此前代表西班牙参加了2024年欧洲杯，具备大赛经验。",
+        affectedTeam: "西班牙",
+        affectedPlayer: "拉明·亚马尔",
+        severity: "medium",
+        date: "2026-06-08",
+        channel: "The Athletic / 纽约时报",
+      },
     ],
   },
 
@@ -330,6 +353,17 @@ export const matchNewsMap: Record<number, MatchNews> = {
         date: "2026-06-11",
         channel: "GloboEsporte / TyC Sports",
       },
+      {
+        type: "injury",
+        title: "阿根廷后卫巴列尔迪因伤无缘世界杯",
+        summary:
+          "阿根廷队做出阵容调整，后卫莱昂纳多·巴列尔迪因伤无法参加本届世界杯。阿根廷主帅斯卡洛尼需要在后防线上寻找替代人选，目前尚未公布替代者。",
+        affectedTeam: "阿根廷",
+        affectedPlayer: "莱昂纳多·巴列尔迪",
+        severity: "medium",
+        date: "2026-06-06",
+        channel: "bolavip.com / ESPN",
+      },
     ],
   },
 
@@ -357,6 +391,18 @@ export const matchNewsMap: Record<number, MatchNews> = {
     matchId: 12,
     updatedAt: "2026-06-11",
     items: [
+      {
+        type: "injury",
+        title: "布卡约·萨卡腿筋受伤，英格兰最后一练出战存疑",
+        summary:
+          "英格兰边锋布卡约·萨卡在备战期间腿筋受伤，缺席了球队的最后一堂训练课。英格兰队医正在评估他的恢复情况，出战克罗地亚存疑。萨卡是英格兰进攻端的核心球员，他的缺阵将极大影响英格兰的边路突破能力。",
+        affectedTeam: "英格兰",
+        affectedPlayer: "布卡约·萨卡",
+        severity: "high",
+        date: "2026-06-10",
+        channel: "The Independent / FourFourTwo",
+        sourceUrl: "https://www.the-independent.com",
+      },
       {
         type: "tactical",
         title: "英格兰阵型调整为三中卫，凯恩单前锋突前",
