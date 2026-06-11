@@ -31,17 +31,17 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "墨西哥",
         affectedPlayer: "伊尔文·洛萨诺 / 亨利·马丁",
         severity: "medium",
-        source: "rg.org / FourFourTwo (2026-06-07)",
+        source: "ESPN / FourFourTwo (2026-06-07)",
       },
       {
         type: "form",
-        title: "40岁奥乔亚有望征战第六届世界杯",
+        title: "40岁奥乔亚入选最终名单，有望征战第六届世界杯",
         summary:
-          "吉列尔莫·奥乔亚（40岁）入选最终名单，若出场将成为继梅西、C罗之后第三位参加六届世界杯的球员。他可能与年轻门将劳尔·兰赫尔竞争首发。",
+          "吉列尔莫·奥乔亚（40岁）入选最终26人名单，若出场将成为继梅西、C罗之后第三位参加六届世界杯的球员。他可能与年轻门将劳尔·兰赫尔竞争首发。",
         affectedTeam: "墨西哥",
         affectedPlayer: "吉列尔莫·奥乔亚",
         severity: "low",
-        source: "rg.org (2026-06-07)",
+        source: "ESPN / Goal.com (2026-06-07)",
       },
       {
         type: "injury",
