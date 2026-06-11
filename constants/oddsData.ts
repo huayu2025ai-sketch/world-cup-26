@@ -39,9 +39,9 @@ export const recommendedBookmakers: Bookmaker[] = [
   { key: "draftkings", name: "数据源 E", marketRole: "北美市场样本" }
 ];
 
-export const oddsDataUpdatedAt = "2026-06-10";
+export const oddsDataUpdatedAt = "2026-06-11";
 
-export const championFavoritesUpdatedAt = "2026-06-10";
+export const championFavoritesUpdatedAt = "2026-06-11";
 
 export const championFavorites: ChampionFavorite[] = [
   {
@@ -108,87 +108,87 @@ export const championFavorites: ChampionFavorite[] = [
 
 export const matchOddsById: Record<number, MatchBookmakerOdds[]> = {
   1: [
-    { bookmaker: "pinnacle", odds: { home: 1.43, draw: 4.6, away: 8.2 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.42, draw: 4.34, away: 8.4 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.42, draw: 4.34, away: 8.4 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.44, draw: 4.2, away: 7.5 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.44, draw: 4.3, away: 8 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.43, draw: 4.6, away: 8.2 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.42, draw: 4.34, away: 8.4 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.42, draw: 4.34, away: 8.4 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.44, draw: 4.2, away: 7.5 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.44, draw: 4.3, away: 8 }, capturedAt: "2026-06-11" }
   ],
   2: [
-    { bookmaker: "pinnacle", odds: { home: 1.8, draw: 3.55, away: 4.5 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.8, draw: 3.7, away: 4.38 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.8, draw: 3.7, away: 4.38 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.8, draw: 3.7, away: 4.5 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.8, draw: 3.6, away: 4.5 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.8, draw: 3.55, away: 4.5 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.8, draw: 3.7, away: 4.38 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.8, draw: 3.7, away: 4.38 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.8, draw: 3.7, away: 4.5 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.8, draw: 3.6, away: 4.5 }, capturedAt: "2026-06-11" }
   ],
   3: [
-    { bookmaker: "pinnacle", odds: { home: 1.61, draw: 3.85, away: 5.6 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.61, draw: 3.82, away: 5.85 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.61, draw: 3.82, away: 5.85 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.62, draw: 3.8, away: 5.75 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.62, draw: 3.85, away: 5.6 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.61, draw: 3.85, away: 5.6 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.61, draw: 3.82, away: 5.85 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.61, draw: 3.82, away: 5.85 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.62, draw: 3.8, away: 5.75 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.62, draw: 3.85, away: 5.6 }, capturedAt: "2026-06-11" }
   ],
   4: [
-    { bookmaker: "pinnacle", odds: { home: 1.99, draw: 3.35, away: 3.85 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 2, draw: 3.42, away: 3.84 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 2, draw: 3.42, away: 3.84 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.95, draw: 3.4, away: 4 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.97, draw: 3.4, away: 3.95 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.99, draw: 3.35, away: 3.85 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 2, draw: 3.42, away: 3.84 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 2, draw: 3.42, away: 3.84 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.95, draw: 3.4, away: 4 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.97, draw: 3.4, away: 3.95 }, capturedAt: "2026-06-11" }
   ],
   5: [
-    { bookmaker: "pinnacle", odds: { home: 1.02, draw: 22, away: 40 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.03, draw: 15, away: 54 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.03, draw: 15, away: 54 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.03, draw: 19, away: 41 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.03, draw: 16, away: 45 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.02, draw: 22, away: 40 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.03, draw: 15, away: 54 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.03, draw: 15, away: 54 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.03, draw: 19, away: 41 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.03, draw: 16, away: 45 }, capturedAt: "2026-06-11" }
   ],
   6: [
-    { bookmaker: "pinnacle", odds: { home: 2, draw: 3.55, away: 3.6 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.91, draw: 3.66, away: 3.9 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.91, draw: 3.66, away: 3.9 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.95, draw: 3.8, away: 3.5 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.99, draw: 3.6, away: 3.65 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 2, draw: 3.55, away: 3.6 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.91, draw: 3.66, away: 3.9 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.91, draw: 3.66, away: 3.9 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.95, draw: 3.8, away: 3.5 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.99, draw: 3.6, away: 3.65 }, capturedAt: "2026-06-11" }
   ],
   7: [
-    { bookmaker: "pinnacle", odds: { home: 1.66, draw: 3.9, away: 5 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.68, draw: 3.78, away: 5.15 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.68, draw: 3.78, away: 5.15 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.65, draw: 3.8, away: 5 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.67, draw: 3.9, away: 5 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.66, draw: 3.9, away: 5 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.68, draw: 3.78, away: 5.15 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.68, draw: 3.78, away: 5.15 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.65, draw: 3.8, away: 5 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.67, draw: 3.9, away: 5 }, capturedAt: "2026-06-11" }
   ],
   8: [
-    { bookmaker: "pinnacle", odds: { home: 1.09, draw: 10, away: 24 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.09, draw: 10, away: 26 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.09, draw: 10, away: 26 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.09, draw: 9.5, away: 23 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.09, draw: 10, away: 25 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.09, draw: 10, away: 24 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.09, draw: 10, away: 26 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.09, draw: 10, away: 26 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.09, draw: 9.5, away: 23 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.09, draw: 10, away: 25 }, capturedAt: "2026-06-11" }
   ],
   9: [
-    { bookmaker: "pinnacle", odds: { home: 1.48, draw: 4.6, away: 7 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.46, draw: 4.38, away: 7.2 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.46, draw: 4.38, away: 7.2 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.45, draw: 4.5, away: 6.25 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.45, draw: 4.5, away: 7 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.48, draw: 4.6, away: 7 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.46, draw: 4.38, away: 7.2 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.46, draw: 4.38, away: 7.2 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.45, draw: 4.5, away: 6.25 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.45, draw: 4.5, away: 7 }, capturedAt: "2026-06-11" }
   ],
   10: [
-    { bookmaker: "pinnacle", odds: { home: 1.41, draw: 4.8, away: 8.4 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.4, draw: 4.44, away: 8.9 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.4, draw: 4.44, away: 8.9 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.4, draw: 4.75, away: 7 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.4, draw: 4.5, away: 8.4 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.41, draw: 4.8, away: 8.4 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.4, draw: 4.44, away: 8.9 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.4, draw: 4.44, away: 8.9 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.4, draw: 4.75, away: 7 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.4, draw: 4.5, away: 8.4 }, capturedAt: "2026-06-11" }
   ],
   11: [
-    { bookmaker: "pinnacle", odds: { home: 1.27, draw: 6, away: 11 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.28, draw: 5.55, away: 11 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.28, draw: 5.55, away: 11 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.25, draw: 6, away: 9.5 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.28, draw: 5.8, away: 10 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.27, draw: 6, away: 11 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.28, draw: 5.55, away: 11 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.28, draw: 5.55, away: 11 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.25, draw: 6, away: 9.5 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.28, draw: 5.8, away: 10 }, capturedAt: "2026-06-11" }
   ],
   12: [
-    { bookmaker: "pinnacle", odds: { home: 1.75, draw: 3.8, away: 4.9 }, capturedAt: "2026-06-10" },
-    { bookmaker: "betfair", odds: { home: 1.73, draw: 3.78, away: 4.74 }, capturedAt: "2026-06-10" },
-    { bookmaker: "bet365", odds: { home: 1.73, draw: 3.78, away: 4.74 }, capturedAt: "2026-06-10" },
-    { bookmaker: "sbobet", odds: { home: 1.73, draw: 3.7, away: 4.75 }, capturedAt: "2026-06-10" },
-    { bookmaker: "draftkings", odds: { home: 1.72, draw: 3.75, away: 4.8 }, capturedAt: "2026-06-10" }
+    { bookmaker: "pinnacle", odds: { home: 1.75, draw: 3.8, away: 4.9 }, capturedAt: "2026-06-11" },
+    { bookmaker: "betfair", odds: { home: 1.73, draw: 3.78, away: 4.74 }, capturedAt: "2026-06-11" },
+    { bookmaker: "bet365", odds: { home: 1.73, draw: 3.78, away: 4.74 }, capturedAt: "2026-06-11" },
+    { bookmaker: "sbobet", odds: { home: 1.73, draw: 3.7, away: 4.75 }, capturedAt: "2026-06-11" },
+    { bookmaker: "draftkings", odds: { home: 1.72, draw: 3.75, away: 4.8 }, capturedAt: "2026-06-11" }
   ]
 };
