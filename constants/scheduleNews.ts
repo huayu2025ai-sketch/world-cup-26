@@ -264,6 +264,122 @@ export const matchNewsMap: Record<number, MatchNews> = {
       },
     ],
   },
+
+  // 西班牙 vs 佛得角 (6/15)
+  8: {
+    matchId: 8,
+    updatedAt: "2026-06-11",
+    items: [
+      {
+        type: "injury",
+        title: "佩德里左小腿受伤，世界杯出场待定",
+        summary:
+          "佩德里在2025-26赛季末左小腿受伤，6月7日热身赛对爱沙尼亚第32分钟被替换下场。虽然已进入西班牙26人名单并参加部分训练，但首战身体状态存疑。中场核心位置可能由法比安·鲁伊斯或苏比门迪替代。",
+        affectedTeam: "西班牙",
+        affectedPlayer: "佩德里",
+        severity: "medium",
+        date: "2026-06-08",
+        channel: "ESPN / Marca",
+      },
+    ],
+  },
+
+  // 法国 vs 塞内加尔 (6/15)
+  9: {
+    matchId: 9,
+    updatedAt: "2026-06-11",
+    items: [
+      {
+        type: "injury",
+        title: "恩戈洛·坎特大腿内收肌撕裂伤退世界杯",
+        summary:
+          "恩戈洛·坎特在训练中大腿内收肌撕裂，法国国家队确认其伤退，由那不勒斯的曼努·科尼入替。坎特自2022年卡塔尔世界杯后逐渐淡出国家队，本届是他的大赛回归。科尼将担任防守中场替补。",
+        affectedTeam: "法国",
+        affectedPlayer: "恩戈洛·坎特 / 曼努·科尼",
+        severity: "medium",
+        date: "2026-06-10",
+        channel: "ESPN / LEquipe",
+      },
+      {
+        type: "injury",
+        title: "萨迪奥·马内膝伤恢复中，首战出场存疑",
+        summary:
+          "萨迪奥·马内自2025年4月遭遇膝伤后一直养伤，虽入选塞内加尔26人名单，但5月归队训练时间有限。主帅阿利乌·西塞表示将根据训练状态决定其出场时间。",
+        affectedTeam: "塞内加尔",
+        affectedPlayer: "萨迪奥·马内",
+        severity: "medium",
+        date: "2026-06-10",
+        channel: "BBC Sport / ESPN",
+      },
+    ],
+  },
+
+  // 阿根廷 vs 阿尔及利亚 (6/16)
+  10: {
+    matchId: 10,
+    updatedAt: "2026-06-11",
+    items: [
+      {
+        type: "injury",
+        title: "梅西左内收肌轻伤，训练单独调整，首战出战存疑",
+        summary:
+          "梅西在阿根廷队训练中左内收肌轻微不适，缺席了部分合练但参与了分组练习。教练组对他的出场持乐观态度，但将根据赛前最后一练决定是否出场。若梅西缺阵，胡利安·阿尔瓦雷斯将出任伪九号。",
+        affectedTeam: "阿根廷",
+        affectedPlayer: "莱昂内尔·梅西",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "GloboEsporte / TyC Sports",
+      },
+    ],
+  },
+
+  // 葡萄牙 vs 刚果民主共和国 (6/16)
+  11: {
+    matchId: 11,
+    updatedAt: "2026-06-11",
+    items: [
+      {
+        type: "injury",
+        title: "迪奥戈·达洛特腿筋轻伤，已参加部分训练",
+        summary:
+          "迪奥戈·达洛特在曼联赛季末腿筋轻伤，虽进入葡萄牙26人名单，已参与部分球队训练。主帅罗伯托·马丁内斯表示右后卫位置有足够深度，拉斐尔·莱奥和佩德罗·内托可司职边后卫。",
+        affectedTeam: "葡萄牙",
+        affectedPlayer: "迪奥戈·达洛特",
+        severity: "medium",
+        date: "2026-06-10",
+        channel: "A Bola / Record",
+      },
+    ],
+  },
+
+  // 英格兰 vs 克罗地亚 (6/16)
+  12: {
+    matchId: 12,
+    updatedAt: "2026-06-11",
+    items: [
+      {
+        type: "tactical",
+        title: "英格兰阵型调整为三中卫，凯恩单前锋突前",
+        summary:
+          "英格兰主帅卢卡斯·卡斯卡在训练中试验三中卫体系：格伊、斯通斯和宽萨组成中卫线，萨卡和拉什福德担任翼卫，凯恩作为单箭头突前。这是针对克罗地亚中场控制的针对性部署。",
+        affectedTeam: "英格兰",
+        severity: "medium",
+        date: "2026-06-10",
+        channel: "The Athletic / BBC Sport",
+      },
+      {
+        type: "form",
+        title: "克罗地亚队长莫德里奇宝刀不老，欧洲杯后维持高水平",
+        summary:
+          "39岁的卢卡·莫德里奇在欧洲杯后保持良好身体状态，季前训练完整。克罗地亚在欧洲附加赛表现出色，莫德里奇在中场的调度和定位球能力仍是球队核心。",
+        affectedTeam: "克罗地亚",
+        affectedPlayer: "卢卡·莫德里奇",
+        severity: "medium",
+        date: "2026-06-10",
+        channel: "Sportske Novosti / The Athletic",
+      },
+    ],
+  },
 };
 
 export const hasMatchNews = (matchId: number): boolean => matchId in matchNewsMap;
