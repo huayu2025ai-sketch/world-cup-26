@@ -21,7 +21,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 墨西哥 vs 南非 (6/11)
   1: {
     matchId: 1,
-    updatedAt: "2026-06-10",
+    updatedAt: "2026-06-09",
     items: [
       {
         type: "injury",
@@ -62,13 +62,23 @@ export const matchNewsMap: Record<number, MatchNews> = {
         severity: "low",
         source: "新华社 / FourFourTwo (2026-05-27~28)",
       },
+      {
+        type: "injury",
+        title: "墨西哥希门尼斯脚踝伤愈，可出战揭幕战",
+        summary:
+          "AC米兰前锋圣地亚哥·希门尼斯在赛季末段遭遇脚踝伤势，一度存在出战疑虑。但经过国家队医疗团队评估，希门尼斯已恢复训练，可以出战6月11日对南非的揭幕战。",
+        affectedTeam: "墨西哥",
+        affectedPlayer: "圣地亚哥·希门尼斯",
+        severity: "low",
+        source: "FourFourTwo (2026-06-01)",
+      },
     ],
   },
 
   // 加拿大 vs 波黑 (6/12)
   2: {
     matchId: 2,
-    updatedAt: "2026-06-10",
+    updatedAt: "2026-06-09",
     items: [
       {
         type: "injury",
@@ -105,17 +115,17 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 巴西 vs 摩洛哥 (6/13)
   3: {
     matchId: 3,
-    updatedAt: "2026-06-10",
+    updatedAt: "2026-06-09",
     items: [
       {
         type: "injury",
-        title: "内马尔右小腿伤势恐缺席首战",
+        title: "内马尔二级小腿拉伤，首战复出存疑",
         summary:
-          "内马尔自5月17日起受右小腿伤势困扰，巴西国家队队医预计恢复期为三周，首战对阵摩洛哥出场成疑。即使复出，状态也难达百分百。",
+          "内马尔报到后MRI确诊为二级小腿肌肉拉伤，缺席了对巴拿马和埃及的两场热身赛。6月8日复查显示恢复进展良好，安切洛蒂表示有望在6月13日对摩洛哥的首战复出；若未完全恢复，主要目标将是6月19日对海地的第二战。巴西足协确认不会替换内马尔。",
         affectedTeam: "巴西",
         affectedPlayer: "内马尔",
         severity: "high",
-        source: "ESPN / 巴西国家队官方声明 (2026-06-09)",
+        source: "GloboEsporte / CBF 官方声明 (2026-06-09)",
         sourceUrl: "https://www.espn.com.au/football/story/_/id/48572979",
       },
       {
@@ -139,13 +149,23 @@ export const matchNewsMap: Record<number, MatchNews> = {
         source: "FourFourTwo (2026-06-08)",
         sourceUrl: "https://www.fourfourtwo.com/team/brazil-world-cup-2026-squad",
       },
+      {
+        type: "injury",
+        title: "摩洛哥边锋埃扎尔祖利将缺席数周",
+        summary:
+          "阿卜德·埃扎尔祖利在赛前训练中受伤，将缺席数周，确定无法出战对巴西的首场比赛。摩洛哥边路进攻将更多依赖阿什拉夫·哈基米和卜拉欣·迪亚斯。",
+        affectedTeam: "摩洛哥",
+        affectedPlayer: "阿卜德·埃扎尔祖利",
+        severity: "medium",
+        source: "ESPN / 摩洛哥足协 (2026-06-09)",
+      },
     ],
   },
 
   // 美国 vs 巴拉圭 (6/13)
   4: {
     matchId: 4,
-    updatedAt: "2026-06-10",
+    updatedAt: "2026-06-09",
     items: [
       {
         type: "injury",
@@ -182,7 +202,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 德国 vs 库拉索 (6/14)
   5: {
     matchId: 5,
-    updatedAt: "2026-06-10",
+    updatedAt: "2026-06-09",
     items: [
       {
         type: "injury",
@@ -213,13 +233,33 @@ export const matchNewsMap: Record<number, MatchNews> = {
         severity: "low",
         source: "BBC Sport (2026-03)",
       },
+      {
+        type: "injury",
+        title: "诺伊尔小腿伤势无碍，40岁复出担任一门",
+        summary:
+          "曼努埃尔·诺伊尔在2024年欧洲杯后退出国家队，但在欧冠四分之一决赛对皇马的九次扑救表现后，纳格尔斯曼将其召回。目前诺伊尔有小腿伤势，但德国足协确认不影响参赛，他将以40岁年龄担任一门出战第五届世界杯。",
+        affectedTeam: "德国",
+        affectedPlayer: "曼努埃尔·诺伊尔",
+        severity: "low",
+        source: "ESPN / Sporting News (2026-06-06)",
+      },
+      {
+        type: "tactical",
+        title: "菲尔克鲁格落选，哈弗茨领衔锋线",
+        summary:
+          "纳格尔斯曼在5月21日公布的最终名单中放弃了2024欧洲杯的超级替补尼克拉斯·菲尔克鲁格，后者在AC米兰租借期间19场意甲仅1球。凯·哈弗茨将作为中锋领衔锋线，马克西米利安·拜尔和德尼兹·翁达夫提供板凳深度。",
+        affectedTeam: "德国",
+        affectedPlayer: "尼克拉斯·菲尔克鲁格",
+        severity: "medium",
+        source: "worldcup26hub.com (2026-05-21)",
+      },
     ],
   },
 
   // 荷兰 vs 日本 (6/14)
   6: {
     matchId: 6,
-    updatedAt: "2026-06-10",
+    updatedAt: "2026-06-09",
     items: [
       {
         type: "injury",
