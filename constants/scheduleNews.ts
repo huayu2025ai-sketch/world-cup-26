@@ -233,6 +233,37 @@ export const matchNewsMap: Record<number, MatchNews> = {
       },
     ],
   },
+
+  // 比利时 vs 埃及 (6/15)
+  7: {
+    matchId: 7,
+    updatedAt: "2026-06-11",
+    items: [
+      {
+        type: "injury",
+        title: "卢卡库虽被指「体型走样」仍入选世界杯大名单",
+        summary:
+          "卢卡库因腿筋伤势缺席2025-26赛季后半段大部分比赛，那不勒斯时期被标注为「out of shape」。但比利时主帅鲁迪·加西亚仍将他选入26人名单，首战身体状态存疑。",
+        affectedTeam: "比利时",
+        affectedPlayer: "罗梅卢·卢卡库",
+        severity: "medium",
+        date: "2026-06-10",
+        channel: "BBC Sport / AI Overview",
+        sourceUrl: "https://www.bbc.com/sport/football",
+      },
+      {
+        type: "injury",
+        title: "比利时后卫泽诺·德巴斯特肌肉伤势，预计缺席首轮小组赛",
+        summary:
+          "泽诺·德巴斯特正在从肌肉伤势中恢复，预计将缺席比利时队的开局小组赛阶段比赛。",
+        affectedTeam: "比利时",
+        affectedPlayer: "泽诺·德巴斯特",
+        severity: "medium",
+        date: "2026-06-10",
+        channel: "AI Overview / Instagram (Peche Football)",
+      },
+    ],
+  },
 };
 
 export const hasMatchNews = (matchId: number): boolean => matchId in matchNewsMap;
