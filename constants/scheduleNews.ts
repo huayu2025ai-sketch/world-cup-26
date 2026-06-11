@@ -7,7 +7,8 @@ export type MatchNewsItem = {
   affectedTeam: string;
   affectedPlayer?: string;
   severity: "high" | "medium" | "low";
-  source: string;
+  date: string;        // 情报发布日期 YYYY-MM-DD
+  channel: string;     // 来源媒体/渠道
   sourceUrl?: string;
 };
 
@@ -25,23 +26,14 @@ export const matchNewsMap: Record<number, MatchNews> = {
     items: [
       {
         type: "injury",
-        title: "墨西哥洛萨诺、马丁等主力因伤病/纪律缺席",
+        title: "洛萨诺、马丁等主力未入选最终名单",
         summary:
-          "伊尔文·洛萨诺因纪律问题和在圣迭戈FC出场时间有限被排除在名单外；亨利·马丁、路易斯·安赫尔·马拉贡、罗德里戈·韦斯卡斯因伤缺席。阿吉雷的26人名单以墨西哥联赛为班底。",
+          "伊尔文·洛萨诺因纪律问题和在圣迭戈FC出场时间有限被排除在名单外；亨利·马丁、路易斯·安赫尔·马拉贡、罗德里戈·韦斯卡斯因伤未入选最终26人名单。主教练阿吉雷的名单以墨西哥联赛为班底。",
         affectedTeam: "墨西哥",
         affectedPlayer: "伊尔文·洛萨诺 / 亨利·马丁",
         severity: "medium",
-        source: "ESPN / FourFourTwo (2026-06-07)",
-      },
-      {
-        type: "form",
-        title: "40岁奥乔亚入选最终名单，有望征战第六届世界杯",
-        summary:
-          "吉列尔莫·奥乔亚（40岁）入选最终26人名单，若出场将成为继梅西、C罗之后第三位参加六届世界杯的球员。他可能与年轻门将劳尔·兰赫尔竞争首发。",
-        affectedTeam: "墨西哥",
-        affectedPlayer: "吉列尔莫·奥乔亚",
-        severity: "low",
-        source: "ESPN / Goal.com (2026-06-07)",
+        date: "2026-06-07",
+        channel: "ESPN / FourFourTwo",
       },
       {
         type: "injury",
@@ -51,26 +43,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "南非",
         affectedPlayer: "奥布里·莫迪巴",
         severity: "medium",
-        source: "GhanaSoccernet / CAF Online (2026-05-27)",
-      },
-      {
-        type: "tactical",
-        title: "南非19/26球员来自国内联赛，布鲁斯世界杯后退役",
-        summary:
-          "南非阵容高度依赖国内两大豪门奥兰多海盗和马梅洛迪日落；74岁主帅雨果·布鲁斯已确认将在本届世界杯后退休。",
-        affectedTeam: "南非",
-        severity: "low",
-        source: "新华社 / FourFourTwo (2026-05-27~28)",
-      },
-      {
-        type: "injury",
-        title: "墨西哥希门尼斯脚踝伤愈，可出战揭幕战",
-        summary:
-          "AC米兰前锋圣地亚哥·希门尼斯在赛季末段遭遇脚踝伤势，一度存在出战疑虑。但经过国家队医疗团队评估，希门尼斯已恢复训练，可以出战6月11日对南非的揭幕战。",
-        affectedTeam: "墨西哥",
-        affectedPlayer: "圣地亚哥·希门尼斯",
-        severity: "low",
-        source: "FourFourTwo (2026-06-01)",
+        date: "2026-05-27",
+        channel: "GhanaSoccernet / CAF Online",
       },
     ],
   },
@@ -88,16 +62,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "加拿大",
         affectedPlayer: "阿方索·戴维斯",
         severity: "high",
-        source: "ESPN / 163.com (2026-06-01)",
-      },
-      {
-        type: "form",
-        title: "加拿大从伤病潮中恢复，阵容相对齐整",
-        summary:
-          "主教练杰西·马什表示，过去七到十天队内出现了大量积极进展，除戴维斯外其余位置已基本摆脱伤病阴影。",
-        affectedTeam: "加拿大",
-        severity: "low",
-        source: "163.com / OneSoccer (2026-06-01)",
+        date: "2026-06-01",
+        channel: "ESPN / 163.com",
       },
       {
         type: "tactical",
@@ -107,7 +73,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "波黑",
         affectedPlayer: "埃丁·哲科",
         severity: "medium",
-        source: "SI.com / Sports Illustrated (2026-05-14)",
+        date: "2026-05-14",
+        channel: "SI.com / Sports Illustrated",
       },
     ],
   },
@@ -125,7 +92,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "巴西",
         affectedPlayer: "内马尔",
         severity: "high",
-        source: "GloboEsporte / CBF 官方声明 (2026-06-09)",
+        date: "2026-06-09",
+        channel: "GloboEsporte / CBF",
         sourceUrl: "https://www.espn.com.au/football/story/_/id/48572979",
       },
       {
@@ -136,7 +104,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "巴西",
         affectedPlayer: "罗德里戈 / 埃德尔·米利唐",
         severity: "high",
-        source: "ESPN / FourFourTwo (2026-06-07~09)",
+        date: "2026-06-07",
+        channel: "ESPN / FourFourTwo",
         sourceUrl: "https://www.espn.com.au/football/story/_/id/48572979",
       },
       {
@@ -146,7 +115,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
           "6月6日热身赛2-1击败埃及，卡洛·安切洛蒂试验了三后卫体系，马尔基尼奥斯-加布里埃尔-布雷默搭档。面对摩洛哥强硬防守，此阵型可能继续使用。",
         affectedTeam: "巴西",
         severity: "medium",
-        source: "FourFourTwo (2026-06-08)",
+        date: "2026-06-08",
+        channel: "FourFourTwo",
         sourceUrl: "https://www.fourfourtwo.com/team/brazil-world-cup-2026-squad",
       },
       {
@@ -157,7 +127,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "摩洛哥",
         affectedPlayer: "阿卜德·埃扎尔祖利",
         severity: "medium",
-        source: "ESPN / 摩洛哥足协 (2026-06-09)",
+        date: "2026-06-09",
+        channel: "ESPN / 摩洛哥足协",
       },
     ],
   },
@@ -175,7 +146,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "美国",
         affectedPlayer: "约翰尼·卡多索 / 亚历杭德罗·岑德哈斯",
         severity: "high",
-        source: "ESPN (2026-06-09)",
+        date: "2026-06-09",
+        channel: "ESPN",
       },
       {
         type: "injury",
@@ -185,16 +157,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "美国",
         affectedPlayer: "克里斯·理查兹",
         severity: "medium",
-        source: "ESPN (2026-06-09)",
-      },
-      {
-        type: "form",
-        title: "美国主场作战，普利西奇-亚当斯-巴洛贡中轴线完整",
-        summary:
-          "美国作为东道主之一，小组赛全部在本土进行。克里斯蒂安·普利西奇、泰勒·亚当斯、福拉林·巴洛贡等核心球员状态良好，主场优势是最大变量。",
-        affectedTeam: "美国",
-        severity: "low",
-        source: "ESPN / BBC Sport (2026-06)",
+        date: "2026-06-09",
+        channel: "ESPN",
       },
     ],
   },
@@ -212,7 +176,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "德国",
         affectedPlayer: "伦纳特·卡尔 / 阿桑·韦德拉奥戈",
         severity: "medium",
-        source: "ESPN / DFB 官方声明 (2026-06-09)",
+        date: "2026-06-09",
+        channel: "ESPN / DFB",
       },
       {
         type: "injury",
@@ -222,26 +187,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "德国",
         affectedPlayer: "塞尔日·格纳布里 / 马克-安德烈·特尔施特根",
         severity: "high",
-        source: "ESPN / talkSPORT (2026-06-08)",
-      },
-      {
-        type: "form",
-        title: "德国近2场热身赛1胜1平，维尔茨-穆西亚拉组合渐入佳境",
-        summary:
-          "3月热身赛3-1意大利、2-2法国，弗洛里安·维尔茨和贾马尔·穆西亚拉的组合展现出强大创造力。面对库拉索预计将以进攻为主。",
-        affectedTeam: "德国",
-        severity: "low",
-        source: "BBC Sport (2026-03)",
-      },
-      {
-        type: "injury",
-        title: "诺伊尔小腿伤势无碍，40岁复出担任一门",
-        summary:
-          "曼努埃尔·诺伊尔在2024年欧洲杯后退出国家队，但在欧冠四分之一决赛对皇马的九次扑救表现后，纳格尔斯曼将其召回。目前诺伊尔有小腿伤势，但德国足协确认不影响参赛，他将以40岁年龄担任一门出战第五届世界杯。",
-        affectedTeam: "德国",
-        affectedPlayer: "曼努埃尔·诺伊尔",
-        severity: "low",
-        source: "ESPN / Sporting News (2026-06-06)",
+        date: "2026-06-08",
+        channel: "ESPN / talkSPORT",
       },
       {
         type: "tactical",
@@ -251,7 +198,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "德国",
         affectedPlayer: "尼克拉斯·菲尔克鲁格",
         severity: "medium",
-        source: "worldcup26hub.com (2026-05-21)",
+        date: "2026-05-21",
+        channel: "worldcup26hub.com",
       },
     ],
   },
@@ -269,7 +217,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "荷兰",
         affectedPlayer: "尤里恩·廷伯 / 卢特沙雷尔·海特勒伊达",
         severity: "high",
-        source: "ESPN / 荷兰足协官方声明 (2026-06-09)",
+        date: "2026-06-09",
+        channel: "ESPN / 荷兰足协",
       },
       {
         type: "injury",
@@ -279,16 +228,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
         affectedTeam: "日本",
         affectedPlayer: "三笘薫",
         severity: "high",
-        source: "ESPN (2026-06-09)",
-      },
-      {
-        type: "form",
-        title: "日本近3场热身赛全胜，状态正佳",
-        summary:
-          "日本在3月国际比赛日先后击败英格兰、乌拉圭和沙特，堂安律、久保建英和前田大然状态出色。",
-        affectedTeam: "日本",
-        severity: "low",
-        source: "BBC Sport / 日媒 (2026-03)",
+        date: "2026-06-09",
+        channel: "ESPN",
       },
     ],
   },

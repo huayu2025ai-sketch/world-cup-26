@@ -235,12 +235,17 @@ export default function SchedulePage() {
 
                     {currentItem && (
                       <div className="mt-2 rounded-md border border-slate-700/80 bg-slate-950/50 p-2">
-                        <div className="flex items-center gap-1.5">
-                          <span className={`rounded px-1.5 py-0.5 text-[10px] font-black ${severityBadge(currentItem.severity).className}`}>
-                            {severityBadge(currentItem.severity).text}
+                        <div className="flex items-center justify-between gap-1.5">
+                          <div className="flex items-center gap-1.5">
+                            <span className={`rounded px-1.5 py-0.5 text-[10px] font-black ${severityBadge(currentItem.severity).className}`}>
+                              {severityBadge(currentItem.severity).text}
+                            </span>
+                            <span className="text-[10px] font-bold text-slate-500">{typeLabel[currentItem.type]}</span>
+                            <span className="text-[10px] font-bold text-cyan-200">{currentItem.affectedTeam}</span>
+                          </div>
+                          <span className="shrink-0 text-[10px] text-slate-500">
+                            {currentItem.date} · {currentItem.channel}
                           </span>
-                          <span className="text-[10px] font-bold text-slate-500">{typeLabel[currentItem.type]}</span>
-                          <span className="text-[10px] font-bold text-cyan-200">{currentItem.affectedTeam}</span>
                         </div>
                         <p className="mt-1.5 truncate text-xs font-bold text-slate-200" title={currentItem.title}>
                           {currentItem.title}
