@@ -28,6 +28,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-11T18:35:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月11日 18:35",
+    title: "球员数据维护复核",
+    summary: "本次按本地可复核的 FIFA 官方 Squad Lists-English.pdf（2026-06-10 01:34 UTC，Version 1，48页）再次核对 48 队球员数据；未发现阵容、号码或位置字段需要调整。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "teamRosters.ts 已将官方名单核查说明更新为 2026-06-11 再次复核，来源仍为 FIFA 2026-06-10 01:34 UTC 版本。",
+      "本轮未发现需要移出或补入的球员；1248 名球员、球衣号码和位置结构保持不变。",
+      "playerProfiles.ts 已按 2026-06-11 口径更新生日球员年龄：Kai Havertz、Ben Waine、Orlando Gill、Unai Simon。",
+      "国家队出场数 caps 继续保留已核实值与待核实标记，后续需通过各协会或 FIFA 球员资料逐项确认。"
+    ]
+  },
+  {
     updatedAt: "2026-06-10T13:15:00+08:00",
     updatedAtLabel: "北京时间 2026年6月10日 13:15",
     title: "球员数据核对修正",
