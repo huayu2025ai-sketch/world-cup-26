@@ -9,10 +9,12 @@ export type ScheduleMatch = {
   away: string;
   venue: string;
   city: string;
+  homeScore?: number;
+  awayScore?: number;
 };
 
 export const scheduleMatches: ScheduleMatch[] = [
-  { id: 1, stage: "分组赛", group: "A", date: "2026-06-11", etTime: "15:00", beijingTime: "06-12 03:00", home: "墨西哥", away: "南非", venue: "Estadio Azteca", city: "Mexico City" },
+  { id: 1, stage: "分组赛", group: "A", date: "2026-06-11", etTime: "15:00", beijingTime: "06-12 03:00", home: "墨西哥", away: "南非", venue: "Estadio Azteca", city: "Mexico City", homeScore: 2, awayScore: 0 },
   { id: 2, stage: "分组赛", group: "B", date: "2026-06-12", etTime: "18:00", beijingTime: "06-13 06:00", home: "加拿大", away: "波黑", venue: "BC Place", city: "Vancouver" },
   { id: 3, stage: "分组赛", group: "C", date: "2026-06-13", etTime: "18:00", beijingTime: "06-14 06:00", home: "巴西", away: "摩洛哥", venue: "MetLife Stadium", city: "New York New Jersey" },
   { id: 4, stage: "分组赛", group: "D", date: "2026-06-13", etTime: "21:00", beijingTime: "06-14 09:00", home: "美国", away: "巴拉圭", venue: "SoFi Stadium", city: "Los Angeles" },
