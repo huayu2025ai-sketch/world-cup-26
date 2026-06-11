@@ -233,9 +233,15 @@ export default function SchedulePage() {
                   <div className="min-w-0">
                     <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
                       <p className="truncate text-right text-sm font-black text-slate-50">{match.home}</p>
-                      <span className="rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] font-black text-cyan-100">
-                        VS
-                      </span>
+                      {match.homeScore !== undefined && match.awayScore !== undefined ? (
+                        <span className="rounded-full border border-cyan-300/40 bg-cyan-300/15 px-2 py-0.5 text-[10px] font-black text-cyan-200">
+                          {match.homeScore} - {match.awayScore}
+                        </span>
+                      ) : (
+                        <span className="rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] font-black text-cyan-100">
+                          VS
+                        </span>
+                      )}
                       <p className="truncate text-sm font-black text-slate-50">{match.away}</p>
                     </div>
                     <p className="mt-1 truncate text-center text-[11px] font-medium text-slate-300">

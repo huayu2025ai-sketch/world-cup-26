@@ -52,8 +52,8 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
         </div>
       ) : (
         <div className="mt-4 rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-center">
-          <p className="font-black text-slate-100">{statsNotice.title}</p>
-          {statsNotice.body && <p className="mt-2 text-sm leading-6 text-slate-400">{statsNotice.body}</p>}
+          <p className="font-black text-slate-100">比赛开始前不展示模拟数据</p>
+          <p className="mt-2 text-sm leading-6 text-slate-400">进球榜和助攻榜将在首场比赛结束后更新</p>
         </div>
       )}
     </section>
