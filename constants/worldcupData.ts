@@ -28,6 +28,32 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-11T20:20:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月11日 20:20",
+    title: "中文名候选补充",
+    summary: "本次使用 Wikidata 精确匹配（英文名 + DOB）补充 21 名球员的简体中文名；未采用非简体或明显不符合大陆常用译名的候选。",
+    changes: [
+      "补充中文名：Malick Thiaw、Marten de Roon、Alireza Jahanbakhsh、Themba Zwane、Justin Kluivert、Renato Veiga、Amad Diallo 等 21 名球员。",
+      "匹配规则：仅接受 Wikidata 中英文名与 FIFA DOB 同时匹配，且存在 zh-hans、zh-cn 或 zh-sg 标签的候选。",
+      "跳过 Danilo → 哥希 等不符合当前简体中文语境的候选，避免误覆盖。",
+      "中文名仍为英文原名的球员从 395 名降至 374 名；后续可继续用中文维基、新华社/央视/足协中文稿等来源补充。",
+      "本轮不改变 48 队名单、号码、位置、DOB、身高、caps、goals 等 FIFA 官方字段。"
+    ]
+  },
+  {
+    updatedAt: "2026-06-11T19:45:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月11日 19:45",
+    title: "球员档案字段补充",
+    summary: "本次按 FIFA 官方 Squad Lists-English.pdf（2026-06-11 05:16 UTC，Version 1，48页）补齐 1248 名球员的 DOB、身高、国家队出场数和进球数。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "teamRosters.ts 已将官方名单来源同步到 FIFA 2026-06-11 05:16 UTC 版本；名单、号码和位置结构保持 48 队 x 26 人。",
+      "playerProfiles.ts 的 playerProfileMeta 已新增并填充 goals、dob、heightCm 字段，并用 FIFA PDF 中的 caps 数值覆盖此前待核实出场数。",
+      "首页球员卡新增展示进球、身高和生日信息，俱乐部、年龄、出场字段继续保留。",
+      "中文名仍保留现有本地译名；未自动用非官方百科来源覆盖，后续可单独引入 Wikidata/中文维基候选并人工校对。"
+    ]
+  },
+  {
     updatedAt: "2026-06-11T18:35:00+08:00",
     updatedAtLabel: "北京时间 2026年6月11日 18:35",
     title: "球员数据维护复核",

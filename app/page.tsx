@@ -449,7 +449,14 @@ export default function HomePage() {
       ? playerProfiles[selectedPlayerName] ?? buildBasicProfile(selectedRosterPlayer, selectedTeam?.name ?? "该队")
       : undefined;
   const selectedPlayerMeta = selectedPlayer
-    ? playerProfileMeta[selectedPlayer.name] ?? { club: "待核实", age: "待核实", caps: "待核实" }
+    ? playerProfileMeta[selectedPlayer.name] ?? {
+        club: "待核实",
+        age: "待核实",
+        caps: "待核实",
+        goals: "待核实",
+        dob: "待核实",
+        heightCm: "待核实"
+      }
     : undefined;
   const recentUpdateHistory = groupOverviewUpdates.slice(0, 5);
   const selectedUpdate = recentUpdateHistory[selectedUpdateIndex] ?? groupOverviewUpdate;
@@ -743,6 +750,20 @@ export default function HomePage() {
                                 <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
                                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">出场</p>
                                   <p className="mt-1 text-xs font-black text-slate-100">{selectedPlayerMeta.caps}</p>
+                                </div>
+                                <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
+                                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">进球</p>
+                                  <p className="mt-1 text-xs font-black text-slate-100">{selectedPlayerMeta.goals}</p>
+                                </div>
+                                <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
+                                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">身高</p>
+                                  <p className="mt-1 text-xs font-black text-slate-100">
+                                    {selectedPlayerMeta.heightCm === "待核实" ? "待核实" : `${selectedPlayerMeta.heightCm}cm`}
+                                  </p>
+                                </div>
+                                <div className="rounded-md border border-slate-700 bg-slate-950/60 p-2">
+                                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">生日</p>
+                                  <p className="mt-1 text-xs font-black text-slate-100">{selectedPlayerMeta.dob}</p>
                                 </div>
                                 <div className="col-span-3 rounded-md border border-slate-700 bg-slate-950/60 p-2">
                                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">俱乐部</p>

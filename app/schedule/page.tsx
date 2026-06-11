@@ -12,12 +12,19 @@ const formatDate = (value: string) => {
   }).format(new Date(`${value}T12:00:00`));
 };
 
+const getBeijingDateKey = (match: ScheduleMatch) => {
+  const [monthDay] = match.beijingTime.split(" ");
+  const [month, day] = monthDay.split("-");
+  return `2026-${month}-${day}`;
+};
+
 const groupByDate = (matches: ScheduleMatch[]) => {
   return matches.reduce<Record<string, ScheduleMatch[]>>((acc, match) => {
-    if (!acc[match.date]) {
-      acc[match.date] = [];
+    const dateKey = getBeijingDateKey(match);
+    if (!acc[dateKey]) {
+      acc[dateKey] = [];
     }
-    acc[match.date].push(match);
+    acc[dateKey].push(match);
     return acc;
   }, {});
 };
@@ -57,6 +64,7 @@ export default function SchedulePage() {
         match.stage,
         match.group ? `${match.group}组 Group ${match.group}` : "",
         match.date,
+        getBeijingDateKey(match),
         match.etTime,
         match.beijingTime,
         match.home,
@@ -158,7 +166,7 @@ export default function SchedulePage() {
                   id="schedule-search"
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="输入 英格兰、E组、Dallas、MetLife 或 2026-06-11"
+                  placeholder="输入 英格兰、E组、Dallas、MetLife 或 2026-06-12"
                   className="w-full bg-transparent text-sm text-slate-100 outline-none placeholder:text-slate-500"
                 />
               </div>
@@ -190,6 +198,7 @@ export default function SchedulePage() {
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700 px-3 py-2">
               <div>
                 <h2 className="text-base font-black text-amber-200 sm:text-[17px]">{formatDate(date)}</h2>
+                <p className="mt-0.5 text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-200">北京时间</p>
               </div>
               <span className="rounded-full border border-slate-600 bg-slate-900/70 px-2.5 py-0.5 text-[11px] font-black text-cyan-100">
                 {groupedMatches[date].length} 场
@@ -281,13 +290,13 @@ export default function SchedulePage() {
                   </div>
 
                   <div className="grid grid-cols-2 gap-1.5 md:grid-cols-1 md:gap-1">
-                    <div className="rounded-md border border-slate-700 bg-slate-950/60 px-2 py-1">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">ET</p>
-                      <p className="text-xs font-black text-slate-100">{match.etTime}</p>
-                    </div>
                     <div className="rounded-md border border-cyan-300/20 bg-cyan-300/10 px-2 py-1">
                       <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-200">北京时间</p>
                       <p className="text-xs font-black text-cyan-50">{match.beijingTime}</p>
+                    </div>
+                    <div className="rounded-md border border-slate-700 bg-slate-950/60 px-2 py-1">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">ET</p>
+                      <p className="text-xs font-black text-slate-100">{match.etTime}</p>
                     </div>
                   </div>
                 </div>
