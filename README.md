@@ -11,6 +11,7 @@
 - 数据更新记录：首页底部展示最后数据更新时间，可打开弹窗查看最近更新记录。
 - 比赛时间表：展示 104 场比赛，支持按阶段、球队、组别、日期、城市和球场筛选。
 - 胜负预测：基于 Pinnacle、Betfair Exchange、bet365、SBOBet、DraftKings 五家 1/X/2 赔率，计算去水概率、平均市场概率、最高概率赛果和置信度。
+- 赛前情报：在赛程卡片中展示高/中影响伤病、停赛、战术和状态情报，含发布日期与来源渠道；仅收录近3天内情报。
 - 数据榜：展示进球榜和助攻榜；赛事未开赛时保持空榜并显示维护提示。
 - 顶部导航：提供小组总览、比赛时间表、数据榜入口，并显示揭幕倒计时。
 - 访问统计：调用 `POST /api/visits` 记录总访问量和今日访问量，支持 Upstash Redis；未配置 Redis 时使用本地文件兜底。
@@ -44,9 +45,11 @@
 │   ├── playerProfiles.ts          # 球员档案和 club/age/caps 元信息
 │   ├── oddsData.ts                # 五家博彩公司 1/X/2 赔率录入
 │   ├── scheduleData.ts            # 104 场比赛赛程和阶段列表
+│   ├── scheduleNews.ts            # 赛前情报数据（高/中影响、近3天内、含日期与渠道）
 │   ├── teamRosters.ts             # 48 队 26 人名单、来源和备注
 │   ├── tournamentStats.ts         # 进球榜、助攻榜和空榜提示
 │   └── worldcupData.ts            # 12 个小组、球队信息和更新记录
+├── PROMPTS.md                     # 情报更新提示词模板与规则
 ├── lib/
 │   ├── oddsPrediction.ts          # 赔率去水、平均概率和预测逻辑
 │   └── visitStats.ts              # Redis/本地文件访问统计逻辑
@@ -101,7 +104,7 @@ npm run start
 ## 页面与组件
 
 - `/`：小组总览页，使用 `GroupCard`、`VisitCounter`，读取 `worldcupData.ts`、`teamRosters.ts`、`playerProfiles.ts`。
-- `/schedule`：比赛时间表页，读取 `scheduleData.ts`。
+- `/schedule`：比赛时间表页，读取 `scheduleData.ts` 和 `scheduleNews.ts`；比赛卡片内联展示高/中影响赛前情报，含发布日期、来源渠道、影响等级和分页切换。
 - `/predictions`：胜负预测页，读取 `scheduleData.ts`、`oddsData.ts`，调用 `oddsPrediction.ts` 计算市场概率。
 - `/stats`：进球榜和助攻榜页，读取 `tournamentStats.ts`。
 - `Navbar`：在 `app/layout.tsx` 中全站挂载，倒计时目标为北京时间 `2026-06-12 03:00`。
@@ -117,6 +120,7 @@ npm run start
 - 阵容来源提示：维护 `constants/teamRosters.ts` 中的 `officialSquadsNotice`。首页阵容区域会显示该说明。
 - 球员资料：维护 `constants/playerProfiles.ts` 中的 `playerProfiles` 和 `playerProfileMeta`。未精修球员会基于 `teamRosters` 自动生成基础档案，`club`、`age`、`caps` 默认为“待核实”。
 - 进球榜和助攻榜：维护 `constants/tournamentStats.ts` 中的 `goalsRanking`、`assistsRanking` 和 `statsNotice`。比赛开始前保持空数组，避免展示模拟统计。
+- 赛前情报：维护 `constants/scheduleNews.ts` 中的 `matchNewsMap`。每条情报包含 `type`、`title`、`summary`、`affectedTeam`、`affectedPlayer`、`severity`（仅 `high` 或 `medium`）、`date`（发布日期，需在 `updatedAt` 前3天内）、`channel`（来源媒体）和可选 `sourceUrl`。新增或更新情报时请参考 `PROMPTS.md` 中的规则。
 
 当前应用不会编造未录入的阵容或赛事统计。阵容基础信息以 `teamRosters.ts` 为准；赛事统计只展示 `tournamentStats.ts` 中实际录入的数据。
 
