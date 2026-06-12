@@ -1,3 +1,10 @@
+export type GoalScorer = {
+  player: string;
+  team: string;
+  minute: string;
+  type?: "goal" | "penalty" | "ownGoal";
+};
+
 export type ScheduleMatch = {
   id: number;
   stage: "分组赛" | "32强" | "16强" | "1/4决赛" | "半决赛" | "季军赛" | "决赛";
@@ -9,6 +16,9 @@ export type ScheduleMatch = {
   away: string;
   venue: string;
   city: string;
+  homeScore?: number;
+  awayScore?: number;
+  goalScorers?: GoalScorer[];
 };
 
 type ScheduleMatchInput = Omit<ScheduleMatch, "beijingTime">;
@@ -34,7 +44,10 @@ const withBeijingTime = (match: ScheduleMatchInput): ScheduleMatch => ({
 });
 
 const matchInputs: ScheduleMatchInput[] = [
-  { id: 1, stage: "分组赛", group: "A", date: "2026-06-11", etTime: "15:00", home: "墨西哥", away: "南非", venue: "Estadio Azteca", city: "Mexico City" },
+  { id: 1, stage: "分组赛", group: "A", date: "2026-06-11", etTime: "15:00", home: "墨西哥", away: "南非", venue: "Estadio Azteca", city: "Mexico City", homeScore: 2, awayScore: 0, goalScorers: [
+    { player: "Julián Quiñones", team: "墨西哥", minute: "9'", type: "goal" },
+    { player: "Raúl Jiménez", team: "墨西哥", minute: "67'", type: "goal" },
+  ] },
   { id: 2, stage: "分组赛", group: "A", date: "2026-06-11", etTime: "22:00", home: "韩国", away: "捷克", venue: "Estadio Akron", city: "Guadalajara" },
   { id: 3, stage: "分组赛", group: "B", date: "2026-06-12", etTime: "15:00", home: "加拿大", away: "波黑", venue: "BMO Field", city: "Toronto" },
   { id: 4, stage: "分组赛", group: "D", date: "2026-06-12", etTime: "21:00", home: "美国", away: "巴拉圭", venue: "SoFi Stadium", city: "Los Angeles" },

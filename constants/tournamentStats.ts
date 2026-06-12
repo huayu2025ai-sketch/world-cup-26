@@ -8,11 +8,11 @@ export type PlayerStat = {
   matches: number;
 };
 
-export const goalsRanking: PlayerStat[] = [];
+export const goalsRanking: PlayerStat[] =   [];
 
-export const assistsRanking: PlayerStat[] = [];
+export const assistsRanking: PlayerStat[] =   [];
 
 export const statsNotice = {
-  title: "赛事尚未开赛",
-  body: ""
-};
+    title: "墨西哥 2-0 南非",
+    body: "比赛已完成，进球榜和助攻榜已更新。"
+  };

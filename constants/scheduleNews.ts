@@ -22,7 +22,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 墨西哥 vs 南非 (6/11)
   1: {
     matchId: 1,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-11",
     items: [
       {
         type: "injury",
@@ -121,14 +121,15 @@ export const matchNewsMap: Record<number, MatchNews> = {
       },
       {
         type: "injury",
-        title: "摩洛哥边锋埃扎尔祖利将缺席数周",
+        title: "摩洛哥阿格尔德、埃扎尔祖利因伤无缘世界杯",
         summary:
-          "阿卜德·埃扎尔祖利在赛前训练中受伤，将缺席数周，确定无法出战对巴西的首场比赛。摩洛哥边路进攻将更多依赖阿什拉夫·哈基米和卜拉欣·迪亚斯。",
+          "摩洛哥在开赛前最后一刻对名单做出调整：纳耶夫·阿格尔德和阿卜德·埃扎尔祖利因伤被移除，由其他人递补。两人在赛前训练中受伤，最终未能进入最终26人名单。摩洛哥防线和边路进攻深度受损。",
         affectedTeam: "摩洛哥",
-        affectedPlayer: "阿卜德·埃扎尔祖利",
-        severity: "medium",
-        date: "2026-06-09",
-        channel: "ESPN / 摩洛哥足协",
+        affectedPlayer: "纳耶夫·阿格尔德 / 阿卜德·埃扎尔祖利",
+        severity: "high",
+        date: "2026-06-11",
+        channel: "ESPN / Reuters",
+        sourceUrl: "https://www.reuters.com",
       },
     ],
   },
@@ -136,7 +137,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 美国 vs 巴拉圭 (6/12)
   4: {
     matchId: 4,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-11",
     items: [
       {
         type: "injury",
@@ -231,9 +232,22 @@ export const matchNewsMap: Record<number, MatchNews> = {
         date: "2026-06-09",
         channel: "ESPN",
       },
+      {
+        type: "injury",
+        title: "荷兰后防再伤一人，廷柏尔确认缺席世界杯",
+        summary:
+          "荷兰队伤病情况持续恶化，继廷伯之后，后防再添伤员。荷兰在备战期间遭遇严重伤病危机，多名主力球员先后退出大名单，主帅科曼的防守端选择极为有限。",
+        affectedTeam: "荷兰",
+        severity: "high",
+        date: "2026-06-10",
+        channel: "USA Today / ESPN",
+        sourceUrl: "https://www.usatoday.com",
+      },
     ],
   },
+
 };
+
 
 export const hasMatchNews = (matchId: number): boolean => matchId in matchNewsMap;
 

@@ -9,10 +9,24 @@ export type Team = {
   host?: boolean;
 };
 
+export type TeamStanding = {
+  name: string;
+  code: string;
+  played: number;
+  won: number;
+  draw: number;
+  lost: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  goalDiff: number;
+  points: number;
+};
+
 export type WorldCupGroup = {
   id: string;
   name: string;
   teams: Team[];
+  standings: TeamStanding[];
   headline: string;
   detail: string;
   watchPoints: string[];
@@ -221,6 +235,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "南非", englishName: "South Africa", code: "RSA", flag: "🇿🇦", confederation: "CAF", pot: 3 },
       { name: "韩国", englishName: "Korea Republic", code: "KOR", flag: "🇰🇷", confederation: "AFC", pot: 2 },
       { name: "捷克", englishName: "Czechia", code: "CZE", flag: "🇨🇿", confederation: "UEFA", pot: 4 }
+    ],
+    standings: [
+      { name: "墨西哥", code: "MEX", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 0, goalDiff: 2, points: 3 },
+      { name: "南非", code: "RSA", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 },
+      { name: "韩国", code: "KOR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "捷克", code: "CZE", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -235,6 +255,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "波黑", englishName: "Bosnia and Herzegovina", code: "BIH", flag: "🇧🇦", confederation: "UEFA", pot: 4 },
       { name: "卡塔尔", englishName: "Qatar", code: "QAT", flag: "🇶🇦", confederation: "AFC", pot: 3 },
       { name: "瑞士", englishName: "Switzerland", code: "SUI", flag: "🇨🇭", confederation: "UEFA", pot: 2 }
+    ],
+    standings: [
+      { name: "加拿大", code: "CAN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "波黑", code: "BIH", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "卡塔尔", code: "QAT", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "瑞士", code: "SUI", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -249,6 +275,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "摩洛哥", englishName: "Morocco", code: "MAR", flag: "🇲🇦", confederation: "CAF", pot: 2 },
       { name: "海地", englishName: "Haiti", code: "HAI", flag: "🇭🇹", confederation: "CONCACAF", pot: 4 },
       { name: "苏格兰", englishName: "Scotland", code: "SCO", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", confederation: "UEFA", pot: 3 }
+    ],
+    standings: [
+      { name: "巴西", code: "BRA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "摩洛哥", code: "MAR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "海地", code: "HAI", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "苏格兰", code: "SCO", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -263,6 +295,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "巴拉圭", englishName: "Paraguay", code: "PAR", flag: "🇵🇾", confederation: "CONMEBOL", pot: 3 },
       { name: "澳大利亚", englishName: "Australia", code: "AUS", flag: "🇦🇺", confederation: "AFC", pot: 2 },
       { name: "土耳其", englishName: "Turkiye", code: "TUR", flag: "🇹🇷", confederation: "UEFA", pot: 4 }
+    ],
+    standings: [
+      { name: "美国", code: "USA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "巴拉圭", code: "PAR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "澳大利亚", code: "AUS", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "土耳其", code: "TUR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -277,6 +315,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "库拉索", englishName: "Curacao", code: "CUW", flag: "🇨🇼", confederation: "CONCACAF", pot: 4, debut: true },
       { name: "科特迪瓦", englishName: "Ivory Coast", code: "CIV", flag: "🇨🇮", confederation: "CAF", pot: 3 },
       { name: "厄瓜多尔", englishName: "Ecuador", code: "ECU", flag: "🇪🇨", confederation: "CONMEBOL", pot: 2 }
+    ],
+    standings: [
+      { name: "德国", code: "GER", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "库拉索", code: "CUW", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "科特迪瓦", code: "CIV", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "厄瓜多尔", code: "ECU", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -291,6 +335,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "日本", englishName: "Japan", code: "JPN", flag: "🇯🇵", confederation: "AFC", pot: 2 },
       { name: "瑞典", englishName: "Sweden", code: "SWE", flag: "🇸🇪", confederation: "UEFA", pot: 4 },
       { name: "突尼斯", englishName: "Tunisia", code: "TUN", flag: "🇹🇳", confederation: "CAF", pot: 3 }
+    ],
+    standings: [
+      { name: "荷兰", code: "NED", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "日本", code: "JPN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "瑞典", code: "SWE", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "突尼斯", code: "TUN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -305,6 +355,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "埃及", englishName: "Egypt", code: "EGY", flag: "🇪🇬", confederation: "CAF", pot: 3 },
       { name: "伊朗", englishName: "Iran", code: "IRN", flag: "🇮🇷", confederation: "AFC", pot: 2 },
       { name: "新西兰", englishName: "New Zealand", code: "NZL", flag: "🇳🇿", confederation: "OFC", pot: 4 }
+    ],
+    standings: [
+      { name: "比利时", code: "BEL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "埃及", code: "EGY", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "伊朗", code: "IRN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "新西兰", code: "NZL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -319,6 +375,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "佛得角", englishName: "Cape Verde", code: "CPV", flag: "🇨🇻", confederation: "CAF", pot: 4, debut: true },
       { name: "沙特阿拉伯", englishName: "Saudi Arabia", code: "KSA", flag: "🇸🇦", confederation: "AFC", pot: 3 },
       { name: "乌拉圭", englishName: "Uruguay", code: "URU", flag: "🇺🇾", confederation: "CONMEBOL", pot: 2 }
+    ],
+    standings: [
+      { name: "西班牙", code: "ESP", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "佛得角", code: "CPV", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "沙特阿拉伯", code: "KSA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "乌拉圭", code: "URU", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -333,6 +395,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "塞内加尔", englishName: "Senegal", code: "SEN", flag: "🇸🇳", confederation: "CAF", pot: 2 },
       { name: "伊拉克", englishName: "Iraq", code: "IRQ", flag: "🇮🇶", confederation: "AFC", pot: 4 },
       { name: "挪威", englishName: "Norway", code: "NOR", flag: "🇳🇴", confederation: "UEFA", pot: 3 }
+    ],
+    standings: [
+      { name: "法国", code: "FRA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "塞内加尔", code: "SEN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "伊拉克", code: "IRQ", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "挪威", code: "NOR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -347,6 +415,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "阿尔及利亚", englishName: "Algeria", code: "ALG", flag: "🇩🇿", confederation: "CAF", pot: 3 },
       { name: "奥地利", englishName: "Austria", code: "AUT", flag: "🇦🇹", confederation: "UEFA", pot: 2 },
       { name: "约旦", englishName: "Jordan", code: "JOR", flag: "🇯🇴", confederation: "AFC", pot: 4, debut: true }
+    ],
+    standings: [
+      { name: "阿根廷", code: "ARG", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "阿尔及利亚", code: "ALG", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "奥地利", code: "AUT", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "约旦", code: "JOR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -361,6 +435,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "刚果民主共和国", englishName: "DR Congo", code: "COD", flag: "🇨🇩", confederation: "CAF", pot: 4 },
       { name: "乌兹别克斯坦", englishName: "Uzbekistan", code: "UZB", flag: "🇺🇿", confederation: "AFC", pot: 3, debut: true },
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
+    ],
+    standings: [
+      { name: "葡萄牙", code: "POR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "刚果民主共和国", code: "COD", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "乌兹别克斯坦", code: "UZB", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "哥伦比亚", code: "COL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   },
   {
@@ -375,6 +455,12 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "克罗地亚", englishName: "Croatia", code: "CRO", flag: "🇭🇷", confederation: "UEFA", pot: 2 },
       { name: "加纳", englishName: "Ghana", code: "GHA", flag: "🇬🇭", confederation: "CAF", pot: 4 },
       { name: "巴拿马", englishName: "Panama", code: "PAN", flag: "🇵🇦", confederation: "CONCACAF", pot: 3 }
+    ],
+    standings: [
+      { name: "英格兰", code: "ENG", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "克罗地亚", code: "CRO", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "加纳", code: "GHA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "巴拿马", code: "PAN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
   }
 ];

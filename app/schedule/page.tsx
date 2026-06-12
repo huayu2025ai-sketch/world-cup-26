@@ -282,16 +282,47 @@ export default function SchedulePage() {
                   <div className="min-w-0">
                     <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
                       <p className="truncate text-right text-sm font-black text-slate-50">{match.home}</p>
-                      <span className="rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] font-black text-cyan-100">
-                        VS
-                      </span>
+                      {match.homeScore !== undefined && match.awayScore !== undefined ? (
+                        <span className="rounded-full border border-cyan-300/40 bg-cyan-300/15 px-2 py-0.5 text-[10px] font-black text-cyan-200">
+                          {match.homeScore} - {match.awayScore}
+                        </span>
+                      ) : (
+                        <span className="rounded-full border border-slate-700 bg-slate-800 px-2 py-0.5 text-[10px] font-black text-cyan-100">
+                          VS
+                        </span>
+                      )}
                       <p className="truncate text-sm font-black text-slate-50">{match.away}</p>
                     </div>
                     <p className="mt-1 truncate text-center text-[11px] font-medium text-slate-300">
                       {match.venue} · {match.city}
                     </p>
 
-                    {currentItem && (
+                    {match.homeScore !== undefined && match.awayScore !== undefined ? (
+                      <div className="mt-2 rounded-md border border-cyan-300/20 bg-cyan-300/[0.04] p-2">
+                        <p className="text-[10px] font-black uppercase tracking-[0.14em] text-cyan-200">进球记录</p>
+                        {match.goalScorers && match.goalScorers.length > 0 ? (
+                          <div className="mt-1.5 space-y-1">
+                            {match.goalScorers.map((scorer, idx) => (
+                              <div key={idx} className="flex items-center gap-2 text-xs">
+                                <span className="shrink-0 rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-bold text-cyan-100">
+                                  {scorer.minute}
+                                </span>
+                                <span className="font-bold text-slate-100">{scorer.player}</span>
+                                <span className="text-[10px] text-slate-400">({scorer.team})</span>
+                                {scorer.type === "penalty" && (
+                                  <span className="text-[10px] text-amber-300">点球</span>
+                                )}
+                                {scorer.type === "ownGoal" && (
+                                  <span className="text-[10px] text-rose-300">乌龙</span>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="mt-1 text-[11px] text-slate-400">暂无进球记录</p>
+                        )}
+                      </div>
+                    ) : currentItem && (
                       <div className="mt-2 rounded-md border border-slate-700/80 bg-slate-950/50 p-2">
                         <div className="flex items-center justify-between gap-1.5">
                           <div className="flex items-center gap-1.5">

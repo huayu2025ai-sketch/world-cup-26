@@ -39,9 +39,9 @@ export const recommendedBookmakers: Bookmaker[] = [
   { key: "draftkings", name: "数据源 E", marketRole: "北美市场样本" }
 ];
 
-export const oddsDataUpdatedAt = "2026-06-11";
+export const oddsDataUpdatedAt = "2026-06-12";
 
-export const championFavoritesUpdatedAt = "2026-06-11";
+export const championFavoritesUpdatedAt = "2026-06-12";
 
 export const championFavorites: ChampionFavorite[] = [
   {
