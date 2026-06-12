@@ -49,6 +49,25 @@ export const matchNewsMap: Record<number, MatchNews> = {
     ],
   },
 
+  // 韩国 vs 捷克 (6/11)
+  2: {
+    matchId: 2,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "injury",
+        title: "韩国赵佑民伤退，赵威济递补入选",
+        summary:
+          "韩国队在2026-06-02因后卫赵佑民伤退，临时补招赵威济进入最终26人名单。赵威济的入围体现了教练组对其防守稳定性和即战力的认可。",
+        affectedTeam: "韩国",
+        affectedPlayer: "赵佑民 / 赵威济",
+        severity: "medium",
+        date: "2026-06-02",
+        channel: "韩国足协 / 韩国媒体报道",
+      },
+    ],
+  },
+
   // 加拿大 vs 波黑 (6/12)
   3: {
     matchId: 3,
@@ -75,6 +94,36 @@ export const matchNewsMap: Record<number, MatchNews> = {
         severity: "medium",
         date: "2026-06-07",
         channel: "SI.com / Sports Illustrated",
+      },
+    ],
+  },
+
+  // 美国 vs 巴拉圭 (6/12)
+  4: {
+    matchId: 4,
+    updatedAt: "2026-06-11",
+    items: [
+      {
+        type: "injury",
+        title: "美国约翰尼·卡多索脚踝重伤缺席，岑德哈斯入替",
+        summary:
+          "卡多索在欧冠半决赛中遭遇高级别右脚踝扭伤需要手术，将缺席世界杯。波切蒂诺选择用美洲的亚历杭德罗·岑德哈斯填补其位置，转而加强攻击线深度。",
+        affectedTeam: "美国",
+        affectedPlayer: "约翰尼·卡多索 / 亚历杭德罗·岑德哈斯",
+        severity: "high",
+        date: "2026-06-09",
+        channel: "ESPN",
+      },
+      {
+        type: "injury",
+        title: "美国克里斯·理查兹脚踝韧带撕裂，但预计能赶上世界杯",
+        summary:
+          "水晶宫中卫理查兹撕裂了两条脚踝韧带，主帅奥利弗·格拉斯纳称他参加5月27日欧协联决赛是「五五开」。但消息人士告诉ESPN，理查兹预计将及时恢复，参加世界杯应无问题。",
+        affectedTeam: "美国",
+        affectedPlayer: "克里斯·理查兹",
+        severity: "medium",
+        date: "2026-06-09",
+        channel: "ESPN",
       },
     ],
   },
@@ -134,32 +183,21 @@ export const matchNewsMap: Record<number, MatchNews> = {
     ],
   },
 
-  // 美国 vs 巴拉圭 (6/12)
-  4: {
-    matchId: 4,
-    updatedAt: "2026-06-11",
+  // 海地 vs 苏格兰 (6/13)
+  7: {
+    matchId: 7,
+    updatedAt: "2026-06-12",
     items: [
       {
         type: "injury",
-        title: "美国约翰尼·卡多索脚踝重伤缺席，岑德哈斯入替",
+        title: "苏格兰麦克托米奈单独出行备战",
         summary:
-          "卡多索在欧冠半决赛中遭遇高级别右脚踝扭伤需要手术，将缺席世界杯。波切蒂诺选择用美洲的亚历杭德罗·岑德哈斯填补其位置，转而加强攻击线深度。",
-        affectedTeam: "美国",
-        affectedPlayer: "约翰尼·卡多索 / 亚历杭德罗·岑德哈斯",
-        severity: "high",
-        date: "2026-06-09",
-        channel: "ESPN",
-      },
-      {
-        type: "injury",
-        title: "美国克里斯·理查兹脚踝韧带撕裂，但预计能赶上世界杯",
-        summary:
-          "水晶宫中卫理查兹撕裂了两条脚踝韧带，主帅奥利弗·格拉斯纳称他参加5月27日欧协联决赛是「五五开」。但消息人士告诉ESPN，理查兹预计将及时恢复，参加世界杯应无问题。",
-        affectedTeam: "美国",
-        affectedPlayer: "克里斯·理查兹",
+          "苏格兰中场斯科特·麦克托米奈作为预防措施，单独从大部队分开前往比赛地波士顿。他在赛季末段体能消耗较大，教练组谨慎处理其出场计划以确保能以最佳状态出战。",
+        affectedTeam: "苏格兰",
+        affectedPlayer: "斯科特·麦克托米奈",
         severity: "medium",
-        date: "2026-06-09",
-        channel: "ESPN",
+        date: "2026-06-12",
+        channel: "BBC Sport",
       },
     ],
   },
@@ -242,6 +280,25 @@ export const matchNewsMap: Record<number, MatchNews> = {
         date: "2026-06-10",
         channel: "USA Today / ESPN",
         sourceUrl: "https://www.usatoday.com",
+      },
+    ],
+  },
+
+  // 奥地利 vs 约旦 (6/17)
+  20: {
+    matchId: 20,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "injury",
+        title: "奥地利鲍姆加特纳伤情观察，仍在名单中",
+        summary:
+          "克里斯托夫·鲍姆加特纳是奥地利中前场关键球员，赛前有伤情报道。虽在伤情观察名单，但截至2026-06-11 FIFA官方名单发布时仍在26人名单中；教练组将根据最后阶段训练情况决定是否替换。",
+        affectedTeam: "奥地利",
+        affectedPlayer: "克里斯托夫·鲍姆加特纳",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "奥地利媒体报道 / FIFA Squad List",
       },
     ],
   },
