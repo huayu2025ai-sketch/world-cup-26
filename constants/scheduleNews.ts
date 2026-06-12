@@ -50,8 +50,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
   },
 
   // 加拿大 vs 波黑 (6/12)
-  2: {
-    matchId: 2,
+  3: {
+    matchId: 3,
     updatedAt: "2026-06-09",
     items: [
       {
@@ -80,8 +80,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
   },
 
   // 巴西 vs 摩洛哥 (6/13)
-  3: {
-    matchId: 3,
+  6: {
+    matchId: 6,
     updatedAt: "2026-06-09",
     items: [
       {
@@ -133,7 +133,7 @@ export const matchNewsMap: Record<number, MatchNews> = {
     ],
   },
 
-  // 美国 vs 巴拉圭 (6/13)
+  // 美国 vs 巴拉圭 (6/12)
   4: {
     matchId: 4,
     updatedAt: "2026-06-09",
@@ -164,8 +164,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
   },
 
   // 德国 vs 库拉索 (6/14)
-  5: {
-    matchId: 5,
+  9: {
+    matchId: 9,
     updatedAt: "2026-06-09",
     items: [
       {
@@ -205,8 +205,8 @@ export const matchNewsMap: Record<number, MatchNews> = {
   },
 
   // 荷兰 vs 日本 (6/14)
-  6: {
-    matchId: 6,
+  10: {
+    matchId: 10,
     updatedAt: "2026-06-09",
     items: [
       {

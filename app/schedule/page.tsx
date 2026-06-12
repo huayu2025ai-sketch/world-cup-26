@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { scheduleMatches, scheduleStages, type ScheduleMatch } from "@/constants/scheduleData";
 import { hasMatchNews, getMatchNews, getHighSeverityCount, type MatchNewsItem } from "@/constants/scheduleNews";
 
@@ -29,6 +29,27 @@ const groupByDate = (matches: ScheduleMatch[]) => {
   }, {});
 };
 
+const getBeijingTimestamp = (match: ScheduleMatch) => {
+  const [monthDay, time] = match.beijingTime.split(" ");
+  return new Date(`2026-${monthDay}T${time}:00+08:00`).getTime();
+};
+
+const getNextUpcomingMatch = (matches: ScheduleMatch[], now: number) => {
+  return matches.reduce<ScheduleMatch | undefined>((nextMatch, match) => {
+    const matchTime = getBeijingTimestamp(match);
+
+    if (matchTime < now) {
+      return nextMatch;
+    }
+
+    if (!nextMatch || matchTime < getBeijingTimestamp(nextMatch)) {
+      return match;
+    }
+
+    return nextMatch;
+  }, undefined);
+};
+
 const typeLabel: Record<MatchNewsItem["type"], string> = {
   injury: "🚑 伤病",
   suspension: "🟥 停赛",
@@ -53,6 +74,8 @@ export default function SchedulePage() {
   const [stage, setStage] = useState<(typeof scheduleStages)[number]>("全部");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [newsIndexMap, setNewsIndexMap] = useState<Record<number, number>>({});
+  const matchRefs = useRef<Record<number, HTMLDivElement | null>>({});
+  const hasCenteredInitialMatch = useRef(false);
 
   const filteredMatches = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -83,6 +106,29 @@ export default function SchedulePage() {
   const dateKeys = Object.keys(groupedMatches).sort();
   const groupStageCount = scheduleMatches.filter((match) => match.stage === "分组赛").length;
   const knockoutCount = scheduleMatches.length - groupStageCount;
+
+  useEffect(() => {
+    if (hasCenteredInitialMatch.current) {
+      return;
+    }
+
+    const nextMatch = getNextUpcomingMatch(scheduleMatches, Date.now());
+    if (!nextMatch) {
+      return;
+    }
+
+    const frameId = window.requestAnimationFrame(() => {
+      const target = matchRefs.current[nextMatch.id];
+      if (!target) {
+        return;
+      }
+
+      target.scrollIntoView({ block: "center", inline: "nearest" });
+      hasCenteredInitialMatch.current = true;
+    });
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, []);
 
   const goPrevNews = (matchId: number) => {
     const news = getMatchNews(matchId);
@@ -216,6 +262,9 @@ export default function SchedulePage() {
                 return (
                 <div
                   key={match.id}
+                  ref={(node) => {
+                    matchRefs.current[match.id] = node;
+                  }}
                   className={`grid gap-1.5 rounded-md border p-2 shadow-sm shadow-slate-950/20 md:grid-cols-[66px_1fr_118px] md:items-start md:gap-2.5 ${
                     highSeverityCount > 0
                       ? "border-rose-300/30 bg-rose-300/[0.04]"
