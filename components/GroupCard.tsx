@@ -45,7 +45,7 @@ export default function GroupCard({ group, onSelect }: GroupCardProps) {
                   <div className="min-w-0">
                     <p className="truncate text-[13px] font-bold text-slate-100">{team.name}</p>
                     <p className="text-[10px] uppercase tracking-[0.16em] text-slate-500">
-                      {standing.played > 0 ? `${standing.goalDiff > 0 ? "+" : ""}${standing.goalDiff} | ${standing.points}分` : standing.code}
+                      {standing.code}
                     </p>
                   </div>
                 </div>
@@ -53,8 +53,8 @@ export default function GroupCard({ group, onSelect }: GroupCardProps) {
                   <span className="text-[11px] text-slate-400">
                     {standing.played > 0 ? `${standing.won}-${standing.draw}-${standing.lost}` : "-"}
                   </span>
-                  <span className="grid h-6 w-6 place-items-center rounded-full bg-slate-800 text-[11px] font-black text-slate-400">
-                    {sortedIndex + 1}
+                  <span className="grid h-6 w-[3.5rem] place-items-center rounded-full bg-slate-800 text-[10px] font-black text-cyan-300">
+                    {standing.played > 0 ? `(${standing.goalsFor}/${standing.goalsAgainst}) ${standing.points}分` : "-"}
                   </span>
                 </div>
               </div>
