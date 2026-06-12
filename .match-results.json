@@ -1,0 +1,10 @@
+{
+  "1": {
+    "homeScore": 2,
+    "awayScore": 0,
+    "goalScorers": [
+      {"player": "Julián Quiñones", "team": "墨西哥", "minute": "9'", "type": "goal"},
+      {"player": "Raúl Jiménez", "team": "墨西哥", "minute": "67'", "type": "goal"}
+    ]
+  }
+}
