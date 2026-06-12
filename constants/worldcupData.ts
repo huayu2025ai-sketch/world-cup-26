@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-13T05:20:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月13日 05:20",
+    title: "B组首场赛果更新",
+    summary: "本次同步 B 组加拿大 1-1 波黑的真实赛果，更新赛程比分、进球记录、B 组排名，以及进球榜和可确认助攻榜。",
+    changes: [
+      "赛程页补入加拿大 1-1 波黑：约沃·卢基奇 21'，赛尔·拉林 79'。",
+      "B 组积分榜更新：加拿大与波黑同积 1 分、净胜球同为 0，卡塔尔与瑞士暂列其后。",
+      "进球榜新增赛尔·拉林、约沃·卢基奇；可确认助攻榜新增普罗米斯·戴维、塞亚德·科拉希纳茨。",
+      "美国 vs 巴拉圭在本次运行时尚未开赛，继续保留赛前状态。"
+    ]
+  },
+  {
     updatedAt: "2026-06-12T12:20:00+08:00",
     updatedAtLabel: "北京时间 2026年6月12日 12:20",
     title: "小组赛赛果与统计更新",
@@ -269,8 +281,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "瑞士", englishName: "Switzerland", code: "SUI", flag: "🇨🇭", confederation: "UEFA", pot: 2 }
     ],
     standings: [
-      { name: "加拿大", code: "CAN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "波黑", code: "BIH", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "加拿大", code: "CAN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
+      { name: "波黑", code: "BIH", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
       { name: "卡塔尔", code: "QAT", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
       { name: "瑞士", code: "SUI", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]

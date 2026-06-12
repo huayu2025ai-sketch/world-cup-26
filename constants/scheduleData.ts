@@ -53,7 +53,10 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "黄仁范", team: "韩国", minute: "67'", type: "goal" },
     { player: "吴贤揆", team: "韩国", minute: "80'", type: "goal" },
   ] },
-  { id: 3, stage: "分组赛", group: "B", date: "2026-06-12", etTime: "15:00", home: "加拿大", away: "波黑", venue: "BMO Field", city: "Toronto" },
+  { id: 3, stage: "分组赛", group: "B", date: "2026-06-12", etTime: "15:00", home: "加拿大", away: "波黑", venue: "BMO Field", city: "Toronto", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "约沃·卢基奇", team: "波黑", minute: "21'", type: "goal" },
+    { player: "赛尔·拉林", team: "加拿大", minute: "79'", type: "goal" },
+  ] },
   { id: 4, stage: "分组赛", group: "D", date: "2026-06-12", etTime: "21:00", home: "美国", away: "巴拉圭", venue: "SoFi Stadium", city: "Los Angeles" },
   { id: 5, stage: "分组赛", group: "B", date: "2026-06-13", etTime: "15:00", home: "卡塔尔", away: "瑞士", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
   { id: 6, stage: "分组赛", group: "C", date: "2026-06-13", etTime: "18:00", home: "巴西", away: "摩洛哥", venue: "MetLife Stadium", city: "New York New Jersey" },
