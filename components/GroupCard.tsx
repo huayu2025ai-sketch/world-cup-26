@@ -51,10 +51,10 @@ export default function GroupCard({ group, onSelect }: GroupCardProps) {
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="text-[11px] text-slate-400">
-                    {standing.played > 0 ? `${standing.won}-${standing.draw}-${standing.lost}` : "-"}
+                    {standing.played > 0 ? `进球${standing.goalsFor}/失球${standing.goalsAgainst}` : "-"}
                   </span>
                   <span className="grid h-6 w-[3.5rem] place-items-center rounded-full bg-slate-800 text-[10px] font-black text-cyan-300">
-                    {standing.played > 0 ? `(${standing.goalsFor}/${standing.goalsAgainst}) ${standing.points}分` : "-"}
+                    {standing.played > 0 ? `${standing.points}分` : "-"}
                   </span>
                 </div>
               </div>
