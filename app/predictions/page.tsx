@@ -38,10 +38,31 @@ const outcomeShortLabel: Record<OutcomeKey, string> = {
   away: "客胜"
 };
 
+const getActualOutcome = (match: ScheduleMatch): OutcomeKey | null => {
+  if (match.homeScore === undefined || match.awayScore === undefined) {
+    return null;
+  }
+
+  if (match.homeScore > match.awayScore) {
+    return "home";
+  }
+
+  if (match.homeScore < match.awayScore) {
+    return "away";
+  }
+
+  return "draw";
+};
+
 const confidenceClass: Record<"高" | "中" | "低", string> = {
   高: "border-emerald-300/30 bg-emerald-300/12 text-emerald-100",
   中: "border-amber-300/30 bg-amber-300/12 text-amber-100",
   低: "border-rose-300/30 bg-rose-300/12 text-rose-100"
+};
+
+const predictionResultClass: Record<"correct" | "wrong", string> = {
+  correct: "border-emerald-300/40 bg-emerald-300/15 text-emerald-100",
+  wrong: "border-rose-300/40 bg-rose-300/15 text-rose-100"
 };
 
 const formatSignedIndex = (value: number) => (value > 0 ? `+${value}` : `${value}`);
@@ -181,7 +202,12 @@ export default function PredictionsPage() {
 
       <section className="mt-4 grid gap-3 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
         <div className="space-y-3">
-          {predictionRows.map(({ match, odds, prediction }) => (
+          {predictionRows.map(({ match, odds, prediction }) => {
+            const actualOutcome = getActualOutcome(match);
+            const predictionResult =
+              prediction && actualOutcome ? (prediction.predictedOutcome === actualOutcome ? "correct" : "wrong") : null;
+
+            return (
             <article key={match.id} className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 backdrop-blur-md">
               <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-center">
                 <div>
@@ -211,9 +237,20 @@ export default function PredictionsPage() {
                 {prediction ? (
                   <div className="rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-3">
                     <p className="text-[11px] font-black uppercase tracking-[0.2em] text-cyan-200">Prediction</p>
-                    <p className="mt-1 text-lg font-black text-cyan-50">
-                      {outcomeLabel(prediction.predictedOutcome, match)}
-                    </p>
+                    <div className="mt-1 flex flex-wrap items-center gap-2">
+                      <p className="text-lg font-black text-cyan-50">
+                        {outcomeLabel(prediction.predictedOutcome, match)}
+                      </p>
+                      {predictionResult && (
+                        <span
+                          className={`rounded-full border px-2 py-0.5 text-[10px] font-black ${
+                            predictionResultClass[predictionResult]
+                          }`}
+                        >
+                          {predictionResult === "correct" ? "预测正确" : "预测错误"}
+                        </span>
+                      )}
+                    </div>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       <span className="rounded-full bg-slate-950/55 px-2 py-1 text-xs font-black text-cyan-100">
                         {formatPercent(prediction.predictedProbability)}
@@ -333,7 +370,8 @@ export default function PredictionsPage() {
                 </>
               )}
             </article>
-          ))}
+            );
+          })}
         </div>
 
         <aside className="rounded-lg border border-slate-700 bg-slate-800/50 p-4 backdrop-blur-md lg:sticky lg:top-24">
