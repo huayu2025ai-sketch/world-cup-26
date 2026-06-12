@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { scheduleMatches, type ScheduleMatch } from "@/constants/scheduleData";
 
 const navItems = [
   { href: "/", label: "分组" },
@@ -12,37 +13,67 @@ const navItems = [
   { href: "/stats", label: "数据" }
 ];
 
-const worldCupKickoff = new Date("2026-06-12T03:00:00+08:00").getTime();
-
-const getCountdown = () => {
-  const remaining = Math.max(0, worldCupKickoff - Date.now());
-  const totalSeconds = Math.floor(remaining / 1000);
-
-  return {
-    days: Math.floor(totalSeconds / 86400),
-    hours: Math.floor((totalSeconds % 86400) / 3600),
-    minutes: Math.floor((totalSeconds % 3600) / 60),
-    seconds: totalSeconds % 60
-  };
+type TournamentStatus = {
+  stage: ScheduleMatch["stage"];
+  completedMatches: number;
+  totalMatches: number;
+  todayMatches: number;
+  nextMatch?: ScheduleMatch;
+  nextTimeLabel?: string;
 };
 
-const initialCountdown = {
-  days: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0
+const shanghaiDateFormatter = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Asia/Shanghai",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit"
+});
+
+const shanghaiTimeFormatter = new Intl.DateTimeFormat("zh-CN", {
+  timeZone: "Asia/Shanghai",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false
+});
+
+const getBeijingDateKey = (date: Date) => shanghaiDateFormatter.format(date);
+
+const getMatchKickoff = (match: ScheduleMatch) => {
+  const [monthDay, time] = match.beijingTime.split(" ");
+  return new Date(`2026-${monthDay}T${time}:00+08:00`);
+};
+
+const hasResult = (match: ScheduleMatch) => match.homeScore !== undefined && match.awayScore !== undefined;
+
+const getTournamentStatus = (): TournamentStatus => {
+  const now = new Date();
+  const todayKey = getBeijingDateKey(now);
+  const completedMatches = scheduleMatches.filter(hasResult).length;
+  const nextMatch = scheduleMatches.find((match) => getMatchKickoff(match).getTime() > now.getTime());
+  const currentStage =
+    nextMatch?.stage ?? [...scheduleMatches].reverse().find(hasResult)?.stage ?? scheduleMatches[0].stage;
+  const todayMatches = scheduleMatches.filter((match) => getBeijingDateKey(getMatchKickoff(match)) === todayKey).length;
+
+  return {
+    stage: currentStage,
+    completedMatches,
+    totalMatches: scheduleMatches.length,
+    todayMatches,
+    nextMatch,
+    nextTimeLabel: nextMatch ? shanghaiTimeFormatter.format(getMatchKickoff(nextMatch)) : undefined
+  };
 };
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [countdown, setCountdown] = useState(initialCountdown);
+  const [tournamentStatus, setTournamentStatus] = useState<TournamentStatus>(() => getTournamentStatus());
 
   useEffect(() => {
-    setCountdown(getCountdown());
+    setTournamentStatus(getTournamentStatus());
 
     const timer = window.setInterval(() => {
-      setCountdown(getCountdown());
-    }, 1000);
+      setTournamentStatus(getTournamentStatus());
+    }, 60 * 1000);
 
     return () => window.clearInterval(timer);
   }, []);
@@ -62,23 +93,23 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="mx-auto flex items-center gap-1 rounded-lg border border-cyan-300/20 bg-slate-950/70 px-2 py-1 shadow-glow">
-          <span className="hidden text-[10px] font-black uppercase tracking-[0.2em] text-cyan-200 sm:inline">Kickoff</span>
-          <span className="font-mono text-sm font-black tracking-[0.08em] text-cyan-200 drop-shadow-[0_0_8px_rgba(103,232,249,0.75)]">
-            {String(countdown.days).padStart(2, "0")}
+        <div className="mx-auto flex max-w-full items-center gap-2 rounded-lg border border-cyan-300/20 bg-slate-950/70 px-3 py-1.5 shadow-glow">
+          <span className="hidden text-[10px] font-black uppercase tracking-[0.2em] text-cyan-200 sm:inline">Beijing</span>
+          <span className="whitespace-nowrap font-mono text-sm font-black tracking-[0.04em] text-cyan-200 drop-shadow-[0_0_8px_rgba(103,232,249,0.75)]">
+            {tournamentStatus.stage}
           </span>
-          <span className="text-[10px] font-bold text-slate-500">天</span>
-          <span className="font-mono text-sm font-black tracking-[0.08em] text-cyan-200">
-            {String(countdown.hours).padStart(2, "0")}
+          <span className="text-slate-600">·</span>
+          <span className="whitespace-nowrap font-mono text-xs font-black text-slate-200">
+            {tournamentStatus.completedMatches}/{tournamentStatus.totalMatches}
           </span>
-          <span className="text-[10px] font-bold text-slate-500">:</span>
-          <span className="font-mono text-sm font-black tracking-[0.08em] text-cyan-200">
-            {String(countdown.minutes).padStart(2, "0")}
+          <span className="hidden whitespace-nowrap text-xs font-bold text-slate-400 sm:inline">
+            今日 {tournamentStatus.todayMatches} 场
           </span>
-          <span className="text-[10px] font-bold text-slate-500">:</span>
-          <span className="font-mono text-sm font-black tracking-[0.08em] text-cyan-200">
-            {String(countdown.seconds).padStart(2, "0")}
-          </span>
+          {tournamentStatus.nextMatch && (
+            <span className="hidden whitespace-nowrap text-xs font-bold text-slate-400 md:inline">
+              下一场 {tournamentStatus.nextTimeLabel} {tournamentStatus.nextMatch.home} vs {tournamentStatus.nextMatch.away}
+            </span>
+          )}
         </div>
 
         <div className="flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 p-1 lg:justify-self-end">
