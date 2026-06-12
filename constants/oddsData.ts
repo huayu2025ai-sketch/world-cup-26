@@ -50,11 +50,11 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "Spain",
     code: "ESP",
     flag: "🇪🇸",
-    consensusAmericanOdds: 478,
-    consensusDecimalOdds: 5.78,
-    marketImpliedProbability: 0.1732,
+    consensusAmericanOdds: 440,
+    consensusDecimalOdds: 5.4,
+    marketImpliedProbability: 0.1852,
     modelProbability: 0.257,
-    sourceNote: "多源冠军预测共识第 1"
+    sourceNote: "公开市场共识第 1"
   },
   {
     rank: 2,
@@ -62,11 +62,11 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "France",
     code: "FRA",
     flag: "🇫🇷",
-    consensusAmericanOdds: 543,
-    consensusDecimalOdds: 6.43,
-    marketImpliedProbability: 0.1556,
+    consensusAmericanOdds: 485,
+    consensusDecimalOdds: 5.85,
+    marketImpliedProbability: 0.1709,
     modelProbability: 0.189,
-    sourceNote: "多源冠军预测共识第 2"
+    sourceNote: "公开市场共识第 2"
   },
   {
     rank: 3,
@@ -74,35 +74,35 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "England",
     code: "ENG",
     flag: "\u{1F3F4}\u{E0065}\u{E006E}\u{E0067}\u{E006C}\u{E0061}\u{E006E}\u{E0064}\u{E007F}",
-    consensusAmericanOdds: 638,
-    consensusDecimalOdds: 7.38,
-    marketImpliedProbability: 0.1356,
+    consensusAmericanOdds: 625,
+    consensusDecimalOdds: 7.25,
+    marketImpliedProbability: 0.1379,
     modelProbability: 0.05,
-    sourceNote: "多源冠军预测共识第 3"
+    sourceNote: "公开市场共识第 3"
   },
   {
     rank: 4,
-    team: "巴西",
-    englishName: "Brazil",
-    code: "BRA",
-    flag: "🇧🇷",
-    consensusAmericanOdds: 825,
-    consensusDecimalOdds: 9.25,
-    marketImpliedProbability: 0.1081,
-    modelProbability: 0.076,
-    sourceNote: "多源冠军预测共识第 4"
-  },
-  {
-    rank: 5,
     team: "阿根廷",
     englishName: "Argentina",
     code: "ARG",
     flag: "🇦🇷",
-    consensusAmericanOdds: 838,
-    consensusDecimalOdds: 9.38,
-    marketImpliedProbability: 0.1067,
+    consensusAmericanOdds: 800,
+    consensusDecimalOdds: 9,
+    marketImpliedProbability: 0.1111,
     modelProbability: 0.143,
-    sourceNote: "多源冠军预测共识第 5"
+    sourceNote: "公开市场共识第 4"
+  },
+  {
+    rank: 5,
+    team: "巴西",
+    englishName: "Brazil",
+    code: "BRA",
+    flag: "🇧🇷",
+    consensusAmericanOdds: 875,
+    consensusDecimalOdds: 9.75,
+    marketImpliedProbability: 0.1026,
+    modelProbability: 0.076,
+    sourceNote: "公开市场共识第 5"
   }
 ];
 
