@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-12T12:20:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月12日 12:20",
+    title: "小组赛赛果与统计更新",
+    summary: "本次同步 A 组韩国 2-1 捷克的赛果，更新赛程比分、进球记录、A 组排名，以及进球榜和助攻榜。",
+    changes: [
+      "赛程页补入韩国 2-1 捷克：拉迪斯拉夫·克雷伊奇 59'，黄仁范 67'，吴贤揆 80'。",
+      "A 组积分榜更新：墨西哥 3 分 +2 继续第一，韩国 3 分 +1 升至第二，捷克与南非暂列第三、第四。",
+      "进球榜新增黄仁范、吴贤揆、拉迪斯拉夫·克雷伊奇；可确认助攻榜新增黄仁范。",
+      "本轮只更新已结束比赛的真实赛果，未开赛场次继续保留赛前状态。"
+    ]
+  },
+  {
     updatedAt: "2026-06-11T20:20:00+08:00",
     updatedAtLabel: "北京时间 2026年6月11日 20:20",
     title: "中文名候选补充",
@@ -238,9 +250,9 @@ export const worldCupGroups: WorldCupGroup[] = [
     ],
     standings: [
       { name: "墨西哥", code: "MEX", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 0, goalDiff: 2, points: 3 },
-      { name: "南非", code: "RSA", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 },
-      { name: "韩国", code: "KOR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "捷克", code: "CZE", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "韩国", code: "KOR", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
+      { name: "捷克", code: "CZE", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 },
+      { name: "南非", code: "RSA", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 }
     ]
   },
   {
