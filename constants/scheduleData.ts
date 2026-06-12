@@ -45,8 +45,8 @@ const withBeijingTime = (match: ScheduleMatchInput): ScheduleMatch => ({
 
 const matchInputs: ScheduleMatchInput[] = [
   { id: 1, stage: "分组赛", group: "A", date: "2026-06-11", etTime: "15:00", home: "墨西哥", away: "南非", venue: "Estadio Azteca", city: "Mexico City", homeScore: 2, awayScore: 0, goalScorers: [
-    { player: "Julián Quiñones", team: "墨西哥", minute: "9'", type: "goal" },
-    { player: "Raúl Jiménez", team: "墨西哥", minute: "67'", type: "goal" },
+    { player: "胡利安·基尼奥内斯", team: "墨西哥", minute: "9'", type: "goal" },
+    { player: "劳尔·希门尼斯", team: "墨西哥", minute: "67'", type: "goal" },
   ] },
   { id: 2, stage: "分组赛", group: "A", date: "2026-06-11", etTime: "22:00", home: "韩国", away: "捷克", venue: "Estadio Akron", city: "Guadalajara" },
   { id: 3, stage: "分组赛", group: "B", date: "2026-06-12", etTime: "15:00", home: "加拿大", away: "波黑", venue: "BMO Field", city: "Toronto" },
