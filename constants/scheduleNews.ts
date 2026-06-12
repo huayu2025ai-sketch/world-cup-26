@@ -22,29 +22,62 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 墨西哥 vs 南非 (6/11)
   1: {
     matchId: 1,
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-06-12",
     items: [
       {
-        type: "injury",
-        title: "洛萨诺、马丁等主力未入选最终名单",
+        type: "form",
+        title: "墨西哥揭幕战2-0取胜，主场氛围明显提振",
         summary:
-          "伊尔文·洛萨诺因纪律问题和在圣迭戈FC出场时间有限被排除在名单外；亨利·马丁、路易斯·安赫尔·马拉贡、罗德里戈·韦斯卡斯因伤未入选最终26人名单。主教练阿吉雷的名单以墨西哥联赛为班底。",
+          "墨西哥在阿兹特克球场揭幕战2-0击败南非，朱利安·奎尼奥内斯早早破门，劳尔·希门尼斯下半场扩大比分。主场声浪与开门红会继续影响A组后续走势。",
         affectedTeam: "墨西哥",
-        affectedPlayer: "伊尔文·洛萨诺 / 亨利·马丁",
+        affectedPlayer: "朱利安·奎尼奥内斯 / 劳尔·希门尼斯",
         severity: "medium",
-        date: "2026-06-07",
-        channel: "ESPN / FourFourTwo",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/mexico-south-africa-world-cup-2026",
       },
       {
-        type: "injury",
-        title: "南非莫迪巴带伤入选，两名新人有望首秀",
+        type: "form",
+        title: "南非重返世界杯首战受挫",
         summary:
-          "左后卫奥布里·莫迪巴在马梅洛迪日落队的CAF冠军联赛决赛第二回合中受伤，但仍入选26人名单；两名新人首次入选国家队。",
+          "南非自2010年后首次回到世界杯正赛，首战面对东道主墨西哥未能拿分。球队需要在随后对韩国、捷克的比赛中提升进攻效率，否则A组出线压力会迅速放大。",
         affectedTeam: "南非",
-        affectedPlayer: "奥布里·莫迪巴",
         severity: "medium",
-        date: "2026-06-07",
-        channel: "CAF Online / 南非足协",
+        date: "2026-06-11",
+        channel: "The Guardian / New York Post",
+        sourceUrl: "https://nypost.com/2026/06/11/sports/fifa-world-cup-kicks-off-in-mexico-city-with-opening-ceremony-big-on-stars-and-local-culture/",
+      },
+    ],
+  },
+
+  // 韩国 vs 捷克 (6/11)
+  2: {
+    matchId: 2,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "tactical",
+        title: "韩国改打3-4-3，依赖孙兴慜和李刚仁个人推进",
+        summary:
+          "韩国首发排出3-4-3，金玟哉坐镇三中卫，薛英佑和李泰锡承担翼卫职责。球队无球时回落成5-2-3，中前场推进仍主要依赖孙兴慜、李刚仁和李在城的个人处理。",
+        affectedTeam: "韩国",
+        affectedPlayer: "孙兴慜 / 李刚仁 / 金玟哉",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/live/2026/jun/12/fifa-world-cup-2026-live-south-korea-v-czechia-updates-kor-vs-cze-group-a-match-score-latest",
+      },
+      {
+        type: "form",
+        title: "捷克点球附加赛晋级，希克锋线状态回升",
+        summary:
+          "捷克通过连续两轮附加赛点球大战进入世界杯，帕特里克·希克仍是最主要的进攻支点。赛前报道提到他在勒沃库森赛季末体能和状态均有改善，捷克进攻会围绕他与绍切克的中轴展开。",
+        affectedTeam: "捷克",
+        affectedPlayer: "帕特里克·希克 / 托马什·绍切克",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/live/2026/jun/12/fifa-world-cup-2026-live-south-korea-v-czechia-updates-kor-vs-cze-group-a-match-score-latest",
       },
     ],
   },
@@ -52,29 +85,42 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 加拿大 vs 波黑 (6/12)
   3: {
     matchId: 3,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-12",
     items: [
       {
         type: "injury",
-        title: "加拿大队长阿方索·戴维斯腿筋伤势，揭幕战成疑",
+        title: "阿方索·戴维斯恢复中，加拿大首战大概率赶不上",
         summary:
-          "阿方索·戴维斯自2025年3月在CONCACAF国家联赛决赛中撕裂ACL后一直未代表加拿大出场，上月又在拜仁比赛中腿筋受伤。6月1日对乌兹别克斯坦的热身赛他仅在场边跑圈，揭幕战出场可能性极低。",
+          "马什赛前表示阿方索·戴维斯仍在从腿筋伤势中恢复，加拿大对波黑的主场揭幕战对他来说来得太早。加拿大左路推进和转换速度会受到直接影响。",
         affectedTeam: "加拿大",
         affectedPlayer: "阿方索·戴维斯",
         severity: "high",
-        date: "2026-06-08",
-        channel: "ESPN / 163.com",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/canada-world-cup-opening-game-jesse-marsch",
       },
       {
-        type: "tactical",
-        title: "波黑40岁哲科领衔，点球大战连克威尔士、意大利晋级",
+        type: "injury",
+        title: "邦比托曾有缺席风险，但赛前发布会称可出战",
         summary:
-          "队长埃丁·哲科（40岁）仍是锋线核心；波黑在欧洲附加赛中连续通过点球击败威尔士和意大利，展现极强韧性。这是波黑自2014年以来首次参加世界杯。",
-        affectedTeam: "波黑",
-        affectedPlayer: "埃丁·哲科",
+          "加拿大后卫莫伊塞·邦比托此前被认为可能因伤无缘整届赛事；马什随后在赛前发布会确认邦比托和伊斯梅尔·科内均可出战，后防用人压力有所缓解。",
+        affectedTeam: "加拿大",
+        affectedPlayer: "莫伊塞·邦比托 / 伊斯梅尔·科内",
         severity: "medium",
-        date: "2026-06-07",
-        channel: "SI.com / Sports Illustrated",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/jesse-masrch-canada-us-national-anthem-world-cup",
+      },
+      {
+        type: "form",
+        title: "加拿大近9场运动战仅2球，进攻效率是隐忧",
+        summary:
+          "加拿大赛前最大隐患不只在伤病，还包括运动战进球效率偏低。报道提到球队近9场比赛只有2个运动战进球，主帅马什强调保持积极，但首战若迟迟打不开局面，压力会很快堆到锋线。",
+        affectedTeam: "加拿大",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/canada-world-cup-opening-game-jesse-marsch",
       },
     ],
   },
@@ -82,31 +128,30 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 巴西 vs 摩洛哥 (6/13)
   6: {
     matchId: 6,
-    updatedAt: "2026-06-09",
+    updatedAt: "2026-06-12",
     items: [
       {
         type: "injury",
-        title: "内马尔二级小腿拉伤，首战复出存疑",
+        title: "内马尔小腿伤恢复进展良好，但首战仍需观察",
         summary:
-          "内马尔报到后MRI确诊为二级小腿肌肉拉伤，缺席了对巴拿马和埃及的两场热身赛。6月8日复查显示恢复进展良好，安切洛蒂表示有望在6月13日对摩洛哥的首战复出；若未完全恢复，主要目标将是6月19日对海地的第二战。巴西足协确认不会替换内马尔。",
+          "巴西足协通报称内马尔接受MRI复查后恢复进展良好，将继续按医疗组计划训练和康复。他没有参加周一合练，能否在对摩洛哥首战出场仍取决于临场评估。",
         affectedTeam: "巴西",
         affectedPlayer: "内马尔",
         severity: "high",
         date: "2026-06-09",
-        channel: "GloboEsporte / CBF",
-        sourceUrl: "https://www.espn.com.au/football/story/_/id/48572979",
+        channel: "Reuters / CBF / The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/live/2026/jun/09/world-cup-2026-news-olise-dazzles-in-france-friendly-neymar-recovering-well-england-latest-live",
       },
       {
-        type: "injury",
-        title: "罗德里戈、米利唐已确认缺席世界杯",
+        type: "form",
+        title: "摩洛哥热度高，外界期待延续非洲突破",
         summary:
-          "罗德里戈在3月遭遇十字韧带与半月板撕裂，埃德尔·米利唐因腿筋手术，两人均未进入26人名单。巴西边路和防线深度受损。",
-        affectedTeam: "巴西",
-        affectedPlayer: "罗德里戈 / 埃德尔·米利唐",
-        severity: "high",
-        date: "2026-06-07",
-        channel: "ESPN / FourFourTwo",
-        sourceUrl: "https://www.espn.com.au/football/story/_/id/48572979",
+          "摩洛哥延续2022年世界杯四强后的高期待，国际媒体把他们列为本届最受关注的非洲球队之一。面对巴西的强强对话会直接检验其防守反击和大赛成熟度。",
+        affectedTeam: "摩洛哥",
+        severity: "medium",
+        date: "2026-06-09",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/09/africa-10-contenders-teams-world-cup-2026-morocco-egypt-senegal-cote-d-ivoire",
       },
       {
         type: "tactical",
@@ -119,47 +164,112 @@ export const matchNewsMap: Record<number, MatchNews> = {
         channel: "FourFourTwo",
         sourceUrl: "https://www.fourfourtwo.com/team/brazil-world-cup-2026-squad",
       },
-      {
-        type: "injury",
-        title: "摩洛哥阿格尔德、埃扎尔祖利因伤无缘世界杯",
-        summary:
-          "摩洛哥在开赛前最后一刻对名单做出调整：纳耶夫·阿格尔德和阿卜德·埃扎尔祖利因伤被移除，由其他人递补。两人在赛前训练中受伤，最终未能进入最终26人名单。摩洛哥防线和边路进攻深度受损。",
-        affectedTeam: "摩洛哥",
-        affectedPlayer: "纳耶夫·阿格尔德 / 阿卜德·埃扎尔祖利",
-        severity: "high",
-        date: "2026-06-11",
-        channel: "ESPN / Reuters",
-        sourceUrl: "https://www.reuters.com",
-      },
     ],
   },
 
   // 美国 vs 巴拉圭 (6/12)
   4: {
     matchId: 4,
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "form",
+        title: "美国26人均可出战，波切蒂诺强调放松和信任",
+        summary:
+          "美国队赛前确认26名球员均可供选择。波切蒂诺在揭幕战前淡化过度动员，强调放松、信任训练成果和团队连接，这意味着首战阵容不会受大面积伤病限制。",
+        affectedTeam: "美国",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/usmnt-pochettino-press-conference-paraguay-world-cup",
+      },
+      {
+        type: "tactical",
+        title: "美国阵容防守配置偏重，巴洛贡近期状态被看好",
+        summary:
+          "美国本届阵容包含大量后卫和防守型中场，外界关注球队能否在控球和转换防守之间找到平衡。锋线方面，福拉林·巴洛贡赛前状态被认为出色，可能承担更多终结任务。",
+        affectedTeam: "美国",
+        affectedPlayer: "福拉林·巴洛贡",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/world-cup-group-d-usa-co-hosts-australia-turkey-paraguay-football",
+      },
+      {
+        type: "tactical",
+        title: "巴拉圭身体对抗和反击是美国首战主要考题",
+        summary:
+          "巴拉圭被描述为结构清晰、对抗强、擅长反击的球队，胡利奥·恩西索、古斯塔沃·戈麦斯和奥马尔·阿尔德雷特会构成前后场关键支点。美国若压上过深，身后空间会成为风险点。",
+        affectedTeam: "巴拉圭",
+        affectedPlayer: "胡利奥·恩西索 / 古斯塔沃·戈麦斯",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "Stars and Stripes FC",
+        sourceUrl: "https://www.starsandstripesfc.com/usmnt-news/44224/2026-world-cup-previewing-usa-vs-paraguay-all-gas-no-brakes",
+      },
+    ],
+  },
+
+  // 海地 vs 苏格兰 (6/13)
+  7: {
+    matchId: 7,
+    updatedAt: "2026-06-12",
     items: [
       {
         type: "injury",
-        title: "美国约翰尼·卡多索脚踝重伤缺席，岑德哈斯入替",
+        title: "麦克托米奈因胃部不适缺训，但苏格兰相信可赶上首战",
         summary:
-          "卡多索在欧冠半决赛中遭遇高级别右脚踝扭伤需要手术，将缺席世界杯。波切蒂诺选择用美洲的亚历杭德罗·岑德哈斯填补其位置，转而加强攻击线深度。",
-        affectedTeam: "美国",
-        affectedPlayer: "约翰尼·卡多索 / 亚历杭德罗·岑德哈斯",
-        severity: "high",
-        date: "2026-06-09",
-        channel: "ESPN",
+          "斯科特·麦克托米奈因胃部不适缺席训练，队内消息认为更多是预防措施。作为苏格兰中场最重要的推进和得分点之一，他的身体状态会直接影响对海地的首战强度。",
+        affectedTeam: "苏格兰",
+        affectedPlayer: "斯科特·麦克托米奈",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/scott-mctominay-scotland-world-cup-opener-stomach-bug",
       },
       {
         type: "injury",
-        title: "美国克里斯·理查兹脚踝韧带撕裂，但预计能赶上世界杯",
+        title: "吉尔摩因膝伤无缘名单，弗莱彻补进中场轮换",
         summary:
-          "水晶宫中卫理查兹撕裂了两条脚踝韧带，主帅奥利弗·格拉斯纳称他参加5月27日欧协联决赛是「五五开」。但消息人士告诉ESPN，理查兹预计将及时恢复，参加世界杯应无问题。",
-        affectedTeam: "美国",
-        affectedPlayer: "克里斯·理查兹",
+          "比利·吉尔摩因对库拉索时遭遇的膝伤缺席世界杯，但仍随队前往波士顿支持球队。19岁的泰勒·弗莱彻因此进入名单，苏格兰中场轮换经验下降。",
+        affectedTeam: "苏格兰",
+        affectedPlayer: "比利·吉尔摩 / 泰勒·弗莱彻",
         severity: "medium",
-        date: "2026-06-09",
-        channel: "ESPN",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/scott-mctominay-scotland-world-cup-opener-stomach-bug",
+      },
+    ],
+  },
+
+  // 澳大利亚 vs 土耳其 (6/14)
+  8: {
+    matchId: 8,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "injury",
+        title: "莫·图雷缺训引发锋线伤情警报",
+        summary:
+          "澳大利亚前锋莫·图雷在赛前训练中缺席，官方称预计次日回归，但他有肌肉伤病史。若图雷无法首发，澳大利亚正印中锋选择有限，特特·延吉将承受更大压力。",
+        affectedTeam: "澳大利亚",
+        affectedPlayer: "莫·图雷 / 特特·延吉",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/mo-toure-injury-scare-world-cup-socceroos-striker",
+      },
+      {
+        type: "tactical",
+        title: "土耳其进攻天赋充足，但中卫协同和定位球防守仍是短板",
+        summary:
+          "蒙特拉的土耳其以居莱尔、伊尔迪兹和恰尔汗奥卢为核心，常用4-2-3-1控制球权。赛前分析同时指出球队中卫组合默契、反击防守和定位球防守仍不稳定。",
+        affectedTeam: "土耳其",
+        affectedPlayer: "阿尔达·居莱尔 / 凯南·伊尔迪兹 / 哈坎·恰尔汗奥卢",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/blog/2026/jun/12/world-cup-group-d-matches-turkey-national-football-team-strengths-weaknesses",
       },
     ],
   },
