@@ -8,7 +8,7 @@ type RankingTableProps = {
 
 function RankingTable({ title, label, rows }: RankingTableProps) {
   return (
-    <section className="rounded-lg border border-slate-700 bg-slate-800/50 p-4 backdrop-blur-md">
+    <section className="min-w-0 rounded-lg border border-slate-700 bg-slate-800/50 p-4 backdrop-blur-md">
       <div className="flex items-center justify-between gap-3 border-b border-slate-700 pb-3">
         <div>
           <p className="text-[11px] font-black uppercase tracking-[0.3em] text-cyan-200">Ranking</p>
@@ -20,31 +20,40 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
       </div>
 
       {rows.length > 0 ? (
-        <div className="mt-3 overflow-x-auto">
-          <table className="w-full min-w-[560px] text-left text-sm">
+        <div className="mt-3 max-w-full overflow-x-auto">
+          <table className="w-full table-fixed text-left text-xs sm:min-w-[560px] sm:text-sm">
+            <colgroup>
+              <col className="w-[15%] sm:w-auto" />
+              <col className="w-[41%] sm:w-auto" />
+              <col className="w-[20%] sm:w-auto" />
+              <col className="w-[12%] sm:w-auto" />
+              <col className="w-[12%] sm:w-auto" />
+            </colgroup>
             <thead>
-              <tr className="border-b border-slate-700 text-xs uppercase tracking-[0.16em] text-slate-500">
-                <th className="py-2 pr-3">排名</th>
-                <th className="px-3 py-2">球员</th>
-                <th className="px-3 py-2">球队</th>
-                <th className="px-3 py-2 text-right">{label}</th>
-                <th className="py-2 pl-3 text-right">出场</th>
+              <tr className="border-b border-slate-700 text-[10px] uppercase tracking-[0.06em] text-slate-500 sm:text-xs sm:tracking-[0.16em]">
+                <th className="py-2 pr-2 sm:pr-3">排名</th>
+                <th className="px-2 py-2 sm:px-3">球员</th>
+                <th className="px-2 py-2 sm:px-3">球队</th>
+                <th className="px-1 py-2 text-right sm:px-3">{label}</th>
+                <th className="py-2 pl-1 text-right sm:pl-3">出场</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row) => (
                 <tr key={`${row.teamCode}-${row.player}`} className="border-b border-slate-700/60 last:border-0">
-                  <td className="py-3 pr-3 font-black text-cyan-200">#{row.rank}</td>
-                  <td className="px-3 py-3">
-                    <p className="font-black text-slate-100">{row.chineseName}</p>
-                    <p className="mt-0.5 text-xs text-slate-500">{row.player}</p>
+                  <td className="py-3 pr-2 font-black text-cyan-200 sm:pr-3">#{row.rank}</td>
+                  <td className="min-w-0 px-2 py-3 sm:px-3">
+                    <p className="truncate font-black text-slate-100">{row.chineseName}</p>
+                    <p className="mt-0.5 truncate text-[10px] text-slate-500 sm:text-xs">{row.player}</p>
                   </td>
-                  <td className="px-3 py-3">
-                    <p className="font-bold text-slate-300">{row.team}</p>
-                    <p className="mt-0.5 text-xs text-slate-500">{row.teamCode}</p>
+                  <td className="min-w-0 px-2 py-3 sm:px-3">
+                    <p className="truncate font-bold text-slate-300">{row.team}</p>
+                    <p className="mt-0.5 truncate text-[10px] text-slate-500 sm:text-xs">{row.teamCode}</p>
                   </td>
-                  <td className="px-3 py-3 text-right text-lg font-black text-slate-100">{row.value}</td>
-                  <td className="py-3 pl-3 text-right font-bold text-slate-400">{row.matches}</td>
+                  <td className="px-1 py-3 text-right text-base font-black text-slate-100 sm:px-3 sm:text-lg">
+                    {row.value}
+                  </td>
+                  <td className="py-3 pl-1 text-right font-bold text-slate-400 sm:pl-3">{row.matches}</td>
                 </tr>
               ))}
             </tbody>
@@ -71,7 +80,7 @@ export default function StatsPage() {
         </p>
       </section>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid min-w-0 gap-4 lg:grid-cols-2">
         <RankingTable title="进球榜" label="进球" rows={goalsRanking} />
         <RankingTable title="助攻榜" label="助攻" rows={assistsRanking} />
       </div>
