@@ -8,11 +8,16 @@ export type PlayerStat = {
   matches: number;
 };
 
-export const goalsRanking: PlayerStat[] =   [];
+export const goalsRanking: PlayerStat[] = [
+  { rank: 1, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 },
+  { rank: 1, player: "劳尔·希门尼斯", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 }
+];
 
-export const assistsRanking: PlayerStat[] =   [];
+export const assistsRanking: PlayerStat[] = [
+  { rank: 1, player: "罗伯托·阿尔瓦拉多", chineseName: "罗伯托·阿尔瓦拉多", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 }
+];
 
 export const statsNotice = {
     title: "墨西哥 2-0 南非",
-    body: "比赛已完成，进球榜和助攻榜已更新。"
+    body: "已更新墨西哥 2-0 南非的进球榜和可确认助攻榜。"
   };
