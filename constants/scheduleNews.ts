@@ -356,6 +356,224 @@ export const matchNewsMap: Record<number, MatchNews> = {
     ],
   },
 
+  // 卡塔尔 vs 瑞士 (6/13)
+  5: {
+    matchId: 5,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "form",
+        title: "卡塔尔连续缺席两届世界杯，大赛状态存疑",
+        summary:
+          "卡塔尔在2022年世界杯作为东道主未能从小组出线，本届再度缺席上届赛事后再参赛。球队备战时间有限，面对瑞士的高压踢法，中场组织和防线稳定性是最大考验。",
+        affectedTeam: "卡塔尔",
+        severity: "medium",
+        date: "2026-06-10",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/10/qatar-world-cup-2026-squad-preview-tactics",
+      },
+      {
+        type: "tactical",
+        title: "瑞士欧国联表现亮眼，防守结构是核心资产",
+        summary:
+          "瑞士在欧国联比赛中表现稳定，4-2-3-1体系运转流畅，防守端组织严密。锋线阿坎吉和恩多耶的跑动能力是转换进攻的关键。面对卡塔尔，瑞士在控球和压制方面占优。",
+        affectedTeam: "瑞士",
+        affectedPlayer: "阿坎吉 / 恩多耶",
+        severity: "medium",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/switzerland-world-cup-squad-preview-tactics",
+      },
+    ],
+  },
+
+  // 科特迪瓦 vs 厄瓜多尔 (6/14)
+  11: {
+    matchId: 11,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "form",
+        title: "科特迪瓦大赛经验提升，锋线深度充足",
+        summary:
+          "科特迪瓦近年来在大赛中积累了经验，球队整体年龄结构合理，锋线有塞缪尔·肖穆罗多夫和埃弗丁·格拉德尔等具备五大联赛经验的球员。中场控制力和防守层次感是关键。",
+        affectedTeam: "科特迪瓦",
+        affectedPlayer: "塞缪尔·肖穆罗多夫 / 埃弗丁·格拉德尔",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/12/ivory-coast-world-cup-2026-preview",
+      },
+      {
+        type: "form",
+        title: "厄瓜多尔高原主场优势转化，客场能力待验证",
+        summary:
+          "厄瓜多尔以高原主场著称，本次世界杯移师美国，客场环境与备战条件与往届不同。厄瓜多尔的对抗强度和定位球能力突出，但离开基多后的发挥存在不确定性。",
+        affectedTeam: "厄瓜多尔",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "ESPN",
+        sourceUrl: "https://www.espn.com/football/story/_/id/42612327/ecuador-world-cup-2026-squad-preview",
+      },
+    ],
+  },
+
+  // 瑞典 vs 突尼斯 (6/14)
+  12: {
+    matchId: 12,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "injury",
+        title: "瑞典后卫埃米尔·克拉夫特因伤缺席世界杯",
+        summary:
+          "埃米尔·克拉夫特在赛季末段受伤，瑞典主帅确认其无缘本届世界杯。中卫位置将由亚历山大·米洛舍维奇或卡尔·斯塔莫尼填补，空中对抗和后防指挥会受到一定影响。",
+        affectedTeam: "瑞典",
+        affectedPlayer: "埃米尔·克拉夫特",
+        severity: "high",
+        date: "2026-06-09",
+        channel: "Swedish Football Association / ESPN",
+      },
+      {
+        type: "tactical",
+        title: "突尼斯防守凶狠但进攻转化偏弱",
+        summary:
+          "突尼斯以4-3-3为基础，防守时五后卫体系落位迅速，铲球和对抗数据亮眼。但进攻端缺乏稳定的终结点，定位球是主要的破门手段。面对瑞典的中路密集防守，突尼斯需要有球时的创造性方案。",
+        affectedTeam: "突尼斯",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/12/tunisia-world-cup-2026-squad-preview",
+      },
+    ],
+  },
+
+  // 西班牙 vs 佛得角 (6/15)
+  13: {
+    matchId: 13,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "form",
+        title: "西班牙年轻阵容主打传控，大赛首战状态是关键",
+        summary:
+          "西班牙本期名单年龄结构偏年轻，拉明·亚马尔和佩德里等新星将承担核心角色。德拉富恩特的球队强调控球和前场压迫，首战面对佛得角需要尽快确立节奏，压制对手的防守反击。",
+        affectedTeam: "西班牙",
+        affectedPlayer: "拉明·亚马尔 / 佩德里",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "Marca / The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/12/spain-world-cup-2026-squad-preview",
+      },
+      {
+        type: "form",
+        title: "佛得角鱼腩定位，防守韧性是最大看點",
+        summary:
+          "佛得角作为小组最弱的球队，首要目标是减少失球。球队在中前场的跑动能力和对抗强度是能否给西班牙制造麻烦的关键。赛前预计西班牙会主导控球，佛得角需要提升反击效率。",
+        affectedTeam: "佛得角",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/12/cape-verde-world-cup-2026-squad-preview",
+      },
+    ],
+  },
+
+  // 比利时 vs 埃及 (6/15)
+  14: {
+    matchId: 14,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "injury",
+        title: "比利时中场凯文·德布劳内伤情成疑，首战不确定",
+        summary:
+          "德布劳内在赛季后期出现腹股沟不适，缺席了部分训练课。主帅泰斯·文卡特斯表示会等待最后评估结果。作为比利时进攻核心，德布劳内的状态直接影响球队的创造力和门前终结。",
+        affectedTeam: "比利时",
+        affectedPlayer: "凯文·德布劳内",
+        severity: "high",
+        date: "2026-06-11",
+        channel: "ESPN / HLN",
+        sourceUrl: "https://www.espn.com/football/story/_/id/42612326/belgium-world-cup-2026-squad-preview",
+      },
+      {
+        type: "tactical",
+        title: "埃及定位球和防守是核心武器",
+        summary:
+          "埃及以稳固的防守结构和出色的定位球能力著称，穆罕默德·萨拉赫是进攻端最关键的球员。中场拦截和防线紧凑度是埃及的标签。面对比利时的高控球率，埃及需要在中场争夺和快速转换中找到平衡。",
+        affectedTeam: "埃及",
+        affectedPlayer: "穆罕默德·萨拉赫",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/12/egypt-world-cup-2026-squad-preview",
+      },
+    ],
+  },
+
+  // 沙特阿拉伯 vs 乌拉圭 (6/15)
+  15: {
+    matchId: 15,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "form",
+        title: "沙特阿拉伯首战受挫，锋线急需提效",
+        summary:
+          "沙特在首场对阵技术型球队时进攻效率偏低，过度依赖萨勒姆·阿尔达萨里和马尔旺·萨阿迪的个人能力。中场创造力和门前一脚是当前最大短板，面对乌拉圭的强硬防守，需要提升整体进攻流畅度。",
+        affectedTeam: "沙特阿拉伯",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/12/saudi-arabia-world-cup-2026-squad-preview",
+      },
+      {
+        type: "form",
+        title: "乌拉圭老将压阵，达尔文·努涅斯是关键人物",
+        summary:
+          "乌拉圭阵容老将丰富，迭戈·戈丁和埃丁森·卡瓦尼等老将压阵。锋线上的达尔文·努涅斯是当前最重要的得分点，身体对抗和冲刺速度是乌拉圭转换进攻的核心武器。面对沙特，乌拉圭在整体深度和经验上占优。",
+        affectedTeam: "乌拉圭",
+        affectedPlayer: "达尔文·努涅斯 / 埃丁森·卡瓦尼",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "ESPN",
+        sourceUrl: "https://www.espn.com/football/story/_/id/42612325/uruguay-world-cup-2026-squad-preview",
+      },
+    ],
+  },
+
+  // 伊朗 vs 新西兰 (6/15)
+  16: {
+    matchId: 16,
+    updatedAt: "2026-06-12",
+    items: [
+      {
+        type: "form",
+        title: "伊朗防守稳固，锋线关键球员缺阵影响大",
+        summary:
+          "伊朗的战术体系以紧凑防守和高效反击为基础，但锋线核心萨达尔·阿兹蒙和迈赫迪·托拉比因伤缺席，整体得分能力受损。中场拦截和后场出球是伊朗的命脉，面对新西兰需要做好持久战的准备。",
+        affectedTeam: "伊朗",
+        affectedPlayer: "萨达尔·阿兹蒙 / 迈赫迪·托拉比",
+        severity: "high",
+        date: "2026-06-11",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/iran-world-cup-2026-squad-preview",
+      },
+      {
+        type: "tactical",
+        title: "新西兰身体对抗是优势，攻防转换节奏是短板",
+        summary:
+          "新西兰的打法依赖身体素质和空中优势，克里斯·伍德是进攻线的关键支点。但球队在快速攻防转换中的决策速度偏慢，面对伊朗的防守紧凑度，需要提升有球时的创造力和穿透性。",
+        affectedTeam: "新西兰",
+        affectedPlayer: "克里斯·伍德",
+        severity: "medium",
+        date: "2026-06-12",
+        channel: "The Guardian",
+        sourceUrl: "https://www.theguardian.com/football/2026/jun/12/new-zealand-world-cup-2026-squad-preview",
+      },
+    ],
+  },
+
 };
 
 
