@@ -359,30 +359,31 @@ export const matchNewsMap: Record<number, MatchNews> = {
   // 卡塔尔 vs 瑞士 (6/13)
   5: {
     matchId: 5,
-    updatedAt: "2026-06-12",
+    updatedAt: "2026-06-14",
     items: [
       {
         type: "form",
-        title: "卡塔尔连续缺席两届世界杯，大赛状态存疑",
+        title: "卡塔尔补时扳平，拿到队史世界杯首个积分",
         summary:
-          "卡塔尔在2022年世界杯作为东道主未能从小组出线，本届再度缺席上届赛事后再参赛。球队备战时间有限，面对瑞士的高压踢法，中场组织和防线稳定性是最大考验。",
+          "卡塔尔在长时间被压制的局面下守住比分悬念，并由布阿莱姆·胡希在90+5分钟头球扳平瑞士，1-1拿到队史世界杯首个积分。B组首轮两场均为平局，小组形势继续胶着。",
         affectedTeam: "卡塔尔",
+        affectedPlayer: "布阿莱姆·胡希 / 霍马姆·艾哈迈德",
         severity: "medium",
-        date: "2026-06-10",
+        date: "2026-06-13",
         channel: "The Guardian",
-        sourceUrl: "https://www.theguardian.com/football/2026/jun/10/qatar-world-cup-2026-squad-preview-tactics",
+        sourceUrl: "https://www.theguardian.com/football/live/2026/jun/13/qatar-v-switzerland-world-cup-2026-live",
       },
       {
         type: "tactical",
-        title: "瑞士欧国联表现亮眼，防守结构是核心资产",
+        title: "瑞士早早点球领先但错失扩大优势",
         summary:
-          "瑞士在欧国联比赛中表现稳定，4-2-3-1体系运转流畅，防守端组织严密。锋线阿坎吉和恩多耶的跑动能力是转换进攻的关键。面对卡塔尔，瑞士在控球和压制方面占优。",
+          "瑞士由布雷尔·恩博洛在17分钟点球破门，但之后未能把控球和射门优势转化为第二球，补时阶段被卡塔尔扳平。球队仍保持不败，但在同积1分的B组中错失抢占先机的机会。",
         affectedTeam: "瑞士",
-        affectedPlayer: "阿坎吉 / 恩多耶",
+        affectedPlayer: "布雷尔·恩博洛",
         severity: "medium",
-        date: "2026-06-11",
+        date: "2026-06-13",
         channel: "The Guardian",
-        sourceUrl: "https://www.theguardian.com/football/2026/jun/11/switzerland-world-cup-squad-preview-tactics",
+        sourceUrl: "https://www.theguardian.com/football/live/2026/jun/13/qatar-v-switzerland-world-cup-2026-live",
       },
     ],
   },

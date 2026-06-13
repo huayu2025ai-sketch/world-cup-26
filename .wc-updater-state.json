@@ -1,13 +1,13 @@
 {
   "last_hash_roster": "90fd42bba1e951ee8725ae6139720d9c",
-  "last_run": "2026-06-14T05:00:00+08:00",
+  "last_run": "2026-06-14T06:02:00+08:00",
   "fifa_skipped": true,
-  "fifa_skip_reason": "Cron auto-run: synced match-results.json with scheduleData.ts for matches 1-4",
+  "fifa_skip_reason": "Manual results update: synced match-results.json with scheduleData.ts for match 5",
   "changes": [
     {
       "tag": "✅",
       "team": "match-results.json",
-      "detail": "Synced matches 2, 3, 4 from scheduleData.ts (KOR 2-1 CZE, CAN 1-1 BIH, USA 4-1 PAR)"
+      "detail": "Synced match 5 from scheduleData.ts (QAT 1-1 SUI)"
     }
   ]
 }

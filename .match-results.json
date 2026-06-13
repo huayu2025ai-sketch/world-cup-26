@@ -34,5 +34,13 @@
       {"player": "Mauricio", "team": "巴拉圭", "minute": "73'", "type": "goal"},
       {"player": "吉奥·雷纳", "team": "美国", "minute": "90+7'", "type": "goal"}
     ]
+  },
+  "5": {
+    "homeScore": 1,
+    "awayScore": 1,
+    "goalScorers": [
+      {"player": "布雷尔·恩博洛", "team": "瑞士", "minute": "17'", "type": "penalty"},
+      {"player": "布阿莱姆·胡希", "team": "卡塔尔", "minute": "90+5'", "type": "goal"}
+    ]
   }
 }

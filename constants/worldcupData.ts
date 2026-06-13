@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-14T06:02:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月14日 06:02",
+    title: "B组赛果与统计更新",
+    summary: "本次同步 B 组卡塔尔 1-1 瑞士的终场赛果，更新赛程比分、进球记录、B 组积分榜，以及进球榜和可确认助攻榜。",
+    changes: [
+      "赛程页补入卡塔尔 1-1 瑞士：布雷尔·恩博洛 17'（点球），布阿莱姆·胡希 90+5'。",
+      "B 组积分榜重算：加拿大、波黑、卡塔尔、瑞士均为 1 战 1 分、净胜球 0；本地在完全相同积分/净胜球/进球时保留现有展示顺序。",
+      "进球榜新增布雷尔·恩博洛、布阿莱姆·胡希；助攻榜新增霍马姆·艾哈迈德。",
+      "巴西 vs 摩洛哥、海地 vs 苏格兰、澳大利亚 vs 土耳其在本次运行时未按终场状态落库，继续保留赛前状态。"
+    ]
+  },
+  {
     updatedAt: "2026-06-14T00:35:00+08:00",
     updatedAtLabel: "北京时间 2026年6月14日 00:35",
     title: "球队与球员数据维护更新",
@@ -336,8 +348,8 @@ export const worldCupGroups: WorldCupGroup[] = [
     standings: [
       { name: "加拿大", code: "CAN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
       { name: "波黑", code: "BIH", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "卡塔尔", code: "QAT", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "瑞士", code: "SUI", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "卡塔尔", code: "QAT", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
+      { name: "瑞士", code: "SUI", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 }
     ]
   },
   {

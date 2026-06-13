@@ -18,7 +18,9 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 2, player: "Ladislav Krejci", chineseName: "拉迪斯拉夫·克雷伊奇", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
   { rank: 2, player: "Jovo Lukic", chineseName: "约沃·卢基奇", team: "波黑", teamCode: "BIH", value: 1, matches: 1 },
   { rank: 2, player: "Giovanni Reyna", chineseName: "吉奥·雷纳", team: "美国", teamCode: "USA", value: 1, matches: 1 },
-  { rank: 2, player: "Mauricio", chineseName: "Mauricio", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 }
+  { rank: 2, player: "Mauricio", chineseName: "Mauricio", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 },
+  { rank: 2, player: "Breel Embolo", chineseName: "布雷尔·恩博洛", team: "瑞士", teamCode: "SUI", value: 1, matches: 1 },
+  { rank: 2, player: "Boualem Khoukhi", chineseName: "布阿莱姆·胡希", team: "卡塔尔", teamCode: "QAT", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -26,10 +28,11 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 1, player: "Christian Pulisic", chineseName: "克里斯蒂安·普利西奇", team: "美国", teamCode: "USA", value: 1, matches: 1 },
   { rank: 1, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
   { rank: 1, player: "Promise David", chineseName: "普罗米斯·戴维", team: "加拿大", teamCode: "CAN", value: 1, matches: 1 },
-  { rank: 1, player: "Sead Kolasinac", chineseName: "塞亚德·科拉希纳茨", team: "波黑", teamCode: "BIH", value: 1, matches: 1 }
+  { rank: 1, player: "Sead Kolasinac", chineseName: "塞亚德·科拉希纳茨", team: "波黑", teamCode: "BIH", value: 1, matches: 1 },
+  { rank: 1, player: "Homam Ahmed", chineseName: "霍马姆·艾哈迈德", team: "卡塔尔", teamCode: "QAT", value: 1, matches: 1 }
 ];
 
 export const statsNotice = {
-    title: "美国 4-1 巴拉圭赛果已更正",
-    body: "已按正式终场比分修正美国 vs 巴拉圭的进球榜数据；本轮助攻仍只保留被可靠来源明确确认的记录。"
+    title: "卡塔尔 1-1 瑞士赛果已更新",
+    body: "已按终场比分补入布雷尔·恩博洛点球、布阿莱姆·胡希补时扳平球；助攻榜只新增可靠来源明确确认的霍马姆·艾哈迈德助攻。"
   };
