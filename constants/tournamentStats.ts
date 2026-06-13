@@ -16,7 +16,9 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 2, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
   { rank: 2, player: "Hyeongyu Oh", chineseName: "吴贤揆", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
   { rank: 2, player: "Ladislav Krejci", chineseName: "拉迪斯拉夫·克雷伊奇", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
-  { rank: 2, player: "Jovo Lukic", chineseName: "约沃·卢基奇", team: "波黑", teamCode: "BIH", value: 1, matches: 1 }
+  { rank: 2, player: "Jovo Lukic", chineseName: "约沃·卢基奇", team: "波黑", teamCode: "BIH", value: 1, matches: 1 },
+  { rank: 2, player: "Giovanni Reyna", chineseName: "吉奥·雷纳", team: "美国", teamCode: "USA", value: 1, matches: 1 },
+  { rank: 2, player: "Mauricio", chineseName: "Mauricio", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -28,6 +30,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "A组、B组与D组已有四场完赛",
-    body: "已更新美国 3-0 巴拉圭后的进球榜和可确认助攻榜；本轮仅写入被可靠来源明确确认的助攻。"
+    title: "美国 4-1 巴拉圭赛果已更正",
+    body: "已按正式终场比分修正美国 vs 巴拉圭的进球榜数据；本轮助攻仍只保留被可靠来源明确确认的记录。"
   };

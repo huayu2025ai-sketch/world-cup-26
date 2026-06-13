@@ -57,10 +57,12 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "约沃·卢基奇", team: "波黑", minute: "21'", type: "goal" },
     { player: "赛尔·拉林", team: "加拿大", minute: "79'", type: "goal" },
   ] },
-  { id: 4, stage: "分组赛", group: "D", date: "2026-06-12", etTime: "21:00", home: "美国", away: "巴拉圭", venue: "SoFi Stadium", city: "Los Angeles", homeScore: 3, awayScore: 0, goalScorers: [
+  { id: 4, stage: "分组赛", group: "D", date: "2026-06-12", etTime: "21:00", home: "美国", away: "巴拉圭", venue: "SoFi Stadium", city: "Los Angeles", homeScore: 4, awayScore: 1, goalScorers: [
     { player: "达米安·博瓦迪利亚", team: "巴拉圭", minute: "7'", type: "ownGoal" },
     { player: "福拉林·巴洛贡", team: "美国", minute: "31'", type: "goal" },
     { player: "福拉林·巴洛贡", team: "美国", minute: "45+5'", type: "goal" },
+    { player: "Mauricio", team: "巴拉圭", minute: "73'", type: "goal" },
+    { player: "吉奥·雷纳", team: "美国", minute: "90+7'", type: "goal" },
   ] },
   { id: 5, stage: "分组赛", group: "B", date: "2026-06-13", etTime: "15:00", home: "卡塔尔", away: "瑞士", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
   { id: 6, stage: "分组赛", group: "C", date: "2026-06-13", etTime: "18:00", home: "巴西", away: "摩洛哥", venue: "MetLife Stadium", city: "New York New Jersey" },

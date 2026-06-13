@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-13T11:15:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月13日 11:15",
+    title: "D组赛果更正",
+    summary: "本次根据更可靠的终场赛果来源，将美国 vs 巴拉圭由此前记录的 3-0 更正为正式比分 4-1，并同步修正进球记录与射手榜。",
+    changes: [
+      "赛程页将美国 vs 巴拉圭更正为 4-1：达米安·博瓦迪利亚 7'（乌龙），福拉林·巴洛贡 31'、45+5'，Mauricio 73'，吉奥·雷纳 90+7'。",
+      "D 组积分榜按正式比分重算：美国 3 分、进 4 球失 1 球、净胜球 +3 继续第一；巴拉圭进 1 球失 4 球、净胜球 -3 继续垫底。",
+      "进球榜新增吉奥·雷纳和 Mauricio；可确认助攻榜仍只保留克里斯蒂安·普利西奇 1 次明确确认助攻。",
+      "本次只修正已被可靠来源确认的终场信息，其他未完赛或未稳定落库场次继续保留赛前状态。"
+    ]
+  },
+  {
     updatedAt: "2026-06-13T10:51:00+08:00",
     updatedAtLabel: "北京时间 2026年6月13日 10:51",
     title: "D组首场赛果更新",
@@ -333,10 +345,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "土耳其", englishName: "Turkiye", code: "TUR", flag: "🇹🇷", confederation: "UEFA", pot: 4 }
     ],
     standings: [
-      { name: "美国", code: "USA", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 0, goalDiff: 3, points: 3 },
+      { name: "美国", code: "USA", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 4, goalsAgainst: 1, goalDiff: 3, points: 3 },
       { name: "澳大利亚", code: "AUS", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
       { name: "土耳其", code: "TUR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "巴拉圭", code: "PAR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 }
+      { name: "巴拉圭", code: "PAR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 4, goalDiff: -3, points: 0 }
     ]
   },
   {
