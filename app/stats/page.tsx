@@ -23,10 +23,10 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
         <div className="mt-3 max-w-full overflow-x-auto">
           <table className="w-full table-fixed text-left text-xs sm:min-w-[560px] sm:text-sm">
             <colgroup>
-              <col className="w-[15%] sm:w-auto" />
-              <col className="w-[41%] sm:w-auto" />
-              <col className="w-[20%] sm:w-auto" />
-              <col className="w-[12%] sm:w-auto" />
+              <col className="w-[10%] sm:w-auto" />
+              <col className="w-[50%] sm:w-auto" />
+              <col className="w-[18%] sm:w-auto" />
+              <col className="w-[10%] sm:w-auto" />
               <col className="w-[12%] sm:w-auto" />
             </colgroup>
             <thead>
