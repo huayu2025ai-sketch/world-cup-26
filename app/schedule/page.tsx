@@ -301,22 +301,43 @@ export default function SchedulePage() {
                       <div className="mt-2 rounded-md border border-cyan-300/20 bg-cyan-300/[0.04] p-2">
                         <p className="text-[10px] font-black uppercase tracking-[0.14em] text-cyan-200">进球记录</p>
                         {match.goalScorers && match.goalScorers.length > 0 ? (
-                          <div className="mt-1.5 space-y-1">
-                            {match.goalScorers.map((scorer, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-xs">
-                                <span className="shrink-0 rounded bg-slate-800 px-1.5 py-0.5 text-[10px] font-bold text-cyan-100">
-                                  {scorer.minute}
-                                </span>
-                                <span className="font-bold text-slate-100">{scorer.player}</span>
-                                <span className="text-[10px] text-slate-400">({scorer.team})</span>
-                                {scorer.type === "penalty" && (
-                                  <span className="text-[10px] text-amber-300">点球</span>
-                                )}
-                                {scorer.type === "ownGoal" && (
-                                  <span className="text-[10px] text-rose-300">乌龙</span>
-                                )}
-                              </div>
-                            ))}
+                          <div className="mt-1.5 grid grid-cols-2 gap-6">
+                            <div className="space-y-1">
+                              {match.goalScorers
+                                .filter((s) => s.team === match.home)
+                                .map((scorer, idx) => (
+                                  <div key={idx} className="flex items-center justify-end gap-2 text-xs">
+                                    <span className="inline-block w-10 shrink-0 rounded bg-slate-800 px-1.5 py-0.5 text-center text-[10px] font-bold text-cyan-100">
+                                      {scorer.minute}
+                                    </span>
+                                    {scorer.type === "penalty" && (
+                                      <span className="shrink-0 text-[10px] text-amber-300">点</span>
+                                    )}
+                                    {scorer.type === "ownGoal" && (
+                                      <span className="shrink-0 text-[10px] text-rose-300">乌</span>
+                                    )}
+                                    <span className="truncate font-bold text-slate-100">{scorer.player}</span>
+                                  </div>
+                                ))}
+                            </div>
+                            <div className="space-y-1">
+                              {match.goalScorers
+                                .filter((s) => s.team === match.away)
+                                .map((scorer, idx) => (
+                                  <div key={idx} className="flex items-center gap-2 text-xs">
+                                    <span className="truncate font-bold text-slate-100">{scorer.player}</span>
+                                    <span className="inline-block w-10 shrink-0 rounded bg-slate-800 px-1.5 py-0.5 text-center text-[10px] font-bold text-cyan-100">
+                                      {scorer.minute}
+                                    </span>
+                                    {scorer.type === "penalty" && (
+                                      <span className="shrink-0 text-[10px] text-amber-300">点</span>
+                                    )}
+                                    {scorer.type === "ownGoal" && (
+                                      <span className="shrink-0 text-[10px] text-rose-300">乌</span>
+                                    )}
+                                  </div>
+                                ))}
+                            </div>
                           </div>
                         ) : (
                           <p className="mt-1 text-[11px] text-slate-400">暂无进球记录</p>
@@ -369,15 +390,9 @@ export default function SchedulePage() {
                     )}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-1.5 md:grid-cols-1 md:gap-1">
-                    <div className="rounded-md border border-cyan-300/20 bg-cyan-300/10 px-2 py-1">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-200">北京时间</p>
-                      <p className="text-xs font-black text-cyan-50">{match.beijingTime}</p>
-                    </div>
-                    <div className="rounded-md border border-slate-700 bg-slate-950/60 px-2 py-1">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">ET</p>
-                      <p className="text-xs font-black text-slate-100">{match.etTime}</p>
-                    </div>
+                  <div className="rounded-md border border-cyan-300/20 bg-cyan-300/10 px-2 py-1">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-200">北京时间</p>
+                    <p className="text-xs font-black text-cyan-50">{match.beijingTime}</p>
                   </div>
                 </div>
                 );

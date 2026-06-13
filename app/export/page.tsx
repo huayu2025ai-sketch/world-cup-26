@@ -149,17 +149,31 @@ const formatDisplayDate = (value: string) => {
   }).format(new Date(`${value}T12:00:00+08:00`));
 };
 
-const buildExportRows = (dateKey: string) => {
+const getBeijingTimeOnly = (match: ScheduleMatch) => match.beijingTime.split(" ")[1] ?? match.beijingTime;
+
+const formatMatchOptionLabel = (row: ExportMatch) => {
+  const dateKey = getBeijingDateKey(row.match);
+
+  return `M${row.match.id} · ${row.match.home} vs ${row.match.away} · ${formatDisplayDate(dateKey)} ${getBeijingTimeOnly(
+    row.match
+  )}`;
+};
+
+const buildPredictedExportRows = () => {
   return scheduleMatches
-    .filter((match) => getBeijingDateKey(match) === dateKey)
     .map<ExportMatch>((match) => ({
       match,
       prediction: getMatchPrediction(matchOddsById[match.id] ?? [])
-    }));
+    }))
+    .filter((row): row is ExportMatch & { prediction: MatchPrediction } => Boolean(row.prediction));
+};
+
+const buildExportRows = (dateKey: string) => {
+  return buildPredictedExportRows().filter(({ match }) => getBeijingDateKey(match) === dateKey);
 };
 
 const getAvailableDates = () => {
-  return Array.from(new Set(scheduleMatches.map(getBeijingDateKey))).sort();
+  return Array.from(new Set(buildPredictedExportRows().map(({ match }) => getBeijingDateKey(match)))).sort();
 };
 
 const getDefaultDate = () => {
@@ -172,6 +186,13 @@ const getDefaultDate = () => {
   }
 
   return dates.find((date) => date >= today) ?? dates[0];
+};
+
+const getDefaultMatchId = () => {
+  const defaultDate = getDefaultDate();
+  const rows = buildPredictedExportRows();
+
+  return rows.find(({ match }) => getBeijingDateKey(match) === defaultDate)?.match.id ?? rows[0]?.match.id ?? 0;
 };
 
 const buildCaptionOptions = (dateKey: string, row: ExportMatch | undefined, includeDisclaimer: boolean) => {
@@ -765,14 +786,19 @@ export default function ExportPage() {
   const captionRef = useRef<HTMLTextAreaElement | null>(null);
   const [platform, setPlatform] = useState<PlatformKey>("xiaohongshu");
   const [theme, setTheme] = useState<ThemeKey>("night");
-  const [selectedDate, setSelectedDate] = useState(getDefaultDate);
-  const [currentMatchIndex, setCurrentMatchIndex] = useState(0);
+  const [selectedMatchId, setSelectedMatchId] = useState(getDefaultMatchId);
   const [includeDisclaimer, setIncludeDisclaimer] = useState(true);
   const [captionIndex, setCaptionIndex] = useState(0);
   const [copyState, setCopyState] = useState<"idle" | "copied" | "selected">("idle");
 
-  const dates = useMemo(() => getAvailableDates(), []);
+  const matchOptions = useMemo(() => buildPredictedExportRows(), []);
+  const selectedMatch = matchOptions.find(({ match }) => match.id === selectedMatchId) ?? matchOptions[0];
+  const selectedDate = selectedMatch ? getBeijingDateKey(selectedMatch.match) : getDefaultDate();
   const rows = useMemo(() => buildExportRows(selectedDate), [selectedDate]);
+  const currentMatchIndex = Math.max(
+    0,
+    rows.findIndex(({ match }) => match.id === selectedMatchId)
+  );
   const currentRow = rows[currentMatchIndex] ?? rows[0];
   const captionOptions = useMemo(
     () => buildCaptionOptions(selectedDate, currentRow, includeDisclaimer),
@@ -782,18 +808,14 @@ export default function ExportPage() {
   const currentPlatform = platformOptions[platform];
 
   useEffect(() => {
-    setCurrentMatchIndex(0);
-  }, [selectedDate]);
-
-  useEffect(() => {
     setCaptionIndex(0);
-  }, [currentMatchIndex, includeDisclaimer, selectedDate]);
+  }, [includeDisclaimer, selectedDate, selectedMatchId]);
 
   useEffect(() => {
-    if (currentMatchIndex > Math.max(0, rows.length - 1)) {
-      setCurrentMatchIndex(Math.max(0, rows.length - 1));
+    if (currentRow && currentRow.match.id !== selectedMatchId) {
+      setSelectedMatchId(currentRow.match.id);
     }
-  }, [currentMatchIndex, rows.length]);
+  }, [currentRow, selectedMatchId]);
 
   useEffect(() => {
     if (!canvasRef.current) {
@@ -830,7 +852,8 @@ export default function ExportPage() {
       return;
     }
 
-    setCurrentMatchIndex((current) => (current + direction + rows.length) % rows.length);
+    const nextIndex = (currentMatchIndex + direction + rows.length) % rows.length;
+    setSelectedMatchId(rows[nextIndex].match.id);
   };
 
   const copyCaption = async () => {
@@ -858,7 +881,7 @@ export default function ExportPage() {
   };
 
   const goToNextMatchDay = () => {
-    setSelectedDate(getDefaultDate());
+    setSelectedMatchId(getDefaultMatchId());
   };
 
   return (
@@ -875,7 +898,7 @@ export default function ExportPage() {
 
           <section className="rounded-lg border border-slate-700 bg-slate-800/55 p-3 backdrop-blur-md">
             <div className="flex items-center justify-between gap-3">
-              <label htmlFor="export-date" className="text-xs font-bold text-slate-200">
+              <label htmlFor="export-match" className="text-xs font-bold text-slate-200">
                 比赛日
               </label>
               <button
@@ -887,14 +910,14 @@ export default function ExportPage() {
               </button>
             </div>
             <select
-              id="export-date"
-              value={selectedDate}
-              onChange={(event) => setSelectedDate(event.target.value)}
+              id="export-match"
+              value={selectedMatchId}
+              onChange={(event) => setSelectedMatchId(Number(event.target.value))}
               className="mt-2 w-full rounded-md border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm font-bold text-slate-100 outline-none focus:border-cyan-300/70"
             >
-              {dates.map((date) => (
-                <option key={date} value={date}>
-                  {formatDisplayDate(date)} · {buildExportRows(date).length} 场
+              {matchOptions.map((row) => (
+                <option key={row.match.id} value={row.match.id}>
+                  {formatMatchOptionLabel(row)}
                 </option>
               ))}
             </select>
@@ -1069,7 +1092,7 @@ export default function ExportPage() {
                   <button
                     key={row.match.id}
                     type="button"
-                    onClick={() => setCurrentMatchIndex(index)}
+                    onClick={() => setSelectedMatchId(row.match.id)}
                     className={`w-full rounded-md border p-2 text-left transition ${
                       currentMatchIndex === index
                         ? "border-cyan-300/70 bg-cyan-300/10"

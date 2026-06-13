@@ -19,7 +19,7 @@ type TournamentStatus = {
   totalMatches: number;
   todayMatches: number;
   nextMatch?: ScheduleMatch;
-  nextTimeLabel?: string;
+  nextMatchTimeLabel?: string;
 };
 
 const shanghaiDateFormatter = new Intl.DateTimeFormat("en-CA", {
@@ -36,7 +36,19 @@ const shanghaiTimeFormatter = new Intl.DateTimeFormat("zh-CN", {
   hour12: false
 });
 
+const shanghaiMonthDayFormatter = new Intl.DateTimeFormat("zh-CN", {
+  timeZone: "Asia/Shanghai",
+  month: "numeric",
+  day: "numeric"
+});
+
 const getBeijingDateKey = (date: Date) => shanghaiDateFormatter.format(date);
+
+const getNextBeijingDateKey = (date: Date) => {
+  const nextDate = new Date(date);
+  nextDate.setUTCDate(nextDate.getUTCDate() + 1);
+  return getBeijingDateKey(nextDate);
+};
 
 const getMatchKickoff = (match: ScheduleMatch) => {
   const [monthDay, time] = match.beijingTime.split(" ");
@@ -45,11 +57,28 @@ const getMatchKickoff = (match: ScheduleMatch) => {
 
 const hasResult = (match: ScheduleMatch) => match.homeScore !== undefined && match.awayScore !== undefined;
 
+const formatNextMatchTimeLabel = (kickoff: Date, now: Date) => {
+  const kickoffDateKey = getBeijingDateKey(kickoff);
+  const todayKey = getBeijingDateKey(now);
+  const timeLabel = shanghaiTimeFormatter.format(kickoff);
+
+  if (kickoffDateKey === todayKey) {
+    return timeLabel;
+  }
+
+  if (kickoffDateKey === getNextBeijingDateKey(now)) {
+    return `明日 ${timeLabel}`;
+  }
+
+  return `${shanghaiMonthDayFormatter.format(kickoff)} ${timeLabel}`;
+};
+
 const getTournamentStatus = (): TournamentStatus => {
   const now = new Date();
   const todayKey = getBeijingDateKey(now);
   const completedMatches = scheduleMatches.filter(hasResult).length;
   const nextMatch = scheduleMatches.find((match) => getMatchKickoff(match).getTime() > now.getTime());
+  const nextMatchKickoff = nextMatch ? getMatchKickoff(nextMatch) : undefined;
   const currentStage =
     nextMatch?.stage ?? [...scheduleMatches].reverse().find(hasResult)?.stage ?? scheduleMatches[0].stage;
   const todayMatches = scheduleMatches.filter((match) => getBeijingDateKey(getMatchKickoff(match)) === todayKey).length;
@@ -60,7 +89,7 @@ const getTournamentStatus = (): TournamentStatus => {
     totalMatches: scheduleMatches.length,
     todayMatches,
     nextMatch,
-    nextTimeLabel: nextMatch ? shanghaiTimeFormatter.format(getMatchKickoff(nextMatch)) : undefined
+    nextMatchTimeLabel: nextMatchKickoff ? formatNextMatchTimeLabel(nextMatchKickoff, now) : undefined
   };
 };
 
@@ -103,11 +132,12 @@ export default function Navbar() {
             {tournamentStatus.completedMatches}/{tournamentStatus.totalMatches}
           </span>
           <span className="hidden whitespace-nowrap text-xs font-bold text-slate-400 sm:inline">
-            今日 {tournamentStatus.todayMatches} 场
+            今日赛程 {tournamentStatus.todayMatches} 场
           </span>
           {tournamentStatus.nextMatch && (
             <span className="hidden whitespace-nowrap text-xs font-bold text-slate-400 md:inline">
-              下一场 {tournamentStatus.nextTimeLabel} {tournamentStatus.nextMatch.home} vs {tournamentStatus.nextMatch.away}
+              下一场 {tournamentStatus.nextMatchTimeLabel} {tournamentStatus.nextMatch.home} vs{" "}
+              {tournamentStatus.nextMatch.away}
             </span>
           )}
         </div>
