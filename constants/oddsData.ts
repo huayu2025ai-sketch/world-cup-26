@@ -62,9 +62,9 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "France",
     code: "FRA",
     flag: "🇫🇷",
-    consensusAmericanOdds: 550,
-    consensusDecimalOdds: 6.5,
-    marketImpliedProbability: 0.1538,
+    consensusAmericanOdds: 500,
+    consensusDecimalOdds: 6,
+    marketImpliedProbability: 0.1667,
     modelProbability: 0.189,
     sourceNote: "公开市场共识第 2"
   },
@@ -86,9 +86,9 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "Brazil",
     code: "BRA",
     flag: "🇧🇷",
-    consensusAmericanOdds: 800,
-    consensusDecimalOdds: 9,
-    marketImpliedProbability: 0.1111,
+    consensusAmericanOdds: 850,
+    consensusDecimalOdds: 9.5,
+    marketImpliedProbability: 0.1053,
     modelProbability: 0.076,
     sourceNote: "公开市场共识第 4"
   },
@@ -98,9 +98,9 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "Argentina",
     code: "ARG",
     flag: "🇦🇷",
-    consensusAmericanOdds: 900,
-    consensusDecimalOdds: 10,
-    marketImpliedProbability: 0.1,
+    consensusAmericanOdds: 925,
+    consensusDecimalOdds: 10.25,
+    marketImpliedProbability: 0.0976,
     modelProbability: 0.143,
     sourceNote: "公开市场共识第 5"
   }
