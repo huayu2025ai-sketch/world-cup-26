@@ -14,6 +14,8 @@ export type BookmakerProbability = {
 
 export type MatchPrediction = {
   bookmakerProbabilities: BookmakerProbability[];
+  sourceCount: number;
+  maxSourceCount: number;
   average: OutcomeProbabilities;
   predictedOutcome: OutcomeKey;
   predictedProbability: number;
@@ -23,6 +25,8 @@ export type MatchPrediction = {
 };
 
 const outcomeKeys: OutcomeKey[] = ["home", "draw", "away"];
+
+export const maxMarketSourceCount = 5;
 
 export const formatPercent = (value: number, digits = 1) => `${(value * 100).toFixed(digits)}%`;
 
@@ -44,9 +48,17 @@ export const removeVig = (raw: OutcomeProbabilities): OutcomeProbabilities => {
   };
 };
 
-const getConfidence = (topProbability: number, marginToSecond: number): MatchPrediction["confidence"] => {
+const getConfidence = (
+  topProbability: number,
+  marginToSecond: number,
+  sourceCount: number
+): MatchPrediction["confidence"] => {
+  if (sourceCount <= 1) {
+    return "低";
+  }
+
   if (topProbability >= 0.62 && marginToSecond >= 0.18) {
-    return "高";
+    return sourceCount >= 3 ? "高" : "中";
   }
 
   if (topProbability >= 0.46 && marginToSecond >= 0.08) {
@@ -92,11 +104,13 @@ export const getMatchPrediction = (bookmakerOdds: MatchBookmakerOdds[]): MatchPr
 
   return {
     bookmakerProbabilities,
+    sourceCount: bookmakerProbabilities.length,
+    maxSourceCount: maxMarketSourceCount,
     average,
     predictedOutcome,
     predictedProbability,
     marginToSecond,
-    confidence: getConfidence(predictedProbability, marginToSecond),
+    confidence: getConfidence(predictedProbability, marginToSecond, bookmakerProbabilities.length),
     averageOverround
   };
 };

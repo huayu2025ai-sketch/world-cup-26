@@ -10,7 +10,7 @@ import {
   type BookmakerKey
 } from "@/constants/oddsData";
 import { scheduleMatches, type ScheduleMatch } from "@/constants/scheduleData";
-import { formatPercent, getMatchPrediction, type OutcomeKey } from "@/lib/oddsPrediction";
+import { formatPercent, getMatchPrediction, maxMarketSourceCount, type OutcomeKey } from "@/lib/oddsPrediction";
 
 const bookmakerByKey = recommendedBookmakers.reduce<Record<BookmakerKey, (typeof recommendedBookmakers)[number]>>(
   (acc, item) => {
@@ -33,9 +33,9 @@ const outcomeLabel = (outcome: OutcomeKey, match: ScheduleMatch) => {
 };
 
 const outcomeShortLabel: Record<OutcomeKey, string> = {
-  home: "主胜",
+  home: "左侧胜",
   draw: "平",
-  away: "客胜"
+  away: "右侧胜"
 };
 
 const getActualOutcome = (match: ScheduleMatch): OutcomeKey | null => {
@@ -134,10 +134,10 @@ export default function PredictionsPage() {
         <div>
           <p className="text-[11px] font-black uppercase tracking-[0.36em] text-cyan-200">Probability Model</p>
           <h1 className="mt-2 text-2xl font-black leading-tight text-slate-100 sm:text-3xl lg:text-4xl">
-            5 组市场数据胜平负预测
+            最多 5 组市场数据胜平负预测
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
-            每场比赛先按 5 组市场数据分别计算 1/X/2 隐含概率并校正，再对校正概率取平均，输出最高概率赛果和置信度。
+            每场比赛按已采集的 1/X/2 市场数据分别计算隐含概率并校正，再对校正概率取平均；样本数不足时会自动降低置信度。
           </p>
         </div>
 
@@ -147,8 +147,8 @@ export default function PredictionsPage() {
             <p className="mt-1 text-xs text-slate-400">已录数据</p>
           </div>
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
-            <p className="text-xl font-black text-cyan-200">{recommendedBookmakers.length}</p>
-            <p className="mt-1 text-xs text-slate-400">数据源</p>
+            <p className="text-xl font-black text-cyan-200">{maxMarketSourceCount}</p>
+            <p className="mt-1 text-xs text-slate-400">最多来源</p>
           </div>
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xs font-black text-cyan-200">
@@ -175,7 +175,7 @@ export default function PredictionsPage() {
                 id="prediction-search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="输入 巴西、A组、主胜、Dallas 或 2026-06-11"
+                placeholder="输入 巴西、A组、球队胜、Dallas 或 2026-06-11"
                 className="w-full bg-transparent text-sm text-slate-100 outline-none placeholder:text-slate-500"
               />
             </div>
@@ -220,6 +220,11 @@ export default function PredictionsPage() {
                       {match.group ? ` · ${match.group}组` : ""}
                     </span>
                     <span className="text-[11px] font-bold text-slate-500">{formatMonthDay(match.date)}</span>
+                    {prediction && (
+                      <span className="rounded-full border border-slate-700 bg-slate-950/60 px-2.5 py-1 text-[11px] font-bold text-slate-400">
+                        {prediction.sourceCount}/{prediction.maxSourceCount} 来源
+                      </span>
+                    )}
                   </div>
 
                   <div className="mt-3 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
@@ -267,7 +272,7 @@ export default function PredictionsPage() {
                 ) : (
                   <div className="rounded-lg border border-slate-700 bg-slate-950/50 p-3">
                     <p className="text-sm font-black text-slate-300">待录入数据</p>
-                    <p className="mt-1 text-xs leading-5 text-slate-500">录入 5 组 1/X/2 指数后自动生成预测。</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">录入至少 1 组 1/X/2 指数后自动生成预测。</p>
                   </div>
                 )}
               </div>
@@ -302,7 +307,7 @@ export default function PredictionsPage() {
 
                   <details className="group mt-3 rounded-lg border border-slate-700 bg-slate-950/35">
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-3 py-2 text-xs font-black text-slate-200 transition hover:bg-slate-900/60 [&::-webkit-details-marker]:hidden">
-                      <span>数据源 / 指数 / 偏差</span>
+                      <span>数据源 / 指数 / 偏差（{prediction.sourceCount}/{prediction.maxSourceCount}）</span>
                       <span className="text-[11px] text-cyan-200 group-open:hidden">点击展开</span>
                       <span className="hidden text-[11px] text-cyan-200 group-open:inline">点击收起</span>
                     </summary>
@@ -487,8 +492,8 @@ export default function PredictionsPage() {
           <div className="mt-3 space-y-3 text-sm leading-6 text-slate-300">
             <p>1. 单个数据源隐含概率 = 1 / 十进制指数。</p>
             <p>2. 将 1/X/2 概率总和归一化到 100%，校正不同数据源的市场偏差。</p>
-            <p>3. 对 5 组校正概率取平均，最高的一项作为预测结果。</p>
-            <p>4. 置信度由最高概率和第二高概率差距决定，数据接近时会自动降为低。</p>
+            <p>3. 对已采集来源的校正概率取平均，最高的一项作为预测结果。</p>
+            <p>4. 置信度由最高概率、第二高概率差距和来源数量共同决定，样本不足或数据接近时会自动降级。</p>
           </div>
         </aside>
       </section>
