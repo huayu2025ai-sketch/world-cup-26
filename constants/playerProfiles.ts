@@ -799,7 +799,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Niko Sigur", "HNK Hajduk Split (CRO)", 22, 19, 2, "2003-09-09", 178],
     ["Promise David", "Royale Union Saint-Gilloise (BEL)", 24, 10, 3, "2001-07-03", 195],
     ["Nathan Saliba", "RSC Anderlecht (BEL)", 22, 15, 2, "2004-02-07", 174],
-    ["Marcelo Flores", "Tigres UANL (MEX)", 22, 2, 0, "2003-10-01", 164],
+    ["Jayden Nelson", "Vancouver Whitecaps FC (CAN)", 23, 7, 1, "2002-09-26", 170],
 
     // BIH 波黑
     ["Nikola Vasilj", "FC St. Pauli (GER)", 30, 26, 0, "1995-12-02", 193],
@@ -825,7 +825,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Stjepan Radeljic", "HNK Rijeka (CRO)", 28, 5, 0, "1997-09-05", 201],
     ["Martin Zlomislic", "HNK Rijeka (CRO)", 27, 3, 0, "1998-08-16", 189],
     ["Haris Tabakovic", "Borussia Mönchengladbach (GER)", 31, 10, 4, "1994-06-20", 196],
-    ["Nidal Celik", "RC Lens (FRA)", 19, 2, 0, "2006-07-17", 192],
+    ["Arjan Malic", "SK Sturm Graz (AUT)", 20, 1, 0, "2005-08-28", 186],
     ["Jovo Lukic", "Universitatea Cluj (ROU)", 27, 3, 0, "1998-11-28", 190],
     ["Ermin Mahmic", "FC Slovan Liberec (CZE)", 21, 2, 0, "2005-03-14", 182],
 
@@ -1671,7 +1671,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
 
     // ARG 阿根廷
     ["Juan Musso", "Atlético De Madrid (ESP)", 32, 4, 0, "1994-05-06", 193],
-    ["Leonardo Balerdi", "Olympique Marseille (FRA)", 27, 11, 0, "1999-01-26", 188],
+    ["Marcos Senesi", "Feyenoord (NED)", 29, 1, 0, "1997-05-10", 185],
     ["Nicolas Tagliafico", "Olympique Lyonnais (FRA)", 33, 76, 1, "1992-08-31", 172],
     ["Gonzalo Montiel", "CA River Plate (ARG)", 29, 39, 2, "1997-01-01", 175],
     ["Leandro Paredes", "CA Boca Juniors (ARG)", 31, 77, 5, "1994-06-29", 182],

@@ -42,6 +42,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-13T17:24:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月13日 17:24",
+    title: "球员数据维护更新",
+    summary: "本次按 FIFA 官方 Squad Lists-English.pdf（2026-06-12 21:07 UTC，Version 1，48页）复核球队与球员数据，更新加拿大、波黑、阿根廷三队的替补名单与新增球员资料。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "teamRosters.ts 已将官方名单来源同步到 FIFA 2026-06-12 21:07 UTC 版本，并继续保留 48 队 x 26 人结构。",
+      "加拿大 #26：Marcelo Flores → Jayden Nelson；同步补充 Vancouver Whitecaps FC、DOB、身高、caps 与 goals。",
+      "波黑 #24：Nidal Celik → Arjan Malic；同步补充 SK Sturm Graz、DOB、身高、caps 与 goals。",
+      "阿根廷 #2：Leonardo Balerdi → Marcos Senesi；同步补充 Feyenoord、DOB、身高、caps 与 goals。"
+    ]
+  },
+  {
     updatedAt: "2026-06-13T11:15:00+08:00",
     updatedAtLabel: "北京时间 2026年6月13日 11:15",
     title: "D组赛果更正",
