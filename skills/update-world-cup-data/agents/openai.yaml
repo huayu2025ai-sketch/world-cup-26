@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update World Cup Data"
+  short_description: "Refresh verified World Cup match data"
+  default_prompt: "Use $update-world-cup-data to verify completed 2026 World Cup matches, update local data files, build, and commit only confirmed changes."
