@@ -300,73 +300,81 @@ export default function PredictionsPage() {
                     ))}
                   </div>
 
-                  <div className="mt-3 grid gap-1.5 sm:hidden">
-                    {prediction.bookmakerProbabilities.map((item) => (
-                      <div key={item.bookmaker} className="rounded-md border border-slate-700 bg-slate-900/55 p-2">
-                        <div className="flex items-start justify-between gap-2">
-                          <div>
-                            <p className="text-xs font-black text-slate-100">{bookmakerByKey[item.bookmaker].name}</p>
-                            <p className="mt-0.5 text-[10px] text-slate-500">
-                              {bookmakerByKey[item.bookmaker].marketRole}
-                            </p>
-                          </div>
-                          <span className="rounded-full border border-slate-700 bg-slate-950/70 px-2 py-0.5 text-[10px] font-black text-slate-400">
-                            偏差 {formatPercent(item.overround)}
-                          </span>
-                        </div>
-                        <div className="mt-2 grid grid-cols-2 gap-1.5">
-                          <div className="rounded-md border border-slate-700 bg-slate-950/55 px-2 py-1">
-                            <p className="text-[10px] font-black text-slate-500">指数 1/X/2</p>
-                            <p className="mt-0.5 whitespace-nowrap font-mono text-[11px] font-black text-slate-100">
-                              {item.odds.home.toFixed(2)} / {item.odds.draw.toFixed(2)} / {item.odds.away.toFixed(2)}
-                            </p>
-                          </div>
-                          <div className="rounded-md border border-slate-700 bg-slate-950/55 px-2 py-1">
-                            <p className="text-[10px] font-black text-slate-500">校正概率</p>
-                            <p className="mt-0.5 whitespace-nowrap font-mono text-[11px] font-black text-cyan-100">
-                              {formatPercent(item.noVig.home)} / {formatPercent(item.noVig.draw)} /{" "}
-                              {formatPercent(item.noVig.away)}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <details className="group mt-3 rounded-lg border border-slate-700 bg-slate-950/35">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-3 py-2 text-xs font-black text-slate-200 transition hover:bg-slate-900/60 [&::-webkit-details-marker]:hidden">
+                      <span>数据源 / 指数 / 偏差</span>
+                      <span className="text-[11px] text-cyan-200 group-open:hidden">点击展开</span>
+                      <span className="hidden text-[11px] text-cyan-200 group-open:inline">点击收起</span>
+                    </summary>
 
-                  <div className="mt-3 hidden overflow-x-auto rounded-lg border border-slate-700 sm:block">
-                    <table className="min-w-full divide-y divide-slate-700 text-left text-xs">
-                      <thead className="bg-slate-950/60 text-slate-400">
-                        <tr>
-                          <th className="whitespace-nowrap px-3 py-2 font-black">数据源</th>
-                          <th className="whitespace-nowrap px-3 py-2 font-black">指数 1/X/2</th>
-                          <th className="whitespace-nowrap px-3 py-2 font-black">校正概率 1/X/2</th>
-                          <th className="whitespace-nowrap px-3 py-2 font-black">市场偏差</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-slate-800 bg-slate-900/40">
-                        {prediction.bookmakerProbabilities.map((item) => (
-                          <tr key={item.bookmaker}>
-                            <td className="whitespace-nowrap px-3 py-2">
-                              <p className="font-black text-slate-100">{bookmakerByKey[item.bookmaker].name}</p>
-                              <p className="mt-0.5 text-[11px] text-slate-500">
+                    <div className="grid gap-1.5 border-t border-slate-700 p-2 sm:hidden">
+                      {prediction.bookmakerProbabilities.map((item) => (
+                        <div key={item.bookmaker} className="rounded-md border border-slate-700 bg-slate-900/55 p-2">
+                          <div className="flex items-start justify-between gap-2">
+                            <div>
+                              <p className="text-xs font-black text-slate-100">{bookmakerByKey[item.bookmaker].name}</p>
+                              <p className="mt-0.5 text-[10px] text-slate-500">
                                 {bookmakerByKey[item.bookmaker].marketRole}
                               </p>
-                            </td>
-                            <td className="whitespace-nowrap px-3 py-2 font-mono text-slate-200">
-                              {item.odds.home.toFixed(2)} / {item.odds.draw.toFixed(2)} / {item.odds.away.toFixed(2)}
-                            </td>
-                            <td className="whitespace-nowrap px-3 py-2 font-mono text-slate-200">
-                              {formatPercent(item.noVig.home)} / {formatPercent(item.noVig.draw)} /{" "}
-                              {formatPercent(item.noVig.away)}
-                            </td>
-                            <td className="whitespace-nowrap px-3 py-2 font-mono text-slate-400">
-                              {formatPercent(item.overround)}
-                            </td>
+                            </div>
+                            <span className="rounded-full border border-slate-700 bg-slate-950/70 px-2 py-0.5 text-[10px] font-black text-slate-400">
+                              偏差 {formatPercent(item.overround)}
+                            </span>
+                          </div>
+                          <div className="mt-2 grid grid-cols-2 gap-1.5">
+                            <div className="rounded-md border border-slate-700 bg-slate-950/55 px-2 py-1">
+                              <p className="text-[10px] font-black text-slate-500">指数 1/X/2</p>
+                              <p className="mt-0.5 whitespace-nowrap font-mono text-[11px] font-black text-slate-100">
+                                {item.odds.home.toFixed(2)} / {item.odds.draw.toFixed(2)} / {item.odds.away.toFixed(2)}
+                              </p>
+                            </div>
+                            <div className="rounded-md border border-slate-700 bg-slate-950/55 px-2 py-1">
+                              <p className="text-[10px] font-black text-slate-500">校正概率</p>
+                              <p className="mt-0.5 whitespace-nowrap font-mono text-[11px] font-black text-cyan-100">
+                                {formatPercent(item.noVig.home)} / {formatPercent(item.noVig.draw)} /{" "}
+                                {formatPercent(item.noVig.away)}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="hidden overflow-x-auto border-t border-slate-700 sm:block">
+                      <table className="min-w-full divide-y divide-slate-700 text-left text-xs">
+                        <thead className="bg-slate-950/60 text-slate-400">
+                          <tr>
+                            <th className="whitespace-nowrap px-3 py-2 font-black">数据源</th>
+                            <th className="whitespace-nowrap px-3 py-2 font-black">指数 1/X/2</th>
+                            <th className="whitespace-nowrap px-3 py-2 font-black">校正概率 1/X/2</th>
+                            <th className="whitespace-nowrap px-3 py-2 font-black">市场偏差</th>
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                        </thead>
+                        <tbody className="divide-y divide-slate-800 bg-slate-900/40">
+                          {prediction.bookmakerProbabilities.map((item) => (
+                            <tr key={item.bookmaker}>
+                              <td className="whitespace-nowrap px-3 py-2">
+                                <p className="font-black text-slate-100">{bookmakerByKey[item.bookmaker].name}</p>
+                                <p className="mt-0.5 text-[11px] text-slate-500">
+                                  {bookmakerByKey[item.bookmaker].marketRole}
+                                </p>
+                              </td>
+                              <td className="whitespace-nowrap px-3 py-2 font-mono text-slate-200">
+                                {item.odds.home.toFixed(2)} / {item.odds.draw.toFixed(2)} / {item.odds.away.toFixed(2)}
+                              </td>
+                              <td className="whitespace-nowrap px-3 py-2 font-mono text-slate-200">
+                                {formatPercent(item.noVig.home)} / {formatPercent(item.noVig.draw)} /{" "}
+                                {formatPercent(item.noVig.away)}
+                              </td>
+                              <td className="whitespace-nowrap px-3 py-2 font-mono text-slate-400">
+                                {formatPercent(item.overround)}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </details>
                 </>
               )}
             </article>
