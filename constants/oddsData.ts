@@ -41,7 +41,7 @@ export const recommendedBookmakers: Bookmaker[] = [
 
 export const oddsDataUpdatedAt = "2026-06-12";
 
-export const championFavoritesUpdatedAt = "2026-06-12";
+export const championFavoritesUpdatedAt = "2026-06-13";
 
 export const championFavorites: ChampionFavorite[] = [
   {
@@ -50,9 +50,9 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "Spain",
     code: "ESP",
     flag: "🇪🇸",
-    consensusAmericanOdds: 440,
-    consensusDecimalOdds: 5.4,
-    marketImpliedProbability: 0.1852,
+    consensusAmericanOdds: 450,
+    consensusDecimalOdds: 5.5,
+    marketImpliedProbability: 0.1818,
     modelProbability: 0.257,
     sourceNote: "公开市场共识第 1"
   },
@@ -62,9 +62,9 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "France",
     code: "FRA",
     flag: "🇫🇷",
-    consensusAmericanOdds: 485,
-    consensusDecimalOdds: 5.85,
-    marketImpliedProbability: 0.1709,
+    consensusAmericanOdds: 550,
+    consensusDecimalOdds: 6.5,
+    marketImpliedProbability: 0.1538,
     modelProbability: 0.189,
     sourceNote: "公开市场共识第 2"
   },
@@ -74,34 +74,34 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "England",
     code: "ENG",
     flag: "\u{1F3F4}\u{E0065}\u{E006E}\u{E0067}\u{E006C}\u{E0061}\u{E006E}\u{E0064}\u{E007F}",
-    consensusAmericanOdds: 625,
-    consensusDecimalOdds: 7.25,
-    marketImpliedProbability: 0.1379,
+    consensusAmericanOdds: 700,
+    consensusDecimalOdds: 8,
+    marketImpliedProbability: 0.125,
     modelProbability: 0.05,
     sourceNote: "公开市场共识第 3"
   },
   {
     rank: 4,
-    team: "阿根廷",
-    englishName: "Argentina",
-    code: "ARG",
-    flag: "🇦🇷",
-    consensusAmericanOdds: 800,
-    consensusDecimalOdds: 9,
-    marketImpliedProbability: 0.1111,
-    modelProbability: 0.143,
-    sourceNote: "公开市场共识第 4"
-  },
-  {
-    rank: 5,
     team: "巴西",
     englishName: "Brazil",
     code: "BRA",
     flag: "🇧🇷",
-    consensusAmericanOdds: 875,
-    consensusDecimalOdds: 9.75,
-    marketImpliedProbability: 0.1026,
+    consensusAmericanOdds: 800,
+    consensusDecimalOdds: 9,
+    marketImpliedProbability: 0.1111,
     modelProbability: 0.076,
+    sourceNote: "公开市场共识第 4"
+  },
+  {
+    rank: 5,
+    team: "阿根廷",
+    englishName: "Argentina",
+    code: "ARG",
+    flag: "🇦🇷",
+    consensusAmericanOdds: 900,
+    consensusDecimalOdds: 10,
+    marketImpliedProbability: 0.1,
+    modelProbability: 0.143,
     sourceNote: "公开市场共识第 5"
   }
 ];
