@@ -190,7 +190,7 @@ const buildCaptionOptions = (dateKey: string, row: ExportMatch | undefined, incl
 
   const options = row.prediction
     ? [
-        `今晚这场 ${matchup}，模型先站 ${pick}。\n概率 ${probability}，${confidence}。\n不保证剧本照写，但至少盘口先把态度摆出来了。`,
+        `今晚这场 ${matchup}，模型先站 ${pick}。\n概率 ${probability}，${confidence}。\n不保证剧本照写，但至少市场共识先把态度摆出来了。`,
         `${matchup} 这场有点意思。\n模型看好 ${pick}，概率 ${probability}。\n如果足球有说明书，这场大概写着“别想太复杂”。`,
         `赛前小纸条：${matchup}\n倾向：${pick}\n概率：${probability}\n友情提醒：强队也会演，但数据目前不想陪它演。`,
         `赛前腹黑一句：${matchup} 这场，模型更信 ${pick}。\n概率 ${probability}。\n如果冷门来了，那就是足球在提醒我们别太自信。`,
