@@ -42,6 +42,22 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-14T00:35:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月14日 00:35",
+    title: "球队与球员数据维护更新",
+    summary: "本次按 FIFA 官方 Squad Lists-English.pdf（2026-06-13 16:05 UTC，Version 1，48页）复核 48 队、小组与最终 26 人名单，更新奥地利、海地、日本、摩洛哥、阿根廷、加拿大、阿尔及利亚、南非、伊拉克相关球员数据。",
+    changes: [
+      "48 队与 12 个小组未发现变化，本地仍覆盖全部球队。",
+      "teamRosters.ts 已将官方名单来源同步到 FIFA 2026-06-13 16:05 UTC 版本，并继续保留 48 队 x 26 人结构。",
+      "奥地利 #19：Christoph Baumgartner → Dejan Ljubicic；同步补充 FC Schalke 04、DOB、身高、caps 与 goals。",
+      "海地 #14：Leverton Pierre → Garven Metusala；同步补充 Colorado Springs Switchbacks FC、DOB、身高、caps 与 goals。",
+      "日本 #6：Wataru Endo → Shuto Machino；同步补充 Borussia Mönchengladbach、DOB、身高、caps 与 goals。",
+      "摩洛哥 #5：Nayef Aguerd → Marwane Saadane；#17：Abde Ezzalzouli → Amine Sbai；同步补充俱乐部、DOB、身高、caps 与 goals。",
+      "阿根廷 Marcos Senesi 按 FIFA PDF 改为中场，并更新俱乐部为 AFC Bournemouth、caps 为 3；加拿大 Jayden Nelson 按 FIFA PDF 改为前锋，并更新俱乐部为 Austin FC、caps 为 15、goals 为 2。",
+      "按 FIFA PDF 修正英文名 key：阿尔及利亚 Achref Abada、Rafik Belghali；南非 Samukele Kabini；伊拉克 Ahmed Qasem。"
+    ]
+  },
+  {
     updatedAt: "2026-06-13T17:24:00+08:00",
     updatedAtLabel: "北京时间 2026年6月13日 17:24",
     title: "球员数据维护更新",
