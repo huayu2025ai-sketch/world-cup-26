@@ -22,7 +22,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 2, player: "Breel Embolo", chineseName: "布雷尔·恩博洛", team: "瑞士", teamCode: "SUI", value: 1, matches: 1 },
   { rank: 2, player: "Boualem Khoukhi", chineseName: "布阿莱姆·胡希", team: "卡塔尔", teamCode: "QAT", value: 1, matches: 1 },
   { rank: 2, player: "Ismael Saibari", chineseName: "伊斯梅尔·塞巴里", team: "摩洛哥", teamCode: "MAR", value: 1, matches: 1 },
-  { rank: 2, player: "Vinicius Junior", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 }
+  { rank: 2, player: "Vinicius Junior", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
+  { rank: 2, player: "John McGinn", chineseName: "约翰·麦金", team: "苏格兰", teamCode: "SCO", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -37,6 +38,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "巴西 1-1 摩洛哥赛果已更新",
-    body: "已按终场比分补入伊斯梅尔·塞巴里与维尼修斯·儒尼奥尔进球；助攻榜新增可靠来源明确确认的卜拉欣·迪亚斯与布鲁诺·吉马良斯。"
+    title: "海地 0-1 苏格兰赛果已更新",
+    body: "已按终场比分补入约翰·麦金 28' 进球；助攻来源表述不稳定，本次未新增助攻。"
   };

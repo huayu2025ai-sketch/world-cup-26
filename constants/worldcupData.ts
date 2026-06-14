@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-14T11:05:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月14日 11:05",
+    title: "C组海地 vs 苏格兰赛果更新",
+    summary: "本次按北京时间 2026-06-14 11:05 复核当前比赛进度：海地 0-1 苏格兰已终场，补入第 7 场比分、进球记录、球员统计与 C 组积分榜；澳大利亚 vs 土耳其尚未到北京时间 12:00 开球，继续保留赛前状态。",
+    changes: [
+      "match-results.json 与 scheduleData.ts 补入海地 0-1 苏格兰：约翰·麦金 28' 进球。",
+      "player-stats 进球榜新增约翰·麦金 1 球；助攻来源表述不稳定，本次未新增助攻。",
+      "C 组积分榜重算：苏格兰 1 战 3 分升至第一，巴西与摩洛哥各 1 分，海地 0 分。",
+      "第 8 场澳大利亚 vs 土耳其在本次运行时尚未开球，未写入终场数据。"
+    ]
+  },
+  {
     updatedAt: "2026-06-14T09:31:00+08:00",
     updatedAtLabel: "北京时间 2026年6月14日 09:31",
     title: "比赛进度复核更新",
@@ -402,10 +414,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "苏格兰", englishName: "Scotland", code: "SCO", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", confederation: "UEFA", pot: 3 }
     ],
     standings: [
+      { name: "苏格兰", code: "SCO", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 1, goalsAgainst: 0, goalDiff: 1, points: 3 },
       { name: "巴西", code: "BRA", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
       { name: "摩洛哥", code: "MAR", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "海地", code: "HAI", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "苏格兰", code: "SCO", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "海地", code: "HAI", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 1, goalDiff: -1, points: 0 }
     ]
   },
   {

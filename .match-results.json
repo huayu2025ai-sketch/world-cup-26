@@ -50,5 +50,12 @@
       {"player": "伊斯梅尔·塞巴里", "team": "摩洛哥", "minute": "21'", "type": "goal"},
       {"player": "维尼修斯·儒尼奥尔", "team": "巴西", "minute": "32'", "type": "goal"}
     ]
+  },
+  "7": {
+    "homeScore": 0,
+    "awayScore": 1,
+    "goalScorers": [
+      {"player": "约翰·麦金", "team": "苏格兰", "minute": "28'", "type": "goal"}
+    ]
   }
 }
