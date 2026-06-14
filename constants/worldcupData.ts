@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-14T14:30:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月14日 14:30",
+    title: "D组澳大利亚 vs 土耳其赛果更新",
+    summary: "本次按北京时间 2026-06-14 14:30 复核当前比赛进度：澳大利亚 2-0 土耳其已终场，补入第 8 场比分、进球记录、球员统计与 D 组积分榜；第 9 场德国 vs 库拉索尚未开球，后续赛程继续保留赛前状态。",
+    changes: [
+      "match-results.json 与 scheduleData.ts 补入澳大利亚 2-0 土耳其：内斯托里·伊兰昆达 27'，康纳·梅特卡夫 75'。",
+      "player-stats 进球榜新增内斯托里·伊兰昆达与康纳·梅特卡夫各 1 球；明确助攻仅新增保罗·奥孔-恩斯特勒 1 次。",
+      "D 组积分榜重算：美国与澳大利亚同为 1 战 3 分，美国以净胜球 +3 暂列第一，澳大利亚以 +2 暂列第二，土耳其与巴拉圭仍为 0 分。",
+      "德国 vs 库拉索、荷兰 vs 日本、科特迪瓦 vs 厄瓜多尔、瑞典 vs 突尼斯在本次运行时尚未到北京时间开球时间，未写入终场数据。"
+    ]
+  },
+  {
     updatedAt: "2026-06-14T14:01:00+08:00",
     updatedAtLabel: "北京时间 2026年6月14日 14:01",
     title: "澳大利亚 vs 土耳其赛中复核",
@@ -447,8 +459,8 @@ export const worldCupGroups: WorldCupGroup[] = [
     ],
     standings: [
       { name: "美国", code: "USA", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 4, goalsAgainst: 1, goalDiff: 3, points: 3 },
-      { name: "澳大利亚", code: "AUS", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "土耳其", code: "TUR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "澳大利亚", code: "AUS", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 0, goalDiff: 2, points: 3 },
+      { name: "土耳其", code: "TUR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 },
       { name: "巴拉圭", code: "PAR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 4, goalDiff: -3, points: 0 }
     ]
   },

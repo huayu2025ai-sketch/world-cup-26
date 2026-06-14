@@ -75,7 +75,10 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 7, stage: "分组赛", group: "C", date: "2026-06-13", etTime: "21:00", home: "海地", away: "苏格兰", venue: "Gillette Stadium", city: "Boston", homeScore: 0, awayScore: 1, goalScorers: [
     { player: "约翰·麦金", team: "苏格兰", minute: "28'", type: "goal" },
   ] },
-  { id: 8, stage: "分组赛", group: "D", date: "2026-06-14", etTime: "00:00", home: "澳大利亚", away: "土耳其", venue: "BC Place", city: "Vancouver" },
+  { id: 8, stage: "分组赛", group: "D", date: "2026-06-14", etTime: "00:00", home: "澳大利亚", away: "土耳其", venue: "BC Place", city: "Vancouver", homeScore: 2, awayScore: 0, goalScorers: [
+    { player: "内斯托里·伊兰昆达", team: "澳大利亚", minute: "27'", type: "goal" },
+    { player: "康纳·梅特卡夫", team: "澳大利亚", minute: "75'", type: "goal" },
+  ] },
   { id: 9, stage: "分组赛", group: "E", date: "2026-06-14", etTime: "13:00", home: "德国", away: "库拉索", venue: "Lincoln Financial Field", city: "Philadelphia" },
   { id: 10, stage: "分组赛", group: "F", date: "2026-06-14", etTime: "16:00", home: "荷兰", away: "日本", venue: "AT&T Stadium", city: "Dallas" },
   { id: 11, stage: "分组赛", group: "E", date: "2026-06-14", etTime: "19:00", home: "科特迪瓦", away: "厄瓜多尔", venue: "MetLife Stadium", city: "New York New Jersey" },

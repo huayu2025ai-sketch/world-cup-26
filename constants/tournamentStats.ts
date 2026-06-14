@@ -23,7 +23,9 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 2, player: "Boualem Khoukhi", chineseName: "布阿莱姆·胡希", team: "卡塔尔", teamCode: "QAT", value: 1, matches: 1 },
   { rank: 2, player: "Ismael Saibari", chineseName: "伊斯梅尔·塞巴里", team: "摩洛哥", teamCode: "MAR", value: 1, matches: 1 },
   { rank: 2, player: "Vinicius Junior", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
-  { rank: 2, player: "John McGinn", chineseName: "约翰·麦金", team: "苏格兰", teamCode: "SCO", value: 1, matches: 1 }
+  { rank: 2, player: "John McGinn", chineseName: "约翰·麦金", team: "苏格兰", teamCode: "SCO", value: 1, matches: 1 },
+  { rank: 2, player: "Nestory Irankunda", chineseName: "内斯托里·伊兰昆达", team: "澳大利亚", teamCode: "AUS", value: 1, matches: 1 },
+  { rank: 2, player: "Connor Metcalfe", chineseName: "康纳·梅特卡夫", team: "澳大利亚", teamCode: "AUS", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -34,10 +36,11 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 1, player: "Sead Kolasinac", chineseName: "塞亚德·科拉希纳茨", team: "波黑", teamCode: "BIH", value: 1, matches: 1 },
   { rank: 1, player: "Homam Ahmed", chineseName: "霍马姆·艾哈迈德", team: "卡塔尔", teamCode: "QAT", value: 1, matches: 1 },
   { rank: 1, player: "Brahim Diaz", chineseName: "卜拉欣·迪亚斯", team: "摩洛哥", teamCode: "MAR", value: 1, matches: 1 },
-  { rank: 1, player: "Bruno Guimaraes", chineseName: "布鲁诺·吉马良斯", team: "巴西", teamCode: "BRA", value: 1, matches: 1 }
+  { rank: 1, player: "Bruno Guimaraes", chineseName: "布鲁诺·吉马良斯", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
+  { rank: 1, player: "Paul Okon-Engstler", chineseName: "保罗·奥孔-恩斯特勒", team: "澳大利亚", teamCode: "AUS", value: 1, matches: 1 }
 ];
 
 export const statsNotice = {
-    title: "海地 0-1 苏格兰赛果已更新",
-    body: "已按终场比分补入约翰·麦金 28' 进球；助攻来源表述不稳定，本次未新增助攻。"
+    title: "澳大利亚 2-0 土耳其赛果已更新",
+    body: "已按终场比分补入内斯托里·伊兰昆达 27'、康纳·梅特卡夫 75' 进球；明确助攻仅新增保罗·奥孔-恩斯特勒。"
   };
