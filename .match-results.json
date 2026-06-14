@@ -42,5 +42,13 @@
       {"player": "布雷尔·恩博洛", "team": "瑞士", "minute": "17'", "type": "penalty"},
       {"player": "布阿莱姆·胡希", "team": "卡塔尔", "minute": "90+5'", "type": "goal"}
     ]
+  },
+  "6": {
+    "homeScore": 1,
+    "awayScore": 1,
+    "goalScorers": [
+      {"player": "伊斯梅尔·塞巴里", "team": "摩洛哥", "minute": "21'", "type": "goal"},
+      {"player": "维尼修斯·儒尼奥尔", "team": "巴西", "minute": "32'", "type": "goal"}
+    ]
   }
 }

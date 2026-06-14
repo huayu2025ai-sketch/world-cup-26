@@ -68,7 +68,10 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "布雷尔·恩博洛", team: "瑞士", minute: "17'", type: "penalty" },
     { player: "布阿莱姆·胡希", team: "卡塔尔", minute: "90+5'", type: "goal" },
   ] },
-  { id: 6, stage: "分组赛", group: "C", date: "2026-06-13", etTime: "18:00", home: "巴西", away: "摩洛哥", venue: "MetLife Stadium", city: "New York New Jersey" },
+  { id: 6, stage: "分组赛", group: "C", date: "2026-06-13", etTime: "18:00", home: "巴西", away: "摩洛哥", venue: "MetLife Stadium", city: "New York New Jersey", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "伊斯梅尔·塞巴里", team: "摩洛哥", minute: "21'", type: "goal" },
+    { player: "维尼修斯·儒尼奥尔", team: "巴西", minute: "32'", type: "goal" },
+  ] },
   { id: 7, stage: "分组赛", group: "C", date: "2026-06-13", etTime: "21:00", home: "海地", away: "苏格兰", venue: "Gillette Stadium", city: "Boston" },
   { id: 8, stage: "分组赛", group: "D", date: "2026-06-14", etTime: "00:00", home: "澳大利亚", away: "土耳其", venue: "BC Place", city: "Vancouver" },
   { id: 9, stage: "分组赛", group: "E", date: "2026-06-14", etTime: "13:00", home: "德国", away: "库拉索", venue: "Lincoln Financial Field", city: "Philadelphia" },

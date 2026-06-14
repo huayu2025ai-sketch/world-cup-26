@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-14T08:02:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月14日 08:02",
+    title: "C组首场赛果与统计更新",
+    summary: "本次同步 C 组巴西 1-1 摩洛哥的终场赛果，更新赛程比分、进球记录、C 组积分榜，以及进球榜和可确认助攻榜。",
+    changes: [
+      "赛程页补入巴西 1-1 摩洛哥：伊斯梅尔·塞巴里 21'，维尼修斯·儒尼奥尔 32'。",
+      "C 组积分榜重算：巴西与摩洛哥均为 1 战 1 分、净胜球 0；海地与苏格兰尚未完赛，继续保留 0 战。",
+      "进球榜新增伊斯梅尔·塞巴里、维尼修斯·儒尼奥尔；助攻榜新增卜拉欣·迪亚斯、布鲁诺·吉马良斯。",
+      "海地 vs 苏格兰、澳大利亚 vs 土耳其在本次运行时未按终场状态落库，继续保留赛前状态。"
+    ]
+  },
+  {
     updatedAt: "2026-06-14T06:02:00+08:00",
     updatedAtLabel: "北京时间 2026年6月14日 06:02",
     title: "B组赛果与统计更新",
@@ -366,8 +378,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "苏格兰", englishName: "Scotland", code: "SCO", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", confederation: "UEFA", pot: 3 }
     ],
     standings: [
-      { name: "巴西", code: "BRA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "摩洛哥", code: "MAR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "巴西", code: "BRA", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
+      { name: "摩洛哥", code: "MAR", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
       { name: "海地", code: "HAI", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
       { name: "苏格兰", code: "SCO", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
