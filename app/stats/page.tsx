@@ -21,13 +21,13 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
 
       {rows.length > 0 ? (
         <div className="mt-3 max-w-full overflow-x-auto">
-          <table className="w-full table-fixed text-left text-xs sm:min-w-[560px] sm:text-sm">
+          <table className="w-full min-w-[520px] table-fixed text-left text-xs sm:text-sm">
             <colgroup>
-              <col className="w-[10%] sm:w-auto" />
-              <col className="w-[50%] sm:w-auto" />
-              <col className="w-[18%] sm:w-auto" />
-              <col className="w-[10%] sm:w-auto" />
-              <col className="w-[12%] sm:w-auto" />
+              <col className="w-[10%]" />
+              <col className="w-[42%]" />
+              <col className="w-[18%]" />
+              <col className="w-[14%]" />
+              <col className="w-[16%]" />
             </colgroup>
             <thead>
               <tr className="border-b border-slate-700 text-[10px] uppercase tracking-[0.06em] text-slate-500 sm:text-xs sm:tracking-[0.16em]">
@@ -42,18 +42,22 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
               {rows.map((row) => (
                 <tr key={`${row.teamCode}-${row.player}`} className="border-b border-slate-700/60 last:border-0">
                   <td className="py-3 pr-2 font-black text-cyan-200 sm:pr-3">#{row.rank}</td>
-                  <td className="min-w-0 px-2 py-3 sm:px-3">
-                    <p className="truncate font-black text-slate-100">{row.chineseName}</p>
-                    <p className="mt-0.5 truncate text-[10px] text-slate-500 sm:text-xs">{row.player}</p>
+                  <td className="min-w-0 px-2 py-3 align-top sm:px-3">
+                    <p className="whitespace-normal break-words font-black leading-snug text-slate-100">
+                      {row.chineseName}
+                    </p>
+                    <p className="mt-0.5 whitespace-normal break-words text-[10px] leading-snug text-slate-500 sm:text-xs">
+                      {row.player}
+                    </p>
                   </td>
-                  <td className="min-w-0 px-2 py-3 sm:px-3">
+                  <td className="min-w-0 px-2 py-3 align-top sm:px-3">
                     <p className="truncate font-bold text-slate-300">{row.team}</p>
                     <p className="mt-0.5 truncate text-[10px] text-slate-500 sm:text-xs">{row.teamCode}</p>
                   </td>
-                  <td className="px-1 py-3 text-right text-base font-black text-slate-100 sm:px-3 sm:text-lg">
+                  <td className="px-1 py-3 text-right align-top text-base font-black text-slate-100 sm:px-3 sm:text-lg">
                     {row.value}
                   </td>
-                  <td className="py-3 pl-1 text-right font-bold text-slate-400 sm:pl-3">{row.matches}</td>
+                  <td className="py-3 pl-1 text-right align-top font-bold text-slate-400 sm:pl-3">{row.matches}</td>
                 </tr>
               ))}
             </tbody>
