@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-14T09:31:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月14日 09:31",
+    title: "比赛进度复核更新",
+    summary: "本次按北京时间 2026-06-14 09:31 复核当前比赛进度：第 1-6 场终场赛果、球员统计与 A-D 组积分榜保持一致；海地 vs 苏格兰正在进行，澳大利亚 vs 土耳其尚未开球，均未写入终场比分。",
+    changes: [
+      "match-results.json 状态文件与 scheduleData.ts 继续保持第 1-6 场终场比分一致，本次未新增完赛比分。",
+      "player-stats 进球榜与已确认非乌龙进球一致；助攻榜仍只保留可靠来源明确确认的助攻。",
+      "A 组、B 组、C 组、D 组积分榜按已完赛小组赛复核无冲突，E-L 组仍为 0 战初始状态。",
+      "The Guardian 直播源显示海地 vs 苏格兰已开赛但未完赛；澳大利亚 vs 土耳其仍为赛前预告状态，未写入终场数据。"
+    ]
+  },
+  {
     updatedAt: "2026-06-14T09:02:16+08:00",
     updatedAtLabel: "北京时间 2026年6月14日 09:02",
     title: "比赛进度核查更新",
