@@ -65,5 +65,36 @@
       {"player": "内斯托里·伊兰昆达", "team": "澳大利亚", "minute": "27'", "type": "goal"},
       {"player": "康纳·梅特卡夫", "team": "澳大利亚", "minute": "75'", "type": "goal"}
     ]
+  },
+  "9": {
+    "homeScore": 7,
+    "awayScore": 1,
+    "goalScorers": [
+      {"player": "费利克斯·恩梅查", "team": "德国", "minute": "6'", "type": "goal"},
+      {"player": "Livano Comenencia", "team": "库拉索", "minute": "21'", "type": "goal"},
+      {"player": "尼科·施洛特贝克", "team": "德国", "minute": "38'", "type": "goal"},
+      {"player": "凯·哈弗茨", "team": "德国", "minute": "45+5'", "type": "penalty"},
+      {"player": "贾马尔·穆西亚拉", "team": "德国", "minute": "47'", "type": "goal"},
+      {"player": "Nathaniel Brown", "team": "德国", "minute": "68'", "type": "goal"},
+      {"player": "德尼兹·翁达夫", "team": "德国", "minute": "78'", "type": "goal"},
+      {"player": "凯·哈弗茨", "team": "德国", "minute": "88'", "type": "goal"}
+    ]
+  },
+  "10": {
+    "homeScore": 2,
+    "awayScore": 2,
+    "goalScorers": [
+      {"player": "维吉尔·范戴克", "team": "荷兰", "minute": "51'", "type": "goal"},
+      {"player": "中村敬斗", "team": "日本", "minute": "57'", "type": "goal"},
+      {"player": "Crysencio Summerville", "team": "荷兰", "minute": "64'", "type": "goal"},
+      {"player": "镰田大地", "team": "日本", "minute": "89'", "type": "goal"}
+    ]
+  },
+  "11": {
+    "homeScore": 1,
+    "awayScore": 0,
+    "goalScorers": [
+      {"player": "阿马德·迪亚洛", "team": "科特迪瓦", "minute": "90'", "type": "goal"}
+    ]
   }
 }

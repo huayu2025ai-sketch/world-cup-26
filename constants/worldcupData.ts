@@ -42,6 +42,31 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-15T09:07:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月15日 09:07",
+    title: "E组科特迪瓦 vs 厄瓜多尔赛果更新",
+    summary: "本次按北京时间 2026-06-15 09:07 复核当前比赛进度：科特迪瓦 1-0 厄瓜多尔已终场，补入第 11 场比分、进球记录、球员统计与 E 组积分榜；瑞典 vs 突尼斯尚未开球，未写入终场数据。",
+    changes: [
+      "scheduleData.ts 补入科特迪瓦 1-0 厄瓜多尔：阿马德·迪亚洛 90' 进球。",
+      "E 组积分榜重算：德国与科特迪瓦同为 1 战 3 分，德国以净胜球 +6 暂列第一，科特迪瓦以 +1 暂列第二；厄瓜多尔 0 分暂列第三，库拉索 0 分暂列第四。",
+      "射手榜新增阿马德·迪亚洛 1 球；助攻榜未新增未完全确认的助攻。",
+      "第 12 场瑞典 vs 突尼斯在本次运行时尚未到北京时间开球时间，未写入终场比分。"
+    ]
+  },
+  {
+    updatedAt: "2026-06-15T07:20:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月15日 07:20",
+    title: "E/F组首轮赛果更新",
+    summary: "本次按北京时间 2026-06-15 07:20 复核当前比赛进度：德国 7-1 库拉索、荷兰 2-2 日本已终场，补入第 9、10 场比分、进球记录、球员统计与 E/F 组积分榜；科特迪瓦 vs 厄瓜多尔仍为直播状态，未写入终场数据。",
+    changes: [
+      "scheduleData.ts 补入德国 7-1 库拉索：费利克斯·恩梅查 6'、Livano Comenencia 21'、尼科·施洛特贝克 38'、凯·哈弗茨 45+5'（点球）和 88'、贾马尔·穆西亚拉 47'、Nathaniel Brown 68'、德尼兹·翁达夫 78'。",
+      "scheduleData.ts 补入荷兰 2-2 日本：维吉尔·范戴克 51'、中村敬斗 57'、Crysencio Summerville 64'、镰田大地 89'。",
+      "E 组积分榜重算：德国 1 战 3 分、净胜球 +6 暂列第一，库拉索 0 分暂列第四；科特迪瓦与厄瓜多尔尚未按终场落库。",
+      "F 组积分榜重算：荷兰与日本各 1 战 1 分、进 2 球失 2 球；瑞典 vs 突尼斯尚未开球。",
+      "射手榜新增凯·哈弗茨 2 球，以及德国、库拉索、荷兰、日本的已确认进球球员；助攻榜仅新增来源明确确认的赖恩·赫拉芬贝赫 2 次。"
+    ]
+  },
+  {
     updatedAt: "2026-06-14T14:30:00+08:00",
     updatedAtLabel: "北京时间 2026年6月14日 14:30",
     title: "D组澳大利亚 vs 土耳其赛果更新",
@@ -478,10 +503,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "厄瓜多尔", englishName: "Ecuador", code: "ECU", flag: "🇪🇨", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "德国", code: "GER", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "库拉索", code: "CUW", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "科特迪瓦", code: "CIV", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "厄瓜多尔", code: "ECU", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "德国", code: "GER", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 7, goalsAgainst: 1, goalDiff: 6, points: 3 },
+      { name: "科特迪瓦", code: "CIV", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 1, goalsAgainst: 0, goalDiff: 1, points: 3 },
+      { name: "厄瓜多尔", code: "ECU", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 1, goalDiff: -1, points: 0 },
+      { name: "库拉索", code: "CUW", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 0 }
     ]
   },
   {
@@ -498,8 +523,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "突尼斯", englishName: "Tunisia", code: "TUN", flag: "🇹🇳", confederation: "CAF", pot: 3 }
     ],
     standings: [
-      { name: "荷兰", code: "NED", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "日本", code: "JPN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "荷兰", code: "NED", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
+      { name: "日本", code: "JPN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
       { name: "瑞典", code: "SWE", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
       { name: "突尼斯", code: "TUN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
