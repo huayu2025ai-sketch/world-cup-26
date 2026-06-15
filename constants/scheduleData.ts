@@ -98,9 +98,19 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 11, stage: "分组赛", group: "E", date: "2026-06-14", etTime: "19:00", home: "科特迪瓦", away: "厄瓜多尔", venue: "MetLife Stadium", city: "New York New Jersey", homeScore: 1, awayScore: 0, goalScorers: [
     { player: "阿马德·迪亚洛", team: "科特迪瓦", minute: "90'", type: "goal" },
   ] },
-  { id: 12, stage: "分组赛", group: "F", date: "2026-06-14", etTime: "22:00", home: "瑞典", away: "突尼斯", venue: "Estadio Akron", city: "Guadalajara" },
-  { id: 13, stage: "分组赛", group: "H", date: "2026-06-15", etTime: "12:00", home: "西班牙", away: "佛得角", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
-  { id: 14, stage: "分组赛", group: "G", date: "2026-06-15", etTime: "15:00", home: "比利时", away: "埃及", venue: "NRG Stadium", city: "Houston" },
+  { id: 12, stage: "分组赛", group: "F", date: "2026-06-14", etTime: "22:00", home: "瑞典", away: "突尼斯", venue: "Estadio Akron", city: "Guadalajara", homeScore: 5, awayScore: 1, goalScorers: [
+    { player: "Yasin Ayari", team: "瑞典", minute: "7'", type: "goal" },
+    { player: "亚历山大·伊萨克", team: "瑞典", minute: "30'", type: "goal" },
+    { player: "Omar Rekik", team: "突尼斯", minute: "43'", type: "goal" },
+    { player: "维克托·约克雷斯", team: "瑞典", minute: "60'", type: "goal" },
+    { player: "马蒂亚斯·斯万贝里", team: "瑞典", minute: "86'", type: "goal" },
+    { player: "Yasin Ayari", team: "瑞典", minute: "90+6'", type: "goal" },
+  ] },
+  { id: 13, stage: "分组赛", group: "H", date: "2026-06-15", etTime: "12:00", home: "西班牙", away: "佛得角", venue: "Mercedes-Benz Stadium", city: "Atlanta", homeScore: 0, awayScore: 0, goalScorers: [] },
+  { id: 14, stage: "分组赛", group: "G", date: "2026-06-15", etTime: "15:00", home: "比利时", away: "埃及", venue: "NRG Stadium", city: "Houston", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "埃马姆·阿舒尔", team: "埃及", minute: "19'", type: "goal" },
+    { player: "穆罕默德·哈尼", team: "埃及", minute: "66'", type: "ownGoal" },
+  ] },
   { id: 15, stage: "分组赛", group: "H", date: "2026-06-15", etTime: "18:00", home: "沙特阿拉伯", away: "乌拉圭", venue: "AT&T Stadium", city: "Dallas" },
   { id: 16, stage: "分组赛", group: "G", date: "2026-06-15", etTime: "21:00", home: "伊朗", away: "新西兰", venue: "BMO Field", city: "Toronto" },
   { id: 17, stage: "分组赛", group: "I", date: "2026-06-16", etTime: "15:00", home: "法国", away: "塞内加尔", venue: "MetLife Stadium", city: "New York New Jersey" },

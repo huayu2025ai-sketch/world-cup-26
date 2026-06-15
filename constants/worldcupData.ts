@@ -42,6 +42,22 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-16T07:18:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月16日 07:18",
+    title: "F/G/H组第12-14场赛果更新",
+    summary: "本次按北京时间 2026-06-16 07:18 复核当前比赛进度：瑞典 5-1 突尼斯、西班牙 0-0 佛得角、比利时 1-1 埃及已终场，补入第 12-14 场比分、进球记录、球员统计与 F/G/H 组积分榜。",
+    changes: [
+      "scheduleData.ts 补入瑞典 5-1 突尼斯：Yasin Ayari 7' 和 90+6'、亚历山大·伊萨克 30'、Omar Rekik 43'（突尼斯）、维克托·约克雷斯 60'、马蒂亚斯·斯万贝里 86'。",
+      "scheduleData.ts 补入西班牙 0-0 佛得角：双方互交白卷。",
+      "scheduleData.ts 补入比利时 1-1 埃及：埃马姆·阿舒尔 19'（埃及）、穆罕默德·哈尼 66' 乌龙（比利时扳平）。",
+      "F 组积分榜重算：瑞典 1 战 3 分、净胜球 +4 暂列第一；荷兰与日本各 1 分、净胜球 0 分列第二、第三；突尼斯 0 分垫底。",
+      "G 组积分榜重算：比利时与埃及各 1 战 1 分、净胜球 0 并列；伊朗与新西兰尚未开赛。",
+      "H 组积分榜重算：西班牙与佛得角各 1 战 1 分、净胜球 0 并列；沙特阿拉伯与乌拉圭尚未开赛。",
+      "射手榜新增 Yasin Ayari 2 球领跑，以及亚历山大·伊萨克、维克托·约克雷斯、马蒂亚斯·斯万贝里、Omar Rekik、埃马姆·阿舒尔各 1 球；乌龙球不计入射手榜。",
+      "助攻榜新增维克托·约克雷斯、Hannibal Mejbri、亚历山大·伊萨克、穆罕默德·萨拉赫各 1 次（来源明确确认的助攻）。"
+    ]
+  },
+  {
     updatedAt: "2026-06-15T09:07:00+08:00",
     updatedAtLabel: "北京时间 2026年6月15日 09:07",
     title: "E组科特迪瓦 vs 厄瓜多尔赛果更新",
@@ -523,10 +539,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "突尼斯", englishName: "Tunisia", code: "TUN", flag: "🇹🇳", confederation: "CAF", pot: 3 }
     ],
     standings: [
+      { name: "瑞典", code: "SWE", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 5, goalsAgainst: 1, goalDiff: 4, points: 3 },
       { name: "荷兰", code: "NED", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
       { name: "日本", code: "JPN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
-      { name: "瑞典", code: "SWE", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "突尼斯", code: "TUN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "突尼斯", code: "TUN", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 5, goalDiff: -4, points: 0 }
     ]
   },
   {
@@ -543,8 +559,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "新西兰", englishName: "New Zealand", code: "NZL", flag: "🇳🇿", confederation: "OFC", pot: 4 }
     ],
     standings: [
-      { name: "比利时", code: "BEL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "埃及", code: "EGY", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "埃及", code: "EGY", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
+      { name: "比利时", code: "BEL", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
       { name: "伊朗", code: "IRN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
       { name: "新西兰", code: "NZL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]
@@ -563,8 +579,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "乌拉圭", englishName: "Uruguay", code: "URU", flag: "🇺🇾", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "西班牙", code: "ESP", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "佛得角", code: "CPV", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "西班牙", code: "ESP", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 1 },
+      { name: "佛得角", code: "CPV", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 1 },
       { name: "沙特阿拉伯", code: "KSA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
       { name: "乌拉圭", code: "URU", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]

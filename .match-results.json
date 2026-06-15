@@ -96,5 +96,30 @@
     "goalScorers": [
       {"player": "阿马德·迪亚洛", "team": "科特迪瓦", "minute": "90'", "type": "goal"}
     ]
+  },
+  "12": {
+    "homeScore": 5,
+    "awayScore": 1,
+    "goalScorers": [
+      {"player": "Yasin Ayari", "team": "瑞典", "minute": "7'", "type": "goal"},
+      {"player": "亚历山大·伊萨克", "team": "瑞典", "minute": "30'", "type": "goal"},
+      {"player": "Omar Rekik", "team": "突尼斯", "minute": "43'", "type": "goal"},
+      {"player": "维克托·约克雷斯", "team": "瑞典", "minute": "60'", "type": "goal"},
+      {"player": "马蒂亚斯·斯万贝里", "team": "瑞典", "minute": "86'", "type": "goal"},
+      {"player": "Yasin Ayari", "team": "瑞典", "minute": "90+6'", "type": "goal"}
+    ]
+  },
+  "13": {
+    "homeScore": 0,
+    "awayScore": 0,
+    "goalScorers": []
+  },
+  "14": {
+    "homeScore": 1,
+    "awayScore": 1,
+    "goalScorers": [
+      {"player": "埃马姆·阿舒尔", "team": "埃及", "minute": "19'", "type": "goal"},
+      {"player": "穆罕默德·哈尼", "team": "埃及", "minute": "66'", "type": "ownGoal"}
+    ]
   }
 }
