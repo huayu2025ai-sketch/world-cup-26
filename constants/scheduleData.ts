@@ -115,7 +115,12 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "Abdulelah Alamri", team: "沙特阿拉伯", minute: "41'", type: "goal" },
     { player: "Maxi Araujo", team: "乌拉圭", minute: "80'", type: "goal" },
   ] },
-  { id: 16, stage: "分组赛", group: "G", date: "2026-06-15", etTime: "21:00", home: "伊朗", away: "新西兰", venue: "BMO Field", city: "Toronto" },
+  { id: 16, stage: "分组赛", group: "G", date: "2026-06-15", etTime: "21:00", home: "伊朗", away: "新西兰", venue: "SoFi Stadium", city: "Los Angeles", homeScore: 2, awayScore: 2, goalScorers: [
+    { player: "Eli Just", team: "新西兰", minute: "7'", type: "goal" },
+    { player: "Ramin Rezaeian", team: "伊朗", minute: "32'", type: "goal" },
+    { player: "Eli Just", team: "新西兰", minute: "55'", type: "goal" },
+    { player: "Mohammad Mohebi", team: "伊朗", minute: "64'", type: "goal" },
+  ] },
   { id: 17, stage: "分组赛", group: "I", date: "2026-06-16", etTime: "15:00", home: "法国", away: "塞内加尔", venue: "MetLife Stadium", city: "New York New Jersey" },
   { id: 18, stage: "分组赛", group: "I", date: "2026-06-16", etTime: "18:00", home: "伊拉克", away: "挪威", venue: "Lincoln Financial Field", city: "Philadelphia" },
   { id: 19, stage: "分组赛", group: "J", date: "2026-06-16", etTime: "21:00", home: "阿根廷", away: "阿尔及利亚", venue: "Lumen Field", city: "Seattle" },

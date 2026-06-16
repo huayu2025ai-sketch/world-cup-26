@@ -129,5 +129,15 @@
       {"player": "Abdulelah Alamri", "team": "沙特阿拉伯", "minute": "41'", "type": "goal"},
       {"player": "Maxi Araujo", "team": "乌拉圭", "minute": "80'", "type": "goal"}
     ]
+  },
+  "16": {
+    "homeScore": 2,
+    "awayScore": 2,
+    "goalScorers": [
+      {"player": "Eli Just", "team": "新西兰", "minute": "7'", "type": "goal"},
+      {"player": "Ramin Rezaeian", "team": "伊朗", "minute": "32'", "type": "goal"},
+      {"player": "Eli Just", "team": "新西兰", "minute": "55'", "type": "goal"},
+      {"player": "Mohammad Mohebi", "team": "伊朗", "minute": "64'", "type": "goal"}
+    ]
   }
 }

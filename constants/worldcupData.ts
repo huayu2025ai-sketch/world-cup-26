@@ -42,6 +42,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-16T11:01:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月16日 11:01",
+    title: "G组伊朗 vs 新西兰赛果更新",
+    summary: "本次按北京时间 2026-06-16 11:01 复核当前比赛进度：伊朗 2-2 新西兰已终场，补入第 16 场比分、进球记录、球员统计与 G 组积分榜；法国 vs 塞内加尔等 6 月 16 日后续场次尚未到终场窗口，未写入终场数据。",
+    changes: [
+      "scheduleData.ts 与 .match-results.json 补入伊朗 2-2 新西兰：Eli Just 7'、55'，Ramin Rezaeian 32'，Mohammad Mohebi 64'。",
+      "G 组积分榜重算：伊朗与新西兰各 1 战 1 分、进 2 球失 2 球，因进球数暂列埃及与比利时之前；埃及与比利时各 1 分、进 1 球失 1 球。",
+      "射手榜新增 Eli Just 2 球，并新增 Ramin Rezaeian 与 Mohammad Mohebi 各 1 球。",
+      "助攻榜新增 Chris Wood 2 次、Saman Ghoddos 1 次；Ramin Rezaeian 的进球来自禁区混战后的二点球，未计入助攻。",
+      "第 17 场法国 vs 塞内加尔在本次运行时尚未到北京时间开球时间，继续保留赛前状态。"
+    ]
+  },
+  {
     updatedAt: "2026-06-16T09:01:00+08:00",
     updatedAtLabel: "北京时间 2026年6月16日 09:01",
     title: "H组沙特阿拉伯 vs 乌拉圭赛果更新",
@@ -572,10 +585,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "新西兰", englishName: "New Zealand", code: "NZL", flag: "🇳🇿", confederation: "OFC", pot: 4 }
     ],
     standings: [
+      { name: "伊朗", code: "IRN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
+      { name: "新西兰", code: "NZL", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
       { name: "埃及", code: "EGY", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "比利时", code: "BEL", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "伊朗", code: "IRN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "新西兰", code: "NZL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "比利时", code: "BEL", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 }
     ]
   },
   {
