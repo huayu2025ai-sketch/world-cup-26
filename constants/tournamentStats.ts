@@ -43,7 +43,9 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 4, player: "Omar Rekik", chineseName: "Omar Rekik", team: "突尼斯", teamCode: "TUN", value: 1, matches: 1 },
   { rank: 4, player: "Viktor Gyokeres", chineseName: "维克托·约克雷斯", team: "瑞典", teamCode: "SWE", value: 1, matches: 1 },
   { rank: 4, player: "Mattias Svanberg", chineseName: "马蒂亚斯·斯万贝里", team: "瑞典", teamCode: "SWE", value: 1, matches: 1 },
-  { rank: 4, player: "Emam Ashour", chineseName: "埃马姆·阿舒尔", team: "埃及", teamCode: "EGY", value: 1, matches: 1 }
+  { rank: 4, player: "Emam Ashour", chineseName: "埃马姆·阿舒尔", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
+  { rank: 4, player: "Abdulelah Alamri", chineseName: "Abdulelah Alamri", team: "沙特阿拉伯", teamCode: "KSA", value: 1, matches: 1 },
+  { rank: 4, player: "Maxi Araujo", chineseName: "Maxi Araujo", team: "乌拉圭", teamCode: "URU", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -64,6 +66,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "第 12-14 场赛果已更新",
-    body: "已补入瑞典 5-1 突尼斯、西班牙 0-0 佛得角、比利时 1-1 埃及；射手榜新增已确认非乌龙进球，助攻榜只加入来源明确的助攻。"
+    title: "第 15 场赛果已更新",
+    body: "已补入沙特阿拉伯 1-1 乌拉圭；射手榜新增 Abdulelah Alamri 与 Maxi Araujo，助攻榜未加入未稳定确认的助攻。"
   };

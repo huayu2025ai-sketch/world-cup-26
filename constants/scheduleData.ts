@@ -111,7 +111,10 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "埃马姆·阿舒尔", team: "埃及", minute: "19'", type: "goal" },
     { player: "穆罕默德·哈尼", team: "埃及", minute: "66'", type: "ownGoal" },
   ] },
-  { id: 15, stage: "分组赛", group: "H", date: "2026-06-15", etTime: "18:00", home: "沙特阿拉伯", away: "乌拉圭", venue: "AT&T Stadium", city: "Dallas" },
+  { id: 15, stage: "分组赛", group: "H", date: "2026-06-15", etTime: "18:00", home: "沙特阿拉伯", away: "乌拉圭", venue: "AT&T Stadium", city: "Dallas", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "Abdulelah Alamri", team: "沙特阿拉伯", minute: "41'", type: "goal" },
+    { player: "Maxi Araujo", team: "乌拉圭", minute: "80'", type: "goal" },
+  ] },
   { id: 16, stage: "分组赛", group: "G", date: "2026-06-15", etTime: "21:00", home: "伊朗", away: "新西兰", venue: "BMO Field", city: "Toronto" },
   { id: 17, stage: "分组赛", group: "I", date: "2026-06-16", etTime: "15:00", home: "法国", away: "塞内加尔", venue: "MetLife Stadium", city: "New York New Jersey" },
   { id: 18, stage: "分组赛", group: "I", date: "2026-06-16", etTime: "18:00", home: "伊拉克", away: "挪威", venue: "Lincoln Financial Field", city: "Philadelphia" },

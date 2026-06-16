@@ -42,6 +42,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-16T09:01:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月16日 09:01",
+    title: "H组沙特阿拉伯 vs 乌拉圭赛果更新",
+    summary: "本次按北京时间 2026-06-16 09:01 复核当前比赛进度：沙特阿拉伯 1-1 乌拉圭已终场，补入第 15 场比分、进球记录、球员统计与 H 组积分榜；伊朗 vs 新西兰刚到开球时间，未写入终场数据。",
+    changes: [
+      "scheduleData.ts 与 .match-results.json 补入沙特阿拉伯 1-1 乌拉圭：Abdulelah Alamri 41'、Maxi Araujo 80'。",
+      "H 组积分榜重算：沙特阿拉伯与乌拉圭各 1 战 1 分、进 1 球失 1 球，因进球数暂列西班牙与佛得角之前；西班牙与佛得角各 1 分、净胜球 0。",
+      "射手榜新增 Abdulelah Alamri 与 Maxi Araujo 各 1 球。",
+      "助攻来源未稳定确认，本次未新增助攻榜条目。",
+      "第 16 场伊朗 vs 新西兰在本次运行时不满足终场条件，继续保留赛前状态。"
+    ]
+  },
+  {
     updatedAt: "2026-06-16T07:18:00+08:00",
     updatedAtLabel: "北京时间 2026年6月16日 07:18",
     title: "F/G/H组第12-14场赛果更新",
@@ -579,10 +592,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "乌拉圭", englishName: "Uruguay", code: "URU", flag: "🇺🇾", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
+      { name: "沙特阿拉伯", code: "KSA", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
+      { name: "乌拉圭", code: "URU", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
       { name: "西班牙", code: "ESP", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 1 },
-      { name: "佛得角", code: "CPV", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 1 },
-      { name: "沙特阿拉伯", code: "KSA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "乌拉圭", code: "URU", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "佛得角", code: "CPV", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 1 }
     ]
   },
   {
