@@ -42,6 +42,17 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-17T12:00:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月17日 12:00",
+    title: "J组阿根廷 vs 阿尔及利亚赛果更新",
+    summary: "本次按北京时间 2026-06-17 12:00 复核当前比赛进度：阿根廷 3-0 阿尔及利亚已终场，补入第 19 场比分、进球记录、球员统计与 J 组积分榜；奥地利 vs 约旦尚未开球，未写入终场数据。",
+    changes: [
+      "scheduleData.ts 补入阿根廷 3-0 阿尔及利亚：莱昂内尔·梅西 17'、60'、76' 帽子戏法。",
+      "J 组积分榜重算：阿根廷 1 战 3 分、净胜球 +3 暂列第一；阿尔及利亚 1 战 0 分、净胜球 -3 暂列第四；奥地利与约旦尚未比赛。",
+      "射手榜新增莱昂内尔·梅西 3 球。"
+    ]
+  },
+  {
     updatedAt: "2026-06-17T08:02:00+08:00",
     updatedAtLabel: "北京时间 2026年6月17日 08:02",
     title: "I组法国与挪威首战赛果更新",
@@ -658,8 +669,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "约旦", englishName: "Jordan", code: "JOR", flag: "🇯🇴", confederation: "AFC", pot: 4, debut: true }
     ],
     standings: [
-      { name: "阿根廷", code: "ARG", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "阿尔及利亚", code: "ALG", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "阿根廷", code: "ARG", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 0, goalDiff: 3, points: 3 },
+      { name: "阿尔及利亚", code: "ALG", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 },
       { name: "奥地利", code: "AUT", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
       { name: "约旦", code: "JOR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
     ]

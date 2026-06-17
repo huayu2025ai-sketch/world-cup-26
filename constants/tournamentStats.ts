@@ -13,6 +13,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 1, player: "Kai Havertz", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 2, matches: 1 },
   { rank: 1, player: "Yasin Ayari", chineseName: "Yasin Ayari", team: "瑞典", teamCode: "SWE", value: 2, matches: 1 },
   { rank: 1, player: "Eli Just", chineseName: "Eli Just", team: "新西兰", teamCode: "NZL", value: 2, matches: 1 },
+  { rank: 1, player: "Lionel Messi", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 3, matches: 1 },
   { rank: 1, player: "Kylian Mbappe", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 2, matches: 1 },
   { rank: 1, player: "Erling Haaland", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 2, matches: 1 },
   { rank: 7, player: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 },
@@ -81,6 +82,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "第 17-18 场赛果已更新",
-    body: "已补入法国 3-1 塞内加尔、伊拉克 1-3 挪威；射手榜新增姆巴佩与哈兰德各 2 球，助攻榜新增奥利塞 2 次。"
+    title: "第 19 场赛果已更新",
+    body: "已补入阿根廷 3-0 阿尔及利亚（梅西帽子戏法）；J组积分榜已更新，梅西登顶射手榜（3球）。"
   };
