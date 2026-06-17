@@ -9,13 +9,13 @@ export type PlayerStat = {
 };
 
 export const goalsRanking: PlayerStat[] = [
-  { rank: 1, player: "Folarin Balogun", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 2, matches: 1 },
-  { rank: 1, player: "Kai Havertz", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 2, matches: 1 },
-  { rank: 1, player: "Yasin Ayari", chineseName: "Yasin Ayari", team: "瑞典", teamCode: "SWE", value: 2, matches: 1 },
-  { rank: 1, player: "Eli Just", chineseName: "Eli Just", team: "新西兰", teamCode: "NZL", value: 2, matches: 1 },
   { rank: 1, player: "Lionel Messi", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 3, matches: 1 },
-  { rank: 1, player: "Kylian Mbappe", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 2, matches: 1 },
-  { rank: 1, player: "Erling Haaland", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 2, matches: 1 },
+  { rank: 2, player: "Folarin Balogun", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 2, matches: 1 },
+  { rank: 2, player: "Kai Havertz", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 2, matches: 1 },
+  { rank: 2, player: "Yasin Ayari", chineseName: "Yasin Ayari", team: "瑞典", teamCode: "SWE", value: 2, matches: 1 },
+  { rank: 2, player: "Eli Just", chineseName: "Eli Just", team: "新西兰", teamCode: "NZL", value: 2, matches: 1 },
+  { rank: 2, player: "Kylian Mbappe", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 2, matches: 1 },
+  { rank: 2, player: "Erling Haaland", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 2, matches: 1 },
   { rank: 7, player: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 },
   { rank: 7, player: "Raul Jimenez", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 },
   { rank: 7, player: "Cyle Larin", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 1, matches: 1 },
