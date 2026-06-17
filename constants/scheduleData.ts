@@ -133,7 +133,9 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "埃尔林·哈兰德", team: "挪威", minute: "43'", type: "goal" },
     { player: "莱奥·厄斯蒂高", team: "挪威", minute: "76'", type: "goal" },
   ] },
-  { id: 19, stage: "分组赛", group: "J", date: "2026-06-16", etTime: "21:00", home: "阿根廷", away: "阿尔及利亚", venue: "Lumen Field", city: "Seattle" },
+  { id: 19, stage: "分组赛", group: "J", date: "2026-06-16", etTime: "21:00", home: "阿根廷", away: "阿尔及利亚", venue: "Lumen Field", city: "Seattle", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "尼古拉斯·冈萨雷斯", team: "阿根廷", minute: "78'", type: "goal" },
+  ] },
   { id: 20, stage: "分组赛", group: "J", date: "2026-06-17", etTime: "00:00", home: "奥地利", away: "约旦", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
   { id: 21, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "13:00", home: "葡萄牙", away: "刚果民主共和国", venue: "Hard Rock Stadium", city: "Miami" },
   { id: 22, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "16:00", home: "英格兰", away: "克罗地亚", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
