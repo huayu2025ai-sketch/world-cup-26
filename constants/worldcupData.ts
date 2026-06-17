@@ -42,6 +42,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-17T08:02:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月17日 08:02",
+    title: "I组法国与挪威首战赛果更新",
+    summary: "本次按北京时间 2026-06-17 08:02 复核当前比赛进度：法国 3-1 塞内加尔、伊拉克 1-3 挪威已终场，补入第 17-18 场比分、进球记录、球员统计与 I 组积分榜；阿根廷 vs 阿尔及利亚、奥地利 vs 约旦尚未开球，未写入终场数据。",
+    changes: [
+      "scheduleData.ts 与 .match-results.json 补入法国 3-1 塞内加尔：基利安·姆巴佩 66'、90+6'，布拉德利·巴尔科拉 82'，Ibrahim Mbaye 90+5'。",
+      "scheduleData.ts 与 .match-results.json 补入伊拉克 1-3 挪威：埃尔林·哈兰德 29'、43'，艾曼·侯赛因 39'，莱奥·厄斯蒂高 76'。",
+      "I 组积分榜重算：法国与挪威各 1 战 3 分、净胜球 +2，法国以进球数 3 暂列第一，挪威第二；塞内加尔与伊拉克同为 0 分。",
+      "射手榜新增基利安·姆巴佩与埃尔林·哈兰德各 2 球，并新增布拉德利·巴尔科拉、Ibrahim Mbaye、艾曼·侯赛因与莱奥·厄斯蒂高各 1 球。",
+      "助攻榜新增迈克尔·奥利塞 2 次，阿德里安·拉比奥、大卫·默勒·沃尔夫与 Amir Al-Ammari 各 1 次；哈兰德 43' 进球来自对方回传失误，厄斯蒂高 76' 角球助攻来源未稳定确认，未计入助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-16T11:01:00+08:00",
     updatedAtLabel: "北京时间 2026年6月16日 11:01",
     title: "G组伊朗 vs 新西兰赛果更新",
@@ -625,10 +638,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "挪威", englishName: "Norway", code: "NOR", flag: "🇳🇴", confederation: "UEFA", pot: 3 }
     ],
     standings: [
-      { name: "法国", code: "FRA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "塞内加尔", code: "SEN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "伊拉克", code: "IRQ", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "挪威", code: "NOR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "法国", code: "FRA", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
+      { name: "挪威", code: "NOR", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
+      { name: "塞内加尔", code: "SEN", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 },
+      { name: "伊拉克", code: "IRQ", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 }
     ]
   },
   {

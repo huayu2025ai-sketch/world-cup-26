@@ -139,5 +139,25 @@
       {"player": "Eli Just", "team": "新西兰", "minute": "55'", "type": "goal"},
       {"player": "Mohammad Mohebi", "team": "伊朗", "minute": "64'", "type": "goal"}
     ]
+  },
+  "17": {
+    "homeScore": 3,
+    "awayScore": 1,
+    "goalScorers": [
+      {"player": "基利安·姆巴佩", "team": "法国", "minute": "66'", "type": "goal"},
+      {"player": "布拉德利·巴尔科拉", "team": "法国", "minute": "82'", "type": "goal"},
+      {"player": "Ibrahim Mbaye", "team": "塞内加尔", "minute": "90+5'", "type": "goal"},
+      {"player": "基利安·姆巴佩", "team": "法国", "minute": "90+6'", "type": "goal"}
+    ]
+  },
+  "18": {
+    "homeScore": 1,
+    "awayScore": 3,
+    "goalScorers": [
+      {"player": "埃尔林·哈兰德", "team": "挪威", "minute": "29'", "type": "goal"},
+      {"player": "艾曼·侯赛因", "team": "伊拉克", "minute": "39'", "type": "goal"},
+      {"player": "埃尔林·哈兰德", "team": "挪威", "minute": "43'", "type": "goal"},
+      {"player": "莱奥·厄斯蒂高", "team": "挪威", "minute": "76'", "type": "goal"}
+    ]
   }
 }
