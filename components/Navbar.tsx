@@ -123,16 +123,12 @@ export default function Navbar() {
         </div>
 
         <div className="mx-auto flex max-w-full items-center gap-2 rounded-lg border border-cyan-300/20 bg-slate-950/70 px-3 py-1.5 shadow-glow">
-          <span className="hidden text-[10px] font-black uppercase tracking-[0.2em] text-cyan-200 sm:inline">Beijing</span>
           <span className="whitespace-nowrap font-mono text-sm font-black tracking-[0.04em] text-cyan-200 drop-shadow-[0_0_8px_rgba(103,232,249,0.75)]">
             {tournamentStatus.stage}
           </span>
           <span className="text-slate-600">·</span>
           <span className="whitespace-nowrap font-mono text-xs font-black text-slate-200">
             {tournamentStatus.completedMatches}/{tournamentStatus.totalMatches}
-          </span>
-          <span className="hidden whitespace-nowrap text-xs font-bold text-slate-400 sm:inline">
-            今日赛程 {tournamentStatus.todayMatches} 场
           </span>
           {tournamentStatus.nextMatch && (
             <span className="hidden whitespace-nowrap text-xs font-bold text-slate-400 md:inline">
@@ -142,7 +138,7 @@ export default function Navbar() {
           )}
         </div>
 
-        <div className="flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 p-1 lg:justify-self-end">
+        <div className="flex flex-nowrap items-center justify-center gap-2 overflow-x-auto rounded-full border border-slate-700 bg-slate-800/50 p-1 lg:justify-self-end">
           {navItems.map((item) => {
             const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
 

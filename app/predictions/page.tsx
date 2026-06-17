@@ -74,6 +74,7 @@ export default function PredictionsPage() {
   const [coverage, setCoverage] = useState<"有数据" | "全部">("有数据");
   const [championIndex, setChampionIndex] = useState(0);
   const [championDragStart, setChampionDragStart] = useState<number | null>(null);
+  const [collapsedIds, setCollapsedIds] = useState<Set<number>>(new Set());
 
   const predictionRows = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -107,7 +108,52 @@ export default function PredictionsPage() {
   }, [coverage, query]);
 
   const predictionCount = Object.keys(matchOddsById).length;
+
+  const accuracyStats = useMemo(() => {
+    let judged = 0;
+    let correct = 0;
+
+    for (const match of scheduleMatches) {
+      const odds = matchOddsById[match.id] ?? [];
+      const prediction = getMatchPrediction(odds);
+      if (!prediction) continue;
+
+      const actualOutcome = getActualOutcome(match);
+      if (actualOutcome === null) continue;
+
+      judged++;
+      if (prediction.predictedOutcome === actualOutcome) {
+        correct++;
+      }
+    }
+
+    return { judged, correct };
+  }, []);
+
   const currentChampion = championFavorites[championIndex];
+
+  const resultMatchIds = useMemo(
+    () => predictionRows.filter(({ match }) => getActualOutcome(match) !== null).map(({ match }) => match.id),
+    [predictionRows]
+  );
+
+  const isAllResultsCollapsed =
+    resultMatchIds.length > 0 && resultMatchIds.every((id) => collapsedIds.has(id));
+
+  const toggleCollapse = (id: number) => {
+    setCollapsedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const collapseAllResults = () => setCollapsedIds(new Set(resultMatchIds));
+  const expandAllResults = () => setCollapsedIds(new Set());
 
   const goToChampion = (direction: -1 | 1) => {
     setChampionIndex((current) => (current + direction + championFavorites.length) % championFavorites.length);
@@ -141,7 +187,7 @@ export default function PredictionsPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xl font-black text-cyan-200">{predictionCount}</p>
             <p className="mt-1 text-xs text-slate-400">已录数据</p>
@@ -149,6 +195,17 @@ export default function PredictionsPage() {
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xl font-black text-cyan-200">{maxMarketSourceCount}</p>
             <p className="mt-1 text-xs text-slate-400">最多来源</p>
+          </div>
+          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
+            <p className="text-xl font-black text-cyan-200">
+              {accuracyStats.judged > 0 ? `${accuracyStats.correct}/${accuracyStats.judged}` : "--"}
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              预测战绩
+              {accuracyStats.judged > 0 && (
+                <span className="ml-1 text-cyan-200">{((accuracyStats.correct / accuracyStats.judged) * 100).toFixed(0)}%</span>
+              )}
+            </p>
           </div>
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xs font-black text-cyan-200">
@@ -196,6 +253,15 @@ export default function PredictionsPage() {
                 {item}
               </button>
             ))}
+            {resultMatchIds.length > 0 && (
+              <button
+                type="button"
+                onClick={isAllResultsCollapsed ? expandAllResults : collapseAllResults}
+                className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-2 text-xs font-black text-slate-300 transition hover:border-cyan-300/60 hover:text-slate-100"
+              >
+                {isAllResultsCollapsed ? "展开已赛结果" : "收起已赛结果"}
+              </button>
+            )}
           </div>
         </div>
       </section>
@@ -206,10 +272,58 @@ export default function PredictionsPage() {
             const actualOutcome = getActualOutcome(match);
             const predictionResult =
               prediction && actualOutcome ? (prediction.predictedOutcome === actualOutcome ? "correct" : "wrong") : null;
+            const isCollapsed = collapsedIds.has(match.id);
 
             return (
             <article key={match.id} className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 backdrop-blur-md">
-              <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-center">
+              {isCollapsed ? (
+                <div className="flex items-center gap-3">
+                  <div className="flex min-w-0 flex-1 flex-col gap-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="rounded-full bg-slate-950/70 px-2 py-0.5 text-[10px] font-black text-slate-400">
+                        M{match.id}
+                      </span>
+                      <span className="rounded-full border border-slate-700 bg-slate-900/70 px-2 py-0.5 text-[10px] font-bold text-cyan-100">
+                        {match.stage}
+                        {match.group ? ` · ${match.group}组` : ""}
+                      </span>
+                      <span className="text-[10px] font-bold text-slate-500">{formatMonthDay(match.date)}</span>
+                    </div>
+                    <div className="flex items-center gap-2 overflow-hidden">
+                      <span className="truncate text-sm font-black text-slate-100">{match.home}</span>
+                      <span className="rounded-full border border-slate-700 bg-slate-950 px-1.5 py-0.5 text-[10px] font-black text-slate-400">
+                        VS
+                      </span>
+                      <span className="truncate text-sm font-black text-slate-100">{match.away}</span>
+                      {actualOutcome !== null && (
+                        <span className="ml-1 whitespace-nowrap font-mono text-xs font-black text-slate-200">
+                          {match.homeScore}-{match.awayScore}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  {predictionResult && (
+                    <span
+                      className={`inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-[10px] font-black shadow-lg ${
+                        predictionResult === "correct"
+                          ? "border-emerald-300 bg-emerald-500 text-white shadow-emerald-500/35"
+                          : "border-rose-300 bg-rose-500 text-white shadow-rose-500/35"
+                      }`}
+                    >
+                      {predictionResult === "correct" ? "正确" : "错误"}
+                    </span>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => toggleCollapse(match.id)}
+                    className="shrink-0 rounded-full border border-slate-700 bg-slate-900/60 px-2 py-1 text-[10px] font-black text-slate-300 transition hover:border-cyan-300/60 hover:text-slate-100"
+                  >
+                    展开
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-center">
                 <div>
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="rounded-full bg-slate-950/70 px-2.5 py-1 text-[11px] font-black text-slate-400">
@@ -224,6 +338,15 @@ export default function PredictionsPage() {
                       <span className="rounded-full border border-slate-700 bg-slate-950/60 px-2.5 py-1 text-[11px] font-bold text-slate-400">
                         {prediction.sourceCount}/{prediction.maxSourceCount} 来源
                       </span>
+                    )}
+                    {actualOutcome !== null && (
+                      <button
+                        type="button"
+                        onClick={() => toggleCollapse(match.id)}
+                        className="ml-auto rounded-full border border-slate-700 bg-slate-900/60 px-2 py-1 text-[10px] font-black text-slate-300 transition hover:border-cyan-300/60 hover:text-slate-100"
+                      >
+                        {isCollapsed ? "展开" : "收起"}
+                      </button>
                     )}
                   </div>
 
@@ -242,17 +365,20 @@ export default function PredictionsPage() {
                 {prediction ? (
                   <div className="rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-3">
                     <p className="text-[11px] font-black uppercase tracking-[0.2em] text-cyan-200">Prediction</p>
-                    <div className="mt-1 flex flex-wrap items-center gap-2">
+                    <div className="mt-1 flex flex-wrap items-center gap-3">
                       <p className="text-lg font-black text-cyan-50">
                         {outcomeLabel(prediction.predictedOutcome, match)}
                       </p>
                       {predictionResult && (
                         <span
-                          className={`rounded-full border px-2 py-0.5 text-[10px] font-black ${
-                            predictionResultClass[predictionResult]
+                          className={`inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 text-xs font-black shadow-lg ${
+                            predictionResult === "correct"
+                              ? "border-emerald-300 bg-emerald-500 text-white shadow-emerald-500/35"
+                              : "border-rose-300 bg-rose-500 text-white shadow-rose-500/35"
                           }`}
+                          title={predictionResult === "correct" ? "预测正确" : "预测错误"}
                         >
-                          {predictionResult === "correct" ? "预测正确" : "预测错误"}
+                          {predictionResult === "correct" ? "正确" : "错误"}
                         </span>
                       )}
                     </div>
@@ -382,6 +508,7 @@ export default function PredictionsPage() {
                   </details>
                 </>
               )}
+              </>)}
             </article>
             );
           })}
