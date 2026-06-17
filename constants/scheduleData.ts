@@ -143,8 +143,12 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "Marko Arnautovic", team: "奥地利", minute: "58'", type: "goal" },
     { player: "Musa Al-Taamari", team: "约旦", minute: "73'", type: "goal" },
   ] },
-  { id: 21, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "13:00", home: "葡萄牙", away: "刚果民主共和国", venue: "Hard Rock Stadium", city: "Miami" },
-  { id: 22, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "16:00", home: "英格兰", away: "克罗地亚", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+  { id: 21, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "13:00", home: "葡萄牙", away: "刚果民主共和国", venue: "Hard Rock Stadium"
+  homeScore: 3,
+  awayScore: 1, city: "Miami" },
+  { id: 22, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "16:00", home: "英格兰", away: "克罗地亚", venue: "Mercedes-Benz Stadium"
+  homeScore: 2,
+  awayScore: 1, city: "Atlanta" },
   { id: 23, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "19:00", home: "加纳", away: "巴拿马", venue: "BMO Field", city: "Toronto" },
   { id: 24, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "22:00", home: "乌兹别克斯坦", away: "哥伦比亚", venue: "Estadio BBVA", city: "Monterrey" },
   { id: 25, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "12:00", home: "捷克", away: "南非", venue: "Estadio Azteca", city: "Mexico City" },

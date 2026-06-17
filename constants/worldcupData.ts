@@ -51,7 +51,29 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
       "playerProfiles.ts 的 active roster 覆盖检查通过，所有当前名单球员均能生成或命中个人资料。",
       "playerProfileMeta 覆盖检查通过，抽样核对阿尔及利亚页后，俱乐部、年龄、出场、进球、生日与身高字段与 FIFA PDF 保持一致。"
     ]
+  }
+  {
+    updatedAt: "2026-06-18T06:31:47+08:00",
+    updatedAtLabel: "北京时间 2026年06月18日 06:31",
+    title: "比赛结果更新",
+    summary: "英格兰 vs 克罗地亚 (2-1)",
+    changes: [
+            "英格兰 🏠 2 - 1 克罗地亚",
+      "分组赛 L组第22场比分已更新",
+    ]
   },
+
+  {
+    updatedAt: "2026-06-18T06:31:44+08:00",
+    updatedAtLabel: "北京时间 2026年06月18日 06:31",
+    title: "比赛结果更新",
+    summary: "葡萄牙 vs 刚果民主共和国 (3-1)",
+    changes: [
+            "葡萄牙 🏠 3 - 1 刚果民主共和国",
+      "分组赛 K组第21场比分已更新",
+    ]
+  },
+,
   {
     updatedAt: "2026-06-17T14:00:00+08:00",
     updatedAtLabel: "北京时间 2026年6月17日 14:00",
@@ -711,11 +733,11 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "葡萄牙", code: "POR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "刚果民主共和国", code: "COD", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "乌兹别克斯坦", code: "UZB", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "哥伦比亚", code: "COL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
-    ]
+      { name: ""葡萄牙"", code: ""POR"", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
+      { name: ""乌兹别克斯坦"", code: ""UZB"", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: ""哥伦比亚"", code: ""COL"", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: ""刚果民主共和国"", code: ""COD"", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 }
+    ]]
   },
   {
     id: "L",
@@ -731,10 +753,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "巴拿马", englishName: "Panama", code: "PAN", flag: "🇵🇦", confederation: "CONCACAF", pot: 3 }
     ],
     standings: [
-      { name: "英格兰", code: "ENG", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "克罗地亚", code: "CRO", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "加纳", code: "GHA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "巴拿马", code: "PAN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
-    ]
+      { name: ""英格兰"", code: ""ENG"", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
+      { name: ""加纳"", code: ""GHA"", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: ""巴拿马"", code: ""PAN"", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: ""克罗地亚"", code: ""CRO"", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 }
+    ]]
   }
 ];
