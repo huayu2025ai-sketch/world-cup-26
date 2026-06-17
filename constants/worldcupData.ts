@@ -42,6 +42,17 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-17T14:00:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月17日 14:00",
+    title: "J组奥地利 vs 约旦赛果更新",
+    summary: "本次按北京时间 2026-06-17 14:00 复核当前比赛进度：奥地利 2-1 约旦已终场，补入第 20 场比分、进球记录、球员统计与 J 组积分榜。",
+    changes: [
+      "scheduleData.ts 与 .match-results.json 补入奥地利 2-1 约旦：Romano Schmid 21'、Marko Arnautovic 58'、Musa Al-Taamari 73'。",
+      "J 组积分榜重算：阿根廷与奥地利各 1 战 3 分，阿根廷以净胜球 +3 暂列第一，奥地利以 +1 暂列第二；约旦 1 战 0 分、净胜球 -1 暂列第三；阿尔及利亚 1 战 0 分、净胜球 -3 暂列第四。",
+      "射手榜新增 Romano Schmid、Marko Arnautovic、Musa Al-Taamari 各 1 球。"
+    ]
+  },
+  {
     updatedAt: "2026-06-17T12:00:00+08:00",
     updatedAtLabel: "北京时间 2026年6月17日 12:00",
     title: "J组阿根廷 vs 阿尔及利亚赛果更新",
@@ -670,9 +681,9 @@ export const worldCupGroups: WorldCupGroup[] = [
     ],
     standings: [
       { name: "阿根廷", code: "ARG", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 0, goalDiff: 3, points: 3 },
-      { name: "阿尔及利亚", code: "ALG", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 },
-      { name: "奥地利", code: "AUT", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "约旦", code: "JOR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "奥地利", code: "AUT", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
+      { name: "约旦", code: "JOR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 },
+      { name: "阿尔及利亚", code: "ALG", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 }
     ]
   },
   {

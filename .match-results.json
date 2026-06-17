@@ -159,5 +159,23 @@
       {"player": "埃尔林·哈兰德", "team": "挪威", "minute": "43'", "type": "goal"},
       {"player": "莱奥·厄斯蒂高", "team": "挪威", "minute": "76'", "type": "goal"}
     ]
+  },
+  "19": {
+    "homeScore": 3,
+    "awayScore": 0,
+    "goalScorers": [
+      {"player": "莱昂内尔·梅西", "team": "阿根廷", "minute": "17'", "type": "goal"},
+      {"player": "莱昂内尔·梅西", "team": "阿根廷", "minute": "60'", "type": "goal"},
+      {"player": "莱昂内尔·梅西", "team": "阿根廷", "minute": "76'", "type": "goal"}
+    ]
+  },
+  "20": {
+    "homeScore": 2,
+    "awayScore": 1,
+    "goalScorers": [
+      {"player": "Romano Schmid", "team": "奥地利", "minute": "21'", "type": "goal"},
+      {"player": "Marko Arnautovic", "team": "奥地利", "minute": "58'", "type": "goal"},
+      {"player": "Musa Al-Taamari", "team": "约旦", "minute": "73'", "type": "goal"}
+    ]
   }
 }

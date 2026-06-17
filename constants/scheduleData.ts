@@ -138,7 +138,11 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "莱昂内尔·梅西", team: "阿根廷", minute: "60'", type: "goal" },
     { player: "莱昂内尔·梅西", team: "阿根廷", minute: "76'", type: "goal" },
   ] },
-  { id: 20, stage: "分组赛", group: "J", date: "2026-06-17", etTime: "00:00", home: "奥地利", away: "约旦", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
+  { id: 20, stage: "分组赛", group: "J", date: "2026-06-17", etTime: "00:00", home: "奥地利", away: "约旦", venue: "Levi's Stadium", city: "San Francisco Bay Area", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "Romano Schmid", team: "奥地利", minute: "21'", type: "goal" },
+    { player: "Marko Arnautovic", team: "奥地利", minute: "58'", type: "goal" },
+    { player: "Musa Al-Taamari", team: "约旦", minute: "73'", type: "goal" },
+  ] },
   { id: 21, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "13:00", home: "葡萄牙", away: "刚果民主共和国", venue: "Hard Rock Stadium", city: "Miami" },
   { id: 22, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "16:00", home: "英格兰", away: "克罗地亚", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { id: 23, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "19:00", home: "加纳", away: "巴拿马", venue: "BMO Field", city: "Toronto" },

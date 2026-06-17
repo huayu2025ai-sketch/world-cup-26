@@ -55,7 +55,10 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 7, player: "Bradley Barcola", chineseName: "布拉德利·巴尔科拉", team: "法国", teamCode: "FRA", value: 1, matches: 1 },
   { rank: 7, player: "Ibrahim Mbaye", chineseName: "Ibrahim Mbaye", team: "塞内加尔", teamCode: "SEN", value: 1, matches: 1 },
   { rank: 7, player: "Aymen Hussein", chineseName: "艾曼·侯赛因", team: "伊拉克", teamCode: "IRQ", value: 1, matches: 1 },
-  { rank: 7, player: "Leo Ostigard", chineseName: "莱奥·厄斯蒂高", team: "挪威", teamCode: "NOR", value: 1, matches: 1 }
+  { rank: 7, player: "Leo Ostigard", chineseName: "莱奥·厄斯蒂高", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
+  { rank: 7, player: "Romano Schmid", chineseName: "Romano Schmid", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
+  { rank: 7, player: "Marko Arnautovic", chineseName: "Marko Arnautovic", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
+  { rank: 7, player: "Musa Al-Taamari", chineseName: "Musa Al-Taamari", team: "约旦", teamCode: "JOR", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -82,6 +85,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "第 19 场赛果已更新",
-    body: "已补入阿根廷 3-0 阿尔及利亚（梅西帽子戏法）；J组积分榜已更新，梅西登顶射手榜（3球）。"
+    title: "第 20 场赛果已更新",
+    body: "已补入奥地利 2-1 约旦（Romano Schmid 21'、Marko Arnautovic 58'、Musa Al-Taamari 73'）；J组积分榜已更新。"
   };
