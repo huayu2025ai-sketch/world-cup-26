@@ -42,6 +42,17 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-17T14:10:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月17日 14:10",
+    title: "世界杯最终名单来源复核",
+    summary: "本次按 FIFA 官方 Squad Lists-English.pdf（2026-06-17 06:04 UTC，Version 1，48页）复核 48 队最终 26 人名单、球员资料与元数据覆盖；官方 PDF 版本号仍为 Version 1，名单结构与本地球员明细保持一致。",
+    changes: [
+      "teamRosters.ts 已将官方名单来源时间同步到 FIFA 2026-06-17 06:04 UTC 版本，并继续保留 48 队 x 26 人结构。",
+      "playerProfiles.ts 的 active roster 覆盖检查通过，所有当前名单球员均能生成或命中个人资料。",
+      "playerProfileMeta 覆盖检查通过，抽样核对阿尔及利亚页后，俱乐部、年龄、出场、进球、生日与身高字段与 FIFA PDF 保持一致。"
+    ]
+  },
+  {
     updatedAt: "2026-06-17T14:00:00+08:00",
     updatedAtLabel: "北京时间 2026年6月17日 14:00",
     title: "J组奥地利 vs 约旦赛果更新",
