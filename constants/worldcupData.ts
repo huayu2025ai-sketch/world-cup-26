@@ -733,11 +733,11 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: ""葡萄牙"", code: ""POR"", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
-      { name: ""乌兹别克斯坦"", code: ""UZB"", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: ""哥伦比亚"", code: ""COL"", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: ""刚果民主共和国"", code: ""COD"", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 }
-    ]]
+      { name: "葡萄牙", code: "POR", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
+      { name: "乌兹别克斯坦", code: "UZB", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "哥伦比亚", code: "COL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "刚果民主共和国", code: "COD", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 }
+    ]
   },
   {
     id: "L",
@@ -753,10 +753,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "巴拿马", englishName: "Panama", code: "PAN", flag: "🇵🇦", confederation: "CONCACAF", pot: 3 }
     ],
     standings: [
-      { name: ""英格兰"", code: ""ENG"", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
-      { name: ""加纳"", code: ""GHA"", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: ""巴拿马"", code: ""PAN"", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: ""克罗地亚"", code: ""CRO"", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 }
-    ]]
+      { name: "英格兰", code: "ENG", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
+      { name: "加纳", code: "GHA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "巴拿马", code: "PAN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
+      { name: "克罗地亚", code: "CRO", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 }
+    ]
   }
 ];
