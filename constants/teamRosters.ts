@@ -17,11 +17,11 @@ export type TeamRoster = {
 };
 
 export const officialSquadsNotice = {
-  confirmedDate: "2026-06-17",
-  lastChecked: "2026-06-17",
+  confirmedDate: "2026-06-18",
+  lastChecked: "2026-06-18",
   source: "FIFA",
   sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-  text: "FIFA 官方 Squad Lists-English.pdf（Wednesday, 17 June 2026 | 06:04 UTC | Version 1）已覆盖 48 支参赛队最终 26 人名单；本地 teamRosters 已按该版本复核全部球队、号码、来源与备注。"
+  text: "FIFA 官方 Squad Lists-English.pdf（Thursday, 18 June 2026 | 04:20 UTC | Version 1）已覆盖 48 支参赛队最终 26 人名单；本地 teamRosters 已按该版本复核全部球队、号码、来源与备注。"
 };
 
 const p = (
@@ -1604,7 +1604,7 @@ export const teamRosters: Record<string, TeamRoster> = {
       { number: 7, name: "Otabek Shukurov", chineseName: "奥塔别克·舒库罗夫", position: "中场" },
       { number: 8, name: "Jamshid Iskanderov", chineseName: "贾姆希德·伊斯坎德罗夫", position: "中场" },
       { number: 9, name: "Odiljon Xamrobekov", chineseName: "奥迪尔容·哈姆罗别科夫", position: "中场" },
-      { number: 10, name: "Jaloliddin Masharipov", chineseName: "贾洛利丁·马沙里波夫", position: "中场" },
+      { number: 10, name: "Ruslanbek Jiyanov", chineseName: "鲁斯兰别克·吉亚诺夫", position: "中场" },
       { number: 11, name: "Oston Urunov", chineseName: "奥斯通·乌鲁诺夫", position: "中场" },
       { number: 12, name: "Abduvohid Nematov", chineseName: "阿卜杜沃希德·内马托夫", position: "门将" },
       { number: 13, name: "Sherzod Nasrullaev", chineseName: "谢尔佐德·纳斯鲁拉耶夫", position: "后卫" },
@@ -1791,7 +1791,7 @@ export const teamRosters: Record<string, TeamRoster> = {
       { number: 9, name: "Harry Kane", chineseName: "哈里·凯恩", position: "前锋" },
       { number: 10, name: "Jude Bellingham", chineseName: "裘德·贝林厄姆", position: "中场" },
       { number: 11, name: "Marcus Rashford", chineseName: "马库斯·拉什福德", position: "前锋" },
-      { number: 12, name: "Tino Livramento", chineseName: "蒂诺·利夫拉门托", position: "后卫" },
+      { number: 12, name: "Trevoh Chalobah", chineseName: "特雷沃·查洛巴", position: "后卫" },
       { number: 13, name: "Dean Henderson", chineseName: "迪恩·亨德森", position: "门将" },
       { number: 14, name: "Jordan Henderson", chineseName: "乔丹·亨德森", position: "中场" },
       { number: 15, name: "Dan Burn", chineseName: "丹·伯恩", position: "后卫" },
