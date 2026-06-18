@@ -58,7 +58,18 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 7, player: "Leo Ostigard", chineseName: "莱奥·厄斯蒂高", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
   { rank: 7, player: "Romano Schmid", chineseName: "罗马诺·施密德", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
   { rank: 7, player: "Marko Arnautovic", chineseName: "马尔科·阿瑙托维奇", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
-  { rank: 7, player: "Musa Al-Taamari", chineseName: "穆萨·阿尔塔马里", team: "约旦", teamCode: "JOR", value: 1, matches: 1 }
+  { rank: 7, player: "Musa Al-Taamari", chineseName: "穆萨·阿尔塔马里", team: "约旦", teamCode: "JOR", value: 1, matches: 1 },
+  { rank: 7, player: "Joao Neves", chineseName: "若昂·内维斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 7, player: "Yoane Wissa", chineseName: "约安·维萨", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 },
+  { rank: 7, player: "Harry Kane", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 7, player: "Martin Baturina", chineseName: "马丁·巴图里纳", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
+  { rank: 7, player: "Petar Musa", chineseName: "佩塔尔·穆萨", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
+  { rank: 7, player: "Jude Bellingham", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 7, player: "Marcus Rashford", chineseName: "马库斯·拉什福德", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 7, player: "Caleb Yirenkyi", chineseName: "凯莱布·耶伦基", team: "加纳", teamCode: "GHA", value: 1, matches: 1 },
+  { rank: 7, player: "Daniel Munoz", chineseName: "丹尼尔·穆尼奥斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
+  { rank: 7, player: "Abbosbek Fayzullaev", chineseName: "阿博斯别克·法伊祖拉耶夫", team: "乌兹别克斯坦", teamCode: "UZB", value: 1, matches: 1 },
+  { rank: 7, player: "Jefferson Lerma", chineseName: "杰斐逊·莱尔马", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -81,10 +92,19 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 4, player: "Saman Ghoddos", chineseName: "萨曼·古多斯", team: "伊朗", teamCode: "IRN", value: 1, matches: 1 },
   { rank: 4, player: "Adrien Rabiot", chineseName: "阿德里安·拉比奥", team: "法国", teamCode: "FRA", value: 1, matches: 1 },
   { rank: 4, player: "David Moller Wolfe", chineseName: "大卫·默勒·沃尔夫", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
-  { rank: 4, player: "Amir Al-Ammari", chineseName: "阿米尔·阿拉马里", team: "伊拉克", teamCode: "IRQ", value: 1, matches: 1 }
+  { rank: 4, player: "Amir Al-Ammari", chineseName: "阿米尔·阿拉马里", team: "伊拉克", teamCode: "IRQ", value: 1, matches: 1 },
+  { rank: 4, player: "Pedro Neto", chineseName: "佩德罗·内托", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 4, player: "Arthur Masuaku", chineseName: "阿图尔·马苏亚库", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 },
+  { rank: 4, player: "Declan Rice", chineseName: "德克兰·赖斯", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 4, player: "Petar Sucic", chineseName: "彼得·苏契奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
+  { rank: 4, player: "Ivan Perisic", chineseName: "伊万·佩里希奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
+  { rank: 4, player: "Elliot Anderson", chineseName: "埃利奥特·安德森", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 4, player: "Bukayo Saka", chineseName: "布卡约·萨卡", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 4, player: "Brandon Thomas-Asante", chineseName: "布兰登·托马斯-阿桑特", team: "加纳", teamCode: "GHA", value: 1, matches: 1 },
+  { rank: 4, player: "Luis Diaz", chineseName: "路易斯·迪亚斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 }
 ];
 
 export const statsNotice = {
-    title: "第 20 场赛果已更新",
-    body: "已补入奥地利 2-1 约旦（罗马诺·施密德 21'、马尔科·阿瑙托维奇 58'、穆萨·阿尔塔马里 73'）；J组积分榜已更新。"
+    title: "第 24 场赛果已更新",
+    body: "已补入葡萄牙 1-1 刚果民主共和国、英格兰 3-2 克罗地亚、加纳 1-0 巴拿马、乌兹别克斯坦 1-2 哥伦比亚；K组与L组积分榜已更新。"
   };

@@ -42,6 +42,22 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-18T16:58:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月18日 16:58",
+    title: "K组与L组首轮赛果更新",
+    summary: "本次按北京时间 2026-06-18 16:58 复核当前比赛进度：葡萄牙 1-1 刚果民主共和国、英格兰 3-2 克罗地亚、加纳 1-0 巴拿马、乌兹别克斯坦 1-2 哥伦比亚已终场，补入第 21-24 场比分、进球记录、球员统计与 K/L 组积分榜。",
+    changes: [
+      "scheduleData.ts 补入葡萄牙 1-1 刚果民主共和国：若昂·内维斯 6'，约安·维萨 83'。",
+      "scheduleData.ts 补入英格兰 3-2 克罗地亚：哈里·凯恩 42'（点球）、裘德·贝林厄姆 71'、马库斯·拉什福德 89'；马丁·巴图里纳 56'、佩塔尔·穆萨 69'。",
+      "scheduleData.ts 补入加纳 1-0 巴拿马：凯莱布·耶伦基 72'。",
+      "scheduleData.ts 补入乌兹别克斯坦 1-2 哥伦比亚：丹尼尔·穆尼奥斯 41'、阿博斯别克·法伊祖拉耶夫 55'、杰斐逊·莱尔马 66'。",
+      "K 组积分榜重算：哥伦比亚 1 战 3 分、净胜球 +1 暂列第一；葡萄牙与刚果民主共和国各 1 分，葡萄牙以既有展示顺序列前；乌兹别克斯坦 0 分垫底。",
+      "L 组积分榜重算：英格兰与加纳同为 1 战 3 分，英格兰以进球数 3 暂列第一；克罗地亚与巴拿马均为 0 分，克罗地亚以进球数 2 列第三。",
+      "射手榜新增若昂·内维斯、约安·维萨、哈里·凯恩、马丁·巴图里纳、佩塔尔·穆萨、裘德·贝林厄姆、马库斯·拉什福德、凯莱布·耶伦基、丹尼尔·穆尼奥斯、阿博斯别克·法伊祖拉耶夫、杰斐逊·莱尔马各 1 球。",
+      "助攻榜新增佩德罗·内托、阿图尔·马苏亚库、德克兰·赖斯、彼得·苏契奇、伊万·佩里希奇、埃利奥特·安德森、布卡约·萨卡、布兰登·托马斯-阿桑特、路易斯·迪亚斯各 1 次；乌兹别克斯坦扳平球来自对方回传失误，不计助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-17T14:10:00+08:00",
     updatedAtLabel: "北京时间 2026年6月17日 14:10",
     title: "世界杯最终名单来源复核",
@@ -711,10 +727,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "葡萄牙", code: "POR", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "刚果民主共和国", code: "COD", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "乌兹别克斯坦", code: "UZB", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "哥伦比亚", code: "COL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "哥伦比亚", code: "COL", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
+      { name: "葡萄牙", code: "POR", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
+      { name: "刚果民主共和国", code: "COD", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
+      { name: "乌兹别克斯坦", code: "UZB", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 }
     ]
   },
   {
@@ -731,10 +747,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "巴拿马", englishName: "Panama", code: "PAN", flag: "🇵🇦", confederation: "CONCACAF", pot: 3 }
     ],
     standings: [
-      { name: "英格兰", code: "ENG", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "克罗地亚", code: "CRO", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "加纳", code: "GHA", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "巴拿马", code: "PAN", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 }
+      { name: "英格兰", code: "ENG", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 2, goalDiff: 1, points: 3 },
+      { name: "加纳", code: "GHA", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 1, goalsAgainst: 0, goalDiff: 1, points: 3 },
+      { name: "克罗地亚", code: "CRO", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 0 },
+      { name: "巴拿马", code: "PAN", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 1, goalDiff: -1, points: 0 }
     ]
   }
 ];
