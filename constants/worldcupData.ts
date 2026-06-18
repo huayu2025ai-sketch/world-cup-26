@@ -51,7 +51,7 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
       "playerProfiles.ts 的 active roster 覆盖检查通过，所有当前名单球员均能生成或命中个人资料。",
       "playerProfileMeta 覆盖检查通过，抽样核对阿尔及利亚页后，俱乐部、年龄、出场、进球、生日与身高字段与 FIFA PDF 保持一致。"
     ]
-  }
+  },
   {
     updatedAt: "2026-06-18T06:31:47+08:00",
     updatedAtLabel: "北京时间 2026年06月18日 06:31",
