@@ -51,7 +51,18 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
       "playerProfiles.ts 的 active roster 覆盖检查通过，所有当前名单球员均能生成或命中个人资料。",
       "playerProfileMeta 覆盖检查通过，抽样核对阿尔及利亚页后，俱乐部、年龄、出场、进球、生日与身高字段与 FIFA PDF 保持一致。"
     ]
+  }
+  {
+    updatedAt: "2026-06-18T12:31:44+08:00",
+    updatedAtLabel: "北京时间 2026年06月18日 12:31",
+    title: "比赛结果更新",
+    summary: "乌兹别克斯坦 vs 哥伦比亚 (1-2)",
+    changes: [
+            "乌兹别克斯坦 🏆 1 - 2 哥伦比亚",
+      "分组赛 K组第24场比分已更新",
+    ]
   },
+,
   {
     updatedAt: "2026-06-18T06:31:47+08:00",
     updatedAtLabel: "北京时间 2026年06月18日 06:31",
@@ -732,11 +743,11 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "葡萄牙", code: "POR", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
-      { name: "乌兹别克斯坦", code: "UZB", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "哥伦比亚", code: "COL", played: 0, won: 0, draw: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 0 },
-      { name: "刚果民主共和国", code: "COD", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 }
-    ]
+      { name: ""葡萄牙"", code: ""POR"", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
+      { name: ""哥伦比亚"", code: ""COL"", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
+      { name: ""乌兹别克斯坦"", code: ""UZB"", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 },
+      { name: ""刚果民主共和国"", code: ""COD"", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 }
+    ]]
   },
   {
     id: "L",

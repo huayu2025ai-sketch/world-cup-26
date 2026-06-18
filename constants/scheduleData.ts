@@ -160,7 +160,9 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 23, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "19:00", home: "加纳", away: "巴拿马", venue: "BMO Field", city: "Toronto", homeScore: 1, awayScore: 0, goalScorers: [
     { player: "凯莱布·耶伦基", team: "加纳", minute: "90+5'", type: "goal" },
   ] },
-  { id: 24, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "22:00", home: "乌兹别克斯坦", away: "哥伦比亚", venue: "Estadio BBVA", city: "Monterrey" },
+  { id: 24, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "22:00", home: "乌兹别克斯坦", away: "哥伦比亚", venue: "Estadio BBVA"
+  homeScore: 1,
+  awayScore: 2, city: "Monterrey" },
   { id: 25, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "12:00", home: "捷克", away: "南非", venue: "Estadio Azteca", city: "Mexico City" },
   { id: 26, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "15:00", home: "瑞士", away: "波黑", venue: "BC Place", city: "Vancouver" },
   { id: 27, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "18:00", home: "加拿大", away: "卡塔尔", venue: "BMO Field", city: "Toronto" },
