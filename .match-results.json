@@ -3,110 +3,300 @@
     "homeScore": 2,
     "awayScore": 0,
     "goalScorers": [
-      {"player": "Julián Quiñones", "team": "墨西哥", "minute": "9'", "type": "goal"},
-      {"player": "Raúl Jiménez", "team": "墨西哥", "minute": "67'", "type": "goal"}
+      {
+        "player": "Julián Quiñones",
+        "team": "墨西哥",
+        "minute": "9'",
+        "type": "goal"
+      },
+      {
+        "player": "Raúl Jiménez",
+        "team": "墨西哥",
+        "minute": "67'",
+        "type": "goal"
+      }
     ]
   },
   "2": {
     "homeScore": 2,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "拉迪斯拉夫·克雷伊奇", "team": "捷克", "minute": "59'", "type": "goal"},
-      {"player": "黄仁范", "team": "韩国", "minute": "67'", "type": "goal"},
-      {"player": "吴贤揆", "team": "韩国", "minute": "80'", "type": "goal"}
+      {
+        "player": "拉迪斯拉夫·克雷伊奇",
+        "team": "捷克",
+        "minute": "59'",
+        "type": "goal"
+      },
+      {
+        "player": "黄仁范",
+        "team": "韩国",
+        "minute": "67'",
+        "type": "goal"
+      },
+      {
+        "player": "吴贤揆",
+        "team": "韩国",
+        "minute": "80'",
+        "type": "goal"
+      }
     ]
   },
   "3": {
     "homeScore": 1,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "约沃·卢基奇", "team": "波黑", "minute": "21'", "type": "goal"},
-      {"player": "赛尔·拉林", "team": "加拿大", "minute": "79'", "type": "goal"}
+      {
+        "player": "约沃·卢基奇",
+        "team": "波黑",
+        "minute": "21'",
+        "type": "goal"
+      },
+      {
+        "player": "赛尔·拉林",
+        "team": "加拿大",
+        "minute": "79'",
+        "type": "goal"
+      }
     ]
   },
   "4": {
     "homeScore": 4,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "达米安·博瓦迪利亚", "team": "巴拉圭", "minute": "7'", "type": "ownGoal"},
-      {"player": "福拉林·巴洛贡", "team": "美国", "minute": "31'", "type": "goal"},
-      {"player": "福拉林·巴洛贡", "team": "美国", "minute": "45+5'", "type": "goal"},
-      {"player": "Mauricio", "team": "巴拉圭", "minute": "73'", "type": "goal"},
-      {"player": "吉奥·雷纳", "team": "美国", "minute": "90+7'", "type": "goal"}
+      {
+        "player": "达米安·博瓦迪利亚",
+        "team": "巴拉圭",
+        "minute": "7'",
+        "type": "ownGoal"
+      },
+      {
+        "player": "福拉林·巴洛贡",
+        "team": "美国",
+        "minute": "31'",
+        "type": "goal"
+      },
+      {
+        "player": "福拉林·巴洛贡",
+        "team": "美国",
+        "minute": "45+5'",
+        "type": "goal"
+      },
+      {
+        "player": "Mauricio",
+        "team": "巴拉圭",
+        "minute": "73'",
+        "type": "goal"
+      },
+      {
+        "player": "吉奥·雷纳",
+        "team": "美国",
+        "minute": "90+7'",
+        "type": "goal"
+      }
     ]
   },
   "5": {
     "homeScore": 1,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "布雷尔·恩博洛", "team": "瑞士", "minute": "17'", "type": "penalty"},
-      {"player": "布阿莱姆·胡希", "team": "卡塔尔", "minute": "90+5'", "type": "goal"}
+      {
+        "player": "布雷尔·恩博洛",
+        "team": "瑞士",
+        "minute": "17'",
+        "type": "penalty"
+      },
+      {
+        "player": "布阿莱姆·胡希",
+        "team": "卡塔尔",
+        "minute": "90+5'",
+        "type": "goal"
+      }
     ]
   },
   "6": {
     "homeScore": 1,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "伊斯梅尔·塞巴里", "team": "摩洛哥", "minute": "21'", "type": "goal"},
-      {"player": "维尼修斯·儒尼奥尔", "team": "巴西", "minute": "32'", "type": "goal"}
+      {
+        "player": "伊斯梅尔·塞巴里",
+        "team": "摩洛哥",
+        "minute": "21'",
+        "type": "goal"
+      },
+      {
+        "player": "维尼修斯·儒尼奥尔",
+        "team": "巴西",
+        "minute": "32'",
+        "type": "goal"
+      }
     ]
   },
   "7": {
     "homeScore": 0,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "约翰·麦金", "team": "苏格兰", "minute": "28'", "type": "goal"}
+      {
+        "player": "约翰·麦金",
+        "team": "苏格兰",
+        "minute": "28'",
+        "type": "goal"
+      }
     ]
   },
   "8": {
     "homeScore": 2,
     "awayScore": 0,
     "goalScorers": [
-      {"player": "内斯托里·伊兰昆达", "team": "澳大利亚", "minute": "27'", "type": "goal"},
-      {"player": "康纳·梅特卡夫", "team": "澳大利亚", "minute": "75'", "type": "goal"}
+      {
+        "player": "内斯托里·伊兰昆达",
+        "team": "澳大利亚",
+        "minute": "27'",
+        "type": "goal"
+      },
+      {
+        "player": "康纳·梅特卡夫",
+        "team": "澳大利亚",
+        "minute": "75'",
+        "type": "goal"
+      }
     ]
   },
   "9": {
     "homeScore": 7,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "费利克斯·恩梅查", "team": "德国", "minute": "6'", "type": "goal"},
-      {"player": "Livano Comenencia", "team": "库拉索", "minute": "21'", "type": "goal"},
-      {"player": "尼科·施洛特贝克", "team": "德国", "minute": "38'", "type": "goal"},
-      {"player": "凯·哈弗茨", "team": "德国", "minute": "45+5'", "type": "penalty"},
-      {"player": "贾马尔·穆西亚拉", "team": "德国", "minute": "47'", "type": "goal"},
-      {"player": "Nathaniel Brown", "team": "德国", "minute": "68'", "type": "goal"},
-      {"player": "德尼兹·翁达夫", "team": "德国", "minute": "78'", "type": "goal"},
-      {"player": "凯·哈弗茨", "team": "德国", "minute": "88'", "type": "goal"}
+      {
+        "player": "费利克斯·恩梅查",
+        "team": "德国",
+        "minute": "6'",
+        "type": "goal"
+      },
+      {
+        "player": "Livano Comenencia",
+        "team": "库拉索",
+        "minute": "21'",
+        "type": "goal"
+      },
+      {
+        "player": "尼科·施洛特贝克",
+        "team": "德国",
+        "minute": "38'",
+        "type": "goal"
+      },
+      {
+        "player": "凯·哈弗茨",
+        "team": "德国",
+        "minute": "45+5'",
+        "type": "penalty"
+      },
+      {
+        "player": "贾马尔·穆西亚拉",
+        "team": "德国",
+        "minute": "47'",
+        "type": "goal"
+      },
+      {
+        "player": "Nathaniel Brown",
+        "team": "德国",
+        "minute": "68'",
+        "type": "goal"
+      },
+      {
+        "player": "德尼兹·翁达夫",
+        "team": "德国",
+        "minute": "78'",
+        "type": "goal"
+      },
+      {
+        "player": "凯·哈弗茨",
+        "team": "德国",
+        "minute": "88'",
+        "type": "goal"
+      }
     ]
   },
   "10": {
     "homeScore": 2,
     "awayScore": 2,
     "goalScorers": [
-      {"player": "维吉尔·范戴克", "team": "荷兰", "minute": "51'", "type": "goal"},
-      {"player": "中村敬斗", "team": "日本", "minute": "57'", "type": "goal"},
-      {"player": "Crysencio Summerville", "team": "荷兰", "minute": "64'", "type": "goal"},
-      {"player": "镰田大地", "team": "日本", "minute": "89'", "type": "goal"}
+      {
+        "player": "维吉尔·范戴克",
+        "team": "荷兰",
+        "minute": "51'",
+        "type": "goal"
+      },
+      {
+        "player": "中村敬斗",
+        "team": "日本",
+        "minute": "57'",
+        "type": "goal"
+      },
+      {
+        "player": "Crysencio Summerville",
+        "team": "荷兰",
+        "minute": "64'",
+        "type": "goal"
+      },
+      {
+        "player": "镰田大地",
+        "team": "日本",
+        "minute": "89'",
+        "type": "goal"
+      }
     ]
   },
   "11": {
     "homeScore": 1,
     "awayScore": 0,
     "goalScorers": [
-      {"player": "阿马德·迪亚洛", "team": "科特迪瓦", "minute": "90'", "type": "goal"}
+      {
+        "player": "阿马德·迪亚洛",
+        "team": "科特迪瓦",
+        "minute": "90'",
+        "type": "goal"
+      }
     ]
   },
   "12": {
     "homeScore": 5,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "Yasin Ayari", "team": "瑞典", "minute": "7'", "type": "goal"},
-      {"player": "亚历山大·伊萨克", "team": "瑞典", "minute": "30'", "type": "goal"},
-      {"player": "Omar Rekik", "team": "突尼斯", "minute": "43'", "type": "goal"},
-      {"player": "维克托·约克雷斯", "team": "瑞典", "minute": "60'", "type": "goal"},
-      {"player": "马蒂亚斯·斯万贝里", "team": "瑞典", "minute": "86'", "type": "goal"},
-      {"player": "Yasin Ayari", "team": "瑞典", "minute": "90+6'", "type": "goal"}
+      {
+        "player": "Yasin Ayari",
+        "team": "瑞典",
+        "minute": "7'",
+        "type": "goal"
+      },
+      {
+        "player": "亚历山大·伊萨克",
+        "team": "瑞典",
+        "minute": "30'",
+        "type": "goal"
+      },
+      {
+        "player": "Omar Rekik",
+        "team": "突尼斯",
+        "minute": "43'",
+        "type": "goal"
+      },
+      {
+        "player": "维克托·约克雷斯",
+        "team": "瑞典",
+        "minute": "60'",
+        "type": "goal"
+      },
+      {
+        "player": "马蒂亚斯·斯万贝里",
+        "team": "瑞典",
+        "minute": "86'",
+        "type": "goal"
+      },
+      {
+        "player": "Yasin Ayari",
+        "team": "瑞典",
+        "minute": "90+6'",
+        "type": "goal"
+      }
     ]
   },
   "13": {
@@ -118,64 +308,282 @@
     "homeScore": 1,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "埃马姆·阿舒尔", "team": "埃及", "minute": "19'", "type": "goal"},
-      {"player": "穆罕默德·哈尼", "team": "埃及", "minute": "66'", "type": "ownGoal"}
+      {
+        "player": "埃马姆·阿舒尔",
+        "team": "埃及",
+        "minute": "19'",
+        "type": "goal"
+      },
+      {
+        "player": "穆罕默德·哈尼",
+        "team": "埃及",
+        "minute": "66'",
+        "type": "ownGoal"
+      }
     ]
   },
   "15": {
     "homeScore": 1,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "Abdulelah Alamri", "team": "沙特阿拉伯", "minute": "41'", "type": "goal"},
-      {"player": "Maxi Araujo", "team": "乌拉圭", "minute": "80'", "type": "goal"}
+      {
+        "player": "Abdulelah Alamri",
+        "team": "沙特阿拉伯",
+        "minute": "41'",
+        "type": "goal"
+      },
+      {
+        "player": "Maxi Araujo",
+        "team": "乌拉圭",
+        "minute": "80'",
+        "type": "goal"
+      }
     ]
   },
   "16": {
     "homeScore": 2,
     "awayScore": 2,
     "goalScorers": [
-      {"player": "Eli Just", "team": "新西兰", "minute": "7'", "type": "goal"},
-      {"player": "Ramin Rezaeian", "team": "伊朗", "minute": "32'", "type": "goal"},
-      {"player": "Eli Just", "team": "新西兰", "minute": "55'", "type": "goal"},
-      {"player": "Mohammad Mohebi", "team": "伊朗", "minute": "64'", "type": "goal"}
+      {
+        "player": "Eli Just",
+        "team": "新西兰",
+        "minute": "7'",
+        "type": "goal"
+      },
+      {
+        "player": "Ramin Rezaeian",
+        "team": "伊朗",
+        "minute": "32'",
+        "type": "goal"
+      },
+      {
+        "player": "Eli Just",
+        "team": "新西兰",
+        "minute": "55'",
+        "type": "goal"
+      },
+      {
+        "player": "Mohammad Mohebi",
+        "team": "伊朗",
+        "minute": "64'",
+        "type": "goal"
+      }
     ]
   },
   "17": {
     "homeScore": 3,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "基利安·姆巴佩", "team": "法国", "minute": "66'", "type": "goal"},
-      {"player": "布拉德利·巴尔科拉", "team": "法国", "minute": "82'", "type": "goal"},
-      {"player": "Ibrahim Mbaye", "team": "塞内加尔", "minute": "90+5'", "type": "goal"},
-      {"player": "基利安·姆巴佩", "team": "法国", "minute": "90+6'", "type": "goal"}
+      {
+        "player": "基利安·姆巴佩",
+        "team": "法国",
+        "minute": "66'",
+        "type": "goal"
+      },
+      {
+        "player": "布拉德利·巴尔科拉",
+        "team": "法国",
+        "minute": "82'",
+        "type": "goal"
+      },
+      {
+        "player": "Ibrahim Mbaye",
+        "team": "塞内加尔",
+        "minute": "90+5'",
+        "type": "goal"
+      },
+      {
+        "player": "基利安·姆巴佩",
+        "team": "法国",
+        "minute": "90+6'",
+        "type": "goal"
+      }
     ]
   },
   "18": {
     "homeScore": 1,
-    "awayScore": 3,
+    "awayScore": 4,
     "goalScorers": [
-      {"player": "埃尔林·哈兰德", "team": "挪威", "minute": "29'", "type": "goal"},
-      {"player": "艾曼·侯赛因", "team": "伊拉克", "minute": "39'", "type": "goal"},
-      {"player": "埃尔林·哈兰德", "team": "挪威", "minute": "43'", "type": "goal"},
-      {"player": "莱奥·厄斯蒂高", "team": "挪威", "minute": "76'", "type": "goal"}
+      {
+        "player": "埃尔林·哈兰德",
+        "team": "挪威",
+        "minute": "29'",
+        "type": "goal"
+      },
+      {
+        "player": "艾曼·侯赛因",
+        "team": "伊拉克",
+        "minute": "39'",
+        "type": "goal"
+      },
+      {
+        "player": "埃尔林·哈兰德",
+        "team": "挪威",
+        "minute": "43'",
+        "type": "goal"
+      },
+      {
+        "player": "莱奥·厄斯蒂高",
+        "team": "挪威",
+        "minute": "76'",
+        "type": "goal"
+      },
+      {
+        "player": "艾曼·侯赛因",
+        "team": "伊拉克",
+        "minute": "90+'",
+        "type": "ownGoal"
+      }
     ]
   },
   "19": {
     "homeScore": 3,
     "awayScore": 0,
     "goalScorers": [
-      {"player": "莱昂内尔·梅西", "team": "阿根廷", "minute": "17'", "type": "goal"},
-      {"player": "莱昂内尔·梅西", "team": "阿根廷", "minute": "60'", "type": "goal"},
-      {"player": "莱昂内尔·梅西", "team": "阿根廷", "minute": "76'", "type": "goal"}
+      {
+        "player": "莱昂内尔·梅西",
+        "team": "阿根廷",
+        "minute": "17'",
+        "type": "goal"
+      },
+      {
+        "player": "莱昂内尔·梅西",
+        "team": "阿根廷",
+        "minute": "60'",
+        "type": "goal"
+      },
+      {
+        "player": "莱昂内尔·梅西",
+        "team": "阿根廷",
+        "minute": "76'",
+        "type": "goal"
+      }
     ]
   },
   "20": {
-    "homeScore": 2,
+    "homeScore": 3,
     "awayScore": 1,
     "goalScorers": [
-      {"player": "Romano Schmid", "team": "奥地利", "minute": "21'", "type": "goal"},
-      {"player": "Marko Arnautovic", "team": "奥地利", "minute": "58'", "type": "goal"},
-      {"player": "Musa Al-Taamari", "team": "约旦", "minute": "73'", "type": "goal"}
+      {
+        "player": "Romano Schmid",
+        "team": "奥地利",
+        "minute": "20'",
+        "type": "goal"
+      },
+      {
+        "player": "Ali Olwan",
+        "team": "约旦",
+        "minute": "50'",
+        "type": "goal"
+      },
+      {
+        "player": "Yazan Al-Arab",
+        "team": "约旦",
+        "minute": "77'",
+        "type": "ownGoal"
+      },
+      {
+        "player": "Marko Arnautovic",
+        "team": "奥地利",
+        "minute": "90+11'",
+        "type": "penalty"
+      }
     ]
+  },
+  "21": {
+    "homeScore": 1,
+    "awayScore": 1,
+    "homeTeam": "葡萄牙",
+    "awayTeam": "刚果民主共和国",
+    "group": "K",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-18T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "Joao Neves",
+        "team": "葡萄牙",
+        "minute": "6'",
+        "type": "goal"
+      },
+      {
+        "player": "Yoane Wissa",
+        "team": "刚果民主共和国",
+        "minute": "45+5'",
+        "type": "goal"
+      }
+    ]
+  },
+  "22": {
+    "homeScore": 4,
+    "awayScore": 2,
+    "homeTeam": "英格兰",
+    "awayTeam": "克罗地亚",
+    "group": "L",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-18T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "Harry Kane",
+        "team": "英格兰",
+        "minute": "12'",
+        "type": "penalty"
+      },
+      {
+        "player": "Martin Baturina",
+        "team": "克罗地亚",
+        "minute": "36'",
+        "type": "goal"
+      },
+      {
+        "player": "Harry Kane",
+        "team": "英格兰",
+        "minute": "42'",
+        "type": "goal"
+      },
+      {
+        "player": "Petar Musa",
+        "team": "克罗地亚",
+        "minute": "45+5'",
+        "type": "goal"
+      },
+      {
+        "player": "Jude Bellingham",
+        "team": "英格兰",
+        "minute": "47'",
+        "type": "goal"
+      },
+      {
+        "player": "Marcus Rashford",
+        "team": "英格兰",
+        "minute": "85'",
+        "type": "goal"
+      }
+    ]
+  },
+  "23": {
+    "homeScore": 1,
+    "awayScore": 0,
+    "homeTeam": "加纳",
+    "awayTeam": "巴拿马",
+    "group": "L",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-18T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "Caleb Yirenkyi",
+        "team": "加纳",
+        "minute": "90+5'",
+        "type": "goal"
+      }
+    ]
+  },
+  "24": {
+    "homeScore": 1,
+    "awayScore": 2,
+    "homeTeam": "乌兹别克斯坦",
+    "awayTeam": "哥伦比亚",
+    "group": "K",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-18T12:31:44.962570+08:00"
   }
 }
