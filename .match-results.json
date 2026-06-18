@@ -402,7 +402,7 @@
   },
   "18": {
     "homeScore": 1,
-    "awayScore": 3,
+    "awayScore": 4,
     "goalScorers": [
       {
         "player": "埃尔林·哈兰德",
@@ -427,6 +427,12 @@
         "team": "挪威",
         "minute": "76'",
         "type": "goal"
+      },
+      {
+        "player": "艾曼·侯赛因",
+        "team": "伊拉克",
+        "minute": "90+'",
+        "type": "ownGoal"
       }
     ]
   },
@@ -455,45 +461,120 @@
     ]
   },
   "20": {
-    "homeScore": 2,
+    "homeScore": 3,
     "awayScore": 1,
     "goalScorers": [
       {
         "player": "Romano Schmid",
         "team": "奥地利",
-        "minute": "21'",
+        "minute": "20'",
         "type": "goal"
+      },
+      {
+        "player": "Ali Olwan",
+        "team": "约旦",
+        "minute": "50'",
+        "type": "goal"
+      },
+      {
+        "player": "Yazan Al-Arab",
+        "team": "约旦",
+        "minute": "77'",
+        "type": "ownGoal"
       },
       {
         "player": "Marko Arnautovic",
         "team": "奥地利",
-        "minute": "58'",
-        "type": "goal"
-      },
-      {
-        "player": "Musa Al-Taamari",
-        "team": "约旦",
-        "minute": "73'",
-        "type": "goal"
+        "minute": "90+11'",
+        "type": "penalty"
       }
     ]
   },
   "21": {
-    "homeScore": 3,
+    "homeScore": 1,
     "awayScore": 1,
     "homeTeam": "葡萄牙",
     "awayTeam": "刚果民主共和国",
     "group": "K",
     "stage": "分组赛",
-    "updatedAt": "2026-06-18T06:31:44.370394+08:00"
+    "updatedAt": "2026-06-18T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "Joao Neves",
+        "team": "葡萄牙",
+        "minute": "6'",
+        "type": "goal"
+      },
+      {
+        "player": "Yoane Wissa",
+        "team": "刚果民主共和国",
+        "minute": "45+5'",
+        "type": "goal"
+      }
+    ]
   },
   "22": {
-    "homeScore": 2,
-    "awayScore": 1,
+    "homeScore": 4,
+    "awayScore": 2,
     "homeTeam": "英格兰",
     "awayTeam": "克罗地亚",
     "group": "L",
     "stage": "分组赛",
-    "updatedAt": "2026-06-18T06:31:47.553280+08:00"
+    "updatedAt": "2026-06-18T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "Harry Kane",
+        "team": "英格兰",
+        "minute": "12'",
+        "type": "penalty"
+      },
+      {
+        "player": "Martin Baturina",
+        "team": "克罗地亚",
+        "minute": "36'",
+        "type": "goal"
+      },
+      {
+        "player": "Harry Kane",
+        "team": "英格兰",
+        "minute": "42'",
+        "type": "goal"
+      },
+      {
+        "player": "Petar Musa",
+        "team": "克罗地亚",
+        "minute": "45+5'",
+        "type": "goal"
+      },
+      {
+        "player": "Jude Bellingham",
+        "team": "英格兰",
+        "minute": "47'",
+        "type": "goal"
+      },
+      {
+        "player": "Marcus Rashford",
+        "team": "英格兰",
+        "minute": "85'",
+        "type": "goal"
+      }
+    ]
+  },
+  "23": {
+    "homeScore": 1,
+    "awayScore": 0,
+    "homeTeam": "加纳",
+    "awayTeam": "巴拿马",
+    "group": "L",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-18T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "Caleb Yirenkyi",
+        "team": "加纳",
+        "minute": "90+5'",
+        "type": "goal"
+      }
+    ]
   }
 }

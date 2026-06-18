@@ -16,7 +16,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 2, player: "Eli Just", chineseName: "伊莱·贾斯特", team: "新西兰", teamCode: "NZL", value: 2, matches: 1 },
   { rank: 2, player: "Kylian Mbappe", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 2, matches: 1 },
   { rank: 2, player: "Erling Haaland", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 2, matches: 1 },
-  { rank: 2, player: "Cristiano Ronaldo", chineseName: "C罗", team: "葡萄牙", teamCode: "POR", value: 2, matches: 1 },
+  { rank: 2, player: "Harry Kane", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 2, matches: 1 },
   { rank: 7, player: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 },
   { rank: 7, player: "Raul Jimenez", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 },
   { rank: 7, player: "Cyle Larin", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 1, matches: 1 },
@@ -59,12 +59,14 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 7, player: "Leo Ostigard", chineseName: "莱奥·厄斯蒂高", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
   { rank: 7, player: "Romano Schmid", chineseName: "罗马诺·施密德", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
   { rank: 7, player: "Marko Arnautovic", chineseName: "马尔科·阿瑙托维奇", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
-  { rank: 7, player: "Musa Al-Taamari", chineseName: "穆萨·阿尔塔马里", team: "约旦", teamCode: "JOR", value: 1, matches: 1 },
-  { rank: 7, player: "Bruno Fernandes", chineseName: "布鲁诺·费尔南德斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 7, player: "Ali Olwan", chineseName: "阿里·奥尔万", team: "约旦", teamCode: "JOR", value: 1, matches: 1 },
+  { rank: 7, player: "Joao Neves", chineseName: "若昂·内维斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
   { rank: 7, player: "Yoane Wissa", chineseName: "约昂·维萨", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 },
-  { rank: 7, player: "Harry Kane", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
-  { rank: 7, player: "Bukayo Saka", chineseName: "布卡约·萨卡", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
-  { rank: 7, player: "Luka Modric", chineseName: "卢卡·莫德里奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 }
+  { rank: 7, player: "Martin Baturina", chineseName: "马丁·巴图里纳", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
+  { rank: 7, player: "Petar Musa", chineseName: "佩塔尔·穆萨", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
+  { rank: 7, player: "Jude Bellingham", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 7, player: "Marcus Rashford", chineseName: "马库斯·拉什福德", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 7, player: "Caleb Yirenkyi", chineseName: "凯莱布·耶伦基", team: "加纳", teamCode: "GHA", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -88,13 +90,12 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 4, player: "Adrien Rabiot", chineseName: "阿德里安·拉比奥", team: "法国", teamCode: "FRA", value: 1, matches: 1 },
   { rank: 4, player: "David Moller Wolfe", chineseName: "大卫·默勒·沃尔夫", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
   { rank: 4, player: "Amir Al-Ammari", chineseName: "阿米尔·阿拉马里", team: "伊拉克", teamCode: "IRQ", value: 1, matches: 1 },
-  { rank: 4, player: "Bernardo Silva", chineseName: "贝尔纳多·席尔瓦", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
-  { rank: 4, player: "Joao Felix", chineseName: "若昂·费利克斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
-  { rank: 4, player: "Declan Rice", chineseName: "德克兰·赖斯", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
-  { rank: 4, player: "Jude Bellingham", chineseName: "祖德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 }
+  { rank: 4, player: "Xaver Schlager", chineseName: "克萨弗·施拉格尔", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
+  { rank: 4, player: "Bukayo Saka", chineseName: "布卡约·萨卡", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
+  { rank: 4, player: "Brandon Thomas-Asante", chineseName: "布兰登·托马斯-阿桑特", team: "加纳", teamCode: "GHA", value: 1, matches: 1 }
 ];
 
 export const statsNotice = {
-    title: "第 21-22 场赛果已更新",
-    body: "已补入葡萄牙 3-1 刚果民主共和国（C罗 2球、B费 1球）、英格兰 2-1 克罗地亚（凯恩、萨卡、莫德里奇）；K组/L组积分榜已更新。"
-  };
+  title: "第 18、20-23 场赛果复核完成",
+  body: "纠正挪威 4-1 伊拉克、奥地利 3-1 约旦、葡萄牙 1-1 刚果民主共和国、英格兰 4-2 克罗地亚，并补入加纳 1-0 巴拿马；射手榜与可靠确认的助攻已同步。"
+};

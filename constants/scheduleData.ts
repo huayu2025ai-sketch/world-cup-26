@@ -127,25 +127,39 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "易卜拉欣·姆巴耶", team: "塞内加尔", minute: "90+5'", type: "goal" },
     { player: "基利安·姆巴佩", team: "法国", minute: "90+6'", type: "goal" },
   ] },
-  { id: 18, stage: "分组赛", group: "I", date: "2026-06-16", etTime: "18:00", home: "伊拉克", away: "挪威", venue: "Lincoln Financial Field", city: "Philadelphia", homeScore: 1, awayScore: 3, goalScorers: [
+  { id: 18, stage: "分组赛", group: "I", date: "2026-06-16", etTime: "18:00", home: "伊拉克", away: "挪威", venue: "Lincoln Financial Field", city: "Philadelphia", homeScore: 1, awayScore: 4, goalScorers: [
     { player: "埃尔林·哈兰德", team: "挪威", minute: "29'", type: "goal" },
     { player: "艾曼·侯赛因", team: "伊拉克", minute: "39'", type: "goal" },
     { player: "埃尔林·哈兰德", team: "挪威", minute: "43'", type: "goal" },
     { player: "莱奥·厄斯蒂高", team: "挪威", minute: "76'", type: "goal" },
+    { player: "艾曼·侯赛因", team: "伊拉克", minute: "90+'", type: "ownGoal" },
   ] },
   { id: 19, stage: "分组赛", group: "J", date: "2026-06-16", etTime: "21:00", home: "阿根廷", away: "阿尔及利亚", venue: "Lumen Field", city: "Seattle", homeScore: 3, awayScore: 0, goalScorers: [
     { player: "莱昂内尔·梅西", team: "阿根廷", minute: "17'", type: "goal" },
     { player: "莱昂内尔·梅西", team: "阿根廷", minute: "60'", type: "goal" },
     { player: "莱昂内尔·梅西", team: "阿根廷", minute: "76'", type: "goal" },
   ] },
-  { id: 20, stage: "分组赛", group: "J", date: "2026-06-17", etTime: "00:00", home: "奥地利", away: "约旦", venue: "Levi's Stadium", city: "San Francisco Bay Area", homeScore: 2, awayScore: 1, goalScorers: [
-    { player: "罗马诺·施密德", team: "奥地利", minute: "21'", type: "goal" },
-    { player: "马尔科·阿瑙托维奇", team: "奥地利", minute: "58'", type: "goal" },
-    { player: "穆萨·阿尔塔马里", team: "约旦", minute: "73'", type: "goal" },
+  { id: 20, stage: "分组赛", group: "J", date: "2026-06-17", etTime: "00:00", home: "奥地利", away: "约旦", venue: "Levi's Stadium", city: "San Francisco Bay Area", homeScore: 3, awayScore: 1, goalScorers: [
+    { player: "罗马诺·施密德", team: "奥地利", minute: "20'", type: "goal" },
+    { player: "阿里·奥尔万", team: "约旦", minute: "50'", type: "goal" },
+    { player: "亚赞·阿拉伯", team: "约旦", minute: "77'", type: "ownGoal" },
+    { player: "马尔科·阿瑙托维奇", team: "奥地利", minute: "90+11'", type: "penalty" },
   ] },
-  { id: 21, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "13:00", home: "葡萄牙", away: "刚果民主共和国", venue: "Hard Rock Stadium", homeScore: 3, awayScore: 1, city: "Miami" },
-  { id: 22, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "16:00", home: "英格兰", away: "克罗地亚", venue: "Mercedes-Benz Stadium", homeScore: 2, awayScore: 1, city: "Atlanta" },
-  { id: 23, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "19:00", home: "加纳", away: "巴拿马", venue: "BMO Field", city: "Toronto" },
+  { id: 21, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "13:00", home: "葡萄牙", away: "刚果民主共和国", venue: "Hard Rock Stadium", city: "Miami", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "若昂·内维斯", team: "葡萄牙", minute: "6'", type: "goal" },
+    { player: "约昂·维萨", team: "刚果民主共和国", minute: "45+5'", type: "goal" },
+  ] },
+  { id: 22, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "16:00", home: "英格兰", away: "克罗地亚", venue: "Mercedes-Benz Stadium", city: "Atlanta", homeScore: 4, awayScore: 2, goalScorers: [
+    { player: "哈里·凯恩", team: "英格兰", minute: "12'", type: "penalty" },
+    { player: "马丁·巴图里纳", team: "克罗地亚", minute: "36'", type: "goal" },
+    { player: "哈里·凯恩", team: "英格兰", minute: "42'", type: "goal" },
+    { player: "佩塔尔·穆萨", team: "克罗地亚", minute: "45+5'", type: "goal" },
+    { player: "裘德·贝林厄姆", team: "英格兰", minute: "47'", type: "goal" },
+    { player: "马库斯·拉什福德", team: "英格兰", minute: "85'", type: "goal" },
+  ] },
+  { id: 23, stage: "分组赛", group: "L", date: "2026-06-17", etTime: "19:00", home: "加纳", away: "巴拿马", venue: "BMO Field", city: "Toronto", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "凯莱布·耶伦基", team: "加纳", minute: "90+5'", type: "goal" },
+  ] },
   { id: 24, stage: "分组赛", group: "K", date: "2026-06-17", etTime: "22:00", home: "乌兹别克斯坦", away: "哥伦比亚", venue: "Estadio BBVA", city: "Monterrey" },
   { id: 25, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "12:00", home: "捷克", away: "南非", venue: "Estadio Azteca", city: "Mexico City" },
   { id: 26, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "15:00", home: "瑞士", away: "波黑", venue: "BC Place", city: "Vancouver" },
