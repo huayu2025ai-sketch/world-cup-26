@@ -585,5 +585,51 @@
     "group": "K",
     "stage": "分组赛",
     "updatedAt": "2026-06-18T12:31:44.962570+08:00"
+  },
+  "25": {
+    "homeScore": 1,
+    "awayScore": 0,
+    "homeTeam": "捷克",
+    "awayTeam": "南非",
+    "group": "A",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-19T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "帕特里克·希克",
+        "team": "捷克",
+        "minute": "34'",
+        "type": "goal"
+      }
+    ]
+  },
+  "26": {
+    "homeScore": 2,
+    "awayScore": 1,
+    "homeTeam": "瑞士",
+    "awayTeam": "波黑",
+    "group": "B",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-19T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "布雷尔·恩博洛",
+        "team": "瑞士",
+        "minute": "23'",
+        "type": "goal"
+      },
+      {
+        "player": "格拉尼特·扎卡",
+        "team": "瑞士",
+        "minute": "71'",
+        "type": "goal"
+      },
+      {
+        "player": "约沃·卢基奇",
+        "team": "波黑",
+        "minute": "88'",
+        "type": "goal"
+      }
+    ]
   }
 }

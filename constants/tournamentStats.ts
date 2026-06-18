@@ -69,7 +69,9 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 7, player: "Caleb Yirenkyi", chineseName: "凯莱布·耶伦基", team: "加纳", teamCode: "GHA", value: 1, matches: 1 },
   { rank: 7, player: "Daniel Munoz", chineseName: "丹尼尔·穆尼奥斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 7, player: "Abbosbek Fayzullaev", chineseName: "阿博斯别克·法伊祖拉耶夫", team: "乌兹别克斯坦", teamCode: "UZB", value: 1, matches: 1 },
-  { rank: 7, player: "Jefferson Lerma", chineseName: "杰斐逊·莱尔马", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 }
+  { rank: 7, player: "Jefferson Lerma", chineseName: "杰斐逊·莱尔马", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
+  { rank: 7, player: "Patrik Schick", chineseName: "帕特里克·希克", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
+  { rank: 7, player: "Granit Xhaka", chineseName: "格拉尼特·扎卡", team: "瑞士", teamCode: "SUI", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -105,6 +107,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "第 24 场赛果已更新",
-    body: "已补入葡萄牙 1-1 刚果民主共和国、英格兰 3-2 克罗地亚、加纳 1-0 巴拿马、乌兹别克斯坦 1-2 哥伦比亚；K组与L组积分榜已更新。"
+    title: "第 26 场赛果已更新",
+    body: "已补入捷克 1-0 南非、瑞士 2-1 波黑；A组与B组积分榜已更新。"
   };

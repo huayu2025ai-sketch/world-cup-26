@@ -162,8 +162,14 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "阿博斯别克·法伊祖拉耶夫", team: "乌兹别克斯坦", minute: "55'", type: "goal" },
     { player: "杰斐逊·莱尔马", team: "哥伦比亚", minute: "66'", type: "goal" },
   ] },
-  { id: 25, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "12:00", home: "捷克", away: "南非", venue: "Estadio Azteca", city: "Mexico City" },
-  { id: 26, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "15:00", home: "瑞士", away: "波黑", venue: "BC Place", city: "Vancouver" },
+  { id: 25, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "12:00", home: "捷克", away: "南非", venue: "Estadio Azteca", city: "Mexico City", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "帕特里克·希克", team: "捷克", minute: "34'", type: "goal" },
+  ] },
+  { id: 26, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "15:00", home: "瑞士", away: "波黑", venue: "BC Place", city: "Vancouver", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "布雷尔·恩博洛", team: "瑞士", minute: "23'", type: "goal" },
+    { player: "格拉尼特·扎卡", team: "瑞士", minute: "71'", type: "goal" },
+    { player: "约沃·卢基奇", team: "波黑", minute: "88'", type: "goal" },
+  ] },
   { id: 27, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "18:00", home: "加拿大", away: "卡塔尔", venue: "BMO Field", city: "Toronto" },
   { id: 28, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "21:00", home: "墨西哥", away: "韩国", venue: "Estadio Akron", city: "Guadalajara" },
   { id: 29, stage: "分组赛", group: "D", date: "2026-06-19", etTime: "15:00", home: "美国", away: "澳大利亚", venue: "Lumen Field", city: "Seattle" },

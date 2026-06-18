@@ -42,6 +42,20 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-19T09:30:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月19日 09:30",
+    title: "A组与B组第二轮赛果更新",
+    summary: "本次按北京时间 2026-06-19 09:30 复核当前比赛进度：捷克 1-0 南非、瑞士 2-1 波黑已终场，补入第 25-26 场比分、进球记录、球员统计与 A/B 组积分榜。",
+    changes: [
+      "scheduleData.ts 与 .match-results.json 补入捷克 1-0 南非：帕特里克·希克 34'。",
+      "scheduleData.ts 与 .match-results.json 补入瑞士 2-1 波黑：布雷尔·恩博洛 23'、格拉尼特·扎卡 71'；约沃·卢基奇 88'。",
+      "A 组积分榜重算：墨西哥与韩国同为 1 战 3 分，墨西哥以净胜球 +2 暂列第一；捷克 2 战 3 分、净胜球 0 暂列第三；南非 2 战 0 分垫底。",
+      "B 组积分榜重算：瑞士 2 战 4 分、净胜球 +1 暂列第一；加拿大、卡塔尔、波黑各 1-2 战 1 分，加拿大以进球数 1 暂列第二，波黑以净胜球 -1 暂列第三，卡塔尔以进球数 1 暂列第四。",
+      "射手榜新增帕特里克·希克、格拉尼特·扎卡各 1 球；布雷尔·恩博洛与约沃·卢基奇各增至 2 球与 1 球。",
+      "助攻榜未新增未完全确认的助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-18T16:58:00+08:00",
     updatedAtLabel: "北京时间 2026年6月18日 16:58",
     title: "K组与L组首轮赛果更新",
@@ -529,8 +543,8 @@ export const worldCupGroups: WorldCupGroup[] = [
     standings: [
       { name: "墨西哥", code: "MEX", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 0, goalDiff: 2, points: 3 },
       { name: "韩国", code: "KOR", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
-      { name: "捷克", code: "CZE", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 },
-      { name: "南非", code: "RSA", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 }
+      { name: "捷克", code: "CZE", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
+      { name: "南非", code: "RSA", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 }
     ]
   },
   {
@@ -547,10 +561,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "瑞士", englishName: "Switzerland", code: "SUI", flag: "🇨🇭", confederation: "UEFA", pot: 2 }
     ],
     standings: [
+      { name: "瑞士", code: "SUI", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 3, goalsAgainst: 2, goalDiff: 1, points: 4 },
       { name: "加拿大", code: "CAN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "波黑", code: "BIH", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "卡塔尔", code: "QAT", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "瑞士", code: "SUI", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 }
+      { name: "波黑", code: "BIH", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 1 },
+      { name: "卡塔尔", code: "QAT", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 }
     ]
   },
   {
