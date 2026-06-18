@@ -73,7 +73,6 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
       "分组赛 K组第21场比分已更新",
     ]
   },
-,
   {
     updatedAt: "2026-06-17T14:00:00+08:00",
     updatedAtLabel: "北京时间 2026年6月17日 14:00",
