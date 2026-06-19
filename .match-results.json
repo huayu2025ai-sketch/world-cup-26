@@ -713,5 +713,34 @@
         "type": "goal"
       }
     ]
+  },
+  "29": {
+    "homeScore": 2,
+    "awayScore": 1,
+    "homeTeam": "美国",
+    "awayTeam": "澳大利亚",
+    "group": "D",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-20T06:32:05.269785+08:00",
+    "goalScorers": [
+      {
+        "player": "福拉林·巴洛贡",
+        "team": "美国",
+        "minute": "34'",
+        "type": "goal"
+      },
+      {
+        "player": "内斯托里·伊兰昆达",
+        "team": "澳大利亚",
+        "minute": "61'",
+        "type": "goal"
+      },
+      {
+        "player": "吉奥·雷纳",
+        "team": "美国",
+        "minute": "78'",
+        "type": "goal"
+      }
+    ]
   }
 }

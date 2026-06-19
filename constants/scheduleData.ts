@@ -184,7 +184,11 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 28, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "21:00", home: "墨西哥", away: "韩国", venue: "Estadio Akron", city: "Guadalajara", homeScore: 1, awayScore: 0, goalScorers: [
     { player: "路易斯·罗莫", team: "墨西哥", minute: "50'", type: "goal" },
   ] },
-  { id: 29, stage: "分组赛", group: "D", date: "2026-06-19", etTime: "15:00", home: "美国", away: "澳大利亚", venue: "Lumen Field", city: "Seattle" },
+  { id: 29, stage: "分组赛", group: "D", date: "2026-06-19", etTime: "15:00", home: "美国", away: "澳大利亚", venue: "Lumen Field", city: "Seattle", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "福拉林·巴洛贡", team: "美国", minute: "34'", type: "goal" },
+    { player: "内斯托里·伊兰昆达", team: "澳大利亚", minute: "61'", type: "goal" },
+    { player: "吉奥·雷纳", team: "美国", minute: "78'", type: "goal" },
+  ] },
   { id: 30, stage: "分组赛", group: "C", date: "2026-06-19", etTime: "18:00", home: "苏格兰", away: "摩洛哥", venue: "Lincoln Financial Field", city: "Philadelphia" },
   { id: 31, stage: "分组赛", group: "C", date: "2026-06-19", etTime: "20:30", home: "巴西", away: "海地", venue: "Hard Rock Stadium", city: "Miami" },
   { id: 32, stage: "分组赛", group: "D", date: "2026-06-19", etTime: "23:00", home: "土耳其", away: "巴拉圭", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
