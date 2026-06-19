@@ -170,7 +170,11 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "格拉尼特·扎卡", team: "瑞士", minute: "71'", type: "goal" },
     { player: "约沃·卢基奇", team: "波黑", minute: "88'", type: "goal" },
   ] },
-  { id: 27, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "18:00", home: "加拿大", away: "卡塔尔", venue: "BMO Field", city: "Toronto" },
+  { id: 27, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "18:00", home: "加拿大", away: "卡塔尔", venue: "BMO Field", city: "Toronto", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "乔纳森·戴维", team: "加拿大", minute: "34'", type: "goal" },
+    { player: "阿克拉姆·阿菲夫", team: "卡塔尔", minute: "67'", type: "goal" },
+    { player: "赛尔·拉林", team: "加拿大", minute: "89'", type: "goal" },
+  ] },
   { id: 28, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "21:00", home: "墨西哥", away: "韩国", venue: "Estadio Akron", city: "Guadalajara" },
   { id: 29, stage: "分组赛", group: "D", date: "2026-06-19", etTime: "15:00", home: "美国", away: "澳大利亚", venue: "Lumen Field", city: "Seattle" },
   { id: 30, stage: "分组赛", group: "C", date: "2026-06-19", etTime: "18:00", home: "苏格兰", away: "摩洛哥", venue: "Lincoln Financial Field", city: "Philadelphia" },

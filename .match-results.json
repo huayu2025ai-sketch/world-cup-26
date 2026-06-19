@@ -631,5 +631,34 @@
         "type": "goal"
       }
     ]
+  },
+  "27": {
+    "homeScore": 2,
+    "awayScore": 1,
+    "homeTeam": "加拿大",
+    "awayTeam": "卡塔尔",
+    "group": "B",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-19T09:30:00+08:00",
+    "goalScorers": [
+      {
+        "player": "乔纳森·戴维",
+        "team": "加拿大",
+        "minute": "34'",
+        "type": "goal"
+      },
+      {
+        "player": "阿克拉姆·阿菲夫",
+        "team": "卡塔尔",
+        "minute": "67'",
+        "type": "goal"
+      },
+      {
+        "player": "赛尔·拉林",
+        "team": "加拿大",
+        "minute": "89'",
+        "type": "goal"
+      }
+    ]
   }
 }
