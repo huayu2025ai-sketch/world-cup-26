@@ -588,75 +588,128 @@
   },
   "25": {
     "homeScore": 1,
-    "awayScore": 0,
+    "awayScore": 1,
     "homeTeam": "捷克",
     "awayTeam": "南非",
     "group": "A",
     "stage": "分组赛",
-    "updatedAt": "2026-06-19T09:30:00+08:00",
+    "updatedAt": "2026-06-19T12:31:00+08:00",
     "goalScorers": [
       {
-        "player": "帕特里克·希克",
+        "player": "米哈尔·萨迪莱克",
         "team": "捷克",
-        "minute": "34'",
+        "minute": "5'",
         "type": "goal"
+      },
+      {
+        "player": "特博霍·莫科纳",
+        "team": "南非",
+        "minute": "83'",
+        "type": "penalty"
       }
     ]
   },
   "26": {
-    "homeScore": 2,
+    "homeScore": 4,
     "awayScore": 1,
     "homeTeam": "瑞士",
     "awayTeam": "波黑",
     "group": "B",
     "stage": "分组赛",
-    "updatedAt": "2026-06-19T09:30:00+08:00",
+    "updatedAt": "2026-06-19T12:31:00+08:00",
     "goalScorers": [
       {
-        "player": "布雷尔·恩博洛",
+        "player": "约翰·曼赞比",
         "team": "瑞士",
-        "minute": "23'",
+        "minute": "75'",
+        "type": "goal"
+      },
+      {
+        "player": "鲁本·巴尔加斯",
+        "team": "瑞士",
+        "minute": "85'",
+        "type": "goal"
+      },
+      {
+        "player": "约翰·曼赞比",
+        "team": "瑞士",
+        "minute": "90'",
+        "type": "goal"
+      },
+      {
+        "player": "埃尔明·马赫米奇",
+        "team": "波黑",
+        "minute": "90+3'",
         "type": "goal"
       },
       {
         "player": "格拉尼特·扎卡",
         "team": "瑞士",
-        "minute": "71'",
-        "type": "goal"
-      },
-      {
-        "player": "约沃·卢基奇",
-        "team": "波黑",
-        "minute": "88'",
-        "type": "goal"
+        "minute": "90+6'",
+        "type": "penalty"
       }
     ]
   },
   "27": {
-    "homeScore": 2,
-    "awayScore": 1,
+    "homeScore": 6,
+    "awayScore": 0,
     "homeTeam": "加拿大",
     "awayTeam": "卡塔尔",
     "group": "B",
     "stage": "分组赛",
-    "updatedAt": "2026-06-19T09:30:00+08:00",
+    "updatedAt": "2026-06-19T12:31:00+08:00",
     "goalScorers": [
-      {
-        "player": "乔纳森·戴维",
-        "team": "加拿大",
-        "minute": "34'",
-        "type": "goal"
-      },
-      {
-        "player": "阿克拉姆·阿菲夫",
-        "team": "卡塔尔",
-        "minute": "67'",
-        "type": "goal"
-      },
       {
         "player": "赛尔·拉林",
         "team": "加拿大",
-        "minute": "89'",
+        "minute": "16'",
+        "type": "goal"
+      },
+      {
+        "player": "乔纳森·戴维",
+        "team": "加拿大",
+        "minute": "29'",
+        "type": "goal"
+      },
+      {
+        "player": "乔纳森·戴维",
+        "team": "加拿大",
+        "minute": "45+3'",
+        "type": "goal"
+      },
+      {
+        "player": "内森·萨利巴",
+        "team": "加拿大",
+        "minute": "64'",
+        "type": "goal"
+      },
+      {
+        "player": "穆罕默德·阿尔曼奈",
+        "team": "卡塔尔",
+        "minute": "75'",
+        "type": "ownGoal"
+      },
+      {
+        "player": "乔纳森·戴维",
+        "team": "加拿大",
+        "minute": "90+2'",
+        "type": "goal"
+      }
+    ]
+  },
+  "28": {
+    "homeScore": 1,
+    "awayScore": 0,
+    "homeTeam": "墨西哥",
+    "awayTeam": "韩国",
+    "group": "A",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-19T12:31:00+08:00",
+    "goalScorers": [
+      {
+        "player": "路易斯·罗莫",
+        "team": "墨西哥",
+        "minute": "50'",
         "type": "goal"
       }
     ]

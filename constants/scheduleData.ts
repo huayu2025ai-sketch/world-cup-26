@@ -162,20 +162,28 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "阿博斯别克·法伊祖拉耶夫", team: "乌兹别克斯坦", minute: "55'", type: "goal" },
     { player: "杰斐逊·莱尔马", team: "哥伦比亚", minute: "66'", type: "goal" },
   ] },
-  { id: 25, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "12:00", home: "捷克", away: "南非", venue: "Estadio Azteca", city: "Mexico City", homeScore: 1, awayScore: 0, goalScorers: [
-    { player: "帕特里克·希克", team: "捷克", minute: "34'", type: "goal" },
+  { id: 25, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "12:00", home: "捷克", away: "南非", venue: "Mercedes-Benz Stadium", city: "Atlanta", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "米哈尔·萨迪莱克", team: "捷克", minute: "5'", type: "goal" },
+    { player: "特博霍·莫科纳", team: "南非", minute: "83'", type: "penalty" },
   ] },
-  { id: 26, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "15:00", home: "瑞士", away: "波黑", venue: "BC Place", city: "Vancouver", homeScore: 2, awayScore: 1, goalScorers: [
-    { player: "布雷尔·恩博洛", team: "瑞士", minute: "23'", type: "goal" },
-    { player: "格拉尼特·扎卡", team: "瑞士", minute: "71'", type: "goal" },
-    { player: "约沃·卢基奇", team: "波黑", minute: "88'", type: "goal" },
+  { id: 26, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "15:00", home: "瑞士", away: "波黑", venue: "SoFi Stadium", city: "Los Angeles", homeScore: 4, awayScore: 1, goalScorers: [
+    { player: "约翰·曼赞比", team: "瑞士", minute: "75'", type: "goal" },
+    { player: "鲁本·巴尔加斯", team: "瑞士", minute: "85'", type: "goal" },
+    { player: "约翰·曼赞比", team: "瑞士", minute: "90'", type: "goal" },
+    { player: "埃尔明·马赫米奇", team: "波黑", minute: "90+3'", type: "goal" },
+    { player: "格拉尼特·扎卡", team: "瑞士", minute: "90+6'", type: "penalty" },
   ] },
-  { id: 27, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "18:00", home: "加拿大", away: "卡塔尔", venue: "BMO Field", city: "Toronto", homeScore: 2, awayScore: 1, goalScorers: [
-    { player: "乔纳森·戴维", team: "加拿大", minute: "34'", type: "goal" },
-    { player: "阿克拉姆·阿菲夫", team: "卡塔尔", minute: "67'", type: "goal" },
-    { player: "赛尔·拉林", team: "加拿大", minute: "89'", type: "goal" },
+  { id: 27, stage: "分组赛", group: "B", date: "2026-06-18", etTime: "18:00", home: "加拿大", away: "卡塔尔", venue: "BC Place", city: "Vancouver", homeScore: 6, awayScore: 0, goalScorers: [
+    { player: "赛尔·拉林", team: "加拿大", minute: "16'", type: "goal" },
+    { player: "乔纳森·戴维", team: "加拿大", minute: "29'", type: "goal" },
+    { player: "乔纳森·戴维", team: "加拿大", minute: "45+3'", type: "goal" },
+    { player: "内森·萨利巴", team: "加拿大", minute: "64'", type: "goal" },
+    { player: "穆罕默德·阿尔曼奈", team: "卡塔尔", minute: "75'", type: "ownGoal" },
+    { player: "乔纳森·戴维", team: "加拿大", minute: "90+2'", type: "goal" },
   ] },
-  { id: 28, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "21:00", home: "墨西哥", away: "韩国", venue: "Estadio Akron", city: "Guadalajara" },
+  { id: 28, stage: "分组赛", group: "A", date: "2026-06-18", etTime: "21:00", home: "墨西哥", away: "韩国", venue: "Estadio Akron", city: "Guadalajara", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "路易斯·罗莫", team: "墨西哥", minute: "50'", type: "goal" },
+  ] },
   { id: 29, stage: "分组赛", group: "D", date: "2026-06-19", etTime: "15:00", home: "美国", away: "澳大利亚", venue: "Lumen Field", city: "Seattle" },
   { id: 30, stage: "分组赛", group: "C", date: "2026-06-19", etTime: "18:00", home: "苏格兰", away: "摩洛哥", venue: "Lincoln Financial Field", city: "Philadelphia" },
   { id: 31, stage: "分组赛", group: "C", date: "2026-06-19", etTime: "20:30", home: "巴西", away: "海地", venue: "Hard Rock Stadium", city: "Miami" },

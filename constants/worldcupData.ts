@@ -42,6 +42,21 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-19T12:31:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月19日 12:31",
+    title: "A组与B组第二轮赛果纠正及补全",
+    summary: "本次按北京时间 2026-06-19 12:31 复核当前比赛进度：纠正第 25-27 场错误赛果，并补入墨西哥 1-0 韩国；比分、进球记录、球员统计与 A/B 组积分榜已按终场结果重算。",
+    changes: [
+      "第 25 场纠正为捷克 1-1 南非：米哈尔·萨迪莱克 5'，特博霍·莫科纳 83'（点球）。",
+      "第 26 场纠正为瑞士 4-1 波黑：约翰·曼赞比 75'、90'，鲁本·巴尔加斯 85'，格拉尼特·扎卡 90+6'（点球）；埃尔明·马赫米奇 90+3'。",
+      "第 27 场纠正为加拿大 6-0 卡塔尔：乔纳森·戴维帽子戏法，赛尔·拉林、内森·萨利巴各 1 球，另有穆罕默德·阿尔曼奈乌龙球。",
+      "第 28 场补入墨西哥 1-0 韩国：路易斯·罗莫 50'。",
+      "A 组积分榜重算：墨西哥 6 分居首，韩国 3 分第二，捷克与南非各 1 分。",
+      "B 组积分榜重算：加拿大与瑞士同积 4 分，加拿大以净胜球 +6 居首；波黑与卡塔尔各 1 分。",
+      "射手榜按确认进球重算；乌龙球不计入球员进球榜，未稳定确认的助攻不新增。"
+    ]
+  },
+  {
     updatedAt: "2026-06-19T09:30:00+08:00",
     updatedAtLabel: "北京时间 2026年6月19日 09:30",
     title: "A组与B组第二轮赛果更新",
@@ -541,10 +556,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "捷克", englishName: "Czechia", code: "CZE", flag: "🇨🇿", confederation: "UEFA", pot: 4 }
     ],
     standings: [
-      { name: "墨西哥", code: "MEX", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 0, goalDiff: 2, points: 3 },
-      { name: "韩国", code: "KOR", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
-      { name: "捷克", code: "CZE", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
-      { name: "南非", code: "RSA", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 }
+      { name: "墨西哥", code: "MEX", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 0, goalDiff: 3, points: 6 },
+      { name: "韩国", code: "KOR", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
+      { name: "捷克", code: "CZE", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 1 },
+      { name: "南非", code: "RSA", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 1 }
     ]
   },
   {
@@ -561,10 +576,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "瑞士", englishName: "Switzerland", code: "SUI", flag: "🇨🇭", confederation: "UEFA", pot: 2 }
     ],
     standings: [
-      { name: "瑞士", code: "SUI", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 3, goalsAgainst: 2, goalDiff: 1, points: 4 },
-      { name: "加拿大", code: "CAN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "波黑", code: "BIH", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 1 },
-      { name: "卡塔尔", code: "QAT", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 }
+      { name: "加拿大", code: "CAN", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 7, goalsAgainst: 1, goalDiff: 6, points: 4 },
+      { name: "瑞士", code: "SUI", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 5, goalsAgainst: 2, goalDiff: 3, points: 4 },
+      { name: "波黑", code: "BIH", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 5, goalDiff: -3, points: 1 },
+      { name: "卡塔尔", code: "QAT", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 1 }
     ]
   },
   {
