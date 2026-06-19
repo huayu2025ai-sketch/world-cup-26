@@ -11,7 +11,7 @@ export type PlayerStat = {
 export const goalsRanking: PlayerStat[] = [
   { rank: 1, player: "Lionel Messi", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 3, matches: 1 },
   { rank: 1, player: "Jonathan David", chineseName: "乔纳森·戴维", team: "加拿大", teamCode: "CAN", value: 3, matches: 1 },
-  { rank: 3, player: "Folarin Balogun", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 2, matches: 1 },
+  { rank: 3, player: "Folarin Balogun", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 3, matches: 2 },
   { rank: 3, player: "Kai Havertz", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 2, matches: 1 },
   { rank: 3, player: "Yasin Ayari", chineseName: "亚辛·阿亚里", team: "瑞典", teamCode: "SWE", value: 2, matches: 1 },
   { rank: 3, player: "Eli Just", chineseName: "伊莱·贾斯特", team: "新西兰", teamCode: "NZL", value: 2, matches: 1 },
@@ -25,14 +25,14 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 11, player: "Hyeongyu Oh", chineseName: "吴贤揆", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
   { rank: 11, player: "Ladislav Krejci", chineseName: "拉迪斯拉夫·克雷伊奇", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
   { rank: 11, player: "Jovo Lukic", chineseName: "约沃·卢基奇", team: "波黑", teamCode: "BIH", value: 1, matches: 1 },
-  { rank: 11, player: "Giovanni Reyna", chineseName: "吉奥·雷纳", team: "美国", teamCode: "USA", value: 1, matches: 1 },
+  { rank: 3, player: "Giovanni Reyna", chineseName: "吉奥·雷纳", team: "美国", teamCode: "USA", value: 2, matches: 2 },
   { rank: 11, player: "Mauricio", chineseName: "毛里西奥", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 },
   { rank: 11, player: "Breel Embolo", chineseName: "布雷尔·恩博洛", team: "瑞士", teamCode: "SUI", value: 1, matches: 1 },
   { rank: 11, player: "Boualem Khoukhi", chineseName: "布阿莱姆·胡希", team: "卡塔尔", teamCode: "QAT", value: 1, matches: 1 },
   { rank: 11, player: "Ismael Saibari", chineseName: "伊斯梅尔·塞巴里", team: "摩洛哥", teamCode: "MAR", value: 1, matches: 1 },
   { rank: 11, player: "Vinicius Junior", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
   { rank: 11, player: "John McGinn", chineseName: "约翰·麦金", team: "苏格兰", teamCode: "SCO", value: 1, matches: 1 },
-  { rank: 11, player: "Nestory Irankunda", chineseName: "内斯托里·伊兰昆达", team: "澳大利亚", teamCode: "AUS", value: 1, matches: 1 },
+  { rank: 3, player: "Nestory Irankunda", chineseName: "内斯托里·伊兰昆达", team: "澳大利亚", teamCode: "AUS", value: 2, matches: 2 },
   { rank: 11, player: "Connor Metcalfe", chineseName: "康纳·梅特卡夫", team: "澳大利亚", teamCode: "AUS", value: 1, matches: 1 },
   { rank: 11, player: "Felix Nmecha", chineseName: "费利克斯·恩梅查", team: "德国", teamCode: "GER", value: 1, matches: 1 },
   { rank: 11, player: "Livano Comenencia", chineseName: "利瓦诺·科梅嫩西亚", team: "库拉索", teamCode: "CUW", value: 1, matches: 1 },
@@ -114,6 +114,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "第 28 场赛果已更新",
-    body: "已纠正第 25-27 场赛果并补入墨西哥 1-0 韩国；A组、B组积分榜及射手榜已重算。"
+    title: "第 29 场赛果已更新",
+    body: "已更新美国 2-1 澳大利亚赛果；D组积分榜、射手榜已同步。助攻数据待确认后补入。"
   };
