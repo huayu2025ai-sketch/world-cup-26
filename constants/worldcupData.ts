@@ -616,8 +616,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "土耳其", englishName: "Turkiye", code: "TUR", flag: "🇹🇷", confederation: "UEFA", pot: 4 }
     ],
     standings: [
-      { name: "美国", code: "USA", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 4, goalsAgainst: 1, goalDiff: 3, points: 3 },
-      { name: "澳大利亚", code: "AUS", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 0, goalDiff: 2, points: 3 },
+      { name: "美国", code: "USA", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 2, goalDiff: 4, points: 6 },
+      { name: "澳大利亚", code: "AUS", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 3, goalsAgainst: 2, goalDiff: 1, points: 3 },
       { name: "土耳其", code: "TUR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 },
       { name: "巴拉圭", code: "PAR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 4, goalDiff: -3, points: 0 }
     ]
