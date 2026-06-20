@@ -742,5 +742,92 @@
         "type": "goal"
       }
     ]
+  },
+  "30": {
+    "homeScore": 1,
+    "awayScore": 2,
+    "homeTeam": "苏格兰",
+    "awayTeam": "摩洛哥",
+    "group": "C",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-20T07:32:00+08:00",
+    "goalScorers": [
+      {
+        "player": "约翰·麦金",
+        "team": "苏格兰",
+        "minute": "14'",
+        "type": "goal"
+      },
+      {
+        "player": "哈基姆·齐耶赫",
+        "team": "摩洛哥",
+        "minute": "52'",
+        "type": "goal"
+      },
+      {
+        "player": "苏菲安·拉希米",
+        "team": "摩洛哥",
+        "minute": "78'",
+        "type": "goal"
+      }
+    ]
+  },
+  "31": {
+    "homeScore": 3,
+    "awayScore": 0,
+    "homeTeam": "巴西",
+    "awayTeam": "海地",
+    "group": "C",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-20T07:32:00+08:00",
+    "goalScorers": [
+      {
+        "player": "维尼修斯·儒尼奥尔",
+        "team": "巴西",
+        "minute": "23'",
+        "type": "goal"
+      },
+      {
+        "player": "罗德里戈",
+        "team": "巴西",
+        "minute": "45+2'",
+        "type": "goal"
+      },
+      {
+        "player": "布鲁诺·吉马良斯",
+        "team": "巴西",
+        "minute": "71'",
+        "type": "goal"
+      }
+    ]
+  },
+  "32": {
+    "homeScore": 2,
+    "awayScore": 1,
+    "homeTeam": "土耳其",
+    "awayTeam": "巴拉圭",
+    "group": "D",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-20T07:32:00+08:00",
+    "goalScorers": [
+      {
+        "player": "凯雷姆·阿克图尔科格鲁",
+        "team": "土耳其",
+        "minute": "11'",
+        "type": "goal"
+      },
+      {
+        "player": "达米安·博瓦迪利亚",
+        "team": "巴拉圭",
+        "minute": "38'",
+        "type": "goal"
+      },
+      {
+        "player": "阿尔达·居勒尔",
+        "team": "土耳其",
+        "minute": "65'",
+        "type": "goal"
+      }
+    ]
   }
 }
