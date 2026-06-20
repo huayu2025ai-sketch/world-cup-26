@@ -8,7 +8,7 @@ type GroupCardProps = {
 };
 
 // 已确定晋级淘汰赛的球队（数学上确定）
-const QUALIFIED_TEAMS = new Set(["MEX"]);
+const QUALIFIED_TEAMS = new Set(["MEX", "USA"]);
 
 export default function GroupCard({ group, onSelect }: GroupCardProps) {
   return (
