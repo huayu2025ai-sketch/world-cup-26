@@ -17,11 +17,11 @@ export type TeamRoster = {
 };
 
 export const officialSquadsNotice = {
-  confirmedDate: "2026-06-19",
-  lastChecked: "2026-06-19",
+  confirmedDate: "2026-06-20",
+  lastChecked: "2026-06-20",
   source: "FIFA",
   sourceUrl: "https://fdp.fifa.org/assetspublic/ce281/pdf/SquadLists-English.pdf",
-  text: "FIFA 官方 Squad Lists-English.pdf（Friday, 19 June 2026 | 03:21 UTC | Version 1，共 48 页）已覆盖 48 支参赛队最终 26 人名单；本地 teamRosters 已按该版本复核全部球队、号码、来源与备注。"
+  text: "FIFA 官方 Squad Lists-English.pdf（Saturday, 20 June 2026 | 05:19 UTC | Version 1，共 48 页）已覆盖 48 支参赛队最终 26 人名单；本地 teamRosters 已按该版本复核全部球队、号码、来源与备注。"
 };
 
 const p = (
