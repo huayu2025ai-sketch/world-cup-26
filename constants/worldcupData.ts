@@ -42,6 +42,21 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-20T21:08:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月20日 21:08",
+    title: "C组与D组第二轮赛果纠正",
+    summary: "本次按北京时间 2026-06-20 21:08 复核 2026年6月19日已完赛场次：纠正第 29-32 场终场结果，美国 2-0 澳大利亚、摩洛哥 1-0 苏格兰、巴西 3-0 海地、巴拉圭 1-0 土耳其，并同步重算 C/D 组积分榜与个人统计。",
+    changes: [
+      "第 29 场纠正为美国 2-0 澳大利亚：卡梅伦·伯吉斯 11' 乌龙，亚历克斯·弗里曼 43'。",
+      "第 30 场纠正为苏格兰 0-1 摩洛哥：伊斯梅尔·塞巴里 2'。",
+      "第 31 场比分维持巴西 3-0 海地，但进球人纠正为马特乌斯·库尼亚 6'、12'，维尼修斯·儒尼奥尔 45'。",
+      "第 32 场纠正为土耳其 0-1 巴拉圭：马蒂亚斯·加拉尔萨 2'。",
+      "C 组积分榜重算：巴西与摩洛哥同积 4 分，巴西以净胜球 +3 暂列第一，摩洛哥以 +1 列第二；苏格兰 3 分、海地 0 分。",
+      "D 组积分榜重算：美国 2 战 6 分提前领跑；澳大利亚与巴拉圭同积 3 分，澳大利亚以净胜球优势列第二；土耳其 0 分垫底。",
+      "射手榜按确认进球重算；本次未新增可靠来源明确确认的助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-19T12:31:00+08:00",
     updatedAtLabel: "北京时间 2026年6月19日 12:31",
     title: "A组与B组第二轮赛果纠正及补全",
@@ -596,10 +611,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "苏格兰", englishName: "Scotland", code: "SCO", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", confederation: "UEFA", pot: 3 }
     ],
     standings: [
-      { name: "苏格兰", code: "SCO", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 1, goalsAgainst: 0, goalDiff: 1, points: 3 },
-      { name: "巴西", code: "BRA", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "摩洛哥", code: "MAR", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "海地", code: "HAI", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 1, goalDiff: -1, points: 0 }
+      { name: "巴西", code: "BRA", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 4, goalsAgainst: 1, goalDiff: 3, points: 4 },
+      { name: "摩洛哥", code: "MAR", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 4 },
+      { name: "苏格兰", code: "SCO", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 3 },
+      { name: "海地", code: "HAI", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 0, goalsAgainst: 4, goalDiff: -4, points: 0 }
     ]
   },
   {
@@ -616,10 +631,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "土耳其", englishName: "Turkiye", code: "TUR", flag: "🇹🇷", confederation: "UEFA", pot: 4 }
     ],
     standings: [
-      { name: "美国", code: "USA", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 2, goalDiff: 4, points: 6 },
-      { name: "澳大利亚", code: "AUS", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 3, goalsAgainst: 2, goalDiff: 1, points: 3 },
-      { name: "土耳其", code: "TUR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 },
-      { name: "巴拉圭", code: "PAR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 4, goalDiff: -3, points: 0 }
+      { name: "美国", code: "USA", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 6 },
+      { name: "澳大利亚", code: "AUS", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
+      { name: "巴拉圭", code: "PAR", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 3 },
+      { name: "土耳其", code: "TUR", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 }
     ]
   },
   {
