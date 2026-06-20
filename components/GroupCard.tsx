@@ -7,6 +7,9 @@ type GroupCardProps = {
   onSelect: (group: WorldCupGroup) => void;
 };
 
+// 已确定晋级淘汰赛的球队（数学上确定）
+const QUALIFIED_TEAMS = new Set(["MEX"]);
+
 export default function GroupCard({ group, onSelect }: GroupCardProps) {
   return (
     <button
@@ -43,7 +46,14 @@ export default function GroupCard({ group, onSelect }: GroupCardProps) {
                     {team.flag}
                   </span>
                   <div className="min-w-0">
-                    <p className="truncate text-[13px] font-bold text-slate-100">{team.name}</p>
+                    <div className="flex items-center gap-1.5">
+                      <p className="truncate text-[13px] font-bold text-slate-100">{team.name}</p>
+                      {QUALIFIED_TEAMS.has(standing.code) && (
+                        <span className="rounded bg-emerald-500/20 px-1 py-0 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">
+                          已晋级
+                        </span>
+                      )}
+                    </div>
                     <p className="text-[10px] uppercase tracking-[0.16em] text-slate-500">
                       {standing.code}
                     </p>
