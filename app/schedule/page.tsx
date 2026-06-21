@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { scheduleMatches, scheduleStages, type ScheduleMatch } from "@/constants/scheduleData";
-import { hasMatchNews, getMatchNews, getHighSeverityCount, type MatchNewsItem } from "@/constants/scheduleNews";
+import { getMatchNews, type MatchNewsItem } from "@/constants/scheduleNews";
 
 const formatDate = (value: string) => {
   return new Intl.DateTimeFormat("zh-CN", {
@@ -32,6 +32,28 @@ const groupByDate = (matches: ScheduleMatch[]) => {
 const getBeijingTimestamp = (match: ScheduleMatch) => {
   const [monthDay, time] = match.beijingTime.split(" ");
   return new Date(`2026-${monthDay}T${time}:00+08:00`).getTime();
+};
+
+const getNewsTimestamp = (date: string) => {
+  return new Date(`${date}T23:59:59.999+08:00`).getTime();
+};
+
+const getRecentMatchNews = (match: ScheduleMatch, now: number, windowMs: number) => {
+  const news = getMatchNews(match.id);
+  if (!news) {
+    return undefined;
+  }
+
+  const items = news.items.filter((item) => {
+    const itemTime = getNewsTimestamp(item.date);
+    return now - itemTime <= windowMs;
+  });
+
+  if (items.length === 0) {
+    return undefined;
+  }
+
+  return { ...news, items };
 };
 
 const getNextUpcomingMatch = (matches: ScheduleMatch[], now: number) => {
@@ -69,13 +91,24 @@ const severityBadge = (severity: MatchNewsItem["severity"]) => {
   }
 };
 
+const NEWS_WINDOW_MS = 48 * 60 * 60 * 1000;
+
 export default function SchedulePage() {
   const [query, setQuery] = useState("");
   const [stage, setStage] = useState<(typeof scheduleStages)[number]>("全部");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [newsIndexMap, setNewsIndexMap] = useState<Record<number, number>>({});
+  const [now, setNow] = useState(() => Date.now());
   const matchRefs = useRef<Record<number, HTMLDivElement | null>>({});
   const hasCenteredInitialMatch = useRef(false);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setNow(Date.now());
+    }, 60 * 1000);
+
+    return () => window.clearInterval(timer);
+  }, []);
 
   const filteredMatches = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -253,9 +286,10 @@ export default function SchedulePage() {
 
             <div className="grid gap-1.5 p-2">
               {groupedMatches[date].map((match) => {
-                const matchHasNews = hasMatchNews(match.id);
-                const highSeverityCount = getHighSeverityCount(match.id);
-                const news = matchHasNews ? getMatchNews(match.id) : undefined;
+                const matchHasStarted = match.homeScore !== undefined || match.awayScore !== undefined;
+                const news = matchHasStarted ? undefined : getRecentMatchNews(match, now, NEWS_WINDOW_MS);
+                const matchHasNews = Boolean(news);
+                const highSeverityCount = news ? news.items.filter((item) => item.severity === "high").length : 0;
                 const newsIndex = newsIndexMap[match.id] ?? 0;
                 const currentItem = news?.items[newsIndex];
 
@@ -349,6 +383,9 @@ export default function SchedulePage() {
                           <div className="flex items-center gap-1.5">
                             <span className={`rounded px-1.5 py-0.5 text-[10px] font-black ${severityBadge(currentItem.severity).className}`}>
                               {severityBadge(currentItem.severity).text}
+                            </span>
+                            <span className="rounded bg-cyan-300/10 px-1.5 py-0.5 text-[10px] font-black text-cyan-100">
+                              48h 赛前情报
                             </span>
                             <span className="text-[10px] font-bold text-slate-500">{typeLabel[currentItem.type]}</span>
                             <span className="text-[10px] font-bold text-cyan-200">{currentItem.affectedTeam}</span>
