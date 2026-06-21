@@ -136,6 +136,10 @@ export default function PredictionsPage() {
     () => predictionRows.filter(({ match }) => getActualOutcome(match) !== null).map(({ match }) => match.id),
     [predictionRows]
   );
+  const firstPendingMatchId = useMemo(
+    () => predictionRows.find(({ match }) => getActualOutcome(match) === null)?.match.id,
+    [predictionRows]
+  );
 
   const isAllResultsCollapsed =
     resultMatchIds.length > 0 && resultMatchIds.every((id) => collapsedIds.has(id));
@@ -275,7 +279,11 @@ export default function PredictionsPage() {
             const isCollapsed = collapsedIds.has(match.id);
 
             return (
-            <article key={match.id} className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 backdrop-blur-md">
+            <article
+              key={match.id}
+              id={match.id === firstPendingMatchId ? "pending-prediction" : undefined}
+              className="scroll-mt-28 rounded-lg border border-slate-700 bg-slate-800/50 p-3 backdrop-blur-md"
+            >
               {isCollapsed ? (
                 <div className="flex items-center gap-3">
                   <div className="flex min-w-0 flex-1 flex-col gap-1">

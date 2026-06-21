@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 import { scheduleMatches, type ScheduleMatch } from "@/constants/scheduleData";
 
 const navItems = [
-  { href: "/", label: "分组" },
-  { href: "/schedule", label: "赛程" },
-  { href: "/predictions", label: "预测" },
-  { href: "/export", label: "素材" },
-  { href: "/stats", label: "数据" }
+  { href: "/", path: "/", label: "分组" },
+  { href: "/schedule", path: "/schedule", label: "赛程" },
+  { href: "/predictions#pending-prediction", path: "/predictions", label: "预测" },
+  { href: "/export", path: "/export", label: "素材" },
+  { href: "/stats", path: "/stats", label: "数据" }
 ];
 
 type TournamentStatus = {
@@ -140,7 +140,7 @@ export default function Navbar() {
 
         <div className="flex flex-nowrap items-center justify-center gap-2 overflow-x-auto rounded-full border border-slate-700 bg-slate-800/50 p-1 lg:justify-self-end">
           {navItems.map((item) => {
-            const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            const isActive = item.path === "/" ? pathname === "/" : pathname.startsWith(item.path);
 
             return (
               <Link
