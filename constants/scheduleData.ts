@@ -213,7 +213,12 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "德尼兹·翁达夫", team: "德国", minute: "90+4'", type: "goal" },
   ] },
   { id: 35, stage: "分组赛", group: "E", date: "2026-06-20", etTime: "20:00", home: "厄瓜多尔", away: "库拉索", venue: "Hard Rock Stadium", city: "Miami", homeScore: 0, awayScore: 0, goalScorers: [] },
-  { id: 36, stage: "分组赛", group: "F", date: "2026-06-21", etTime: "00:00", home: "突尼斯", away: "日本", venue: "Estadio BBVA", city: "Monterrey" },
+  { id: 36, stage: "分组赛", group: "F", date: "2026-06-21", etTime: "00:00", home: "突尼斯", away: "日本", venue: "Estadio BBVA", city: "Monterrey", homeScore: 0, awayScore: 4, goalScorers: [
+    { player: "上田绮世", team: "日本", minute: "31'", type: "goal" },
+    { player: "伊东纯也", team: "日本", minute: "63'", type: "goal" },
+    { player: "上田绮世", team: "日本", minute: "78'", type: "goal" },
+    { player: "镰田大地", team: "日本", minute: "90+2'", type: "goal" },
+  ] },
   { id: 37, stage: "分组赛", group: "H", date: "2026-06-21", etTime: "12:00", home: "西班牙", away: "沙特阿拉伯", venue: "NRG Stadium", city: "Houston" },
   { id: 38, stage: "分组赛", group: "G", date: "2026-06-21", etTime: "15:00", home: "比利时", away: "伊朗", venue: "SoFi Stadium", city: "Los Angeles" },
   { id: 39, stage: "分组赛", group: "H", date: "2026-06-21", etTime: "18:00", home: "乌拉圭", away: "佛得角", venue: "Gillette Stadium", city: "Boston" },

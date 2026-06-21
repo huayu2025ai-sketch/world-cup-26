@@ -42,6 +42,20 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-21T14:30:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月21日 14:30",
+    title: "F组第36场终场结果补入",
+    summary: "本次补入第 36 场终场结果：突尼斯 0-4 日本，并同步重算 F 组积分榜、进球榜和可确认助攻榜；日本升至小组第二，但尚未数学锁定 32 强席位。",
+    changes: [
+      "第 36 场补入突尼斯 0-4 日本：上田绮世 31'、78'，伊东纯也 63'，镰田大地 90+2'。",
+      "F 组积分榜重算：荷兰与日本同积 4 分，荷兰以进球数优势第一，日本第二；瑞典 3 分第三，突尼斯 0 分第四。",
+      "出线判断：日本尚未数学锁定小组前二；突尼斯已无缘小组前二。当前没有新增“已晋级”标记。",
+      "射手榜：上田绮世新增 2 球，镰田大地增至 2 球，伊东纯也新增 1 球。",
+      "助攻榜：佐野海舟、上田绮世、中村敬斗各新增 1 次可靠来源明确确认的助攻；上田绮世首球为个人推进后破门，不计助攻。",
+      "本场赛前未录入 1/X/2 市场数据，因此预测页没有可判定的预测结果。"
+    ]
+  },
+  {
     updatedAt: "2026-06-21T10:20:00+08:00",
     updatedAtLabel: "北京时间 2026年6月21日 10:20",
     title: "E组第35场终场结果补入",
@@ -696,9 +710,9 @@ export const worldCupGroups: WorldCupGroup[] = [
     ],
     standings: [
       { name: "荷兰", code: "NED", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 7, goalsAgainst: 3, goalDiff: 4, points: 4 },
+      { name: "日本", code: "JPN", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 6, goalsAgainst: 2, goalDiff: 4, points: 4 },
       { name: "瑞典", code: "SWE", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 6, goalsAgainst: 6, goalDiff: 0, points: 3 },
-      { name: "日本", code: "JPN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
-      { name: "突尼斯", code: "TUN", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 5, goalDiff: -4, points: 0 }
+      { name: "突尼斯", code: "TUN", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 1, goalsAgainst: 9, goalDiff: -8, points: 0 }
     ]
   },
   {
