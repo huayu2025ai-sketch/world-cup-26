@@ -127,6 +127,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "第 33-34 场赛果已更新",
-    body: "已补入 6 月 20 日两场已完赛小组赛结果，重算 E/F 组积分榜、射手榜和可确认助攻榜；厄瓜多尔 vs 库拉索抓取时仍未到可靠终场状态。"
+    title: "第 35 场终场结果已补入",
+    body: "已补入厄瓜多尔 0-0 库拉索，并同步重算 E 组积分榜；本场没有新增进球或可确认助攻，射手榜与助攻榜保持不变。"
   };

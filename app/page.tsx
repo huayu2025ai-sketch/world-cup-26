@@ -6,6 +6,7 @@ import VisitCounter from "@/components/VisitCounter";
 import { playerProfileMeta, playerProfiles, type PlayerProfile } from "@/constants/playerProfiles";
 import { officialSquadsNotice, rosterPositions, teamRosters, type RosterPlayer } from "@/constants/teamRosters";
 import { groupOverviewUpdate, groupOverviewUpdates, worldCupGroups, type WorldCupGroup } from "@/constants/worldcupData";
+import { getQualifiedTeamCodes } from "@/lib/groupQualification";
 
 const profileTemplate: Record<RosterPlayer["position"], Pick<PlayerProfile, "role" | "bio" | "strengths">> = {
   门将: {
@@ -489,9 +490,13 @@ export default function HomePage() {
 
       <section className="mt-2 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {filteredGroups.map((group) => (
-          <GroupCard key={group.id} group={group} onSelect={openGroup} />
+          <GroupCard key={group.id} group={group} qualifiedTeamCodes={getQualifiedTeamCodes(group.id)} onSelect={openGroup} />
         ))}
       </section>
+
+      <p className="mt-4 text-center text-xs leading-5 text-slate-500">
+        `已晋级` 仅标记已根据当前积分和剩余赛程数学上锁定 32 强席位的球队。
+      </p>
 
       {filteredGroups.length === 0 && (
         <div className="mt-10 rounded-lg border border-slate-700 bg-slate-800/50 p-8 text-center backdrop-blur-md">
@@ -637,7 +642,14 @@ export default function HomePage() {
                       {team.flag}
                     </span>
                     <div>
-                      <p className="font-black text-slate-100">{team.name}</p>
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <p className="font-black text-slate-100">{team.name}</p>
+                        {getQualifiedTeamCodes(selectedGroup.id).has(team.code) && (
+                          <span className="rounded-full border border-emerald-400/35 bg-emerald-500/15 px-2 py-0.5 text-[10px] font-black text-emerald-200">
+                            已晋级
+                          </span>
+                        )}
+                      </div>
                       <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
                         {team.code} · {team.confederation}
                       </p>

@@ -4,13 +4,11 @@ import type { WorldCupGroup } from "@/constants/worldcupData";
 
 type GroupCardProps = {
   group: WorldCupGroup;
+  qualifiedTeamCodes: Set<string>;
   onSelect: (group: WorldCupGroup) => void;
 };
 
-// 已确定晋级淘汰赛的球队（数学上确定）
-const QUALIFIED_TEAMS = new Set(["MEX", "USA"]);
-
-export default function GroupCard({ group, onSelect }: GroupCardProps) {
+export default function GroupCard({ group, qualifiedTeamCodes, onSelect }: GroupCardProps) {
   return (
     <button
       type="button"
@@ -48,7 +46,7 @@ export default function GroupCard({ group, onSelect }: GroupCardProps) {
                   <div className="min-w-0">
                     <div className="flex items-center gap-1.5">
                       <p className="truncate text-[13px] font-bold text-slate-100">{team.name}</p>
-                      {QUALIFIED_TEAMS.has(standing.code) && (
+                      {qualifiedTeamCodes.has(standing.code) && (
                         <span className="rounded bg-emerald-500/20 px-1 py-0 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">
                           已晋级
                         </span>

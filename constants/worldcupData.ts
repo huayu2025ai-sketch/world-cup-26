@@ -42,6 +42,17 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-21T10:20:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月21日 10:20",
+    title: "E组第35场终场结果补入",
+    summary: "本次按北京时间 2026-06-21 10:20 补入第 35 场终场结果：厄瓜多尔 0-0 库拉索，并同步重算 E 组积分榜；本场没有新增进球或可确认助攻。",
+    changes: [
+      "第 35 场补入厄瓜多尔 0-0 库拉索：双方互交白卷。",
+      "E 组积分榜重算：德国 2 战 6 分继续第一，科特迪瓦 2 战 3 分第二，厄瓜多尔 2 战 1 分第三，库拉索 2 战 1 分第四。",
+      "本场无进球，射手榜与助攻榜均无新增条目。"
+    ]
+  },
+  {
     updatedAt: "2026-06-21T10:03:00+08:00",
     updatedAtLabel: "北京时间 2026年6月21日 10:03",
     title: "E组与F组第二轮赛果更新",
@@ -666,8 +677,8 @@ export const worldCupGroups: WorldCupGroup[] = [
     standings: [
       { name: "德国", code: "GER", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 9, goalsAgainst: 2, goalDiff: 7, points: 6 },
       { name: "科特迪瓦", code: "CIV", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
-      { name: "厄瓜多尔", code: "ECU", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 1, goalDiff: -1, points: 0 },
-      { name: "库拉索", code: "CUW", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 0 }
+      { name: "厄瓜多尔", code: "ECU", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 0, goalsAgainst: 1, goalDiff: -1, points: 1 },
+      { name: "库拉索", code: "CUW", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 1 }
     ]
   },
   {
