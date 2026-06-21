@@ -199,8 +199,19 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 32, stage: "分组赛", group: "D", date: "2026-06-19", etTime: "23:00", home: "土耳其", away: "巴拉圭", venue: "Levi's Stadium", city: "San Francisco Bay Area", homeScore: 0, awayScore: 1, goalScorers: [
     { player: "马蒂亚斯·加拉尔萨", team: "巴拉圭", minute: "2'", type: "goal" },
   ] },
-  { id: 33, stage: "分组赛", group: "F", date: "2026-06-20", etTime: "13:00", home: "荷兰", away: "瑞典", venue: "AT&T Stadium", city: "Dallas" },
-  { id: 34, stage: "分组赛", group: "E", date: "2026-06-20", etTime: "16:00", home: "德国", away: "科特迪瓦", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+  { id: 33, stage: "分组赛", group: "F", date: "2026-06-20", etTime: "13:00", home: "荷兰", away: "瑞典", venue: "AT&T Stadium", city: "Dallas", homeScore: 5, awayScore: 1, goalScorers: [
+    { player: "布赖恩·布罗贝", team: "荷兰", minute: "6'", type: "goal" },
+    { player: "布赖恩·布罗贝", team: "荷兰", minute: "17'", type: "goal" },
+    { player: "科迪·加克波", team: "荷兰", minute: "47'", type: "goal" },
+    { player: "科迪·加克波", team: "荷兰", minute: "54'", type: "goal" },
+    { player: "安东尼·埃兰加", team: "瑞典", minute: "59'", type: "goal" },
+    { player: "克里森西奥·萨默维尔", team: "荷兰", minute: "89'", type: "goal" },
+  ] },
+  { id: 34, stage: "分组赛", group: "E", date: "2026-06-20", etTime: "16:00", home: "德国", away: "科特迪瓦", venue: "Mercedes-Benz Stadium", city: "Atlanta", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "弗兰克·凯西", team: "科特迪瓦", minute: "30'", type: "goal" },
+    { player: "德尼兹·翁达夫", team: "德国", minute: "68'", type: "goal" },
+    { player: "德尼兹·翁达夫", team: "德国", minute: "90+4'", type: "goal" },
+  ] },
   { id: 35, stage: "分组赛", group: "E", date: "2026-06-20", etTime: "20:00", home: "厄瓜多尔", away: "库拉索", venue: "Hard Rock Stadium", city: "Miami" },
   { id: 36, stage: "分组赛", group: "F", date: "2026-06-21", etTime: "00:00", home: "突尼斯", away: "日本", venue: "Estadio BBVA", city: "Monterrey" },
   { id: 37, stage: "分组赛", group: "H", date: "2026-06-21", etTime: "12:00", home: "西班牙", away: "沙特阿拉伯", venue: "NRG Stadium", city: "Houston" },

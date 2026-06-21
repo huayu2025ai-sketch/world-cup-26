@@ -42,6 +42,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-21T10:03:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月21日 10:03",
+    title: "E组与F组第二轮赛果更新",
+    summary: "本次按北京时间 2026-06-21 10:03 复核 2026年6月20日已完赛场次：补入第 33、34 场终场结果，荷兰 5-1 瑞典、德国 2-1 科特迪瓦，并同步重算 E/F 组积分榜与个人统计；第 35 场厄瓜多尔 vs 库拉索抓取时仍在补时直播，未写入终场数据。",
+    changes: [
+      "第 33 场补入荷兰 5-1 瑞典：布赖恩·布罗贝 6'、17'，科迪·加克波 47'、54'，安东尼·埃兰加 59'，克里森西奥·萨默维尔 89'。",
+      "第 34 场补入德国 2-1 科特迪瓦：弗兰克·凯西 30'，德尼兹·翁达夫 68'、90+4'。",
+      "E 组积分榜重算：德国 2 战 6 分、净胜球 +7 提前领跑；科特迪瓦 2 战 3 分暂列第二；厄瓜多尔 1 战 0 分第三，库拉索 1 战 0 分第四。",
+      "F 组积分榜重算：荷兰 2 战 4 分升至第一；瑞典 2 战 3 分列第二；日本 1 战 1 分第三，突尼斯 1 战 0 分第四。",
+      "射手榜新增布赖恩·布罗贝、科迪·加克波各 2 球，德尼兹·翁达夫增至 3 球并追平榜首；助攻榜仅新增可靠来源明确确认的科迪·加克波、丹泽尔·邓弗里斯、克里森西奥·萨默维尔、孟菲斯·德佩、亚历山大·伊萨克、纳迪姆·阿米里、费利克斯·恩梅查。"
+    ]
+  },
+  {
     updatedAt: "2026-06-20T21:08:00+08:00",
     updatedAtLabel: "北京时间 2026年6月20日 21:08",
     title: "C组与D组第二轮赛果纠正",
@@ -651,8 +664,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "厄瓜多尔", englishName: "Ecuador", code: "ECU", flag: "🇪🇨", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "德国", code: "GER", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 7, goalsAgainst: 1, goalDiff: 6, points: 3 },
-      { name: "科特迪瓦", code: "CIV", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 1, goalsAgainst: 0, goalDiff: 1, points: 3 },
+      { name: "德国", code: "GER", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 9, goalsAgainst: 2, goalDiff: 7, points: 6 },
+      { name: "科特迪瓦", code: "CIV", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
       { name: "厄瓜多尔", code: "ECU", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 1, goalDiff: -1, points: 0 },
       { name: "库拉索", code: "CUW", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 0 }
     ]
@@ -671,8 +684,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "突尼斯", englishName: "Tunisia", code: "TUN", flag: "🇹🇳", confederation: "CAF", pot: 3 }
     ],
     standings: [
-      { name: "瑞典", code: "SWE", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 5, goalsAgainst: 1, goalDiff: 4, points: 3 },
-      { name: "荷兰", code: "NED", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
+      { name: "荷兰", code: "NED", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 7, goalsAgainst: 3, goalDiff: 4, points: 4 },
+      { name: "瑞典", code: "SWE", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 6, goalsAgainst: 6, goalDiff: 0, points: 3 },
       { name: "日本", code: "JPN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
       { name: "突尼斯", code: "TUN", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 5, goalDiff: -4, points: 0 }
     ]
