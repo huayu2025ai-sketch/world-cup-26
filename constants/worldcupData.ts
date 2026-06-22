@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-22T12:35:34+08:00",
+    updatedAtLabel: "北京时间 2026年6月22日 12:35",
+    title: "G组第40场赛果补入",
+    summary: "本次按北京时间 2026-06-22 12:35 复核并补入第 40 场终场结果：新西兰 1-3 埃及；同步重算 G 组积分榜，并更新已确认的进球与助攻统计。当前没有新增“已晋级”标记。",
+    changes: [
+      "第 40 场补入新西兰 1-3 埃及：特雷泽盖 15'、齐佐 59'、穆罕默德·萨拉赫 67'，芬恩·瑟曼 82'。",
+      "G 组积分榜重算：埃及 2 战 4 分暂列第一，伊朗 2 战 2 分列第二，比利时 2 战 2 分列第三，新西兰 2 战 1 分列第四。",
+      "助攻仅确认两次：穆罕默德·萨拉赫助攻特雷泽盖，穆罕默德·哈尼助攻齐佐；未确认来源的助攻不写入。",
+      "当前没有新增“已晋级”标记。"
+    ]
+  },
+  {
     updatedAt: "2026-06-22T09:13:56+08:00",
     updatedAtLabel: "北京时间 2026年6月22日 09:13",
     title: "G组与H组第37-39场赛果更新",
@@ -743,10 +755,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "新西兰", englishName: "New Zealand", code: "NZL", flag: "🇳🇿", confederation: "OFC", pot: 4 }
     ],
     standings: [
+      { name: "埃及", code: "EGY", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 4, goalsAgainst: 2, goalDiff: 2, points: 4 },
       { name: "伊朗", code: "IRN", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 2 },
       { name: "比利时", code: "BEL", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 2 },
-      { name: "新西兰", code: "NZL", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
-      { name: "埃及", code: "EGY", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 }
+      { name: "新西兰", code: "NZL", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 3, goalsAgainst: 5, goalDiff: -2, points: 1 }
     ]
   },
   {

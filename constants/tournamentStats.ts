@@ -92,7 +92,11 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 20, player: "Lamine Yamal", chineseName: "拉明·亚马尔", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
   { rank: 20, player: "Kevin Pina", chineseName: "凯文·皮纳", team: "佛得角", teamCode: "CPV", value: 1, matches: 1 },
   { rank: 20, player: "Agustin Canobbio", chineseName: "阿古斯丁·卡诺比奥", team: "乌拉圭", teamCode: "URU", value: 1, matches: 1 },
-  { rank: 20, player: "Helio Varela", chineseName: "赫利奥·瓦雷拉", team: "佛得角", teamCode: "CPV", value: 1, matches: 1 }
+  { rank: 20, player: "Helio Varela", chineseName: "赫利奥·瓦雷拉", team: "佛得角", teamCode: "CPV", value: 1, matches: 1 },
+  { rank: 20, player: "Trezeguet", chineseName: "特雷泽盖", team: "埃及", teamCode: "EGY", value: 1, matches: 2 },
+  { rank: 20, player: "Zizo", chineseName: "齐佐", team: "埃及", teamCode: "EGY", value: 1, matches: 2 },
+  { rank: 20, player: "Mohamed Salah", chineseName: "穆罕默德·萨拉赫", team: "埃及", teamCode: "EGY", value: 1, matches: 2 },
+  { rank: 20, player: "Finn Surman", chineseName: "芬恩·瑟曼", team: "新西兰", teamCode: "NZL", value: 1, matches: 2 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -101,6 +105,7 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 1, player: "Michael Olise", chineseName: "迈克尔·奥利塞", team: "法国", teamCode: "FRA", value: 2, matches: 1 },
   { rank: 1, player: "Alexander Isak", chineseName: "亚历山大·伊萨克", team: "瑞典", teamCode: "SWE", value: 2, matches: 2 },
   { rank: 1, player: "Denzel Dumfries", chineseName: "丹泽尔·邓弗里斯", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
+  { rank: 1, player: "Mohamed Salah", chineseName: "穆罕默德·萨拉赫", team: "埃及", teamCode: "EGY", value: 2, matches: 2 },
   { rank: 6, player: "Roberto Alvarado", chineseName: "罗伯托·阿尔瓦拉多", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 6, player: "Christian Pulisic", chineseName: "克里斯蒂安·普利西奇", team: "美国", teamCode: "USA", value: 1, matches: 2 },
   { rank: 6, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
@@ -112,7 +117,6 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 6, player: "Paul Okon-Engstler", chineseName: "保罗·奥孔-恩斯特勒", team: "澳大利亚", teamCode: "AUS", value: 1, matches: 2 },
   { rank: 6, player: "Viktor Gyokeres", chineseName: "维克托·约克雷斯", team: "瑞典", teamCode: "SWE", value: 1, matches: 2 },
   { rank: 6, player: "Hannibal Mejbri", chineseName: "汉尼拔·梅布里", team: "突尼斯", teamCode: "TUN", value: 1, matches: 1 },
-  { rank: 6, player: "Mohamed Salah", chineseName: "穆罕默德·萨拉赫", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 6, player: "Saman Ghoddos", chineseName: "萨曼·古多斯", team: "伊朗", teamCode: "IRN", value: 1, matches: 1 },
   { rank: 6, player: "Adrien Rabiot", chineseName: "阿德里安·拉比奥", team: "法国", teamCode: "FRA", value: 1, matches: 1 },
   { rank: 6, player: "David Moller Wolfe", chineseName: "大卫·默勒·沃尔夫", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
@@ -133,10 +137,11 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 6, player: "Felix Nmecha", chineseName: "费利克斯·恩梅查", team: "德国", teamCode: "GER", value: 1, matches: 2 },
   { rank: 6, player: "Kaishu Sano", chineseName: "佐野海舟", team: "日本", teamCode: "JPN", value: 1, matches: 2 },
   { rank: 6, player: "Ayase Ueda", chineseName: "上田绮世", team: "日本", teamCode: "JPN", value: 1, matches: 2 },
-  { rank: 6, player: "Keito Nakamura", chineseName: "中村敬斗", team: "日本", teamCode: "JPN", value: 1, matches: 2 }
+  { rank: 6, player: "Keito Nakamura", chineseName: "中村敬斗", team: "日本", teamCode: "JPN", value: 1, matches: 2 },
+  { rank: 6, player: "Mohamed Hany", chineseName: "穆罕默德·哈尼", team: "埃及", teamCode: "EGY", value: 1, matches: 2 }
 ];
 
 export const statsNotice = {
-    title: "西班牙 4-0 沙特阿拉伯",
-    body: "已补入第 37-39 场终场结果：西班牙、乌拉圭各有新进球入账，比利时与伊朗互交白卷；进球榜已更新，未新增可确认助攻。"
+    title: "新西兰 1-3 埃及",
+    body: "已补入第 40 场终场结果：埃及补进三球拿下首胜，G 组积分榜和射手/助攻榜已同步更新；仅写入可明确确认的两次助攻。"
   };

@@ -232,7 +232,12 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "阿古斯丁·卡诺比奥", team: "乌拉圭", minute: "45+6'", type: "goal" },
     { player: "赫利奥·瓦雷拉", team: "佛得角", minute: "61'", type: "goal" },
   ] },
-  { id: 40, stage: "分组赛", group: "G", date: "2026-06-21", etTime: "21:00", home: "新西兰", away: "埃及", venue: "NRG Stadium", city: "Houston" },
+  { id: 40, stage: "分组赛", group: "G", date: "2026-06-21", etTime: "21:00", home: "新西兰", away: "埃及", venue: "NRG Stadium", city: "Houston", homeScore: 1, awayScore: 3, goalScorers: [
+    { player: "特雷泽盖", team: "埃及", minute: "15'", type: "goal" },
+    { player: "齐佐", team: "埃及", minute: "59'", type: "goal" },
+    { player: "穆罕默德·萨拉赫", team: "埃及", minute: "67'", type: "goal" },
+    { player: "芬恩·瑟曼", team: "新西兰", minute: "82'", type: "goal" },
+  ] },
   { id: 41, stage: "分组赛", group: "J", date: "2026-06-22", etTime: "13:00", home: "阿根廷", away: "奥地利", venue: "Arrowhead Stadium", city: "Kansas City" },
   { id: 42, stage: "分组赛", group: "I", date: "2026-06-22", etTime: "17:00", home: "法国", away: "伊拉克", venue: "SoFi Stadium", city: "Los Angeles" },
   { id: 43, stage: "分组赛", group: "I", date: "2026-06-22", etTime: "20:00", home: "挪威", away: "塞内加尔", venue: "Gillette Stadium", city: "Boston" },
