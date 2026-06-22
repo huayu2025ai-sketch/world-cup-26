@@ -262,15 +262,6 @@ export const matchOddsById: Record<number, MatchBookmakerOdds[]> = {
   33: [
     { bookmaker: "pinnacle", odds: { home: 1.74, draw: 4.1, away: 5.25 }, capturedAt: "2026-06-20" }
   ],
-  34: [
-    { bookmaker: "pinnacle", odds: { home: 1.53, draw: 4.33, away: 5.5 }, capturedAt: "2026-06-22" }
-  ],
-  35: [
-    { bookmaker: "betfair", odds: { home: 1.1, draw: 10, away: 23 }, capturedAt: "2026-06-22" }
-  ],
-  36: [
-    { bookmaker: "bet365", odds: { home: 7.14, draw: 4.17, away: 1.54 }, capturedAt: "2026-06-22" }
-  ],
   37: [
     { bookmaker: "pinnacle", odds: { home: 1.17, draw: 7.8, away: 19 }, capturedAt: "2026-06-21" },
     { bookmaker: "betfair", odds: { home: 1.16, draw: 7.5, away: 20 }, capturedAt: "2026-06-21" },
