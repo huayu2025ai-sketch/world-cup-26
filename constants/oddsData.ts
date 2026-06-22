@@ -39,9 +39,9 @@ export const recommendedBookmakers: Bookmaker[] = [
   { key: "draftkings", name: "数据源 E", marketRole: "北美市场样本" }
 ];
 
-export const oddsDataUpdatedAt = "2026-06-21";
+export const oddsDataUpdatedAt = "2026-06-22";
 
-export const championFavoritesUpdatedAt = "2026-06-20";
+export const championFavoritesUpdatedAt = "2026-06-22";
 
 export const championFavorites: ChampionFavorite[] = [
   {
@@ -50,10 +50,10 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "France",
     code: "FRA",
     flag: "🇫🇷",
-    consensusAmericanOdds: 390,
-    consensusDecimalOdds: 4.9,
-    marketImpliedProbability: 0.2041,
-    modelProbability: 0.2041,
+    consensusAmericanOdds: 450,
+    consensusDecimalOdds: 5.5,
+    marketImpliedProbability: 0.1818,
+    modelProbability: 0.1818,
     sourceNote: "公开市场共识第 1"
   },
   {
@@ -62,10 +62,10 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "Spain",
     code: "ESP",
     flag: "🇪🇸",
-    consensusAmericanOdds: 550,
-    consensusDecimalOdds: 6.5,
-    marketImpliedProbability: 0.1538,
-    modelProbability: 0.1538,
+    consensusAmericanOdds: 450,
+    consensusDecimalOdds: 5.5,
+    marketImpliedProbability: 0.1818,
+    modelProbability: 0.1818,
     sourceNote: "公开市场共识第 2"
   },
   {
@@ -74,34 +74,34 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "England",
     code: "ENG",
     flag: "\u{1F3F4}\u{E0065}\u{E006E}\u{E0067}\u{E006C}\u{E0061}\u{E006E}\u{E0064}\u{E007F}",
-    consensusAmericanOdds: 600,
-    consensusDecimalOdds: 7,
-    marketImpliedProbability: 0.1429,
-    modelProbability: 0.1429,
+    consensusAmericanOdds: 700,
+    consensusDecimalOdds: 8,
+    marketImpliedProbability: 0.125,
+    modelProbability: 0.125,
     sourceNote: "公开市场共识第 3"
   },
   {
     rank: 4,
-    team: "阿根廷",
-    englishName: "Argentina",
-    code: "ARG",
-    flag: "🇦🇷",
-    consensusAmericanOdds: 800,
-    consensusDecimalOdds: 9,
-    marketImpliedProbability: 0.1111,
-    modelProbability: 0.1111,
-    sourceNote: "公开市场共识第 4"
-  },
-  {
-    rank: 5,
     team: "葡萄牙",
     englishName: "Portugal",
     code: "POR",
     flag: "🇵🇹",
-    consensusAmericanOdds: 960,
-    consensusDecimalOdds: 10.6,
-    marketImpliedProbability: 0.0943,
-    modelProbability: 0.0943,
+    consensusAmericanOdds: 850,
+    consensusDecimalOdds: 9.5,
+    marketImpliedProbability: 0.1053,
+    modelProbability: 0.1053,
+    sourceNote: "公开市场共识第 4"
+  },
+  {
+    rank: 5,
+    team: "巴西",
+    englishName: "Brazil",
+    code: "BRA",
+    flag: "🇧🇷",
+    consensusAmericanOdds: 900,
+    consensusDecimalOdds: 10,
+    marketImpliedProbability: 0.1,
+    modelProbability: 0.1,
     sourceNote: "公开市场共识第 5"
   }
 ];
@@ -261,6 +261,15 @@ export const matchOddsById: Record<number, MatchBookmakerOdds[]> = {
   ],
   33: [
     { bookmaker: "pinnacle", odds: { home: 1.74, draw: 4.1, away: 5.25 }, capturedAt: "2026-06-20" }
+  ],
+  34: [
+    { bookmaker: "pinnacle", odds: { home: 1.53, draw: 4.33, away: 5.5 }, capturedAt: "2026-06-22" }
+  ],
+  35: [
+    { bookmaker: "betfair", odds: { home: 1.1, draw: 10, away: 23 }, capturedAt: "2026-06-22" }
+  ],
+  36: [
+    { bookmaker: "bet365", odds: { home: 7.14, draw: 4.17, away: 1.54 }, capturedAt: "2026-06-22" }
   ],
   37: [
     { bookmaker: "pinnacle", odds: { home: 1.17, draw: 7.8, away: 19 }, capturedAt: "2026-06-21" },
