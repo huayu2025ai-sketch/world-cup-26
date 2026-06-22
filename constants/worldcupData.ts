@@ -42,6 +42,20 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-22T09:13:56+08:00",
+    updatedAtLabel: "北京时间 2026年6月22日 09:13",
+    title: "G组与H组第37-39场赛果更新",
+    summary: "本次按北京时间 2026-06-22 09:13 复核并补入第 37-39 场终场结果：西班牙 4-0 沙特阿拉伯、比利时 0-0 伊朗、乌拉圭 2-2 佛得角；同步重算 G/H 组积分榜与个人统计。第 40 场新西兰 vs 埃及尚未获得可信终场，不写入。",
+    changes: [
+      "第 37 场补入西班牙 4-0 沙特阿拉伯：拉明·亚马尔 11'，米克尔·奥亚萨瓦尔 21'、24'，哈桑·坦巴克提 49' 乌龙。",
+      "第 38 场补入比利时 0-0 伊朗：双方互交白卷。",
+      "第 39 场补入乌拉圭 2-2 佛得角：凯文·皮纳 21'，马克西·阿劳霍 44'，阿古斯丁·卡诺比奥 45+6'，赫利奥·瓦雷拉 61'。",
+      "G 组积分榜重算：伊朗与比利时同积 2 分，伊朗以进球数优势暂列第一；新西兰与埃及同积 1 分，新西兰以进球数优势暂列第三。",
+      "H 组积分榜重算：西班牙 4 分领跑，乌拉圭与佛得角同积 2 分，乌拉圭以进球数优势列第二，沙特阿拉伯 1 分垫底。",
+      "当前没有新增“已晋级”标记。第 40 场新西兰 vs 埃及尚未见可信终场，未写入。"
+    ]
+  },
+  {
     updatedAt: "2026-06-21T14:30:00+08:00",
     updatedAtLabel: "北京时间 2026年6月21日 14:30",
     title: "F组第36场终场结果补入",
@@ -729,10 +743,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "新西兰", englishName: "New Zealand", code: "NZL", flag: "🇳🇿", confederation: "OFC", pot: 4 }
     ],
     standings: [
-      { name: "伊朗", code: "IRN", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
+      { name: "伊朗", code: "IRN", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 2 },
+      { name: "比利时", code: "BEL", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 2 },
       { name: "新西兰", code: "NZL", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 1 },
-      { name: "埃及", code: "EGY", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "比利时", code: "BEL", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 }
+      { name: "埃及", code: "EGY", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 }
     ]
   },
   {
@@ -749,10 +763,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "乌拉圭", englishName: "Uruguay", code: "URU", flag: "🇺🇾", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "沙特阿拉伯", code: "KSA", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "乌拉圭", code: "URU", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "西班牙", code: "ESP", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 1 },
-      { name: "佛得角", code: "CPV", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDiff: 0, points: 1 }
+      { name: "西班牙", code: "ESP", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 4, goalsAgainst: 0, goalDiff: 4, points: 4 },
+      { name: "乌拉圭", code: "URU", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 3, goalsAgainst: 3, goalDiff: 0, points: 2 },
+      { name: "佛得角", code: "CPV", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 2 },
+      { name: "沙特阿拉伯", code: "KSA", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 5, goalDiff: -4, points: 1 }
     ]
   },
   {

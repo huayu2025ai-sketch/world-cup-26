@@ -28,6 +28,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 4, player: "Cody Gakpo", chineseName: "科迪·加克波", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
   { rank: 4, player: "Ayase Ueda", chineseName: "上田绮世", team: "日本", teamCode: "JPN", value: 2, matches: 2 },
   { rank: 4, player: "Daichi Kamada", chineseName: "镰田大地", team: "日本", teamCode: "JPN", value: 2, matches: 2 },
+  { rank: 4, player: "Mikel Oyarzabal", chineseName: "米克尔·奥亚萨瓦尔", team: "西班牙", teamCode: "ESP", value: 2, matches: 1 },
+  { rank: 4, player: "Maxi Araujo", chineseName: "马克西·阿劳霍", team: "乌拉圭", teamCode: "URU", value: 2, matches: 2 },
   { rank: 20, player: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 20, player: "Raul Jimenez", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 20, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
@@ -58,7 +60,6 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 20, player: "Mattias Svanberg", chineseName: "马蒂亚斯·斯万贝里", team: "瑞典", teamCode: "SWE", value: 1, matches: 2 },
   { rank: 20, player: "Emam Ashour", chineseName: "埃马姆·阿舒尔", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 20, player: "Abdulelah Alamri", chineseName: "阿卜杜勒拉·阿拉姆里", team: "沙特阿拉伯", teamCode: "KSA", value: 1, matches: 1 },
-  { rank: 20, player: "Maxi Araujo", chineseName: "马克西·阿劳霍", team: "乌拉圭", teamCode: "URU", value: 1, matches: 1 },
   { rank: 20, player: "Ramin Rezaeian", chineseName: "拉明·雷扎伊安", team: "伊朗", teamCode: "IRN", value: 1, matches: 1 },
   { rank: 20, player: "Mohammad Mohebi", chineseName: "穆罕默德·莫赫比", team: "伊朗", teamCode: "IRN", value: 1, matches: 1 },
   { rank: 20, player: "Bradley Barcola", chineseName: "布拉德利·巴尔科拉", team: "法国", teamCode: "FRA", value: 1, matches: 1 },
@@ -87,7 +88,11 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 20, player: "Nathan Saliba", chineseName: "内森·萨利巴", team: "加拿大", teamCode: "CAN", value: 1, matches: 2 },
   { rank: 20, player: "Luis Romo", chineseName: "路易斯·罗莫", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 20, player: "Anthony Elanga", chineseName: "安东尼·埃兰加", team: "瑞典", teamCode: "SWE", value: 1, matches: 2 },
-  { rank: 20, player: "Franck Kessie", chineseName: "弗兰克·凯西", team: "科特迪瓦", teamCode: "CIV", value: 1, matches: 2 }
+  { rank: 20, player: "Franck Kessie", chineseName: "弗兰克·凯西", team: "科特迪瓦", teamCode: "CIV", value: 1, matches: 2 },
+  { rank: 20, player: "Lamine Yamal", chineseName: "拉明·亚马尔", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
+  { rank: 20, player: "Kevin Pina", chineseName: "凯文·皮纳", team: "佛得角", teamCode: "CPV", value: 1, matches: 1 },
+  { rank: 20, player: "Agustin Canobbio", chineseName: "阿古斯丁·卡诺比奥", team: "乌拉圭", teamCode: "URU", value: 1, matches: 1 },
+  { rank: 20, player: "Helio Varela", chineseName: "赫利奥·瓦雷拉", team: "佛得角", teamCode: "CPV", value: 1, matches: 1 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -132,6 +137,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "突尼斯 0-4 日本",
-    body: "已补入第 36 场终场结果：上田绮世两球，伊东纯也、镰田大地各一球；进球榜和可确认助攻榜已同步更新。"
+    title: "西班牙 4-0 沙特阿拉伯",
+    body: "已补入第 37-39 场终场结果：西班牙、乌拉圭各有新进球入账，比利时与伊朗互交白卷；进球榜已更新，未新增可确认助攻。"
   };
