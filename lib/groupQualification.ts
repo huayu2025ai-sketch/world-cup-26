@@ -14,6 +14,13 @@ const getRemainingGroupMatches = (groupId: string) =>
 
 const clonePoints = (points: PointsTable): PointsTable => ({ ...points });
 
+const getRemainingMatchCounts = (groupId: string) =>
+  getRemainingGroupMatches(groupId).reduce<Record<string, number>>((counts, match) => {
+    counts[match.home] = (counts[match.home] ?? 0) + 1;
+    counts[match.away] = (counts[match.away] ?? 0) + 1;
+    return counts;
+  }, {});
+
 const enumerateTables = (matches: ReturnType<typeof getRemainingGroupMatches>, points: PointsTable): PointsTable[] => {
   if (matches.length === 0) return [points];
 
@@ -42,11 +49,28 @@ const buildCurrentPoints = (group: WorldCupGroup) =>
     return table;
   }, {});
 
+const hasClinchedByPointsCeiling = (group: WorldCupGroup, teamName: string) => {
+  const currentPoints = buildCurrentPoints(group);
+  const remainingMatchCounts = getRemainingMatchCounts(group.id);
+  const teamBestPossible = (currentPoints[teamName] ?? 0) + (remainingMatchCounts[teamName] ?? 0) * 3;
+  const otherTeamsThatCanReach = group.standings.filter((standing) => {
+    if (standing.name === teamName) return false;
+    const bestPossible = (currentPoints[standing.name] ?? 0) + (remainingMatchCounts[standing.name] ?? 0) * 3;
+    return bestPossible >= teamBestPossible;
+  }).length;
+
+  return otherTeamsThatCanReach <= 1;
+};
+
 const hasClinchedTopTwo = (group: WorldCupGroup, teamName: string) => {
   const remainingMatches = getRemainingGroupMatches(group.id);
 
   if (remainingMatches.length === 0) {
     return group.standings.slice(0, 2).some((standing) => standing.name === teamName);
+  }
+
+  if (hasClinchedByPointsCeiling(group, teamName)) {
+    return true;
   }
 
   const outcomeTables = enumerateTables(remainingMatches, buildCurrentPoints(group));
