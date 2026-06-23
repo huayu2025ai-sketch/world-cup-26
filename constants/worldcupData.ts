@@ -42,6 +42,21 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-23T10:12:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月23日 10:12",
+    title: "I组与J组第41-43场赛果更新",
+    summary: "本次按北京时间 2026-06-23 10:12 复核并补入第 41-43 场终场结果：阿根廷 2-0 奥地利、法国 3-0 伊拉克、挪威 3-2 塞内加尔；同步重算 I/J 组积分榜与已确认个人统计。法国与挪威已数学锁定 32 强席位，J 组第 44 场尚未开赛。",
+    changes: [
+      "第 41 场补入阿根廷 2-0 奥地利：莱昂内尔·梅西 38'、90+5'。",
+      "第 42 场补入法国 3-0 伊拉克：基利安·姆巴佩 14'、54'，奥斯曼·登贝莱 66'；奥利塞明确送出第三球助攻。",
+      "第 43 场补入挪威 3-2 塞内加尔：马库斯·佩德森 43'，埃尔林·哈兰德 48'、58'，伊斯梅拉·萨尔 53'、90+3'；哈兰德 58' 由马丁·厄德高助攻。",
+      "I 组积分榜重算：法国与挪威同积 6 分，法国以净胜球 +5 领跑；塞内加尔与伊拉克各 0 分。",
+      "J 组积分榜重算：阿根廷 6 分领跑，奥地利 3 分第二，约旦与阿尔及利亚各 0 分，J 组第 44 场尚未开赛。",
+      "射手榜新增莱昂内尔·梅西至 5 球，埃尔林·哈兰德与基利安·姆巴佩至 4 球；奥斯曼·登贝莱、马库斯·佩德森、伊斯梅拉·萨尔各新增进球。",
+      "助攻榜仅确认奥利塞与马丁·厄德高各 1 次可靠来源明确确认的助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-22T12:35:34+08:00",
     updatedAtLabel: "北京时间 2026年6月22日 12:35",
     title: "G组第40场赛果补入",
@@ -795,10 +810,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "挪威", englishName: "Norway", code: "NOR", flag: "🇳🇴", confederation: "UEFA", pot: 3 }
     ],
     standings: [
-      { name: "法国", code: "FRA", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
-      { name: "挪威", code: "NOR", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 3 },
-      { name: "塞内加尔", code: "SEN", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 },
-      { name: "伊拉克", code: "IRQ", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 0 }
+      { name: "法国", code: "FRA", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 6 },
+      { name: "挪威", code: "NOR", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 3, goalDiff: 3, points: 6 },
+      { name: "塞内加尔", code: "SEN", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 3, goalsAgainst: 6, goalDiff: -3, points: 0 },
+      { name: "伊拉克", code: "IRQ", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 1, goalsAgainst: 6, goalDiff: -5, points: 0 }
     ]
   },
   {
@@ -815,8 +830,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "约旦", englishName: "Jordan", code: "JOR", flag: "🇯🇴", confederation: "AFC", pot: 4, debut: true }
     ],
     standings: [
-      { name: "阿根廷", code: "ARG", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 0, goalDiff: 3, points: 3 },
-      { name: "奥地利", code: "AUT", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
+      { name: "阿根廷", code: "ARG", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 5, goalsAgainst: 0, goalDiff: 5, points: 6 },
+      { name: "奥地利", code: "AUT", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 3 },
       { name: "约旦", code: "JOR", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 },
       { name: "阿尔及利亚", code: "ALG", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 }
     ]
