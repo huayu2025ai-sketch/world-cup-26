@@ -254,7 +254,11 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "埃尔林·哈兰德", team: "挪威", minute: "58'", type: "goal" },
     { player: "伊斯梅拉·萨尔", team: "塞内加尔", minute: "90+3'", type: "goal" },
   ] },
-  { id: 44, stage: "分组赛", group: "J", date: "2026-06-22", etTime: "23:00", home: "约旦", away: "阿尔及利亚", venue: "Levi's Stadium", city: "San Francisco Bay Area" },
+  { id: 44, stage: "分组赛", group: "J", date: "2026-06-22", etTime: "23:00", home: "约旦", away: "阿尔及利亚", venue: "Levi's Stadium", city: "San Francisco Bay Area", homeScore: 1, awayScore: 2, goalScorers: [
+    { player: "尼扎尔·拉什丹", team: "约旦", minute: "36'", type: "goal" },
+    { player: "阿明·古伊里", team: "阿尔及利亚", minute: "69'", type: "goal" },
+    { player: "纳迪尔·本布阿里", team: "阿尔及利亚", minute: "82'", type: "goal" },
+  ] },
   { id: 45, stage: "分组赛", group: "K", date: "2026-06-23", etTime: "13:00", home: "葡萄牙", away: "乌兹别克斯坦", venue: "Hard Rock Stadium", city: "Miami" },
   { id: 46, stage: "分组赛", group: "L", date: "2026-06-23", etTime: "16:00", home: "英格兰", away: "加纳", venue: "Gillette Stadium", city: "Boston" },
   { id: 47, stage: "分组赛", group: "L", date: "2026-06-23", etTime: "19:00", home: "巴拿马", away: "克罗地亚", venue: "BMO Field", city: "Toronto" },

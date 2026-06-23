@@ -99,7 +99,10 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 25, player: "Trezeguet", chineseName: "特雷泽盖", team: "埃及", teamCode: "EGY", value: 1, matches: 2 },
   { rank: 25, player: "Zizo", chineseName: "齐佐", team: "埃及", teamCode: "EGY", value: 1, matches: 2 },
   { rank: 25, player: "Mohamed Salah", chineseName: "穆罕默德·萨拉赫", team: "埃及", teamCode: "EGY", value: 1, matches: 2 },
-  { rank: 25, player: "Finn Surman", chineseName: "芬恩·瑟曼", team: "新西兰", teamCode: "NZL", value: 1, matches: 2 }
+  { rank: 25, player: "Finn Surman", chineseName: "芬恩·瑟曼", team: "新西兰", teamCode: "NZL", value: 1, matches: 2 },
+  { rank: 25, player: "Nizar Alrashdan", chineseName: "尼扎尔·拉什丹", team: "约旦", teamCode: "JOR", value: 1, matches: 2 },
+  { rank: 25, player: "Amine Gouiri", chineseName: "阿明·古伊里", team: "阿尔及利亚", teamCode: "ALG", value: 1, matches: 2 },
+  { rank: 25, player: "Nadhir Benbouali", chineseName: "纳迪尔·本布阿里", team: "阿尔及利亚", teamCode: "ALG", value: 1, matches: 2 }
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -146,6 +149,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-    title: "I组与J组赛果更新",
-    body: "已补入第 41-43 场终场结果：阿根廷、法国、挪威取胜；射手榜和助攻榜已同步更新，仅写入可明确确认的助攻。"
-  };
+  title: "J组第44场赛果更新",
+  body: "已补入第 44 场终场结果：约旦 1-2 阿尔及利亚；射手榜和助攻榜已同步更新，仅写入可明确确认的进球与助攻。"
+};
