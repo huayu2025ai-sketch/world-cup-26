@@ -270,7 +270,9 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 47, stage: "分组赛", group: "L", date: "2026-06-23", etTime: "19:00", home: "巴拿马", away: "克罗地亚", venue: "BMO Field", city: "Toronto", homeScore: 0, awayScore: 1, goalScorers: [
     { player: "安特·布迪米尔", team: "克罗地亚", minute: "54'", type: "goal" },
   ] },
-  { id: 48, stage: "分组赛", group: "K", date: "2026-06-23", etTime: "22:00", home: "哥伦比亚", away: "刚果民主共和国", venue: "AT&T Stadium", city: "Dallas" },
+  { id: 48, stage: "分组赛", group: "K", date: "2026-06-23", etTime: "22:00", home: "哥伦比亚", away: "刚果民主共和国", venue: "AT&T Stadium", city: "Dallas", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "丹尼尔·穆尼奥斯", team: "哥伦比亚", minute: "76'", type: "goal" },
+  ] },
   { id: 49, stage: "分组赛", group: "B", date: "2026-06-24", etTime: "15:00", home: "瑞士", away: "加拿大", venue: "BC Place", city: "Vancouver" },
   { id: 50, stage: "分组赛", group: "B", date: "2026-06-24", etTime: "15:00", home: "波黑", away: "卡塔尔", venue: "Lumen Field", city: "Seattle" },
   { id: 51, stage: "分组赛", group: "C", date: "2026-06-24", etTime: "18:00", home: "摩洛哥", away: "海地", venue: "NRG Stadium", city: "Houston" },

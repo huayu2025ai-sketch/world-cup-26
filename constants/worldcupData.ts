@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-24T22:26:46+08:00",
+    updatedAtLabel: "北京时间 2026年6月24日 22:26",
+    title: "K组第48场赛果更新",
+    summary: "本次按北京时间 2026-06-24 22:26 复核并补入第 48 场终场结果：哥伦比亚 1-0 刚果民主共和国；同步重算 K 组积分榜与已确认个人统计。第 45-47 场保持不变。",
+    changes: [
+      "第 48 场补入哥伦比亚 1-0 刚果民主共和国：丹尼尔·穆尼奥斯 76'。",
+      "K 组积分榜重算：哥伦比亚 2 战 6 分、净胜球 +3 领跑并已数学锁定 32 强席位；葡萄牙 2 战 4 分列第二；刚果民主共和国 2 战 1 分列第三；乌兹别克斯坦 2 战 0 分垫底。",
+      "45-47 场结果保持不变，本次未写入任何额外预测或未确认数据。",
+      "助攻榜未发现可靠来源明确确认的新增助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-24T10:55:58+08:00",
     updatedAtLabel: "北京时间 2026年6月24日 10:55",
     title: "K组与L组第45-47场赛果更新",
@@ -862,9 +874,9 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
+      { name: "哥伦比亚", code: "COL", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 4, goalsAgainst: 1, goalDiff: 3, points: 6 },
       { name: "葡萄牙", code: "POR", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 4 },
-      { name: "哥伦比亚", code: "COL", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
-      { name: "刚果民主共和国", code: "COD", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
+      { name: "刚果民主共和国", code: "COD", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 1 },
       { name: "乌兹别克斯坦", code: "UZB", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 0 }
     ]
   },

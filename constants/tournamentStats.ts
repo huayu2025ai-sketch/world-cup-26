@@ -32,6 +32,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 6, player: "Maxi Araujo", chineseName: "马克西·阿劳霍", team: "乌拉圭", teamCode: "URU", value: 2, matches: 2 },
   { rank: 6, player: "Ismaila Sarr", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 2, matches: 1 },
   { rank: 6, player: "Cristiano Ronaldo", chineseName: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", teamCode: "POR", value: 2, matches: 1 },
+  { rank: 6, player: "Daniel Munoz", chineseName: "丹尼尔·穆尼奥斯", team: "哥伦比亚", teamCode: "COL", value: 2, matches: 2 },
   { rank: 25, player: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 25, player: "Raul Jimenez", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 25, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
@@ -84,7 +85,6 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 25, player: "Jude Bellingham", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
   { rank: 25, player: "Marcus Rashford", chineseName: "马库斯·拉什福德", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
   { rank: 25, player: "Caleb Yirenkyi", chineseName: "凯莱布·耶伦基", team: "加纳", teamCode: "GHA", value: 1, matches: 1 },
-  { rank: 25, player: "Daniel Munoz", chineseName: "丹尼尔·穆尼奥斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 25, player: "Abbosbek Fayzullaev", chineseName: "阿博斯别克·法伊祖拉耶夫", team: "乌兹别克斯坦", teamCode: "UZB", value: 1, matches: 1 },
   { rank: 25, player: "Jefferson Lerma", chineseName: "杰斐逊·莱尔马", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 25, player: "Granit Xhaka", chineseName: "格拉尼特·扎卡", team: "瑞士", teamCode: "SUI", value: 1, matches: 2 },
@@ -157,6 +157,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-  title: "K组与L组赛果更新",
-  body: "已补入第 45-47 场终场结果：葡萄牙 5-0 乌兹别克斯坦、英格兰 0-0 加纳、巴拿马 0-1 克罗地亚；射手榜与助攻榜已同步更新，仅写入可明确确认的进球与助攻。"
+  title: "K组第48场赛果更新",
+  body: "已补入第 48 场终场结果：哥伦比亚 1-0 刚果民主共和国；射手榜同步加入丹尼尔·穆尼奥斯第 2 球，助攻榜未新增可靠确认记录。"
 };
