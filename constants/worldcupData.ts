@@ -42,6 +42,20 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-24T10:55:58+08:00",
+    updatedAtLabel: "北京时间 2026年6月24日 10:55",
+    title: "K组与L组第45-47场赛果更新",
+    summary: "本次按北京时间 2026-06-24 10:55 复核并补入第 45-47 场终场结果：葡萄牙 5-0 乌兹别克斯坦、英格兰 0-0 加纳、巴拿马 0-1 克罗地亚；同步重算 K/L 组积分榜与已确认个人统计。第 48 场哥伦比亚 vs 刚果民主共和国尚未到终场窗口，未写入。",
+    changes: [
+      "第 45 场补入葡萄牙 5-0 乌兹别克斯坦：克里斯蒂亚诺·罗纳尔多 6'、39'，努诺·门德斯 16'，阿卜杜科迪尔·胡萨诺夫 60' 乌龙，拉斐尔·莱奥 87'。",
+      "第 46 场补入英格兰 0-0 加纳：双方互交白卷。",
+      "第 47 场补入巴拿马 0-1 克罗地亚：安特·布迪米尔 54'。",
+      "K 组积分榜重算：葡萄牙 2 战 4 分领跑，哥伦比亚 1 战 3 分列第二，刚果民主共和国 1 战 1 分列第三，乌兹别克斯坦 2 战 0 分垫底。",
+      "L 组积分榜重算：英格兰与加纳同积 4 分，英格兰以进球数优势列第一；克罗地亚 3 分列第三，巴拿马 0 分垫底。",
+      "助攻仅确认四次：若昂·坎塞洛助攻克里斯蒂亚诺·罗纳尔多首球，布鲁诺·费尔南德斯助攻克里斯蒂亚诺·罗纳尔多第二球，克里斯蒂亚诺·罗纳尔多助攻拉斐尔·莱奥，约西普·斯塔尼希奇助攻安特·布迪米尔。"
+    ]
+  },
+  {
     updatedAt: "2026-06-23T16:53:36+08:00",
     updatedAtLabel: "北京时间 2026年6月23日 16:53",
     title: "J组第44场赛果更新",
@@ -848,10 +862,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
+      { name: "葡萄牙", code: "POR", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 4 },
       { name: "哥伦比亚", code: "COL", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 3 },
-      { name: "葡萄牙", code: "POR", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
       { name: "刚果民主共和国", code: "COD", played: 1, won: 0, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 1 },
-      { name: "乌兹别克斯坦", code: "UZB", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 0 }
+      { name: "乌兹别克斯坦", code: "UZB", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 0 }
     ]
   },
   {
@@ -868,10 +882,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "巴拿马", englishName: "Panama", code: "PAN", flag: "🇵🇦", confederation: "CONCACAF", pot: 3 }
     ],
     standings: [
-      { name: "英格兰", code: "ENG", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 2, goalDiff: 1, points: 3 },
-      { name: "加纳", code: "GHA", played: 1, won: 1, draw: 0, lost: 0, goalsFor: 1, goalsAgainst: 0, goalDiff: 1, points: 3 },
-      { name: "克罗地亚", code: "CRO", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 0 },
-      { name: "巴拿马", code: "PAN", played: 1, won: 0, draw: 0, lost: 1, goalsFor: 0, goalsAgainst: 1, goalDiff: -1, points: 0 }
+      { name: "英格兰", code: "ENG", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 3, goalsAgainst: 2, goalDiff: 1, points: 4 },
+      { name: "加纳", code: "GHA", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 0, goalDiff: 1, points: 4 },
+      { name: "克罗地亚", code: "CRO", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 3, goalsAgainst: 3, goalDiff: 0, points: 3 },
+      { name: "巴拿马", code: "PAN", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 }
     ]
   }
 ];

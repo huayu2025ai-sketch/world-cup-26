@@ -31,6 +31,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 6, player: "Mikel Oyarzabal", chineseName: "米克尔·奥亚萨瓦尔", team: "西班牙", teamCode: "ESP", value: 2, matches: 1 },
   { rank: 6, player: "Maxi Araujo", chineseName: "马克西·阿劳霍", team: "乌拉圭", teamCode: "URU", value: 2, matches: 2 },
   { rank: 6, player: "Ismaila Sarr", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 2, matches: 1 },
+  { rank: 6, player: "Cristiano Ronaldo", chineseName: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", teamCode: "POR", value: 2, matches: 1 },
   { rank: 25, player: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 25, player: "Raul Jimenez", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 25, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
@@ -73,6 +74,9 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 25, player: "Marko Arnautovic", chineseName: "马尔科·阿瑙托维奇", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
   { rank: 25, player: "Musa Al-Taamari", chineseName: "穆萨·阿尔塔马里", team: "约旦", teamCode: "JOR", value: 1, matches: 1 },
   { rank: 25, player: "Joao Neves", chineseName: "若昂·内维斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 25, player: "Nuno Mendes", chineseName: "努诺·门德斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 25, player: "Rafael Leao", chineseName: "拉斐尔·莱奥", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 25, player: "Ante Budimir", chineseName: "安特·布迪米尔", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
   { rank: 25, player: "Yoane Wissa", chineseName: "约安·维萨", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 },
   { rank: 25, player: "Harry Kane", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
   { rank: 25, player: "Martin Baturina", chineseName: "马丁·巴图里纳", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
@@ -145,10 +149,14 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 7, player: "Kaishu Sano", chineseName: "佐野海舟", team: "日本", teamCode: "JPN", value: 1, matches: 2 },
   { rank: 7, player: "Ayase Ueda", chineseName: "上田绮世", team: "日本", teamCode: "JPN", value: 1, matches: 2 },
   { rank: 7, player: "Keito Nakamura", chineseName: "中村敬斗", team: "日本", teamCode: "JPN", value: 1, matches: 2 },
-  { rank: 7, player: "Mohamed Hany", chineseName: "穆罕默德·哈尼", team: "埃及", teamCode: "EGY", value: 1, matches: 2 }
+  { rank: 7, player: "Mohamed Hany", chineseName: "穆罕默德·哈尼", team: "埃及", teamCode: "EGY", value: 1, matches: 2 },
+  { rank: 7, player: "Joao Cancelo", chineseName: "若昂·坎塞洛", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 7, player: "Bruno Fernandes", chineseName: "布鲁诺·费尔南德斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 7, player: "Cristiano Ronaldo", chineseName: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 7, player: "Josip Stanisic", chineseName: "约西普·斯塔尼希奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 }
 ];
 
 export const statsNotice = {
-  title: "J组第44场赛果更新",
-  body: "已补入第 44 场终场结果：约旦 1-2 阿尔及利亚；射手榜和助攻榜已同步更新，仅写入可明确确认的进球与助攻。"
+  title: "K组与L组赛果更新",
+  body: "已补入第 45-47 场终场结果：葡萄牙 5-0 乌兹别克斯坦、英格兰 0-0 加纳、巴拿马 0-1 克罗地亚；射手榜与助攻榜已同步更新，仅写入可明确确认的进球与助攻。"
 };
