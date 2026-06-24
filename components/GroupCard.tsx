@@ -37,9 +37,9 @@ export default function GroupCard({ group, qualifiedTeamCodes, onSelect }: Group
             return (
               <div
                 key={standing.code}
-                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 rounded-md border border-slate-700/80 bg-slate-900/55 px-2.5 py-1.5 max-[420px]:grid-cols-1 max-[420px]:items-start max-[420px]:gap-1.5"
+                className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 rounded-md border border-slate-700/80 bg-slate-900/55 px-2.5 py-1.5 max-[360px]:grid-cols-1 max-[360px]:items-start max-[360px]:gap-1.5"
               >
-                <div className="flex min-w-0 items-center gap-2.5 max-[420px]:items-start">
+                <div className="flex min-w-0 items-center gap-2.5 max-[360px]:items-start">
                   <span className="text-lg" aria-hidden="true">
                     {team.flag}
                   </span>
@@ -61,8 +61,8 @@ export default function GroupCard({ group, qualifiedTeamCodes, onSelect }: Group
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-end gap-1.5 max-[420px]:justify-start max-[420px]:pl-7">
-                  <span className="grid h-6 w-[3.5rem] place-items-center rounded-full bg-slate-800 text-[10px] font-black text-cyan-300">
+                <div className="flex items-center justify-end gap-1.5 max-[360px]:justify-start max-[360px]:pl-7">
+                  <span className="grid h-6 w-[3.5rem] shrink-0 place-items-center rounded-full bg-slate-800 text-[10px] font-black text-cyan-300 whitespace-nowrap">
                     {standing.played > 0 ? `${standing.points}分` : "-"}
                   </span>
                 </div>
