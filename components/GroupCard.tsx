@@ -50,17 +50,18 @@ export default function GroupCard({ group, qualifiedTeamCodes, onSelect }: Group
                         <span className="shrink-0 rounded bg-emerald-500/20 px-1 py-0 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">
                           已晋级
                         </span>
-                      )}
-                    </div>
-                    <p className="text-[10px] uppercase tracking-[0.16em] text-slate-500">
-                      {standing.code}
+                        )}
+                      </div>
+                    <p className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[10px] uppercase tracking-[0.16em] text-slate-500">
+                      <span>{standing.code}</span>
+                      <span className="text-slate-600">·</span>
+                      <span className="whitespace-nowrap">
+                        {standing.played > 0 ? `进球${standing.goalsFor}/失球${standing.goalsAgainst}` : "-"}
+                      </span>
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center justify-end gap-1.5 max-[420px]:justify-start max-[420px]:pl-7">
-                  <span className="whitespace-nowrap text-[11px] text-slate-400">
-                    {standing.played > 0 ? `进球${standing.goalsFor}/失球${standing.goalsAgainst}` : "-"}
-                  </span>
                   <span className="grid h-6 w-[3.5rem] place-items-center rounded-full bg-slate-800 text-[10px] font-black text-cyan-300">
                     {standing.played > 0 ? `${standing.points}分` : "-"}
                   </span>

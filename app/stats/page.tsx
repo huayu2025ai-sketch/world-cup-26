@@ -35,7 +35,7 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
                 <th className="px-2 py-2 sm:px-3">球员</th>
                 <th className="px-2 py-2 sm:px-3">球队</th>
                 <th className="px-1 py-2 text-right sm:px-3">{label}</th>
-                <th className="py-2 pl-1 text-right sm:pl-3">出场</th>
+                <th className="py-2 pl-1 text-right sm:pl-3">场次</th>
               </tr>
             </thead>
             <tbody>
