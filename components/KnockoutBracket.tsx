@@ -181,6 +181,97 @@ export default function KnockoutBracket() {
     return monthDay.replace("-", "/");
   };
 
+  const renderMatchCard = (
+    match: ScheduleMatch,
+    options?: { mobile?: boolean; top?: number; final?: boolean; round32?: boolean }
+  ) => {
+    const mobile = options?.mobile ?? false;
+    const top = options?.top;
+    const final = options?.final ?? false;
+    const round32 = options?.round32 ?? false;
+    const homeLabel = getDisplayMatchTeamLabel(match, "home");
+    const awayLabel = getDisplayMatchTeamLabel(match, "away");
+
+    return (
+      <div
+        key={match.id}
+        ref={mobile ? undefined : (el) => {
+          matchRefs.current[match.id] = el;
+        }}
+        className={`rounded-lg border shadow-lg shadow-slate-950/20 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(2,6,23,0.32)] ${
+          mobile
+            ? "w-full"
+            : round32
+              ? "relative w-[11rem] sm:w-[11rem]"
+              : "absolute left-0 w-[11rem] sm:w-[11rem]"
+        } ${
+          match.stage === "决赛"
+            ? "border-amber-400/40 bg-[linear-gradient(180deg,rgba(69,26,3,0.65),rgba(15,23,42,0.92))]"
+            : match.stage === "季军赛"
+              ? "border-orange-400/40 bg-[linear-gradient(180deg,rgba(67,20,7,0.55),rgba(15,23,42,0.92))]"
+              : "border-slate-700/80 bg-[linear-gradient(180deg,rgba(15,23,42,0.92),rgba(2,6,23,0.84))] hover:border-cyan-300/40"
+        }`}
+        style={
+          mobile
+            ? undefined
+            : round32
+              ? undefined
+              : top !== undefined
+              ? {
+                  top: top - COLUMN_BODY_OFFSET,
+                  left: final ? FINAL_CARD_SHIFT : 0
+                }
+              : { visibility: "hidden" }
+        }
+      >
+        <div className="mb-1 flex items-center justify-between gap-1 text-[8px] font-bold text-slate-400 sm:text-[9px]">
+          <span className="whitespace-nowrap rounded-full bg-white/5 px-1.5 py-0.5">{formatDateLabel(match.beijingTime)}</span>
+          <span className="whitespace-nowrap rounded-full bg-cyan-300/10 px-1.5 py-0.5 text-cyan-100">
+            {match.beijingTime.split(" ")[1]}
+          </span>
+        </div>
+
+        <div className={mobile ? "space-y-1" : "space-y-0.5"}>
+          <div className={`flex items-center justify-between gap-1 ${mobile ? "text-sm" : ""}`}>
+            <div className="flex min-w-0 items-center gap-1">
+              <span className={`${mobile ? "text-sm" : "text-[11px] sm:text-sm"}`} aria-hidden="true">
+                {getFlag(homeLabel)}
+              </span>
+              <span className={`truncate font-bold leading-none text-slate-50 ${mobile ? "text-[11px]" : "text-[10px] sm:text-[11px]"}`}>
+                {homeLabel}
+              </span>
+            </div>
+            {isFinished(match) && (
+              <span className="shrink-0 rounded-full bg-cyan-300/10 px-1.5 py-0.5 text-[9px] font-black text-cyan-200">
+                {match.homeScore}
+              </span>
+            )}
+          </div>
+
+          <div className={`flex items-center justify-between gap-1 ${mobile ? "text-sm" : ""}`}>
+            <div className="flex min-w-0 items-center gap-1">
+              <span className={`${mobile ? "text-sm" : "text-[11px] sm:text-sm"}`} aria-hidden="true">
+                {getFlag(awayLabel)}
+              </span>
+              <span className={`truncate font-bold leading-none text-slate-50 ${mobile ? "text-[11px]" : "text-[10px] sm:text-[11px]"}`}>
+                {awayLabel}
+              </span>
+            </div>
+            {isFinished(match) && (
+              <span className="shrink-0 rounded-full bg-cyan-300/10 px-1.5 py-0.5 text-[9px] font-black text-cyan-200">
+                {match.awayScore}
+              </span>
+            )}
+          </div>
+        </div>
+
+        {!isFinished(match) && !mobile && (
+          <div className="absolute -right-1 top-1/2 hidden h-1.5 w-1.5 -translate-y-1/2 rounded-full border border-slate-950 bg-cyan-300/80 shadow-[0_0_10px_rgba(34,211,238,0.55)] sm:block" />
+        )}
+      </div>
+    );
+  };
+
   const recomputeCardTops = () => {
     const inner = innerRef.current;
     if (!inner) return;
@@ -247,7 +338,38 @@ export default function KnockoutBracket() {
 
   return (
     <div className="relative">
-      <div className="relative overflow-hidden rounded-2xl border border-cyan-300/10 bg-[linear-gradient(180deg,rgba(15,23,42,0.78),rgba(2,6,23,0.55))] backdrop-blur-md">
+      <div className="lg:hidden">
+        <div className="space-y-4 rounded-2xl border border-cyan-300/10 bg-[linear-gradient(180deg,rgba(15,23,42,0.88),rgba(2,6,23,0.62))] p-3 backdrop-blur-md">
+          {COLUMNS.map((column) => (
+            <section key={`${column.title}-${column.stage}-mobile`} className="rounded-2xl border border-slate-700/70 bg-slate-950/35 p-3">
+              <div className="mb-3 flex items-center justify-between gap-2">
+                <span
+                  className={`inline-block rounded-full border px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.18em] ${
+                    column.isFinalColumn
+                      ? "border-amber-400/40 bg-amber-400/15 text-amber-200"
+                      : "border-cyan-300/20 bg-cyan-300/10 text-cyan-100"
+                  }`}
+                >
+                  {column.title}
+                </span>
+                <span className="text-[11px] font-bold text-slate-500">{column.matchIds.length} 场</span>
+              </div>
+              <div className="grid gap-2">
+                {column.matchIds.map((matchId) => {
+                  const match = matchMap.get(matchId);
+                  if (!match) return null;
+                  return renderMatchCard(match, { mobile: true });
+                })}
+              </div>
+            </section>
+          ))}
+        </div>
+        <p className="mt-3 text-center text-[11px] text-slate-500">
+          手机端已切换为纵向浏览模式，按轮次依次查看比赛卡片。
+        </p>
+      </div>
+
+      <div className="relative hidden overflow-hidden rounded-2xl border border-cyan-300/10 bg-[linear-gradient(180deg,rgba(15,23,42,0.78),rgba(2,6,23,0.55))] backdrop-blur-md lg:block">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.06),transparent_36%)]" />
         <div ref={innerRef} className="relative grid grid-cols-[1.2fr_1fr_0.9fr_0.82fr_0.98fr] gap-2 p-2 sm:gap-2.5 sm:p-3">
           {COLUMNS.map((column) => (
@@ -269,85 +391,11 @@ export default function KnockoutBracket() {
                   const match = matchMap.get(matchId);
                   if (!match) return null;
                   const top = column.stage === "32强" ? undefined : cardTops[match.id];
-                  const homeLabel = getDisplayMatchTeamLabel(match, "home");
-                  const awayLabel = getDisplayMatchTeamLabel(match, "away");
-
-                  return (
-                    <div
-                      key={match.id}
-                      ref={(el) => {
-                        matchRefs.current[match.id] = el;
-                      }}
-                      className={`${
-                        column.stage === "32强" ? "relative" : "absolute left-0"
-                      } w-[11rem] rounded-lg border shadow-lg shadow-slate-950/20 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(2,6,23,0.32)] sm:w-[11rem] ${
-                        match.stage === "决赛"
-                          ? "border-amber-400/40 bg-[linear-gradient(180deg,rgba(69,26,3,0.65),rgba(15,23,42,0.92))]"
-                          : match.stage === "季军赛"
-                            ? "border-orange-400/40 bg-[linear-gradient(180deg,rgba(67,20,7,0.55),rgba(15,23,42,0.92))]"
-                            : "border-slate-700/80 bg-[linear-gradient(180deg,rgba(15,23,42,0.92),rgba(2,6,23,0.84))] hover:border-cyan-300/40"
-                      }`}
-                      style={
-                        top !== undefined
-                          ? column.stage === "32强"
-                            ? undefined
-                            : {
-                                top: top - COLUMN_BODY_OFFSET,
-                                left: match.stage === "决赛" || match.stage === "季军赛" ? FINAL_CARD_SHIFT : 0
-                              }
-                          : column.stage === "32强"
-                            ? undefined
-                            : { visibility: "hidden" }
-                      }
-                    >
-                      <div className="mb-1 flex items-center justify-between gap-1 text-[8px] font-bold text-slate-400 sm:text-[9px]">
-                        <span className="whitespace-nowrap rounded-full bg-white/5 px-1.5 py-0.5">
-                          {formatDateLabel(match.beijingTime)}
-                        </span>
-                        <span className="whitespace-nowrap rounded-full bg-cyan-300/10 px-1.5 py-0.5 text-cyan-100">
-                          {match.beijingTime.split(" ")[1]}
-                        </span>
-                      </div>
-
-                      <div className="space-y-0.5">
-                        <div className="flex items-center justify-between gap-1">
-                          <div className="flex min-w-0 items-center gap-1">
-                            <span className="text-[11px] sm:text-sm" aria-hidden="true">
-                              {getFlag(homeLabel)}
-                            </span>
-                            <span className="truncate text-[10px] font-bold leading-none text-slate-50 sm:text-[11px]">
-                              {homeLabel}
-                            </span>
-                          </div>
-                          {isFinished(match) && (
-                            <span className="shrink-0 rounded-full bg-cyan-300/10 px-1.5 py-0.5 text-[9px] font-black text-cyan-200">
-                              {match.homeScore}
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="flex items-center justify-between gap-1">
-                          <div className="flex min-w-0 items-center gap-1">
-                            <span className="text-[11px] sm:text-sm" aria-hidden="true">
-                              {getFlag(awayLabel)}
-                            </span>
-                            <span className="truncate text-[10px] font-bold leading-none text-slate-50 sm:text-[11px]">
-                              {awayLabel}
-                            </span>
-                          </div>
-                          {isFinished(match) && (
-                            <span className="shrink-0 rounded-full bg-cyan-300/10 px-1.5 py-0.5 text-[9px] font-black text-cyan-200">
-                              {match.awayScore}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-
-                      {!isFinished(match) && (
-                        <div className="absolute -right-1 top-1/2 hidden h-1.5 w-1.5 -translate-y-1/2 rounded-full border border-slate-950 bg-cyan-300/80 shadow-[0_0_10px_rgba(34,211,238,0.55)] sm:block" />
-                      )}
-                    </div>
-                  );
+                  return renderMatchCard(match, {
+                    round32: column.stage === "32强",
+                    top,
+                    final: match.stage === "决赛" || match.stage === "季军赛"
+                  });
                 })}
               </div>
             </div>
