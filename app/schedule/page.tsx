@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { scheduleMatches, scheduleStages, type ScheduleMatch } from "@/constants/scheduleData";
 import { getMatchNews, type MatchNewsItem } from "@/constants/scheduleNews";
+import { getDisplayMatchTeamLabel } from "@/lib/knockoutDisplay";
 
 const formatDate = (value: string) => {
   return new Intl.DateTimeFormat("zh-CN", {
@@ -125,6 +126,8 @@ export default function SchedulePage() {
         match.beijingTime,
         match.home,
         match.away,
+        getDisplayMatchTeamLabel(match, "home"),
+        getDisplayMatchTeamLabel(match, "away"),
         match.venue,
         match.city
       ]
@@ -292,6 +295,8 @@ export default function SchedulePage() {
                 const highSeverityCount = news ? news.items.filter((item) => item.severity === "high").length : 0;
                 const newsIndex = newsIndexMap[match.id] ?? 0;
                 const currentItem = news?.items[newsIndex];
+                const homeLabel = getDisplayMatchTeamLabel(match, "home");
+                const awayLabel = getDisplayMatchTeamLabel(match, "away");
 
                 return (
                 <div
@@ -315,7 +320,7 @@ export default function SchedulePage() {
 
                   <div className="min-w-0">
                     <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
-                      <p className="truncate text-right text-sm font-black text-slate-50">{match.home}</p>
+                      <p className="truncate text-right text-sm font-black text-slate-50">{homeLabel}</p>
                       {match.homeScore !== undefined && match.awayScore !== undefined ? (
                         <span className="rounded-full border border-cyan-300/40 bg-cyan-300/15 px-2 py-0.5 text-[10px] font-black text-cyan-200">
                           {match.homeScore} - {match.awayScore}
@@ -325,7 +330,7 @@ export default function SchedulePage() {
                           VS
                         </span>
                       )}
-                      <p className="truncate text-sm font-black text-slate-50">{match.away}</p>
+                      <p className="truncate text-sm font-black text-slate-50">{awayLabel}</p>
                     </div>
                     <p className="mt-1 truncate text-center text-[11px] font-medium text-slate-300">
                       {match.venue} · {match.city}
@@ -338,7 +343,7 @@ export default function SchedulePage() {
                           <div className="mt-1.5 grid grid-cols-2 gap-6">
                             <div className="space-y-1">
                               {match.goalScorers
-                                .filter((s) => s.team === match.home)
+                                .filter((s) => s.team === match.home || s.team === homeLabel)
                                 .map((scorer, idx) => (
                                   <div key={idx} className="flex items-center justify-end gap-2 text-xs">
                                     <span className="inline-block w-10 shrink-0 rounded bg-slate-800 px-1.5 py-0.5 text-center text-[10px] font-bold text-cyan-100">
@@ -356,7 +361,7 @@ export default function SchedulePage() {
                             </div>
                             <div className="space-y-1">
                               {match.goalScorers
-                                .filter((s) => s.team === match.away)
+                                .filter((s) => s.team === match.away || s.team === awayLabel)
                                 .map((scorer, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-xs">
                                     <span className="truncate font-bold text-slate-100">{scorer.player}</span>

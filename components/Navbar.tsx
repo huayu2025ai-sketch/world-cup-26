@@ -8,6 +8,7 @@ import { scheduleMatches, type ScheduleMatch } from "@/constants/scheduleData";
 const navItems = [
   { href: "/", path: "/", label: "分组" },
   { href: "/schedule", path: "/schedule", label: "赛程" },
+  { href: "/knockout", path: "/knockout", label: "对阵" },
   { href: "/predictions#pending-prediction", path: "/predictions", label: "预测" },
   { href: "/export", path: "/export", label: "素材" },
   { href: "/stats", path: "/stats", label: "数据" }
