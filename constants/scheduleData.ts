@@ -305,8 +305,15 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "胡利安·基尼奥内斯", team: "墨西哥", minute: "61'", type: "goal" },
     { player: "阿尔瓦罗·菲达尔戈", team: "墨西哥", minute: "90+4'", type: "goal" },
   ] },
-  { id: 55, stage: "分组赛", group: "E", date: "2026-06-25", etTime: "16:00", home: "库拉索", away: "科特迪瓦", venue: "Lincoln Financial Field", city: "Philadelphia" },
-  { id: 56, stage: "分组赛", group: "E", date: "2026-06-25", etTime: "16:00", home: "厄瓜多尔", away: "德国", venue: "MetLife Stadium", city: "New York New Jersey" },
+  { id: 55, stage: "分组赛", group: "E", date: "2026-06-25", etTime: "16:00", home: "库拉索", away: "科特迪瓦", venue: "Lincoln Financial Field", city: "Philadelphia", homeScore: 0, awayScore: 2, goalScorers: [
+    { player: "Nicolas Pepe", team: "科特迪瓦", minute: "7'", type: "goal" },
+    { player: "Nicolas Pepe", team: "科特迪瓦", minute: "64'", type: "goal" },
+  ] },
+  { id: 56, stage: "分组赛", group: "E", date: "2026-06-25", etTime: "16:00", home: "厄瓜多尔", away: "德国", venue: "MetLife Stadium", city: "New York New Jersey", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "Leroy Sane", team: "德国", minute: "2'", type: "goal" },
+    { player: "Nilson Angulo", team: "厄瓜多尔", minute: "9'", type: "goal" },
+    { player: "Gonzalo Plata", team: "厄瓜多尔", minute: "77'", type: "goal" },
+  ] },
   { id: 57, stage: "分组赛", group: "F", date: "2026-06-25", etTime: "19:00", home: "突尼斯", away: "荷兰", venue: "AT&T Stadium", city: "Dallas" },
   { id: 58, stage: "分组赛", group: "F", date: "2026-06-25", etTime: "19:00", home: "日本", away: "瑞典", venue: "BC Place", city: "Vancouver" },
   { id: 59, stage: "分组赛", group: "D", date: "2026-06-25", etTime: "22:00", home: "土耳其", away: "美国", venue: "SoFi Stadium", city: "Los Angeles" },
