@@ -39,33 +39,33 @@ export const recommendedBookmakers: Bookmaker[] = [
   { key: "draftkings", name: "数据源 E", marketRole: "北美市场样本" }
 ];
 
-export const oddsDataUpdatedAt = "2026-06-24";
+export const oddsDataUpdatedAt = "2026-06-26";
 
-export const championFavoritesUpdatedAt = "2026-06-24";
+export const championFavoritesUpdatedAt = "2026-06-26";
 
 export const championFavorites: ChampionFavorite[] = [
   {
     rank: 1,
-    team: "法国",
-    englishName: "France",
-    code: "FRA",
-    flag: "🇫🇷",
-    consensusAmericanOdds: 400,
-    consensusDecimalOdds: 5,
-    marketImpliedProbability: 0.2,
-    modelProbability: 0.2,
-    sourceNote: "公开市场共识第 1"
-  },
-  {
-    rank: 2,
     team: "西班牙",
     englishName: "Spain",
     code: "ESP",
     flag: "🇪🇸",
-    consensusAmericanOdds: 500,
-    consensusDecimalOdds: 6,
-    marketImpliedProbability: 0.1667,
-    modelProbability: 0.1667,
+    consensusAmericanOdds: 450,
+    consensusDecimalOdds: 5.5,
+    marketImpliedProbability: 0.1818,
+    modelProbability: 0.204,
+    sourceNote: "公开市场共识第 1"
+  },
+  {
+    rank: 2,
+    team: "法国",
+    englishName: "France",
+    code: "FRA",
+    flag: "🇫🇷",
+    consensusAmericanOdds: 475,
+    consensusDecimalOdds: 5.75,
+    marketImpliedProbability: 0.1739,
+    modelProbability: 0.2,
     sourceNote: "公开市场共识第 2"
   },
   {
@@ -77,7 +77,7 @@ export const championFavorites: ChampionFavorite[] = [
     consensusAmericanOdds: 650,
     consensusDecimalOdds: 7.5,
     marketImpliedProbability: 0.1333,
-    modelProbability: 0.1333,
+    modelProbability: 0.071,
     sourceNote: "公开市场共识第 3"
   },
   {
@@ -89,7 +89,7 @@ export const championFavorites: ChampionFavorite[] = [
     consensusAmericanOdds: 650,
     consensusDecimalOdds: 7.5,
     marketImpliedProbability: 0.1333,
-    modelProbability: 0.1333,
+    modelProbability: 0.18,
     sourceNote: "公开市场共识第 4"
   },
   {
@@ -98,10 +98,10 @@ export const championFavorites: ChampionFavorite[] = [
     englishName: "Portugal",
     code: "POR",
     flag: "🇵🇹",
-    consensusAmericanOdds: 1100,
-    consensusDecimalOdds: 12,
-    marketImpliedProbability: 0.0833,
-    modelProbability: 0.0833,
+    consensusAmericanOdds: 800,
+    consensusDecimalOdds: 9,
+    marketImpliedProbability: 0.1111,
+    modelProbability: 0.08,
     sourceNote: "公开市场共识第 5"
   }
 ];
@@ -291,12 +291,12 @@ export const matchOddsById: Record<number, MatchBookmakerOdds[]> = {
     { bookmaker: "draftkings", odds: { home: 4.1, draw: 3.35, away: 1.87 }, capturedAt: "2026-06-21" }
   ],
   42: [
-    { bookmaker: "pinnacle", odds: { home: 1.07, draw: 11, away: 26 }, capturedAt: "2026-06-24" }
+    { bookmaker: "pinnacle", odds: { home: 1.07, draw: 11, away: 26 }, capturedAt: "2026-06-26" }
   ],
   43: [
-    { bookmaker: "pinnacle", odds: { home: 2.1, draw: 3.3, away: 3.3 }, capturedAt: "2026-06-24" }
+    { bookmaker: "pinnacle", odds: { home: 2.1, draw: 3.3, away: 3.3 }, capturedAt: "2026-06-26" }
   ],
   44: [
-    { bookmaker: "pinnacle", odds: { home: 6, draw: 4, away: 1.44 }, capturedAt: "2026-06-24" }
+    { bookmaker: "pinnacle", odds: { home: 6, draw: 4, away: 1.44 }, capturedAt: "2026-06-26" }
   ]
 };
