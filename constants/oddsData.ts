@@ -318,5 +318,25 @@ export const matchOddsById: Record<number, MatchBookmakerOdds[]> = {
   ],
   60: [
     { bookmaker: "pinnacle", odds: { home: 2.67, draw: 2.25, away: 4 }, capturedAt: "2026-06-26" }
+  ],
+  61: [
+    { bookmaker: "pinnacle", odds: { home: 4.75, draw: 4.2, away: 1.72 }, capturedAt: "2026-06-26" },
+    { bookmaker: "betfair", odds: { home: 5, draw: 4, away: 1.75 }, capturedAt: "2026-06-26" },
+    { bookmaker: "bet365", odds: { home: 5, draw: 3.9, away: 1.73 }, capturedAt: "2026-06-26" }
+  ],
+  62: [
+    { bookmaker: "pinnacle", odds: { home: 1.96, draw: 3.3, away: 4.4 }, capturedAt: "2026-06-26" },
+    { bookmaker: "betfair", odds: { home: 2, draw: 3.25, away: 4.5 }, capturedAt: "2026-06-26" },
+    { bookmaker: "bet365", odds: { home: 2, draw: 3.3, away: 4.5 }, capturedAt: "2026-06-26" }
+  ],
+  65: [
+    { bookmaker: "pinnacle", odds: { home: 1.85, draw: 3.6, away: 4.9 }, capturedAt: "2026-06-26" },
+    { bookmaker: "betfair", odds: { home: 1.8, draw: 3.5, away: 5 }, capturedAt: "2026-06-26" },
+    { bookmaker: "bet365", odds: { home: 1.83, draw: 3.6, away: 4.75 }, capturedAt: "2026-06-26" }
+  ],
+  66: [
+    { bookmaker: "pinnacle", odds: { home: 3.1, draw: 3.4, away: 2.3 }, capturedAt: "2026-06-26" },
+    { bookmaker: "betfair", odds: { home: 3.2, draw: 3.3, away: 2.25 }, capturedAt: "2026-06-26" },
+    { bookmaker: "bet365", odds: { home: 3.1, draw: 3.4, away: 2.2 }, capturedAt: "2026-06-26" }
   ]
 };
