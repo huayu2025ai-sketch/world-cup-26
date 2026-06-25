@@ -33,10 +33,9 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 6, player: "Ismaila Sarr", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 2, matches: 1 },
   { rank: 6, player: "Cristiano Ronaldo", chineseName: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", teamCode: "POR", value: 2, matches: 1 },
   { rank: 6, player: "Daniel Munoz", chineseName: "丹尼尔·穆尼奥斯", team: "哥伦比亚", teamCode: "COL", value: 2, matches: 2 },
-  { rank: 6, player: "Breel Embolo", chineseName: "布雷尔·恩博洛", team: "瑞士", teamCode: "SUI", value: 2, matches: 3 },
+  { rank: 6, player: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 2, matches: 3 },
   { rank: 6, player: "Ruben Vargas", chineseName: "鲁本·巴尔加斯", team: "瑞士", teamCode: "SUI", value: 2, matches: 3 },
   { rank: 6, player: "Ermin Mahmic", chineseName: "埃尔明·马赫米奇", team: "波黑", teamCode: "BIH", value: 2, matches: 3 },
-  { rank: 25, player: "Julian Quinones", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 25, player: "Raul Jimenez", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 25, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
   { rank: 25, player: "Hyeongyu Oh", chineseName: "吴贤揆", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
@@ -94,6 +93,10 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 25, player: "Teboho Mokoena", chineseName: "特博霍·莫科纳", team: "南非", teamCode: "RSA", value: 1, matches: 2 },
   { rank: 25, player: "Nathan Saliba", chineseName: "内森·萨利巴", team: "加拿大", teamCode: "CAN", value: 1, matches: 2 },
   { rank: 25, player: "Luis Romo", chineseName: "路易斯·罗莫", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
+  { rank: 25, player: "Breel Embolo", chineseName: "布雷尔·恩博洛", team: "瑞士", teamCode: "SUI", value: 1, matches: 3 },
+  { rank: 25, player: "Mateo Chavez", chineseName: "马特奥·查韦斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 3 },
+  { rank: 25, player: "Alvaro Fidalgo", chineseName: "阿尔瓦罗·菲达尔戈", team: "墨西哥", teamCode: "MEX", value: 1, matches: 3 },
+  { rank: 25, player: "Thapelo Maseko", chineseName: "塔佩洛·马塞科", team: "南非", teamCode: "RSA", value: 1, matches: 3 },
   { rank: 25, player: "Anthony Elanga", chineseName: "安东尼·埃兰加", team: "瑞典", teamCode: "SWE", value: 1, matches: 2 },
   { rank: 25, player: "Franck Kessie", chineseName: "弗兰克·凯西", team: "科特迪瓦", teamCode: "CIV", value: 1, matches: 2 },
   { rank: 25, player: "Lamine Yamal", chineseName: "拉明·亚马尔", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
@@ -170,6 +173,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-  title: "B组与C组赛果更新",
-  body: "已补入第 49-52 场终场结果：瑞士 2-1 加拿大、波黑 3-1 卡塔尔、摩洛哥 4-2 海地、苏格兰 0-3 巴西；射手榜和助攻榜已同步更新。"
+  title: "A组第53-54场赛果更新",
+  body: "已补入第 53-54 场终场结果：南非 1-0 韩国、捷克 0-3 墨西哥；射手榜已同步更新，助攻仅保留已确认记录。"
 };

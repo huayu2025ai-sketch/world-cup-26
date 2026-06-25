@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-25T21:53:28+08:00",
+    updatedAtLabel: "北京时间 2026年6月25日 21:53",
+    title: "A组第53-54场赛果更新",
+    summary: "本次按北京时间 2026-06-25 21:53 复核并补入第 53-54 场终场结果：南非 1-0 韩国、捷克 0-3 墨西哥；同步重算 A 组积分榜与已确认个人统计。第 55-60 场仍未到完赛窗口，未写入。",
+    changes: [
+      "第 53 场补入南非 1-0 韩国：塔佩洛·马塞科 63'。",
+      "第 54 场补入捷克 0-3 墨西哥：马特奥·查韦斯 54'、胡利安·基尼奥内斯 61'、阿尔瓦罗·菲达尔戈 90+4'。",
+      "A 组积分榜重算：墨西哥 3 战 9 分锁定头名并已确定晋级；南非 3 战 4 分列第二并已确定晋级；韩国 3 战 3 分列第三，捷克 3 战 1 分垫底。",
+      "第 55-60 场在本次运行时仍未到北京时间完赛窗口，未写入终场数据。"
+    ]
+  },
+  {
     updatedAt: "2026-06-25T09:13:46+08:00",
     updatedAtLabel: "北京时间 2026年6月25日 09:13",
     title: "B组与C组第49-52场赛果更新",
@@ -689,10 +701,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "捷克", englishName: "Czechia", code: "CZE", flag: "🇨🇿", confederation: "UEFA", pot: 4 }
     ],
     standings: [
-      { name: "墨西哥", code: "MEX", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 0, goalDiff: 3, points: 6 },
-      { name: "韩国", code: "KOR", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
-      { name: "捷克", code: "CZE", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 1 },
-      { name: "南非", code: "RSA", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDiff: -2, points: 1 }
+      { name: "墨西哥", code: "MEX", played: 3, won: 3, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 0, goalDiff: 6, points: 9 },
+      { name: "南非", code: "RSA", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 4 },
+      { name: "韩国", code: "KOR", played: 3, won: 1, draw: 0, lost: 2, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 3 },
+      { name: "捷克", code: "CZE", played: 3, won: 0, draw: 1, lost: 2, goalsFor: 2, goalsAgainst: 6, goalDiff: -4, points: 1 }
     ]
   },
   {

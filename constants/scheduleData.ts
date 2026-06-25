@@ -297,8 +297,14 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "维尼修斯·儒尼奥尔", team: "巴西", minute: "45+3'", type: "goal" },
     { player: "马特乌斯·库尼亚", team: "巴西", minute: "60'", type: "goal" },
   ] },
-  { id: 53, stage: "分组赛", group: "A", date: "2026-06-24", etTime: "21:00", home: "南非", away: "韩国", venue: "Estadio Akron", city: "Guadalajara" },
-  { id: 54, stage: "分组赛", group: "A", date: "2026-06-24", etTime: "21:00", home: "捷克", away: "墨西哥", venue: "Estadio Azteca", city: "Mexico City" },
+  { id: 53, stage: "分组赛", group: "A", date: "2026-06-24", etTime: "21:00", home: "南非", away: "韩国", venue: "Estadio Akron", city: "Guadalajara", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "塔佩洛·马塞科", team: "南非", minute: "63'", type: "goal" },
+  ] },
+  { id: 54, stage: "分组赛", group: "A", date: "2026-06-24", etTime: "21:00", home: "捷克", away: "墨西哥", venue: "Estadio Azteca", city: "Mexico City", homeScore: 0, awayScore: 3, goalScorers: [
+    { player: "马特奥·查韦斯", team: "墨西哥", minute: "54'", type: "goal" },
+    { player: "胡利安·基尼奥内斯", team: "墨西哥", minute: "61'", type: "goal" },
+    { player: "阿尔瓦罗·菲达尔戈", team: "墨西哥", minute: "90+4'", type: "goal" },
+  ] },
   { id: 55, stage: "分组赛", group: "E", date: "2026-06-25", etTime: "16:00", home: "库拉索", away: "科特迪瓦", venue: "Lincoln Financial Field", city: "Philadelphia" },
   { id: 56, stage: "分组赛", group: "E", date: "2026-06-25", etTime: "16:00", home: "厄瓜多尔", away: "德国", venue: "MetLife Stadium", city: "New York New Jersey" },
   { id: 57, stage: "分组赛", group: "F", date: "2026-06-25", etTime: "19:00", home: "突尼斯", away: "荷兰", venue: "AT&T Stadium", city: "Dallas" },
