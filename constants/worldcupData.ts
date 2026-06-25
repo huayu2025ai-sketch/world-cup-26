@@ -42,6 +42,21 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-25T09:13:46+08:00",
+    updatedAtLabel: "北京时间 2026年6月25日 09:13",
+    title: "B组与C组第49-52场赛果更新",
+    summary: "本次按北京时间 2026-06-25 09:13 复核并补入第 49-52 场终场结果：瑞士 2-1 加拿大、波黑 3-1 卡塔尔、摩洛哥 4-2 海地、苏格兰 0-3 巴西；同步重算 B/C 组积分榜与已确认个人统计。A组第53-54场仍未到终场窗口，未写入。",
+    changes: [
+      "第 49 场补入瑞士 2-1 加拿大：鲁本·巴尔加斯 46'，约翰·曼赞比 57'，普罗米斯·戴维 76'。",
+      "第 50 场补入波黑 3-1 卡塔尔：凯里姆·阿拉伊贝戈维奇 29'，苏丹·阿尔布拉克 34' 乌龙，哈桑·海多斯 42'，埃尔明·马赫米奇 80'。",
+      "第 51 场补入摩洛哥 4-2 海地：莱尼·约瑟夫 10'，阿什拉夫·哈基米 39'，威尔逊·伊西多尔 43'，伊斯梅尔·塞巴里 45+1'，苏菲安·拉希米 78'，杰西姆·亚辛 89'。",
+      "第 52 场补入苏格兰 0-3 巴西：维尼修斯·儒尼奥尔 7'、45+3'，马特乌斯·库尼亚 60'。",
+      "B 组积分榜重算：瑞士 3 战 7 分锁定头名，加拿大 3 战 4 分、净胜球 +5 列第二并已确定晋级；波黑 3 战 4 分列第三，卡塔尔 3 战 1 分垫底。",
+      "C 组积分榜重算：巴西 3 战 7 分、净胜球 +6 领跑并已确定晋级；摩洛哥 3 战 7 分、净胜球 +3 列第二并已确定晋级；苏格兰 3 战 3 分列第三，海地 3 战 0 分垫底。",
+      "助攻榜新增/调整为：约翰·曼赞比、布雷尔·恩博洛、内森·萨利巴、阿什拉夫·哈基米、苏菲安·拉希米、布鲁诺·吉马良斯各有可靠确认助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-24T22:26:46+08:00",
     updatedAtLabel: "北京时间 2026年6月24日 22:26",
     title: "K组第48场赛果更新",
@@ -694,10 +709,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "瑞士", englishName: "Switzerland", code: "SUI", flag: "🇨🇭", confederation: "UEFA", pot: 2 }
     ],
     standings: [
-      { name: "加拿大", code: "CAN", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 7, goalsAgainst: 1, goalDiff: 6, points: 4 },
-      { name: "瑞士", code: "SUI", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 5, goalsAgainst: 2, goalDiff: 3, points: 4 },
-      { name: "波黑", code: "BIH", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 5, goalDiff: -3, points: 1 },
-      { name: "卡塔尔", code: "QAT", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 1 }
+      { name: "瑞士", code: "SUI", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 7, goalsAgainst: 3, goalDiff: 4, points: 7 },
+      { name: "加拿大", code: "CAN", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 8, goalsAgainst: 3, goalDiff: 5, points: 4 },
+      { name: "波黑", code: "BIH", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 5, goalsAgainst: 6, goalDiff: -1, points: 4 },
+      { name: "卡塔尔", code: "QAT", played: 3, won: 0, draw: 1, lost: 2, goalsFor: 2, goalsAgainst: 10, goalDiff: -8, points: 1 }
     ]
   },
   {
@@ -714,10 +729,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "苏格兰", englishName: "Scotland", code: "SCO", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", confederation: "UEFA", pot: 3 }
     ],
     standings: [
-      { name: "巴西", code: "BRA", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 4, goalsAgainst: 1, goalDiff: 3, points: 4 },
-      { name: "摩洛哥", code: "MAR", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 2, goalsAgainst: 1, goalDiff: 1, points: 4 },
-      { name: "苏格兰", code: "SCO", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 3 },
-      { name: "海地", code: "HAI", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 0, goalsAgainst: 4, goalDiff: -4, points: 0 }
+      { name: "巴西", code: "BRA", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 7, goalsAgainst: 1, goalDiff: 6, points: 7 },
+      { name: "摩洛哥", code: "MAR", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 6, goalsAgainst: 3, goalDiff: 3, points: 7 },
+      { name: "苏格兰", code: "SCO", played: 3, won: 1, draw: 0, lost: 2, goalsFor: 1, goalsAgainst: 4, goalDiff: -3, points: 3 },
+      { name: "海地", code: "HAI", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 2, goalsAgainst: 8, goalDiff: -6, points: 0 }
     ]
   },
   {
