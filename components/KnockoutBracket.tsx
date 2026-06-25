@@ -88,7 +88,8 @@ export default function KnockoutBracket() {
 
       const from = getCenter(fromEl);
       const to = getCenter(toEl);
-      const d = `M ${from.right} ${from.y} L ${to.left} ${to.y}`;
+      const elbowX = from.right + (to.left - from.right) * 0.5;
+      const d = `M ${from.right} ${from.y} H ${elbowX} V ${to.y} H ${to.left}`;
       newLines.push({
         id: fromId * 100 + toId + (variant === "loser" ? 1 : 0),
         d,
