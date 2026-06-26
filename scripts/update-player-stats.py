@@ -111,12 +111,14 @@ def update_tournament_stats(match_id, home_team, away_team, home_score, away_sco
             player = goal.get('player', '')
             count = goal.get('count', 1)
             team_name = goal.get('team', '')
+            chinese_name = goal.get('chineseName') or goal.get('chinese_name')
+            team_code = goal.get('teamCode') or goal.get('team_code')
             
             # 查找球队
             if not team_name:
                 team_name = find_player_in_roster(player, teams)
             
-            team_code = team_code_map.get(team_name, team_name[:3].upper() if team_name else 'UNK')
+            team_code = team_code or team_code_map.get(team_name, team_name[:3].upper() if team_name else 'UNK')
             
             # 查找或创建条目
             existing = next((g for g in goals_ranking if g['player'] == player), None)
@@ -125,7 +127,7 @@ def update_tournament_stats(match_id, home_team, away_team, home_score, away_sco
                 existing['matches'] += 1
             else:
                 # 添加新条目
-                chinese_name = player.split()[-1] if ' ' in player else player  # 简化处理
+                chinese_name = chinese_name or (player.split()[-1] if ' ' in player else player)  # 兜底推断
                 goals_ranking.append({
                     'rank': 0,
                     'player': player,
@@ -142,18 +144,20 @@ def update_tournament_stats(match_id, home_team, away_team, home_score, away_sco
             player = assist.get('player', '')
             count = assist.get('count', 1)
             team_name = assist.get('team', '')
+            chinese_name = assist.get('chineseName') or assist.get('chinese_name')
+            team_code = assist.get('teamCode') or assist.get('team_code')
             
             if not team_name:
                 team_name = find_player_in_roster(player, teams)
             
-            team_code = team_code_map.get(team_name, team_name[:3].upper() if team_name else 'UNK')
+            team_code = team_code or team_code_map.get(team_name, team_name[:3].upper() if team_name else 'UNK')
             
             existing = next((a for a in assists_ranking if a['player'] == player), None)
             if existing:
                 existing['value'] += count
                 existing['matches'] += 1
             else:
-                chinese_name = player.split()[-1] if ' ' in player else player
+                chinese_name = chinese_name or (player.split()[-1] if ' ' in player else player)
                 assists_ranking.append({
                     'rank': 0,
                     'player': player,

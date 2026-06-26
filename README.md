@@ -200,6 +200,19 @@ Output Directory: .next
 Node.js Version: 20.x
 ```
 
+## 自动更新
+
+仓库包含一个每天北京时间 12:00 执行的 GitHub Actions 工作流：
+
+- 文件：[.github/workflows/worldcup-daily-update.yml](/Users/huayu/Documents/fifa26/.github/workflows/worldcup-daily-update.yml)
+- 逻辑：先检测已完赛但尚未写入的比赛，再从可配置的可信结果源同步数据，最后构建并自动提交
+- 结果源优先级：
+  - `WORLD_CUP_RESULTS_JSON`
+  - `WORLD_CUP_RESULTS_URL`
+  - `WORLD_CUP_RESULTS_FILE`
+
+结果源可以提供官方/可信来源的 JSON 结果清单，格式详见 `scripts/daily-worldcup-update.py` 注释。若未配置结果源，工作流会只做检测，不会写入新数据。
+
 如果要在 Vercel 上启用访问统计，请在项目环境变量中配置：
 
 ```text

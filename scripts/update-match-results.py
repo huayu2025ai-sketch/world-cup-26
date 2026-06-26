@@ -63,8 +63,8 @@ def parse_beijing_time(bt_str, year=None):
     
     return datetime(year, month, day, hour, minute, tzinfo=BJ_TIMEZONE)
 
-def update_schedule_with_score(match_id, home_score, away_score):
-    """更新 scheduleData.ts 中对应比赛的比分"""
+def update_schedule_with_score(match_id, home_score, away_score, goal_scorers=None):
+    """更新 scheduleData.ts 中对应比赛的比分和进球记录"""
     schedule_path = PROJECT_ROOT / "constants" / "scheduleData.ts"
 
     with open(schedule_path, "r", encoding="utf-8") as f:
@@ -87,14 +87,17 @@ def update_schedule_with_score(match_id, home_score, away_score):
         print(f"Match {match_id} already has score, skipping update")
         return False
 
-    # 在 match_block 末尾（`},` 之前）插入 homeScore 和 awayScore
-    # 找到最后一个 `,` 在 `},` 之前的位置
+    # 在 match_block 末尾（`},` 之前）插入 homeScore、awayScore 和 goalScorers
     insert_pos = match_block.rfind(',')
     if insert_pos == -1:
         print(f"ERROR: Could not find comma in match block")
         return False
 
     new_fields = f"\n  homeScore: {home_score},\n  awayScore: {away_score}"
+    if goal_scorers is not None:
+        goal_scorers_json = json.dumps(goal_scorers, ensure_ascii=False, indent=2)
+        goal_scorers_json = goal_scorers_json.replace("\n", "\n  ")
+        new_fields += f",\n  goalScorers: {goal_scorers_json}"
     new_block = match_block[:insert_pos] + new_fields + match_block[insert_pos:]
 
     new_content = content.replace(match_block, new_block)
@@ -104,7 +107,7 @@ def update_schedule_with_score(match_id, home_score, away_score):
 
     return True
 
-def update_worldcup_data_for_match(match_id, home_team, away_team, home_score, away_score, group):
+def update_worldcup_data_for_match(match_id, home_team, away_team, home_score, away_score, group, standings_override=None):
     """更新 worldcupData.ts 中的小组排名"""
     if not group:
         print(f"Match {match_id} has no group, skipping worldcupData update")
@@ -158,39 +161,58 @@ def update_worldcup_data_for_match(match_id, home_team, away_team, home_score, a
         print(f"Could not find team codes for {home_team}/{away_team} in group {group}")
         return False
 
-    # 更新积分
-    for s in standings:
-        if s['code'] == home_code:
-            s['played'] += 1
-            s['goalsFor'] += home_score
-            s['goalsAgainst'] += away_score
-            if home_score > away_score:
-                s['won'] += 1
-                s['points'] += 3
-            elif home_score == away_score:
-                s['draw'] += 1
-                s['points'] += 1
-            else:
-                s['lost'] += 1
-        elif s['code'] == away_code:
-            s['played'] += 1
-            s['goalsFor'] += away_score
-            s['goalsAgainst'] += home_score
-            if away_score > home_score:
-                s['won'] += 1
-                s['points'] += 3
-            elif away_score == home_score:
-                s['draw'] += 1
-                s['points'] += 1
-            else:
-                s['lost'] += 1
+    if standings_override is not None:
+        standings = []
+        for s in standings_override:
+            if not all(field in s for field in ['name', 'code', 'played', 'won', 'draw', 'lost', 'goalsFor', 'goalsAgainst', 'goalDiff', 'points']):
+                print(f"Skipping malformed standings entry: {s}")
+                continue
+            standings.append({
+                'name': s['name'],
+                'code': s['code'],
+                'played': int(s['played']),
+                'won': int(s['won']),
+                'draw': int(s['draw']),
+                'lost': int(s['lost']),
+                'goalsFor': int(s['goalsFor']),
+                'goalsAgainst': int(s['goalsAgainst']),
+                'goalDiff': int(s['goalDiff']),
+                'points': int(s['points'])
+            })
+    else:
+        # 更新积分
+        for s in standings:
+            if s['code'] == home_code:
+                s['played'] += 1
+                s['goalsFor'] += home_score
+                s['goalsAgainst'] += away_score
+                if home_score > away_score:
+                    s['won'] += 1
+                    s['points'] += 3
+                elif home_score == away_score:
+                    s['draw'] += 1
+                    s['points'] += 1
+                else:
+                    s['lost'] += 1
+            elif s['code'] == away_code:
+                s['played'] += 1
+                s['goalsFor'] += away_score
+                s['goalsAgainst'] += home_score
+                if away_score > home_score:
+                    s['won'] += 1
+                    s['points'] += 3
+                elif away_score == home_score:
+                    s['draw'] += 1
+                    s['points'] += 1
+                else:
+                    s['lost'] += 1
 
-    # 计算 goalDiff
-    for s in standings:
-        s['goalDiff'] = s['goalsFor'] - s['goalsAgainst']
+        # 计算 goalDiff
+        for s in standings:
+            s['goalDiff'] = s['goalsFor'] - s['goalsAgainst']
 
-    # 按 points DESC, goalDiff DESC, goalsFor DESC 排序
-    standings.sort(key=lambda x: (-x['points'], -x['goalDiff'], -x['goalsFor']))
+        # 按 points DESC, goalDiff DESC, goalsFor DESC 排序
+        standings.sort(key=lambda x: (-x['points'], -x['goalDiff'], -x['goalsFor']))
 
     # 重建 standings 数组
     new_standings_parts = []
@@ -253,6 +275,8 @@ def main():
     parser.add_argument("--away-team", type=str, help="Away team name")
     parser.add_argument("--group", type=str, help="Match group")
     parser.add_argument("--stage", type=str, default="分组赛", help="Match stage")
+    parser.add_argument("--goal-scorers-json", type=str, help="JSON array of goal scorers for scheduleData.ts")
+    parser.add_argument("--standings-json", type=str, help="JSON array of standings objects for official standings override")
     
     args = parser.parse_args()
     
@@ -264,8 +288,22 @@ def main():
         print(f"Match {args.match_id} already updated. Skipping.")
         sys.exit(0)
     
+    goal_scorers = None
+    if args.goal_scorers_json:
+        try:
+            goal_scorers = json.loads(args.goal_scorers_json)
+        except json.JSONDecodeError as e:
+            print(f"Warning: Failed to parse goal scorers JSON: {e}")
+
+    standings_override = None
+    if args.standings_json:
+        try:
+            standings_override = json.loads(args.standings_json)
+        except json.JSONDecodeError as e:
+            print(f"Warning: Failed to parse standings JSON: {e}")
+
     # 更新 scheduleData.ts
-    if not update_schedule_with_score(args.match_id, args.home_score, args.away_score):
+    if not update_schedule_with_score(args.match_id, args.home_score, args.away_score, goal_scorers):
         print("Failed to update scheduleData.ts")
         sys.exit(1)
     
@@ -285,7 +323,7 @@ def main():
     if args.group:
         update_worldcup_data_for_match(
             args.match_id, args.home_team, args.away_team,
-            args.home_score, args.away_score, args.group
+            args.home_score, args.away_score, args.group, standings_override
         )
     
     # 添加 groupOverviewUpdate 记录

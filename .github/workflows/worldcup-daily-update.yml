@@ -1,0 +1,55 @@
+name: World Cup Daily Update
+
+on:
+  schedule:
+    # 12:00 Beijing time = 04:00 UTC
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  WORLD_CUP_RESULTS_FILE: .match-results.json
+  WORLD_CUP_RESULTS_URL: ${{ secrets.WORLD_CUP_RESULTS_URL }}
+
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync verified results
+        run: python3 scripts/daily-worldcup-update.py
+
+      - name: Build project
+        run: npm run build
+
+      - name: Commit updated data
+        run: |
+          if git diff --quiet -- constants/scheduleData.ts constants/worldcupData.ts constants/tournamentStats.ts; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add constants/scheduleData.ts constants/worldcupData.ts constants/tournamentStats.ts
+          git commit -m "Update World Cup results and stats"
+          git push
