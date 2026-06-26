@@ -49,7 +49,7 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
     changes: [
       "第 57 场保持突尼斯 1-3 荷兰：埃利耶斯·斯希里 3' 乌龙，布赖恩·布罗贝伊 7'，哈泽姆·马斯图里 54'，扬-保罗·范黑克 62'。荷兰 3 战 7 分锁定 F 组头名并已确定晋级，日本 5 分列第二并已确定晋级，瑞典 4 分列第三，突尼斯 0 分垫底。",
       "第 59 场修正为土耳其 3-2 美国：奥斯顿·特拉斯蒂 3'，阿尔达·居莱尔 10'，奥尔昆·科克曲 31'，塞巴斯蒂安·贝哈尔特 49'，卡安·艾汉 90+8'。",
-      "第 60 场保持巴拉圭 0-0 澳大利亚。D 组积分榜重算：美国 3 战 6 分锁定头名并已确定晋级；澳大利亚 3 战 4 分列第二并已确定晋级；巴拉圭 3 战 4 分列第三；土耳其 3 战 0 分垫底。",
+      "第 60 场保持巴拉圭 0-0 澳大利亚。D 组积分榜重算：美国 3 战 6 分锁定头名并已确定晋级；澳大利亚 3 战 4 分列第二并已确定晋级；巴拉圭 3 战 4 分列第三；土耳其 3 战 3 分垫底。",
       "第 61-66 场在本次运行时尚未到北京时间开赛/终场窗口，未写入终场数据。"
     ]
   },
@@ -61,7 +61,7 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
     changes: [
       "第 59 场补入土耳其 3-2 美国：奥斯顿·特拉斯蒂 3'，阿尔达·居莱尔 10'，奥尔昆·科克曲 31'，塞巴斯蒂安·贝哈尔特 49'，卡安·艾汉 90+8'。",
       "第 60 场补入巴拉圭 0-0 澳大利亚：双方互交白卷。",
-      "D 组积分榜重算：美国 3 战 6 分锁定头名并已确定晋级；澳大利亚 3 战 4 分列第二并已确定晋级；巴拉圭 3 战 4 分列第三，土耳其 3 战 0 分垫底。",
+      "D 组积分榜重算：美国 3 战 6 分锁定头名并已确定晋级；澳大利亚 3 战 4 分列第二并已确定晋级；巴拉圭 3 战 4 分列第三，土耳其 3 战 3 分垫底。",
       "第 61-66 场在本次运行时尚未到北京时间开赛/终场窗口，未写入终场数据。"
     ]
   },
@@ -803,7 +803,7 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "美国", code: "USA", played: 3, won: 2, draw: 0, lost: 1, goalsFor: 8, goalsAgainst: 4, goalDiff: 4, points: 6 },
       { name: "澳大利亚", code: "AUS", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 4 },
       { name: "巴拉圭", code: "PAR", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 4 },
-      { name: "土耳其", code: "TUR", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 2, goalsAgainst: 6, goalDiff: -4, points: 0 }
+      { name: "土耳其", code: "TUR", played: 3, won: 1, draw: 0, lost: 2, goalsFor: 3, goalsAgainst: 5, goalDiff: -2, points: 3 }
     ]
   },
   {
