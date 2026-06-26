@@ -18,7 +18,6 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 4, player: "Ismael Saibari", chineseName: "伊斯梅尔·塞巴里", team: "摩洛哥", teamCode: "MAR", value: 3, matches: 3 },
   { rank: 4, player: "Matheus Cunha", chineseName: "马特乌斯·库尼亚", team: "巴西", teamCode: "BRA", value: 3, matches: 3 },
   { rank: 4, player: "Johan Manzambi", chineseName: "约翰·曼赞比", team: "瑞士", teamCode: "SUI", value: 3, matches: 3 },
-  { rank: 4, player: "Brian Brobbey", chineseName: "布赖恩·布罗贝伊", team: "荷兰", teamCode: "NED", value: 3, matches: 3 },
   { rank: 6, player: "Folarin Balogun", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 2, matches: 2 },
   { rank: 6, player: "Kai Havertz", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 2, matches: 2 },
   { rank: 6, player: "Yasin Ayari", chineseName: "亚辛·阿亚里", team: "瑞典", teamCode: "SWE", value: 2, matches: 2 },
@@ -38,6 +37,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 6, player: "Ermin Mahmic", chineseName: "埃尔明·马赫米奇", team: "波黑", teamCode: "BIH", value: 2, matches: 3 },
   { rank: 6, player: "Nicolas Pepe", chineseName: "尼古拉·佩佩", team: "科特迪瓦", teamCode: "CIV", value: 2, matches: 1 },
   { rank: 6, player: "Anthony Elanga", chineseName: "安东尼·埃兰加", team: "瑞典", teamCode: "SWE", value: 2, matches: 2 },
+  { rank: 6, player: "Brian Brobbey", chineseName: "布赖恩·布罗贝", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
   { rank: 25, player: "Raul Jimenez", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 25, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
   { rank: 25, player: "Hyeongyu Oh", chineseName: "吴贤揆", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
@@ -133,13 +133,13 @@ export const goalsRanking: PlayerStat[] = [
 ];
 
 export const assistsRanking: PlayerStat[] = [
-  { rank: 1, player: "Michael Olise", chineseName: "迈克尔·奥利塞", team: "法国", teamCode: "FRA", value: 3, matches: 2 },
-  { rank: 1, player: "Bruno Guimaraes", chineseName: "布鲁诺·吉马良斯", team: "巴西", teamCode: "BRA", value: 3, matches: 3 },
-  { rank: 2, player: "Ryan Gravenberch", chineseName: "赖恩·赫拉芬贝赫", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
-  { rank: 2, player: "Chris Wood", chineseName: "克里斯·伍德", team: "新西兰", teamCode: "NZL", value: 2, matches: 1 },
-  { rank: 2, player: "Alexander Isak", chineseName: "亚历山大·伊萨克", team: "瑞典", teamCode: "SWE", value: 2, matches: 2 },
-  { rank: 2, player: "Denzel Dumfries", chineseName: "丹泽尔·邓弗里斯", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
-  { rank: 2, player: "Mohamed Salah", chineseName: "穆罕默德·萨拉赫", team: "埃及", teamCode: "EGY", value: 2, matches: 2 },
+  { rank: 1, player: "Michael Olise", chineseName: "迈克尔·奥利塞", team: "法国", teamCode: "FRA", value: 2, matches: 2 },
+  { rank: 1, player: "Bruno Guimaraes", chineseName: "布鲁诺·吉马良斯", team: "巴西", teamCode: "BRA", value: 2, matches: 3 },
+  { rank: 1, player: "Ryan Gravenberch", chineseName: "赖恩·赫拉芬贝赫", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
+  { rank: 1, player: "Chris Wood", chineseName: "克里斯·伍德", team: "新西兰", teamCode: "NZL", value: 2, matches: 1 },
+  { rank: 1, player: "Alexander Isak", chineseName: "亚历山大·伊萨克", team: "瑞典", teamCode: "SWE", value: 2, matches: 2 },
+  { rank: 1, player: "Denzel Dumfries", chineseName: "丹泽尔·邓弗里斯", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
+  { rank: 1, player: "Mohamed Salah", chineseName: "穆罕默德·萨拉赫", team: "埃及", teamCode: "EGY", value: 2, matches: 2 },
   { rank: 7, player: "Roberto Alvarado", chineseName: "罗伯托·阿尔瓦拉多", team: "墨西哥", teamCode: "MEX", value: 1, matches: 2 },
   { rank: 7, player: "Christian Pulisic", chineseName: "克里斯蒂安·普利西奇", team: "美国", teamCode: "USA", value: 1, matches: 2 },
   { rank: 7, player: "Inbeom Hwang", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 2 },
@@ -192,5 +192,5 @@ export const assistsRanking: PlayerStat[] = [
 
 export const statsNotice = {
   title: "D组与F组赛果复核",
-  body: "已按北京时间 2026-06-26 12:13 复核今天已完赛比赛：突尼斯 1-3 荷兰、土耳其 3-2 美国、巴拉圭 0-0 澳大利亚；射手榜补入卡安·艾汉，助攻仅保留已确认记录。"
+  body: "已按北京时间 2026-06-26 12:13 复核今天已完赛比赛：突尼斯 1-3 荷兰、土耳其 3-2 美国、巴拉圭 0-0 澳大利亚；射手榜补入卡安·艾汉与布赖恩·布罗贝，助攻榜补入蒂贾尼·赖因德斯、堂安律、凯文·罗德里格斯，并修正近期确认助攻计数。"
 };
