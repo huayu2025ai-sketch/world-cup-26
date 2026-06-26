@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-26T11:52:54+08:00",
+    updatedAtLabel: "北京时间 2026年6月26日 11:52",
+    title: "D组第59-60场赛果更新",
+    summary: "本次按北京时间 2026-06-26 11:52 复核并补入第 59-60 场终场结果：土耳其 2-2 美国、巴拉圭 0-0 澳大利亚；同步重算 D 组积分榜与已确认个人统计。第 61-66 场尚未到开赛/终场窗口，未写入。",
+    changes: [
+      "第 59 场补入土耳其 2-2 美国：奥斯顿·特拉斯蒂 3'，阿尔达·居莱尔 10'，奥尔昆·科克曲 31'，塞巴斯蒂安·贝哈尔特 49'。",
+      "第 60 场补入巴拉圭 0-0 澳大利亚：双方互交白卷。",
+      "D 组积分榜重算：美国 3 战 7 分锁定头名并已确定晋级；澳大利亚 3 战 4 分列第二并已确定晋级；巴拉圭 3 战 4 分列第三，土耳其 3 战 1 分垫底。",
+      "第 61-66 场在本次运行时尚未到北京时间开赛/终场窗口，未写入终场数据。"
+    ]
+  },
+  {
     updatedAt: "2026-06-26T08:41:12+08:00",
     updatedAtLabel: "北京时间 2026年6月26日 08:41",
     title: "E组与F组第55-58场赛果更新",
@@ -776,10 +788,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "土耳其", englishName: "Turkiye", code: "TUR", flag: "🇹🇷", confederation: "UEFA", pot: 4 }
     ],
     standings: [
-      { name: "美国", code: "USA", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 6 },
-      { name: "澳大利亚", code: "AUS", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
-      { name: "巴拉圭", code: "PAR", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 3 },
-      { name: "土耳其", code: "TUR", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 }
+      { name: "美国", code: "USA", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 8, goalsAgainst: 3, goalDiff: 5, points: 7 },
+      { name: "澳大利亚", code: "AUS", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 4 },
+      { name: "巴拉圭", code: "PAR", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 4 },
+      { name: "土耳其", code: "TUR", played: 3, won: 0, draw: 1, lost: 2, goalsFor: 2, goalsAgainst: 5, goalDiff: -3, points: 1 }
     ]
   },
   {
