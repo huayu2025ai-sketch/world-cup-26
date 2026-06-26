@@ -49,6 +49,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 25, player: "Sebastian Berhalter", chineseName: "塞巴斯蒂安·贝哈尔特", team: "美国", teamCode: "USA", value: 1, matches: 3 },
   { rank: 25, player: "Arda Guler", chineseName: "阿尔达·居莱尔", team: "土耳其", teamCode: "TUR", value: 1, matches: 3 },
   { rank: 25, player: "Orkun Kokcu", chineseName: "奥尔昆·科克曲", team: "土耳其", teamCode: "TUR", value: 1, matches: 3 },
+  { rank: 25, player: "Kaan Ayhan", chineseName: "卡安·艾汉", team: "土耳其", teamCode: "TUR", value: 1, matches: 3 },
   { rank: 25, player: "Mauricio", chineseName: "毛里西奥", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 2 },
   { rank: 25, player: "Matias Galarza", chineseName: "马蒂亚斯·加拉尔萨", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 2 },
   { rank: 25, player: "Boualem Khoukhi", chineseName: "布阿莱姆·胡希", team: "卡塔尔", teamCode: "QAT", value: 1, matches: 2 },
@@ -176,9 +177,6 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 7, player: "Bruno Fernandes", chineseName: "布鲁诺·费尔南德斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
   { rank: 7, player: "Cristiano Ronaldo", chineseName: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
   { rank: 7, player: "Josip Stanisic", chineseName: "约西普·斯塔尼希奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
-  { rank: 7, player: "Sebastian Berhalter", chineseName: "塞巴斯蒂安·贝哈尔特", team: "美国", teamCode: "USA", value: 1, matches: 3 },
-  { rank: 7, player: "Baris Alper Yilmaz", chineseName: "巴里什·阿尔佩尔·耶尔马兹", team: "土耳其", teamCode: "TUR", value: 1, matches: 3 },
-  { rank: 7, player: "Eren Elmali", chineseName: "埃伦·埃尔马勒", team: "土耳其", teamCode: "TUR", value: 1, matches: 3 },
   { rank: 7, player: "Johan Manzambi", chineseName: "约翰·曼赞比", team: "瑞士", teamCode: "SUI", value: 1, matches: 3 },
   { rank: 7, player: "Breel Embolo", chineseName: "布雷尔·恩博洛", team: "瑞士", teamCode: "SUI", value: 1, matches: 3 },
   { rank: 7, player: "Nathan Saliba", chineseName: "内森·萨利巴", team: "加拿大", teamCode: "CAN", value: 1, matches: 3 },
@@ -193,6 +191,6 @@ export const assistsRanking: PlayerStat[] = [
 ];
 
 export const statsNotice = {
-  title: "D组第59-60场赛果更新",
-  body: "已补入第 59-60 场终场结果：土耳其 2-2 美国、巴拉圭 0-0 澳大利亚；射手榜与助攻榜已同步更新，助攻仅保留已确认记录。"
+  title: "D组与F组赛果复核",
+  body: "已按北京时间 2026-06-26 12:13 复核今天已完赛比赛：突尼斯 1-3 荷兰、土耳其 3-2 美国、巴拉圭 0-0 澳大利亚；射手榜补入卡安·艾汉，助攻仅保留已确认记录。"
 };

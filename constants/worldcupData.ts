@@ -42,14 +42,26 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-26T12:13:07+08:00",
+    updatedAtLabel: "北京时间 2026年6月26日 12:13",
+    title: "D组与F组赛果复核",
+    summary: "本次按北京时间 2026-06-26 12:13 重新核对今天已完赛场次：突尼斯 1-3 荷兰、土耳其 3-2 美国、巴拉圭 0-0 澳大利亚；同步重算 F/D 组积分榜与已确认个人统计。",
+    changes: [
+      "第 57 场保持突尼斯 1-3 荷兰：埃利耶斯·斯希里 3' 乌龙，布赖恩·布罗贝伊 7'，哈泽姆·马斯图里 54'，扬-保罗·范黑克 62'。荷兰 3 战 7 分锁定 F 组头名并已确定晋级，日本 5 分列第二并已确定晋级，瑞典 4 分列第三，突尼斯 0 分垫底。",
+      "第 59 场修正为土耳其 3-2 美国：奥斯顿·特拉斯蒂 3'，阿尔达·居莱尔 10'，奥尔昆·科克曲 31'，塞巴斯蒂安·贝哈尔特 49'，卡安·艾汉 90+8'。",
+      "第 60 场保持巴拉圭 0-0 澳大利亚。D 组积分榜重算：美国 3 战 6 分锁定头名并已确定晋级；澳大利亚 3 战 4 分列第二并已确定晋级；巴拉圭 3 战 4 分列第三；土耳其 3 战 0 分垫底。",
+      "第 61-66 场在本次运行时尚未到北京时间开赛/终场窗口，未写入终场数据。"
+    ]
+  },
+  {
     updatedAt: "2026-06-26T11:52:54+08:00",
     updatedAtLabel: "北京时间 2026年6月26日 11:52",
     title: "D组第59-60场赛果更新",
-    summary: "本次按北京时间 2026-06-26 11:52 复核并补入第 59-60 场终场结果：土耳其 2-2 美国、巴拉圭 0-0 澳大利亚；同步重算 D 组积分榜与已确认个人统计。第 61-66 场尚未到开赛/终场窗口，未写入。",
+    summary: "本次按北京时间 2026-06-26 11:52 复核并补入第 59-60 场终场结果：土耳其 3-2 美国、巴拉圭 0-0 澳大利亚；同步重算 D 组积分榜与已确认个人统计。第 61-66 场尚未到开赛/终场窗口，未写入。",
     changes: [
-      "第 59 场补入土耳其 2-2 美国：奥斯顿·特拉斯蒂 3'，阿尔达·居莱尔 10'，奥尔昆·科克曲 31'，塞巴斯蒂安·贝哈尔特 49'。",
+      "第 59 场补入土耳其 3-2 美国：奥斯顿·特拉斯蒂 3'，阿尔达·居莱尔 10'，奥尔昆·科克曲 31'，塞巴斯蒂安·贝哈尔特 49'，卡安·艾汉 90+8'。",
       "第 60 场补入巴拉圭 0-0 澳大利亚：双方互交白卷。",
-      "D 组积分榜重算：美国 3 战 7 分锁定头名并已确定晋级；澳大利亚 3 战 4 分列第二并已确定晋级；巴拉圭 3 战 4 分列第三，土耳其 3 战 1 分垫底。",
+      "D 组积分榜重算：美国 3 战 6 分锁定头名并已确定晋级；澳大利亚 3 战 4 分列第二并已确定晋级；巴拉圭 3 战 4 分列第三，土耳其 3 战 0 分垫底。",
       "第 61-66 场在本次运行时尚未到北京时间开赛/终场窗口，未写入终场数据。"
     ]
   },
@@ -64,7 +76,7 @@ export const groupOverviewUpdates: GroupOverviewUpdate[] = [
       "第 57 场补入突尼斯 1-3 荷兰：埃利耶斯·斯希里 3' 乌龙，布赖恩·布罗贝伊 7'，哈泽姆·马斯图里 54'，扬-保罗·范黑克 62'。",
       "第 58 场补入日本 1-1 瑞典：前田大然 56'，安东尼·埃兰加 61'。",
       "E 组积分榜重算：德国与科特迪瓦同积 6 分，德国以净胜球 +5 列第一并已确定晋级，科特迪瓦以 +2 列第二并已确定晋级；厄瓜多尔 4 分列第三，库拉索 1 分垫底。",
-      "F 组积分榜重算：日本 5 分列第一并已确定晋级，荷兰 4 分列第二并已确定晋级，瑞典 4 分列第三，突尼斯 0 分垫底。",
+      "F 组积分榜重算：荷兰 7 分列第一并已确定晋级，日本 5 分列第二并已确定晋级，瑞典 4 分列第三，突尼斯 0 分垫底。",
       "助攻仅确认六次：扬·迪奥曼德、易卜拉欣·桑加雷、维吉尔·范戴克、蒂贾尼·赖因德斯、堂安律、凯文·罗德里格斯各有可靠确认助攻。"
     ]
   },
@@ -788,10 +800,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "土耳其", englishName: "Turkiye", code: "TUR", flag: "🇹🇷", confederation: "UEFA", pot: 4 }
     ],
     standings: [
-      { name: "美国", code: "USA", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 8, goalsAgainst: 3, goalDiff: 5, points: 7 },
+      { name: "美国", code: "USA", played: 3, won: 2, draw: 0, lost: 1, goalsFor: 8, goalsAgainst: 4, goalDiff: 4, points: 6 },
       { name: "澳大利亚", code: "AUS", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 4 },
       { name: "巴拉圭", code: "PAR", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 4 },
-      { name: "土耳其", code: "TUR", played: 3, won: 0, draw: 1, lost: 2, goalsFor: 2, goalsAgainst: 5, goalDiff: -3, points: 1 }
+      { name: "土耳其", code: "TUR", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 2, goalsAgainst: 6, goalDiff: -4, points: 0 }
     ]
   },
   {
@@ -828,8 +840,8 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "突尼斯", englishName: "Tunisia", code: "TUN", flag: "🇹🇳", confederation: "CAF", pot: 3 }
     ],
     standings: [
+      { name: "荷兰", code: "NED", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 10, goalsAgainst: 4, goalDiff: 6, points: 7 },
       { name: "日本", code: "JPN", played: 3, won: 1, draw: 2, lost: 0, goalsFor: 7, goalsAgainst: 3, goalDiff: 4, points: 5 },
-      { name: "荷兰", code: "NED", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 8, goalsAgainst: 6, goalDiff: 2, points: 4 },
       { name: "瑞典", code: "SWE", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 7, goalsAgainst: 7, goalDiff: 0, points: 4 },
       { name: "突尼斯", code: "TUN", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 2, goalsAgainst: 12, goalDiff: -10, points: 0 }
     ]

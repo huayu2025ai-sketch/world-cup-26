@@ -324,11 +324,12 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "前田大然", team: "日本", minute: "56'", type: "goal" },
     { player: "安东尼·埃兰加", team: "瑞典", minute: "61'", type: "goal" },
   ] },
-  { id: 59, stage: "分组赛", group: "D", date: "2026-06-25", etTime: "22:00", home: "土耳其", away: "美国", venue: "SoFi Stadium", city: "Los Angeles", homeScore: 2, awayScore: 2, goalScorers: [
+  { id: 59, stage: "分组赛", group: "D", date: "2026-06-25", etTime: "22:00", home: "土耳其", away: "美国", venue: "SoFi Stadium", city: "Los Angeles", homeScore: 3, awayScore: 2, goalScorers: [
     { player: "奥斯顿·特拉斯蒂", team: "美国", minute: "3'", type: "goal" },
     { player: "阿尔达·居莱尔", team: "土耳其", minute: "10'", type: "goal" },
     { player: "奥尔昆·科克曲", team: "土耳其", minute: "31'", type: "goal" },
     { player: "塞巴斯蒂安·贝哈尔特", team: "美国", minute: "49'", type: "goal" },
+    { player: "卡安·艾汉", team: "土耳其", minute: "90+8'", type: "goal" },
   ] },
   { id: 60, stage: "分组赛", group: "D", date: "2026-06-25", etTime: "22:00", home: "巴拉圭", away: "澳大利亚", venue: "Levi's Stadium", city: "San Francisco Bay Area", homeScore: 0, awayScore: 0, goalScorers: [] },
   { id: 61, stage: "分组赛", group: "I", date: "2026-06-26", etTime: "15:00", home: "挪威", away: "法国", venue: "MetLife Stadium", city: "New York New Jersey" },
