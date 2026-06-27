@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-27T18:08:24+08:00",
+    updatedAtLabel: "北京时间 2026年6月27日 18:08",
+    title: "E组、J组、K组积分榜复核",
+    summary: "本次按北京时间 2026-06-27 18:08 复核分组页积分、进失球和排名，修正 E/J/K 三组的展示数据，使其与已完赛比赛结果一致。",
+    changes: [
+      "E 组重算：德国、科特迪瓦同积 6 分，德国以净胜球 +6 列第一，科特迪瓦以 +2 列第二；厄瓜多尔 4 分列第三，库拉索 1 分列第四。",
+      "J 组重算：阿根廷 6 分第一；奥地利 3 分但净胜球 -1，列第二；阿尔及利亚 3 分但净胜球 -2，列第三；约旦 0 分列第四。",
+      "K 组重算：哥伦比亚 6 分第一，葡萄牙 4 分第二，刚果民主共和国 1 分第三，乌兹别克斯坦 0 分第四。",
+      "分组页其余小组的积分、进失球与排名顺序保持不变。"
+    ]
+  },
+  {
     updatedAt: "2026-06-27T17:01:24+08:00",
     updatedAtLabel: "北京时间 2026年6月27日 17:01",
     title: "G组第65-66场赛果更新",
@@ -847,8 +859,8 @@ export const worldCupGroups: WorldCupGroup[] = [
     standings: [
       { name: "德国", code: "GER", played: 3, won: 2, draw: 0, lost: 1, goalsFor: 10, goalsAgainst: 4, goalDiff: 6, points: 6 },
       { name: "科特迪瓦", code: "CIV", played: 3, won: 2, draw: 0, lost: 1, goalsFor: 4, goalsAgainst: 2, goalDiff: 2, points: 6 },
-      { name: "厄瓜多尔", code: "ECU", played: 3, won: 1, draw: 0, lost: 2, goalsFor: 3, goalsAgainst: 3, goalDiff: 0, points: 3 },
-      { name: "库拉索", code: "CUW", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 1, goalsAgainst: 9, goalDiff: -8, points: 0 }
+      { name: "厄瓜多尔", code: "ECU", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 4 },
+      { name: "库拉索", code: "CUW", played: 3, won: 0, draw: 1, lost: 2, goalsFor: 1, goalsAgainst: 9, goalDiff: -8, points: 1 }
     ]
   },
   {
@@ -946,8 +958,8 @@ export const worldCupGroups: WorldCupGroup[] = [
     ],
     standings: [
       { name: "阿根廷", code: "ARG", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 5, goalsAgainst: 0, goalDiff: 5, points: 6 },
+      { name: "奥地利", code: "AUT", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 3 },
       { name: "阿尔及利亚", code: "ALG", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 3 },
-      { name: "奥地利", code: "AUT", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 3 },
       { name: "约旦", code: "JOR", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 0 }
     ]
   },
@@ -965,7 +977,7 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "哥伦比亚", code: "COL", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 4, goalsAgainst: 1, goalDiff: 3, points: 6 },
+      { name: "哥伦比亚", code: "COL", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 6 },
       { name: "葡萄牙", code: "POR", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 4 },
       { name: "刚果民主共和国", code: "COD", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 1 },
       { name: "乌兹别克斯坦", code: "UZB", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 0 }
