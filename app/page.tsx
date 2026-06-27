@@ -6,7 +6,7 @@ import VisitCounter from "@/components/VisitCounter";
 import { playerProfileMeta, playerProfiles, type PlayerProfile } from "@/constants/playerProfiles";
 import { officialSquadsNotice, rosterPositions, teamRosters, type RosterPlayer } from "@/constants/teamRosters";
 import { groupOverviewUpdate, groupOverviewUpdates, worldCupGroups, type WorldCupGroup } from "@/constants/worldcupData";
-import { getQualifiedTeamCodes } from "@/lib/groupQualification";
+import { getEliminatedTeamCodes, getQualifiedTeamCodes } from "@/lib/groupQualification";
 
 const profileTemplate: Record<RosterPlayer["position"], Pick<PlayerProfile, "role" | "bio" | "strengths">> = {
   门将: {
@@ -490,12 +490,18 @@ export default function HomePage() {
 
       <section className="mt-2 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {filteredGroups.map((group) => (
-          <GroupCard key={group.id} group={group} qualifiedTeamCodes={getQualifiedTeamCodes(group.id)} onSelect={openGroup} />
+          <GroupCard
+            key={group.id}
+            group={group}
+            qualifiedTeamCodes={getQualifiedTeamCodes(group.id)}
+            eliminatedTeamCodes={getEliminatedTeamCodes(group.id)}
+            onSelect={openGroup}
+          />
         ))}
       </section>
 
       <p className="mt-4 text-center text-xs leading-5 text-slate-500">
-        `已晋级` 仅标记已根据当前积分和剩余赛程数学上锁定 32 强席位的球队。
+        `已晋级` 标记已确定进入 32 强或最佳第三名的球队，`已淘汰` 标记已无缘淘汰赛的球队。
       </p>
 
       {filteredGroups.length === 0 && (
@@ -647,6 +653,11 @@ export default function HomePage() {
                         {getQualifiedTeamCodes(selectedGroup.id).has(team.code) && (
                           <span className="rounded-full border border-emerald-400/35 bg-emerald-500/15 px-2 py-0.5 text-[10px] font-black text-emerald-200">
                             已晋级
+                          </span>
+                        )}
+                        {getEliminatedTeamCodes(selectedGroup.id).has(team.code) && (
+                          <span className="rounded-full border border-rose-400/35 bg-rose-500/15 px-2 py-0.5 text-[10px] font-black text-rose-200">
+                            已淘汰
                           </span>
                         )}
                       </div>

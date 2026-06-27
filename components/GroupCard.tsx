@@ -5,10 +5,11 @@ import type { WorldCupGroup } from "@/constants/worldcupData";
 type GroupCardProps = {
   group: WorldCupGroup;
   qualifiedTeamCodes: Set<string>;
+  eliminatedTeamCodes: Set<string>;
   onSelect: (group: WorldCupGroup) => void;
 };
 
-export default function GroupCard({ group, qualifiedTeamCodes, onSelect }: GroupCardProps) {
+export default function GroupCard({ group, qualifiedTeamCodes, eliminatedTeamCodes, onSelect }: GroupCardProps) {
   return (
     <button
       type="button"
@@ -50,8 +51,13 @@ export default function GroupCard({ group, qualifiedTeamCodes, onSelect }: Group
                         <span className="shrink-0 rounded bg-emerald-500/20 px-1 py-0 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">
                           已晋级
                         </span>
-                        )}
-                      </div>
+                      )}
+                      {eliminatedTeamCodes.has(standing.code) && (
+                        <span className="shrink-0 rounded bg-rose-500/20 px-1 py-0 text-[9px] font-bold text-rose-300 border border-rose-500/30">
+                          已淘汰
+                        </span>
+                      )}
+                    </div>
                     <p className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[10px] uppercase tracking-[0.16em] text-slate-500">
                       <span>{standing.code}</span>
                       <span className="text-slate-600">·</span>
