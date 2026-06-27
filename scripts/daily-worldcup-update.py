@@ -67,7 +67,19 @@ def load_pending_matches() -> list[dict[str, Any]]:
     pending: list[dict[str, Any]] = []
     for line in result.stdout.splitlines():
         if line.startswith("MATCH:"):
-            pending.append(json.loads(line.removeprefix("MATCH:")))
+            parts = line.removeprefix("MATCH:").split("|")
+            if len(parts) >= 4:
+                match_str = parts[1]
+                vs_idx = match_str.find(" vs ")
+                home = match_str[:vs_idx].strip() if vs_idx != -1 else ""
+                away = match_str[vs_idx + 4:].strip() if vs_idx != -1 else ""
+                pending.append({
+                    "id": parts[0],
+                    "home": home,
+                    "away": away,
+                    "group": parts[2],
+                    "bjTime": parts[3],
+                })
     return pending
 
 
