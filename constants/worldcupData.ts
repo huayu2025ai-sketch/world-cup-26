@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-27T17:01:24+08:00",
+    updatedAtLabel: "北京时间 2026年6月27日 17:01",
+    title: "G组第65-66场赛果更新",
+    summary: "本次按北京时间 2026-06-27 17:01 复核并补入第 65-66 场终场结果：新西兰 1-5 比利时、埃及 1-1 伊朗；第 67-72 场尚未到开赛窗口，未写入终场数据。",
+    changes: [
+      "第 65 场补入新西兰 1-5 比利时：莱安德罗·特罗萨德 28'、50'，凯文·德布劳内 67'，伊莱贾·贾斯特 84'，罗梅卢·卢卡库 86'，亚历克西斯·萨勒梅克斯 90+4'。",
+      "第 66 场补入埃及 1-1 伊朗：马哈茂德·萨贝尔 5'，拉明·雷扎伊安 14'。",
+      "G 组积分榜重算：比利时与埃及同积 5 分，比利时以净胜球 +4 列第一并已确定晋级，埃及以 +2 列第二并已确定晋级；伊朗 3 分列第三，新西兰 1 分垫底。",
+      "助攻榜新增凯文·德布劳内、尼古拉·拉斯金各 1 次可靠确认助攻；其余进球未见明确助攻确认，未写入。"
+    ]
+  },
+  {
     updatedAt: "2026-06-27T11:05:08+08:00",
     updatedAtLabel: "北京时间 2026年6月27日 11:05",
     title: "I组与H组第61-64场赛果更新",
@@ -873,10 +885,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "新西兰", englishName: "New Zealand", code: "NZL", flag: "🇳🇿", confederation: "OFC", pot: 4 }
     ],
     standings: [
-      { name: "埃及", code: "EGY", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 4, goalsAgainst: 2, goalDiff: 2, points: 4 },
-      { name: "伊朗", code: "IRN", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 2 },
-      { name: "比利时", code: "BEL", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 1, goalsAgainst: 1, goalDiff: 0, points: 2 },
-      { name: "新西兰", code: "NZL", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 3, goalsAgainst: 5, goalDiff: -2, points: 1 }
+      { name: "比利时", code: "BEL", played: 3, won: 1, draw: 2, lost: 0, goalsFor: 6, goalsAgainst: 2, goalDiff: 4, points: 5 },
+      { name: "埃及", code: "EGY", played: 3, won: 1, draw: 2, lost: 0, goalsFor: 5, goalsAgainst: 3, goalDiff: 2, points: 5 },
+      { name: "伊朗", code: "IRN", played: 3, won: 0, draw: 3, lost: 0, goalsFor: 3, goalsAgainst: 3, goalDiff: 0, points: 3 },
+      { name: "新西兰", code: "NZL", played: 3, won: 0, draw: 1, lost: 2, goalsFor: 4, goalsAgainst: 10, goalDiff: -6, points: 1 }
     ]
   },
   {

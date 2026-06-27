@@ -350,8 +350,18 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 64, stage: "分组赛", group: "H", date: "2026-06-26", etTime: "20:00", home: "乌拉圭", away: "西班牙", venue: "NRG Stadium", city: "Houston", homeScore: 0, awayScore: 1, goalScorers: [
     { player: "亚历克斯·巴埃纳", team: "西班牙", minute: "44'", type: "goal" },
   ] },
-  { id: 65, stage: "分组赛", group: "G", date: "2026-06-26", etTime: "23:00", home: "新西兰", away: "比利时", venue: "Lumen Field", city: "Seattle" },
-  { id: 66, stage: "分组赛", group: "G", date: "2026-06-26", etTime: "23:00", home: "埃及", away: "伊朗", venue: "AT&T Stadium", city: "Dallas" },
+  { id: 65, stage: "分组赛", group: "G", date: "2026-06-26", etTime: "23:00", home: "新西兰", away: "比利时", venue: "Lumen Field", city: "Seattle", homeScore: 1, awayScore: 5, goalScorers: [
+    { player: "莱安德罗·特罗萨德", team: "比利时", minute: "28'", type: "goal" },
+    { player: "莱安德罗·特罗萨德", team: "比利时", minute: "50'", type: "goal" },
+    { player: "凯文·德布劳内", team: "比利时", minute: "67'", type: "goal" },
+    { player: "伊莱贾·贾斯特", team: "新西兰", minute: "84'", type: "goal" },
+    { player: "罗梅卢·卢卡库", team: "比利时", minute: "86'", type: "goal" },
+    { player: "亚历克西斯·萨勒梅克斯", team: "比利时", minute: "90+4'", type: "goal" },
+  ] },
+  { id: 66, stage: "分组赛", group: "G", date: "2026-06-26", etTime: "23:00", home: "埃及", away: "伊朗", venue: "AT&T Stadium", city: "Dallas", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "马哈茂德·萨贝尔", team: "埃及", minute: "5'", type: "goal" },
+    { player: "拉明·雷扎伊安", team: "伊朗", minute: "14'", type: "goal" },
+  ] },
   { id: 67, stage: "分组赛", group: "L", date: "2026-06-27", etTime: "17:00", home: "巴拿马", away: "英格兰", venue: "MetLife Stadium", city: "New York New Jersey" },
   { id: 68, stage: "分组赛", group: "L", date: "2026-06-27", etTime: "17:00", home: "克罗地亚", away: "加纳", venue: "Lincoln Financial Field", city: "Philadelphia" },
   { id: 69, stage: "分组赛", group: "K", date: "2026-06-27", etTime: "19:30", home: "哥伦比亚", away: "葡萄牙", venue: "Hard Rock Stadium", city: "Miami" },
