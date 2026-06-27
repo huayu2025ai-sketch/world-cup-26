@@ -42,6 +42,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-27T11:05:08+08:00",
+    updatedAtLabel: "北京时间 2026年6月27日 11:05",
+    title: "I组与H组第61-64场赛果更新",
+    summary: "本次按北京时间 2026-06-27 11:05 复核并补入第 61-64 场终场结果：挪威 1-4 法国、塞内加尔 5-0 伊拉克、佛得角 0-0 沙特阿拉伯、乌拉圭 0-1 西班牙；第 65-66 场尚未到终场窗口，未写入。",
+    changes: [
+      "第 61 场补入挪威 1-4 法国：奥斯曼·登贝莱 7'、20'、32'，Aasgaard 21'，德西雷·杜埃 90+4'。法国 3 战 9 分锁定 I 组头名并已确定晋级，挪威 3 战 6 分列第二并已确定晋级。",
+      "第 62 场补入塞内加尔 5-0 伊拉克：哈比卜·迪亚拉 4'，拉明·卡马拉 57'，伊斯梅拉·萨尔 59'，帕佩·盖耶 71'，伊利曼·恩迪亚耶 83'。",
+      "第 63 场保持佛得角 0-0 沙特阿拉伯。",
+      "第 64 场补入乌拉圭 0-1 西班牙：亚历克斯·巴埃纳 44'。H 组积分榜重算：西班牙 3 战 7 分锁定头名并已确定晋级；佛得角 3 战 3 分列第二并已确定晋级；乌拉圭 3 战 2 分列第三，沙特阿拉伯 3 战 2 分列第四。",
+      "第 65-66 场在本次运行时尚未到北京时间完赛窗口，未写入终场数据。"
+    ]
+  },
+  {
     updatedAt: "2026-06-26T12:13:07+08:00",
     updatedAtLabel: "北京时间 2026年6月26日 12:13",
     title: "D组与F组赛果复核",
@@ -880,10 +893,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "乌拉圭", englishName: "Uruguay", code: "URU", flag: "🇺🇾", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "西班牙", code: "ESP", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 4, goalsAgainst: 0, goalDiff: 4, points: 4 },
-      { name: "乌拉圭", code: "URU", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 3, goalsAgainst: 3, goalDiff: 0, points: 2 },
-      { name: "佛得角", code: "CPV", played: 2, won: 0, draw: 2, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 2 },
-      { name: "沙特阿拉伯", code: "KSA", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 5, goalDiff: -4, points: 1 }
+      { name: "西班牙", code: "ESP", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 5, goalsAgainst: 0, goalDiff: 5, points: 7 },
+      { name: "佛得角", code: "CPV", played: 3, won: 0, draw: 3, lost: 0, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 3 },
+      { name: "乌拉圭", code: "URU", played: 3, won: 0, draw: 2, lost: 1, goalsFor: 3, goalsAgainst: 4, goalDiff: -1, points: 2 },
+      { name: "沙特阿拉伯", code: "KSA", played: 3, won: 0, draw: 2, lost: 1, goalsFor: 1, goalsAgainst: 5, goalDiff: -4, points: 2 }
     ]
   },
   {
@@ -900,10 +913,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "挪威", englishName: "Norway", code: "NOR", flag: "🇳🇴", confederation: "UEFA", pot: 3 }
     ],
     standings: [
-      { name: "法国", code: "FRA", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 6 },
-      { name: "挪威", code: "NOR", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 6, goalsAgainst: 3, goalDiff: 3, points: 6 },
-      { name: "塞内加尔", code: "SEN", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 3, goalsAgainst: 6, goalDiff: -3, points: 0 },
-      { name: "伊拉克", code: "IRQ", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 1, goalsAgainst: 6, goalDiff: -5, points: 0 }
+      { name: "法国", code: "FRA", played: 3, won: 3, draw: 0, lost: 0, goalsFor: 10, goalsAgainst: 2, goalDiff: 8, points: 9 },
+      { name: "挪威", code: "NOR", played: 3, won: 2, draw: 0, lost: 1, goalsFor: 7, goalsAgainst: 7, goalDiff: 0, points: 6 },
+      { name: "塞内加尔", code: "SEN", played: 3, won: 1, draw: 0, lost: 2, goalsFor: 8, goalsAgainst: 6, goalDiff: 2, points: 3 },
+      { name: "伊拉克", code: "IRQ", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 1, goalsAgainst: 11, goalDiff: -10, points: 0 }
     ]
   },
   {
