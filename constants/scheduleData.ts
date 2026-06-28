@@ -362,8 +362,15 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "马哈茂德·萨贝尔", team: "埃及", minute: "5'", type: "goal" },
     { player: "拉明·雷扎伊安", team: "伊朗", minute: "14'", type: "goal" },
   ] },
-  { id: 67, stage: "分组赛", group: "L", date: "2026-06-27", etTime: "17:00", home: "巴拿马", away: "英格兰", venue: "MetLife Stadium", city: "New York New Jersey" },
-  { id: 68, stage: "分组赛", group: "L", date: "2026-06-27", etTime: "17:00", home: "克罗地亚", away: "加纳", venue: "Lincoln Financial Field", city: "Philadelphia" },
+  { id: 67, stage: "分组赛", group: "L", date: "2026-06-27", etTime: "17:00", home: "巴拿马", away: "英格兰", venue: "MetLife Stadium", city: "New York New Jersey", homeScore: 0, awayScore: 2, goalScorers: [
+    { player: "裘德·贝林厄姆", team: "英格兰", minute: "62'", type: "goal" },
+    { player: "哈里·凯恩", team: "英格兰", minute: "67'", type: "goal" },
+  ] },
+  { id: 68, stage: "分组赛", group: "L", date: "2026-06-27", etTime: "17:00", home: "克罗地亚", away: "加纳", venue: "Lincoln Financial Field", city: "Philadelphia", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "彼得·苏契奇", team: "克罗地亚", minute: "31'", type: "goal" },
+    { player: "德里克·卢卡森", team: "加纳", minute: "73'", type: "goal" },
+    { player: "尼科拉·弗拉希奇", team: "克罗地亚", minute: "83'", type: "goal" },
+  ] },
   { id: 69, stage: "分组赛", group: "K", date: "2026-06-27", etTime: "19:30", home: "哥伦比亚", away: "葡萄牙", venue: "Hard Rock Stadium", city: "Miami" },
   { id: 70, stage: "分组赛", group: "K", date: "2026-06-27", etTime: "19:30", home: "刚果民主共和国", away: "乌兹别克斯坦", venue: "Estadio BBVA", city: "Monterrey" },
   { id: 71, stage: "分组赛", group: "J", date: "2026-06-27", etTime: "22:00", home: "阿尔及利亚", away: "奥地利", venue: "Lumen Field", city: "Seattle" },

@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-28T09:16:09+08:00",
+    updatedAtLabel: "北京时间 2026年6月28日 09:16",
+    title: "L组第67-68场赛果更新",
+    summary: "本次按北京时间 2026-06-28 09:16 复核并补入第 67-68 场终场结果：巴拿马 0-2 英格兰、克罗地亚 2-1 加纳；第 69-72 场尚未到终场窗口，未写入终场数据。",
+    changes: [
+      "第 67 场补入巴拿马 0-2 英格兰：裘德·贝林厄姆 62'，哈里·凯恩 67'。英格兰 3 战 7 分锁定 L 组头名并已确定晋级；巴拿马 3 战 0 分垫底。",
+      "第 68 场补入克罗地亚 2-1 加纳：彼得·苏契奇 31'，德里克·卢卡森 73'，尼科拉·弗拉希奇 83'。克罗地亚 3 战 6 分列第二并已确定晋级；加纳 3 战 4 分列第三。",
+      "L 组积分榜重算：英格兰 7 分第一，克罗地亚 6 分第二，加纳 4 分第三，巴拿马 0 分第四。",
+      "助攻榜新增裘德·贝林厄姆、卢卡·莫德里奇各 1 次可靠确认助攻；其余进球未见明确助攻确认，未写入。"
+    ]
+  },
+  {
     updatedAt: "2026-06-27T18:08:24+08:00",
     updatedAtLabel: "北京时间 2026年6月27日 18:08",
     title: "E组、J组、K组积分榜复核",
@@ -997,10 +1009,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "巴拿马", englishName: "Panama", code: "PAN", flag: "🇵🇦", confederation: "CONCACAF", pot: 3 }
     ],
     standings: [
-      { name: "英格兰", code: "ENG", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 3, goalsAgainst: 2, goalDiff: 1, points: 4 },
-      { name: "加纳", code: "GHA", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 1, goalsAgainst: 0, goalDiff: 1, points: 4 },
-      { name: "克罗地亚", code: "CRO", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 3, goalsAgainst: 3, goalDiff: 0, points: 3 },
-      { name: "巴拿马", code: "PAN", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 0, goalsAgainst: 2, goalDiff: -2, points: 0 }
+      { name: "英格兰", code: "ENG", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 5, goalsAgainst: 2, goalDiff: 3, points: 7 },
+      { name: "克罗地亚", code: "CRO", played: 3, won: 2, draw: 0, lost: 1, goalsFor: 5, goalsAgainst: 4, goalDiff: 1, points: 6 },
+      { name: "加纳", code: "GHA", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 2, goalsAgainst: 2, goalDiff: 0, points: 4 },
+      { name: "巴拿马", code: "PAN", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 0, goalsAgainst: 4, goalDiff: -4, points: 0 }
     ]
   }
 ];
