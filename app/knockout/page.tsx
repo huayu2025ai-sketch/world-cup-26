@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import KnockoutBracket from "@/components/KnockoutBracket";
+import UpdateHistoryPanel from "@/components/UpdateHistoryPanel";
 import { scheduleMatches } from "@/constants/scheduleData";
 
 export const metadata: Metadata = {
@@ -72,6 +73,8 @@ export default function KnockoutPage() {
 
         <KnockoutBracket />
       </section>
+
+      <UpdateHistoryPanel />
     </main>
   );
 }
