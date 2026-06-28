@@ -1,4 +1,25 @@
 import { assistsRanking, goalsRanking, statsNotice, type PlayerStat } from "@/constants/tournamentStats";
+import { playerProfiles } from "@/constants/playerProfiles";
+
+const englishNameByChineseName = Object.values(playerProfiles).reduce<Record<string, string>>((acc, profile) => {
+  if (!acc[profile.chineseName]) {
+    acc[profile.chineseName] = profile.name;
+  }
+
+  return acc;
+}, {});
+
+const getVisibleRankingRows = (rows: PlayerStat[]) => {
+  const thresholdRank = rows[9]?.rank;
+
+  if (thresholdRank === undefined) {
+    return rows;
+  }
+
+  const thresholdValue = rows[9].value;
+
+  return rows.filter((row) => row.rank <= thresholdRank || row.value === thresholdValue);
+};
 
 type RankingTableProps = {
   title: string;
@@ -7,6 +28,8 @@ type RankingTableProps = {
 };
 
 function RankingTable({ title, label, rows }: RankingTableProps) {
+  const visibleRows = getVisibleRankingRows(rows);
+
   return (
     <section className="min-w-0 rounded-lg border border-slate-700 bg-slate-800/50 p-4 backdrop-blur-md">
       <div className="flex items-center justify-between gap-3 border-b border-slate-700 pb-3">
@@ -15,11 +38,11 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
           <h2 className="mt-1 text-xl font-black text-slate-100">{title}</h2>
         </div>
         <span className="rounded-full bg-slate-950/70 px-3 py-1 text-xs font-bold text-slate-400">
-          {rows.length} 人
+          {visibleRows.length} 人
         </span>
       </div>
 
-      {rows.length > 0 ? (
+      {visibleRows.length > 0 ? (
         <div className="mt-3 max-w-full overflow-x-auto">
           <table className="w-full min-w-[520px] table-fixed text-left text-xs sm:text-sm">
             <colgroup>
@@ -39,15 +62,15 @@ function RankingTable({ title, label, rows }: RankingTableProps) {
               </tr>
             </thead>
             <tbody>
-              {rows.map((row) => (
+              {visibleRows.map((row) => (
                 <tr key={`${row.teamCode}-${row.player}`} className="border-b border-slate-700/60 last:border-0">
                   <td className="py-3 pr-2 font-black text-cyan-200 sm:pr-3">#{row.rank}</td>
                   <td className="min-w-0 px-2 py-3 align-top sm:px-3">
-                    <p className="whitespace-normal break-words font-black leading-snug text-slate-100">
+                    <p className="whitespace-normal break-words text-sm font-black leading-snug text-slate-100 sm:text-[15px]">
                       {row.chineseName}
                     </p>
-                    <p className="mt-0.5 whitespace-normal break-words text-[10px] leading-snug text-slate-500 sm:text-xs">
-                      {row.player}
+                    <p className="mt-0.5 whitespace-normal break-words text-[10px] font-medium leading-snug text-slate-500 sm:text-xs">
+                      {englishNameByChineseName[row.chineseName] ?? row.player}
                     </p>
                   </td>
                   <td className="min-w-0 px-2 py-3 align-top sm:px-3">

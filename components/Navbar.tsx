@@ -16,6 +16,7 @@ const navItems = [
 
 type TournamentStatus = {
   stage: ScheduleMatch["stage"];
+  stageLabel: string;
   completedMatches: number;
   totalMatches: number;
   todayMatches: number;
@@ -58,6 +59,14 @@ const getMatchKickoff = (match: ScheduleMatch) => {
 
 const hasResult = (match: ScheduleMatch) => match.homeScore !== undefined && match.awayScore !== undefined;
 
+const getStageLabel = (stage: ScheduleMatch["stage"]) => {
+  if (stage === "分组赛") {
+    return "小组赛";
+  }
+
+  return "淘汰赛";
+};
+
 const formatNextMatchTimeLabel = (kickoff: Date, now: Date) => {
   const kickoffDateKey = getBeijingDateKey(kickoff);
   const todayKey = getBeijingDateKey(now);
@@ -86,6 +95,7 @@ const getTournamentStatus = (): TournamentStatus => {
 
   return {
     stage: currentStage,
+    stageLabel: getStageLabel(currentStage),
     completedMatches,
     totalMatches: scheduleMatches.length,
     todayMatches,
@@ -125,7 +135,7 @@ export default function Navbar() {
 
         <div className="mx-auto flex max-w-full items-center gap-2 rounded-lg border border-cyan-300/20 bg-slate-950/70 px-3 py-1.5 shadow-glow">
           <span className="whitespace-nowrap font-mono text-sm font-black tracking-[0.04em] text-cyan-200 drop-shadow-[0_0_8px_rgba(103,232,249,0.75)]">
-            {tournamentStatus.stage}
+            {tournamentStatus.stageLabel}
           </span>
           <span className="text-slate-600">·</span>
           <span className="whitespace-nowrap font-mono text-xs font-black text-slate-200">
