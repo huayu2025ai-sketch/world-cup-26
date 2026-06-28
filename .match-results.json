@@ -952,5 +952,23 @@
     "group": "L",
     "stage": "分组赛",
     "updatedAt": "2026-06-28T09:16:09.515534+08:00"
+  },
+  "69": {
+    "homeScore": 0,
+    "awayScore": 0,
+    "homeTeam": "哥伦比亚",
+    "awayTeam": "葡萄牙",
+    "group": "K",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-28T09:56:33+08:00"
+  },
+  "70": {
+    "homeScore": 3,
+    "awayScore": 1,
+    "homeTeam": "刚果民主共和国",
+    "awayTeam": "乌兹别克斯坦",
+    "group": "K",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-28T09:56:33+08:00"
   }
 }

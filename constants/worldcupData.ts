@@ -42,6 +42,18 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-28T09:56:33+08:00",
+    updatedAtLabel: "北京时间 2026年6月28日 09:56",
+    title: "K组第69-70场赛果更新",
+    summary: "本次按北京时间 2026-06-28 09:56 复核并补入第 69-70 场终场结果：哥伦比亚 0-0 葡萄牙、刚果民主共和国 3-1 乌兹别克斯坦；第 71-72 场尚未到终场窗口，未写入终场数据。",
+    changes: [
+      "第 69 场保持哥伦比亚 0-0 葡萄牙。哥伦比亚 3 战 7 分锁定 K 组头名并已确定晋级；葡萄牙 3 战 5 分列第二并已确定晋级。",
+      "第 70 场补入刚果民主共和国 3-1 乌兹别克斯坦：埃尔多尔·肖穆罗多夫 10'，约安·维萨 68'（点球）、90+1'，菲斯顿·马耶莱 78'。刚果民主共和国 3 战 4 分列第三并已确认晋级；乌兹别克斯坦 3 战 0 分垫底。",
+      "K 组积分榜重算：哥伦比亚 7 分第一，葡萄牙 5 分第二，刚果民主共和国 4 分第三，乌兹别克斯坦 0 分第四。",
+      "助攻榜未新增可靠确认助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-28T09:16:09+08:00",
     updatedAtLabel: "北京时间 2026年6月28日 09:16",
     title: "L组第67-68场赛果更新",
@@ -989,10 +1001,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "哥伦比亚", englishName: "Colombia", code: "COL", flag: "🇨🇴", confederation: "CONMEBOL", pot: 2 }
     ],
     standings: [
-      { name: "哥伦比亚", code: "COL", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 6 },
-      { name: "葡萄牙", code: "POR", played: 2, won: 1, draw: 1, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 4 },
-      { name: "刚果民主共和国", code: "COD", played: 2, won: 0, draw: 1, lost: 1, goalsFor: 1, goalsAgainst: 2, goalDiff: -1, points: 1 },
-      { name: "乌兹别克斯坦", code: "UZB", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 1, goalsAgainst: 7, goalDiff: -6, points: 0 }
+      { name: "哥伦比亚", code: "COL", played: 3, won: 2, draw: 1, lost: 0, goalsFor: 3, goalsAgainst: 1, goalDiff: 2, points: 7 },
+      { name: "葡萄牙", code: "POR", played: 3, won: 1, draw: 2, lost: 0, goalsFor: 6, goalsAgainst: 1, goalDiff: 5, points: 5 },
+      { name: "刚果民主共和国", code: "COD", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 4, goalsAgainst: 3, goalDiff: 1, points: 4 },
+      { name: "乌兹别克斯坦", code: "UZB", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 2, goalsAgainst: 10, goalDiff: -8, points: 0 }
     ]
   },
   {

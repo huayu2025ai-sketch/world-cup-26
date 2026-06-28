@@ -371,8 +371,13 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "德里克·卢卡森", team: "加纳", minute: "73'", type: "goal" },
     { player: "尼科拉·弗拉希奇", team: "克罗地亚", minute: "83'", type: "goal" },
   ] },
-  { id: 69, stage: "分组赛", group: "K", date: "2026-06-27", etTime: "19:30", home: "哥伦比亚", away: "葡萄牙", venue: "Hard Rock Stadium", city: "Miami" },
-  { id: 70, stage: "分组赛", group: "K", date: "2026-06-27", etTime: "19:30", home: "刚果民主共和国", away: "乌兹别克斯坦", venue: "Estadio BBVA", city: "Monterrey" },
+  { id: 69, stage: "分组赛", group: "K", date: "2026-06-27", etTime: "19:30", home: "哥伦比亚", away: "葡萄牙", venue: "Hard Rock Stadium", city: "Miami", homeScore: 0, awayScore: 0, goalScorers: [] },
+  { id: 70, stage: "分组赛", group: "K", date: "2026-06-27", etTime: "19:30", home: "刚果民主共和国", away: "乌兹别克斯坦", venue: "Estadio BBVA", city: "Monterrey", homeScore: 3, awayScore: 1, goalScorers: [
+    { player: "埃尔多尔·肖穆罗多夫", team: "乌兹别克斯坦", minute: "10'", type: "goal" },
+    { player: "约安·维萨", team: "刚果民主共和国", minute: "68'", type: "penalty" },
+    { player: "菲斯顿·马耶莱", team: "刚果民主共和国", minute: "78'", type: "goal" },
+    { player: "约安·维萨", team: "刚果民主共和国", minute: "90+1'", type: "goal" },
+  ] },
   { id: 71, stage: "分组赛", group: "J", date: "2026-06-27", etTime: "22:00", home: "阿尔及利亚", away: "奥地利", venue: "Lumen Field", city: "Seattle" },
   { id: 72, stage: "分组赛", group: "J", date: "2026-06-27", etTime: "22:00", home: "约旦", away: "阿根廷", venue: "Arrowhead Stadium", city: "Kansas City" },
 
