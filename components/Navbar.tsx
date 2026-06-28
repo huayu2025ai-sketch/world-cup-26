@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import { scheduleMatches, type ScheduleMatch } from "@/constants/scheduleData";
 
 const navItems = [
-  { href: "/", path: "/", label: "分组" },
-  { href: "/schedule", path: "/schedule", label: "赛程" },
   { href: "/knockout", path: "/knockout", label: "对阵" },
+  { href: "/teams", path: "/teams", label: "球队" },
+  { href: "/schedule", path: "/schedule", label: "赛程" },
   { href: "/predictions#pending-prediction", path: "/predictions", label: "预测" },
   { href: "/export", path: "/export", label: "素材" },
   { href: "/stats", path: "/stats", label: "数据" }
@@ -122,7 +122,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-slate-700/70 bg-slate-900/85 backdrop-blur-xl">
       <nav className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-3 px-4 py-3 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
         <div className="flex min-w-0 items-center justify-center lg:justify-start">
-          <Link href="/" className="group flex items-center gap-3" aria-label="返回世界杯小组总览">
+          <Link href="/knockout" className="group flex items-center gap-3" aria-label="返回世界杯对阵页">
             <span className="grid h-10 w-10 place-items-center rounded-full border border-cyan-300/30 bg-cyan-300/10 text-lg shadow-glow">
               ⚽
             </span>

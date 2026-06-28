@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 const siteUrl = "https://wc26.solalab.cn";
 
-const routes = ["", "/schedule", "/predictions", "/export", "/stats"];
+const routes = ["/knockout", "/teams", "/schedule", "/predictions", "/export", "/stats"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
     lastModified,
-    changeFrequency: route === "" ? "daily" : "weekly",
-    priority: route === "" ? 1 : 0.8
+    changeFrequency: route === "/knockout" ? "daily" : "weekly",
+    priority: route === "/knockout" ? 1 : 0.8
   }));
 }

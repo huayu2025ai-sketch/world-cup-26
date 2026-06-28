@@ -165,7 +165,10 @@ const buildPredictedExportRows = () => {
       match,
       prediction: getMatchPrediction(matchOddsById[match.id] ?? [])
     }))
-    .filter((row): row is ExportMatch & { prediction: MatchPrediction } => Boolean(row.prediction));
+    .filter(
+      (row): row is ExportMatch & { prediction: MatchPrediction } =>
+        Boolean(row.prediction) && row.match.homeScore === undefined && row.match.awayScore === undefined
+    );
 };
 
 const buildExportRows = (dateKey: string) => {
