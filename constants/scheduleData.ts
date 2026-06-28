@@ -378,8 +378,20 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "菲斯顿·马耶莱", team: "刚果民主共和国", minute: "78'", type: "goal" },
     { player: "约安·维萨", team: "刚果民主共和国", minute: "90+1'", type: "goal" },
   ] },
-  { id: 71, stage: "分组赛", group: "J", date: "2026-06-27", etTime: "22:00", home: "阿尔及利亚", away: "奥地利", venue: "Lumen Field", city: "Seattle" },
-  { id: 72, stage: "分组赛", group: "J", date: "2026-06-27", etTime: "22:00", home: "约旦", away: "阿根廷", venue: "Arrowhead Stadium", city: "Kansas City" },
+  { id: 71, stage: "分组赛", group: "J", date: "2026-06-27", etTime: "22:00", home: "阿尔及利亚", away: "奥地利", venue: "Lumen Field", city: "Seattle", homeScore: 3, awayScore: 3, goalScorers: [
+    { player: "马尔科·阿瑙托维奇", team: "奥地利", minute: "28'", type: "goal" },
+    { player: "拉菲克·贝尔加利", team: "阿尔及利亚", minute: "45'", type: "goal" },
+    { player: "马塞尔·萨比策", team: "奥地利", minute: "54'", type: "goal" },
+    { player: "里亚德·马赫雷斯", team: "阿尔及利亚", minute: "60'", type: "goal" },
+    { player: "里亚德·马赫雷斯", team: "阿尔及利亚", minute: "90+4'", type: "goal" },
+    { player: "萨沙·卡拉季奇", team: "奥地利", minute: "90+5'", type: "goal" },
+  ] },
+  { id: 72, stage: "分组赛", group: "J", date: "2026-06-27", etTime: "22:00", home: "约旦", away: "阿根廷", venue: "Arrowhead Stadium", city: "Kansas City", homeScore: 1, awayScore: 3, goalScorers: [
+    { player: "吉奥瓦尼·洛塞尔索", team: "阿根廷", minute: "24'", type: "goal" },
+    { player: "劳塔罗·马丁内斯", team: "阿根廷", minute: "33'", type: "penalty" },
+    { player: "穆萨·阿尔塔马里", team: "约旦", minute: "63'", type: "goal" },
+    { player: "莱昂内尔·梅西", team: "阿根廷", minute: "78'", type: "goal" },
+  ] },
 
   { id: 73, stage: "32强", date: "2026-06-28", etTime: "15:00", home: "A组第2", away: "B组第2", venue: "SoFi Stadium", city: "Los Angeles" },
   { id: 74, stage: "32强", date: "2026-06-29", etTime: "15:00", home: "A组第1", away: "最佳第三名", venue: "Estadio Azteca", city: "Mexico City" },

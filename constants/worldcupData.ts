@@ -42,6 +42,19 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-28T12:43:19+08:00",
+    updatedAtLabel: "北京时间 2026年6月28日 12:43",
+    title: "J组收官与小组赛完结",
+    summary: "本次按北京时间 2026-06-28 12:43 复核并补入第 71-72 场终场结果：阿尔及利亚 3-3 奥地利、约旦 1-3 阿根廷；小组赛至此全部结束，J组积分榜与晋级标识同步收官。",
+    changes: [
+      "第 71 场补入阿尔及利亚 3-3 奥地利：马尔科·阿瑙托维奇 28'，拉菲克·贝尔加利 45'，马塞尔·萨比策 54'，里亚德·马赫雷斯 60'、90+4'，萨沙·卡拉季奇 90+5'。",
+      "第 72 场补入约旦 1-3 阿根廷：吉奥瓦尼·洛塞尔索 24'，劳塔罗·马丁内斯 33'（点球），穆萨·阿尔塔马里 63'，莱昂内尔·梅西 78'。",
+      "J 组积分榜重算：阿根廷 3 战 9 分第一；奥地利 3 战 4 分、净胜球 -1 列第二；阿尔及利亚 3 战 4 分、净胜球 -2 列第三；约旦 3 战 0 分垫底。",
+      "晋级标识：阿根廷、奥地利、阿尔及利亚已确认晋级。",
+      "助攻榜仅新增伊赫桑·哈达德 1 次可靠确认助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-28T09:56:33+08:00",
     updatedAtLabel: "北京时间 2026年6月28日 09:56",
     title: "K组第69-70场赛果更新",
@@ -981,10 +994,10 @@ export const worldCupGroups: WorldCupGroup[] = [
       { name: "约旦", englishName: "Jordan", code: "JOR", flag: "🇯🇴", confederation: "AFC", pot: 4, debut: true }
     ],
     standings: [
-      { name: "阿根廷", code: "ARG", played: 2, won: 2, draw: 0, lost: 0, goalsFor: 5, goalsAgainst: 0, goalDiff: 5, points: 6 },
-      { name: "奥地利", code: "AUT", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDiff: -1, points: 3 },
-      { name: "阿尔及利亚", code: "ALG", played: 2, won: 1, draw: 0, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 3 },
-      { name: "约旦", code: "JOR", played: 2, won: 0, draw: 0, lost: 2, goalsFor: 2, goalsAgainst: 4, goalDiff: -2, points: 0 }
+      { name: "阿根廷", code: "ARG", played: 3, won: 3, draw: 0, lost: 0, goalsFor: 8, goalsAgainst: 1, goalDiff: 7, points: 9 },
+      { name: "奥地利", code: "AUT", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 5, goalsAgainst: 6, goalDiff: -1, points: 4 },
+      { name: "阿尔及利亚", code: "ALG", played: 3, won: 1, draw: 1, lost: 1, goalsFor: 5, goalsAgainst: 7, goalDiff: -2, points: 4 },
+      { name: "约旦", code: "JOR", played: 3, won: 0, draw: 0, lost: 3, goalsFor: 3, goalsAgainst: 7, goalDiff: -4, points: 0 }
     ]
   },
   {

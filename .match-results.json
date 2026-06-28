@@ -969,6 +969,44 @@
     "awayTeam": "乌兹别克斯坦",
     "group": "K",
     "stage": "分组赛",
-    "updatedAt": "2026-06-28T09:56:33+08:00"
+    "updatedAt": "2026-06-28T09:56:33+08:00",
+    "goalScorers": [
+      { "player": "埃尔多尔·肖穆罗多夫", "team": "乌兹别克斯坦", "minute": "10'", "type": "goal" },
+      { "player": "约安·维萨", "team": "刚果民主共和国", "minute": "68'", "type": "penalty" },
+      { "player": "菲斯顿·马耶莱", "team": "刚果民主共和国", "minute": "78'", "type": "goal" },
+      { "player": "约安·维萨", "team": "刚果民主共和国", "minute": "90+1'", "type": "goal" }
+    ]
+  },
+  "71": {
+    "homeScore": 3,
+    "awayScore": 3,
+    "homeTeam": "阿尔及利亚",
+    "awayTeam": "奥地利",
+    "group": "J",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-28T12:43:19+08:00",
+    "goalScorers": [
+      { "player": "马尔科·阿瑙托维奇", "team": "奥地利", "minute": "28'", "type": "goal" },
+      { "player": "拉菲克·贝尔加利", "team": "阿尔及利亚", "minute": "45'", "type": "goal" },
+      { "player": "马塞尔·萨比策", "team": "奥地利", "minute": "54'", "type": "goal" },
+      { "player": "里亚德·马赫雷斯", "team": "阿尔及利亚", "minute": "60'", "type": "goal" },
+      { "player": "里亚德·马赫雷斯", "team": "阿尔及利亚", "minute": "90+4'", "type": "goal" },
+      { "player": "萨沙·卡拉季奇", "team": "奥地利", "minute": "90+5'", "type": "goal" }
+    ]
+  },
+  "72": {
+    "homeScore": 1,
+    "awayScore": 3,
+    "homeTeam": "约旦",
+    "awayTeam": "阿根廷",
+    "group": "J",
+    "stage": "分组赛",
+    "updatedAt": "2026-06-28T12:43:19+08:00",
+    "goalScorers": [
+      { "player": "吉奥瓦尼·洛塞尔索", "team": "阿根廷", "minute": "24'", "type": "goal" },
+      { "player": "劳塔罗·马丁内斯", "team": "阿根廷", "minute": "33'", "type": "penalty" },
+      { "player": "穆萨·阿尔塔马里", "team": "约旦", "minute": "63'", "type": "goal" },
+      { "player": "莱昂内尔·梅西", "team": "阿根廷", "minute": "78'", "type": "goal" }
+    ]
   }
 }

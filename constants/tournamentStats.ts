@@ -9,7 +9,7 @@ export type PlayerStat = {
 };
 
 export const goalsRanking: PlayerStat[] = [
-  { rank: 1, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 5, matches: 2 },
+  { rank: 1, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 6, matches: 3 },
   { rank: 2, player: "维尼修斯·儒尼奥尔", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 4, matches: 3 },
   { rank: 3, player: "基利安·姆巴佩", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 4, matches: 2 },
   { rank: 4, player: "埃尔林·哈兰德", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 4, matches: 2 },
@@ -76,8 +76,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 65, player: "艾曼·侯赛因", chineseName: "艾曼·侯赛因", team: "伊拉克", teamCode: "IRQ", value: 1, matches: 1 },
   { rank: 66, player: "莱奥·厄斯蒂高", chineseName: "莱奥·厄斯蒂高", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
   { rank: 67, player: "罗马诺·施密德", chineseName: "罗马诺·施密德", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
-  { rank: 68, player: "马尔科·阿瑙托维奇", chineseName: "马尔科·阿瑙托维奇", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
-  { rank: 69, player: "穆萨·阿尔塔马里", chineseName: "穆萨·阿尔塔马里", team: "约旦", teamCode: "JOR", value: 1, matches: 1 },
+  { rank: 68, player: "马尔科·阿瑙托维奇", chineseName: "马尔科·阿瑙托维奇", team: "奥地利", teamCode: "AUT", value: 2, matches: 2 },
+  { rank: 69, player: "穆萨·阿尔塔马里", chineseName: "穆萨·阿尔塔马里", team: "约旦", teamCode: "JOR", value: 2, matches: 2 },
   { rank: 70, player: "若昂·内维斯", chineseName: "若昂·内维斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
   { rank: 71, player: "马丁·巴图里纳", chineseName: "马丁·巴图里纳", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
   { rank: 72, player: "佩塔尔·穆萨", chineseName: "佩塔尔·穆萨", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
@@ -149,7 +149,13 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 138, player: "德里克·卢卡森", chineseName: "德里克·卢卡森", team: "加纳", teamCode: "GHA", value: 1, matches: 1 },
   { rank: 139, player: "尼科拉·弗拉希奇", chineseName: "尼科拉·弗拉希奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
   { rank: 140, player: "埃尔多尔·肖穆罗多夫", chineseName: "埃尔多尔·肖穆罗多夫", team: "乌兹别克斯坦", teamCode: "UZB", value: 1, matches: 1 },
-  { rank: 141, player: "菲斯顿·马耶莱", chineseName: "菲斯顿·马耶莱", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 }
+  { rank: 141, player: "菲斯顿·马耶莱", chineseName: "菲斯顿·马耶莱", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 },
+  { rank: 142, player: "里亚德·马赫雷斯", chineseName: "里亚德·马赫雷斯", team: "阿尔及利亚", teamCode: "ALG", value: 2, matches: 1 },
+  { rank: 143, player: "吉奥瓦尼·洛塞尔索", chineseName: "吉奥瓦尼·洛塞尔索", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
+  { rank: 144, player: "劳塔罗·马丁内斯", chineseName: "劳塔罗·马丁内斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
+  { rank: 145, player: "拉菲克·贝尔加利", chineseName: "拉菲克·贝尔加利", team: "阿尔及利亚", teamCode: "ALG", value: 1, matches: 1 },
+  { rank: 146, player: "马塞尔·萨比策", chineseName: "马塞尔·萨比策", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
+  { rank: 147, player: "萨沙·卡拉季奇", chineseName: "萨沙·卡拉季奇", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 }
   ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -213,11 +219,12 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 58, player: "凯文·德布劳内", chineseName: "凯文·德布劳内", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
   { rank: 59, player: "尼古拉·拉斯金", chineseName: "尼古拉·拉斯金", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
   { rank: 60, player: "裘德·贝林厄姆", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
-  { rank: 61, player: "卢卡·莫德里奇", chineseName: "卢卡·莫德里奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 }
+  { rank: 61, player: "卢卡·莫德里奇", chineseName: "卢卡·莫德里奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
+  { rank: 62, player: "伊赫桑·哈达德", chineseName: "伊赫桑·哈达德", team: "约旦", teamCode: "JOR", value: 1, matches: 1 }
   ];
 
 
 export const statsNotice = {
-  title: "K组第69-70场赛果更新",
-  body: "已补入哥伦比亚 0-0 葡萄牙、刚果民主共和国 3-1 乌兹别克斯坦并同步更新统计。"
+  title: "J组收官与统计更新",
+  body: "已补入阿尔及利亚 3-3 奥地利、约旦 1-3 阿根廷并同步更新统计。"
 };

@@ -30,6 +30,8 @@ const manualQualifiedTeamCodes = new Set([
   "ENG",
   "CRO",
   "COD",
+  "AUT",
+  "ALG",
   "POR",
   "GHA",
   "EGY",
