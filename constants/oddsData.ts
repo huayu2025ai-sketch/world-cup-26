@@ -39,9 +39,9 @@ export const recommendedBookmakers: Bookmaker[] = [
   { key: "draftkings", name: "数据源 E", marketRole: "北美市场样本" }
 ];
 
-export const oddsDataUpdatedAt = "2026-06-27";
+export const oddsDataUpdatedAt = "2026-06-29";
 
-export const championFavoritesUpdatedAt = "2026-06-27";
+export const championFavoritesUpdatedAt = "2026-06-29";
 
 export const championFavorites: ChampionFavorite[] = [
   {
@@ -346,12 +346,14 @@ export const matchOddsById: Record<number, MatchBookmakerOdds[]> = {
     { bookmaker: "betfair", odds: { home: 1.5, draw: 4.1, away: 6 }, capturedAt: "2026-06-28" }
   ],
   74: [
-    { bookmaker: "pinnacle", odds: { home: 1.42, draw: 4.4, away: 7.5 }, capturedAt: "2026-06-28" },
-    { bookmaker: "betfair", odds: { home: 1.44, draw: 4.2, away: 7.2 }, capturedAt: "2026-06-28" }
+    { bookmaker: "pinnacle", odds: { home: 1.36, draw: 5, away: 8 }, capturedAt: "2026-06-29" },
+    { bookmaker: "betfair", odds: { home: 1.36, draw: 5, away: 8 }, capturedAt: "2026-06-29" },
+    { bookmaker: "bet365", odds: { home: 1.36, draw: 5, away: 8 }, capturedAt: "2026-06-29" }
   ],
   75: [
-    { bookmaker: "pinnacle", odds: { home: 1.82, draw: 3.4, away: 4.3 }, capturedAt: "2026-06-28" },
-    { bookmaker: "betfair", odds: { home: 1.8, draw: 3.3, away: 4.1 }, capturedAt: "2026-06-28" }
+    { bookmaker: "pinnacle", odds: { home: 1.91, draw: 3.3, away: 2.3 }, capturedAt: "2026-06-29" },
+    { bookmaker: "betfair", odds: { home: 1.91, draw: 3.3, away: 2.3 }, capturedAt: "2026-06-29" },
+    { bookmaker: "bet365", odds: { home: 1.91, draw: 3.3, away: 2.3 }, capturedAt: "2026-06-29" }
   ],
   76: [
     { bookmaker: "pinnacle", odds: { home: 1.55, draw: 4, away: 6.8 }, capturedAt: "2026-06-28" },
