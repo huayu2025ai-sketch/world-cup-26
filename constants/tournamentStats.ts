@@ -154,7 +154,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 143, player: "马塞尔·萨比策", chineseName: "马塞尔·萨比策", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
   { rank: 144, player: "萨沙·卡拉季奇", chineseName: "萨沙·卡拉季奇", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
   { rank: 145, player: "吉奥瓦尼·洛塞尔索", chineseName: "吉奥瓦尼·洛塞尔索", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
-  { rank: 146, player: "劳塔罗·马丁内斯", chineseName: "劳塔罗·马丁内斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 }
+  { rank: 146, player: "劳塔罗·马丁内斯", chineseName: "劳塔罗·马丁内斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
+  { rank: 147, player: "斯蒂芬·尤斯塔基奥", chineseName: "斯蒂芬·尤斯塔基奥", team: "加拿大", teamCode: "CAN", value: 1, matches: 1 }
   ];
 
 export const assistsRanking: PlayerStat[] = [

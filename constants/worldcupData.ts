@@ -42,6 +42,17 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-29T08:35:22+08:00",
+    updatedAtLabel: "北京时间 2026年6月29日 08:35",
+    title: "32强首场赛果更新",
+    summary: "本次按北京时间 2026-06-29 08:35 复核并补入第 73 场终场结果：南非 0-1 加拿大；第 74 场尚未获得可信终场证据，未写入。",
+    changes: [
+      "第 73 场补入南非 0-1 加拿大：斯蒂芬·尤斯塔基奥 90+2'。加拿大晋级 16 强，南非止步 32 强。",
+      "小组积分榜与已确认晋级标识本次无变化。",
+      "助攻榜未发现可靠来源明确确认的新增助攻。"
+    ]
+  },
+  {
     updatedAt: "2026-06-28T13:14:28+08:00",
     updatedAtLabel: "北京时间 2026年6月28日 13:14",
     title: "32强对阵已确认",

@@ -393,7 +393,9 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "莱昂内尔·梅西", team: "阿根廷", minute: "78'", type: "goal" },
   ] },
 
-  { id: 73, stage: "32强", date: "2026-06-28", etTime: "15:00", home: "南非", away: "加拿大", venue: "SoFi Stadium", city: "Los Angeles" },
+  { id: 73, stage: "32强", date: "2026-06-28", etTime: "15:00", home: "南非", away: "加拿大", venue: "SoFi Stadium", city: "Los Angeles", homeScore: 0, awayScore: 1, goalScorers: [
+    { player: "斯蒂芬·尤斯塔基奥", team: "加拿大", minute: "90+2'", type: "goal" },
+  ] },
   { id: 74, stage: "32强", date: "2026-06-29", etTime: "15:00", home: "德国", away: "巴拉圭", venue: "Estadio Azteca", city: "Mexico City" },
   { id: 75, stage: "32强", date: "2026-06-29", etTime: "18:00", home: "荷兰", away: "摩洛哥", venue: "BMO Field", city: "Toronto" },
   { id: 76, stage: "32强", date: "2026-06-30", etTime: "15:00", home: "巴西", away: "日本", venue: "MetLife Stadium", city: "New York New Jersey" },
