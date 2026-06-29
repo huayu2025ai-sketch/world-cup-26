@@ -224,9 +224,8 @@ export default function KnockoutBracket() {
         }
       >
         <div className="mb-1 flex items-center justify-between gap-1 text-[8px] font-bold text-slate-400 sm:text-[9px]">
-          <span className="whitespace-nowrap rounded-full bg-white/5 px-1.5 py-0.5">{formatDateLabel(match.beijingTime)}</span>
           <span className="whitespace-nowrap rounded-full bg-cyan-300/10 px-1.5 py-0.5 text-cyan-100">
-            {match.beijingTime.split(" ")[1]}
+            北京时间 {match.beijingTime}
           </span>
         </div>
 

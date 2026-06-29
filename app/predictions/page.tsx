@@ -78,8 +78,16 @@ const formatDate = (value: string) =>
     weekday: "long"
   }).format(new Date(`${value}T12:00:00`));
 
+const getBeijingTimestamp = (match: ScheduleMatch) => {
+  const [monthDay, time] = match.beijingTime.split(" ");
+  return new Date(`2026-${monthDay}T${time}:00+08:00`).getTime();
+};
+
+const sortByBeijingTime = (left: PredictionRow, right: PredictionRow) =>
+  getBeijingTimestamp(left.match) - getBeijingTimestamp(right.match) || left.match.id - right.match.id;
+
 const groupRowsByDate = (rows: PredictionRow[]) => {
-  return rows.reduce<Record<string, PredictionRow[]>>((acc, row) => {
+  const grouped = rows.reduce<Record<string, PredictionRow[]>>((acc, row) => {
     if (!acc[row.match.date]) {
       acc[row.match.date] = [];
     }
@@ -87,6 +95,9 @@ const groupRowsByDate = (rows: PredictionRow[]) => {
     acc[row.match.date].push(row);
     return acc;
   }, {});
+
+  Object.values(grouped).forEach((items) => items.sort(sortByBeijingTime));
+  return grouped;
 };
 
 const getPredictedAdvancer = (match: ScheduleMatch, prediction: MatchPrediction | null) => {

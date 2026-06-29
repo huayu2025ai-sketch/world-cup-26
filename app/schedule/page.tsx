@@ -19,8 +19,16 @@ const getBeijingDateKey = (match: ScheduleMatch) => {
   return `2026-${month}-${day}`;
 };
 
+const getBeijingTimestamp = (match: ScheduleMatch) => {
+  const [monthDay, time] = match.beijingTime.split(" ");
+  return new Date(`2026-${monthDay}T${time}:00+08:00`).getTime();
+};
+
+const sortByBeijingTime = (left: ScheduleMatch, right: ScheduleMatch) =>
+  getBeijingTimestamp(left) - getBeijingTimestamp(right) || left.id - right.id;
+
 const groupByDate = (matches: ScheduleMatch[]) => {
-  return matches.reduce<Record<string, ScheduleMatch[]>>((acc, match) => {
+  const grouped = matches.reduce<Record<string, ScheduleMatch[]>>((acc, match) => {
     const dateKey = getBeijingDateKey(match);
     if (!acc[dateKey]) {
       acc[dateKey] = [];
@@ -28,11 +36,9 @@ const groupByDate = (matches: ScheduleMatch[]) => {
     acc[dateKey].push(match);
     return acc;
   }, {});
-};
 
-const getBeijingTimestamp = (match: ScheduleMatch) => {
-  const [monthDay, time] = match.beijingTime.split(" ");
-  return new Date(`2026-${monthDay}T${time}:00+08:00`).getTime();
+  Object.values(grouped).forEach((items) => items.sort(sortByBeijingTime));
+  return grouped;
 };
 
 const getNewsTimestamp = (date: string) => {
