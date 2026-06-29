@@ -8,7 +8,7 @@ import { getDisplayMatchTeamLabel } from "@/lib/knockoutDisplay";
 type SvgLine = {
   id: number;
   d: string;
-  variant: "winner" | "loser";
+  completed: boolean;
   from: { x: number; y: number };
   to: { x: number; y: number };
 };
@@ -81,19 +81,20 @@ export default function KnockoutBracket() {
       };
     };
 
-    const connect = (fromId: number, toId: number, variant: "winner" | "loser") => {
+    const connect = (fromId: number, toId: number) => {
       const fromEl = matchRefs.current[fromId];
       const toEl = matchRefs.current[toId];
       if (!fromEl || !toEl) return;
+      const fromMatch = matchMap.get(fromId);
 
       const from = getCenter(fromEl);
       const to = getCenter(toEl);
       const elbowX = from.right + (to.left - from.right) * 0.5;
       const d = `M ${from.right} ${from.y} H ${elbowX} V ${to.y} H ${to.left}`;
       newLines.push({
-        id: fromId * 100 + toId + (variant === "loser" ? 1 : 0),
+        id: fromId * 100 + toId,
         d,
-        variant,
+        completed: Boolean(fromMatch && isFinished(fromMatch)),
         from: { x: from.right, y: from.y },
         to: { x: to.left, y: to.y }
       });
@@ -125,10 +126,8 @@ export default function KnockoutBracket() {
     roundChains.push([101, 104], [102, 104], [101, 103], [102, 103]);
 
     for (const [fromId, toId] of roundChains) {
-      const to = matchMap.get(toId);
-      if (!to) continue;
-      const variant = to.stage === "季军赛" ? "loser" : "winner";
-      connect(fromId, toId, variant);
+      if (!matchMap.has(toId)) continue;
+      connect(fromId, toId);
     }
 
     setLines(newLines);
@@ -427,8 +426,8 @@ export default function KnockoutBracket() {
                 <path
                   d={line.d}
                   fill="none"
-                  stroke={line.variant === "winner" ? "rgba(34,211,238,0.22)" : "rgba(251,146,60,0.20)"}
-                  strokeWidth={line.variant === "winner" ? 10 : 8}
+                  stroke={line.completed ? "rgba(34,211,238,0.22)" : "rgba(148,163,184,0.18)"}
+                  strokeWidth={line.completed ? 10 : 8}
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   filter="url(#bracket-glow)"
@@ -436,25 +435,25 @@ export default function KnockoutBracket() {
                 <path
                   d={line.d}
                   fill="none"
-                  stroke={line.variant === "winner" ? "rgba(103,232,249,1)" : "rgba(251,191,36,1)"}
-                  strokeWidth={line.variant === "winner" ? 3.4 : 3}
+                  stroke={line.completed ? "rgba(103,232,249,1)" : "rgba(148,163,184,0.92)"}
+                  strokeWidth={line.completed ? 3.4 : 3}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="drop-shadow-[0_0_10px_rgba(34,211,238,0.55)]"
+                  className={line.completed ? "drop-shadow-[0_0_10px_rgba(34,211,238,0.55)]" : ""}
                 />
                 <circle
                   cx={line.from.x}
                   cy={line.from.y}
-                  r={line.variant === "winner" ? 3.2 : 2.8}
-                  fill={line.variant === "winner" ? "rgba(103,232,249,0.98)" : "rgba(251,191,36,0.96)"}
+                  r={line.completed ? 3.2 : 2.8}
+                  fill={line.completed ? "rgba(103,232,249,0.98)" : "rgba(148,163,184,0.92)"}
                   stroke="rgba(15,23,42,0.9)"
                   strokeWidth="1.2"
                 />
                 <circle
                   cx={line.to.x}
                   cy={line.to.y}
-                  r={line.variant === "winner" ? 3.2 : 2.8}
-                  fill={line.variant === "winner" ? "rgba(103,232,249,0.98)" : "rgba(251,191,36,0.96)"}
+                  r={line.completed ? 3.2 : 2.8}
+                  fill={line.completed ? "rgba(103,232,249,0.98)" : "rgba(148,163,184,0.92)"}
                   stroke="rgba(15,23,42,0.9)"
                   strokeWidth="1.2"
                 />
