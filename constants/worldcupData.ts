@@ -42,6 +42,17 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-06-29T00:00:00+08:00",
+    updatedAtLabel: "北京时间 2026年6月29日 00:00",
+    title: "球员与名单复核",
+    summary: "本次按北京时间 2026-06-29 00:00 复核 FIFA 2026-06-28 21:14 UTC 版本 Squad Lists，统一刷新球队来源日期，并同步少量可确认的球员档案字段。",
+    changes: [
+      "teamRosters.ts 的 officialSquadsNotice、48 队 publishedDate 与 note 统一刷新到 FIFA 2026-06-28 21:14 UTC 版本。",
+      "playerProfiles.ts 同步复核并可确认更新若干球员的俱乐部/年龄/出场数字段，避免沿用旧版值。",
+      "小组、参赛队和总览结构本次未见变化。"
+    ]
+  },
+  {
     updatedAt: "2026-06-29T08:35:22+08:00",
     updatedAtLabel: "北京时间 2026年6月29日 08:35",
     title: "32强首场赛果更新",

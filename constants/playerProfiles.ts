@@ -804,7 +804,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Niko Sigur", "HNK Hajduk Split (CRO)", 22, 19, 2, "2003-09-09", 178],
     ["Promise David", "Royale Union Saint-Gilloise (BEL)", 24, 10, 3, "2001-07-03", 195],
     ["Nathan Saliba", "RSC Anderlecht (BEL)", 22, 15, 2, "2004-02-07", 174],
-    ["Jayden Nelson", "Austin FC (USA)", 23, 15, 2, "2002-09-26", 170],
+    ["Jayden Nelson", "Austin FC (USA)", 23, 15, 3, "2002-09-26", 170],
 
     // BIH 波黑
     ["Nikola Vasilj", "FC St. Pauli (GER)", 30, 26, 0, "1995-12-02", 193],
@@ -813,11 +813,11 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Tarik Muharemovic", "US Sassuolo (ITA)", 23, 14, 1, "2003-02-28", 192],
     ["Sead Kolasinac", "Atalanta Bergamo (ITA)", 32, 65, 0, "1993-06-20", 183],
     ["Benjamin Tahirovic", "Brøndby IF (DEN)", 23, 28, 2, "2003-03-03", 191],
-    ["Amar Dedic", "SL Benfica (POR)", 23, 28, 1, "2002-08-18", 180],
+    ["Amar Dedic", "SL Benfica (POR)", 23, 30, 1, "2002-08-18", 180],
     ["Armin Gigovic", "BSC Young Boys (SUI)", 24, 20, 1, "2002-04-06", 187],
     ["Samed Bazdar", "Jagiellonia Białystok (POL)", 22, 13, 1, "2004-01-31", 189],
     ["Ermedin Demirovic", "VfB Stuttgart (GER)", 28, 40, 4, "1998-03-25", 185],
-    ["Edin Dzeko", "FC Schalke 04 (GER)", 40, 148, 73, "1986-03-17", 192],
+    ["Edin Dzeko", "FC Schalke 04 (GER)", 40, 150, 73, "1986-03-17", 192],
     ["Mladen Jurkas", "FK Borac Banja Luka (BIH)", 18, 0, 0, "2007-10-07", 193],
     ["Ivan Basic", "FC Astana (KAZ)", 24, 17, 0, "2002-04-30", 178],
     ["Ivan Sunjic", "Pafos FC (CYP)", 29, 11, 0, "1996-10-09", 183],
@@ -1077,7 +1077,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
     ["Aziz Behich", "Melbourne City FC (AUS)", 35, 84, 3, "1990-12-16", 170],
     ["Nestory Irankunda", "Watford FC (ENG)", 20, 15, 5, "2006-02-09", 165],
     ["Patrick Beach", "Melbourne City FC (AUS)", 22, 2, 0, "2003-08-06", 189],
-    ["Harry Souttar", "Leicester City FC (ENG)", 27, 38, 11, "1998-10-22", 198],
+    ["Harry Souttar", "Leicester City FC (ENG)", 27, 41, 11, "1998-10-22", 198],
     ["Cristian Volpato", "US Sassuolo (ITA)", 22, 1, 0, "2003-11-15", 187],
     ["Cameron Burgess", "Swansea City AFC (WAL)", 30, 27, 0, "1995-10-21", 194],
     ["Jackson Irvine", "FC St. Pauli (GER)", 33, 82, 14, "1993-03-07", 189],
@@ -1676,7 +1676,7 @@ export const playerProfileMeta: Record<string, PlayerProfileMeta> = {
 
     // ARG 阿根廷
     ["Juan Musso", "Atlético De Madrid (ESP)", 32, 4, 0, "1994-05-06", 193],
-    ["Marcos Senesi", "AFC Bournemouth (ENG)", 29, 3, 0, "1997-05-10", 185],
+    ["Marcos Senesi", "AFC Bournemouth (ENG)", 29, 4, 0, "1997-05-10", 185],
     ["Nicolas Tagliafico", "Olympique Lyonnais (FRA)", 33, 76, 1, "1992-08-31", 172],
     ["Gonzalo Montiel", "CA River Plate (ARG)", 29, 39, 2, "1997-01-01", 175],
     ["Leandro Paredes", "CA Boca Juniors (ARG)", 31, 77, 5, "1994-06-29", 182],
