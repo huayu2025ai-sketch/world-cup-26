@@ -400,7 +400,10 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "胡利奥·恩西索", team: "巴拉圭", minute: "42'", type: "goal" },
     { player: "凯·哈弗茨", team: "德国", minute: "54'", type: "goal" },
   ] },
-  { id: 75, stage: "32强", date: "2026-06-29", etTime: "21:00", home: "荷兰", away: "摩洛哥", venue: "Estadio BBVA", city: "Guadalupe" },
+  { id: 75, stage: "32强", date: "2026-06-29", etTime: "21:00", home: "荷兰", away: "摩洛哥", venue: "Estadio BBVA", city: "Guadalupe", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "科迪·加克波", team: "荷兰", minute: "72'", type: "goal" },
+    { player: "伊萨·迪奥普", team: "摩洛哥", minute: "90+1'", type: "goal" },
+  ] },
   { id: 76, stage: "32强", date: "2026-06-29", etTime: "13:00", home: "巴西", away: "日本", venue: "NRG Stadium", city: "Houston", homeScore: 2, awayScore: 1, goalScorers: [
     { player: "桑圣·桑诺", team: "日本", minute: "29'", type: "goal" },
     { player: "卡塞米罗", team: "巴西", minute: "55'", type: "goal" },
