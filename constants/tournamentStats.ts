@@ -21,10 +21,10 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 10, player: "乔纳森·戴维", chineseName: "乔纳森·戴维", team: "加拿大", teamCode: "CAN", value: 3, matches: 1 },
   { rank: 11, player: "马特乌斯·库尼亚", chineseName: "马特乌斯·库尼亚", team: "巴西", teamCode: "BRA", value: 3, matches: 2 },
   { rank: 12, player: "伊斯梅拉·萨尔", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 3, matches: 2 },
+  { rank: 16, player: "凯·哈弗茨", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 3, matches: 2 },
   { rank: 13, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 2, matches: 2 },
   { rank: 14, player: "赛尔·拉林", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 2, matches: 2 },
   { rank: 15, player: "福拉林·巴洛贡", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 2, matches: 1 },
-  { rank: 16, player: "凯·哈弗茨", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 2, matches: 1 },
   { rank: 17, player: "镰田大地", chineseName: "镰田大地", team: "日本", teamCode: "JPN", value: 2, matches: 2 },
   { rank: 18, player: "克里森西奥·萨默维尔", chineseName: "克里森西奥·萨默维尔", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
   { rank: 19, player: "亚辛·阿亚里", chineseName: "亚辛·阿亚里", team: "瑞典", teamCode: "SWE", value: 2, matches: 1 },
@@ -155,7 +155,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 144, player: "萨沙·卡拉季奇", chineseName: "萨沙·卡拉季奇", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
   { rank: 145, player: "吉奥瓦尼·洛塞尔索", chineseName: "吉奥瓦尼·洛塞尔索", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
   { rank: 146, player: "劳塔罗·马丁内斯", chineseName: "劳塔罗·马丁内斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
-  { rank: 147, player: "斯蒂芬·尤斯塔基奥", chineseName: "斯蒂芬·尤斯塔基奥", team: "加拿大", teamCode: "CAN", value: 1, matches: 1 }
+  { rank: 147, player: "斯蒂芬·尤斯塔基奥", chineseName: "斯蒂芬·尤斯塔基奥", team: "加拿大", teamCode: "CAN", value: 1, matches: 1 },
+  { rank: 148, player: "胡利奥·恩西索", chineseName: "胡利奥·恩西索", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 }
   ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -225,6 +226,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "32强对阵与统计更新",
-  body: "已按已完赛比赛重建进球榜，并同步确认 32 强对阵已写入赛程。"
+  title: "德国 32 强赛果更新",
+  body: "已按最新完赛比赛补入德国 1-1 巴拉圭，并同步更新进球榜。"
 };
