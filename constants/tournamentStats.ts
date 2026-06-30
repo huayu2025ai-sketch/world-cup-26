@@ -221,11 +221,13 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 59, player: "尼古拉·拉斯金", chineseName: "尼古拉·拉斯金", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
   { rank: 60, player: "裘德·贝林厄姆", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
   { rank: 61, player: "卢卡·莫德里奇", chineseName: "卢卡·莫德里奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
-  { rank: 62, player: "伊赫桑·哈达德", chineseName: "伊赫桑·哈达德", team: "约旦", teamCode: "JOR", value: 1, matches: 1 }
+  { rank: 62, player: "伊赫桑·哈达德", chineseName: "伊赫桑·哈达德", team: "约旦", teamCode: "JOR", value: 1, matches: 1 },
+  { rank: 63, player: "弗洛里安·维尔茨", chineseName: "弗洛里安·维尔茨", team: "德国", teamCode: "GER", value: 1, matches: 1 },
+  { rank: 64, player: "马蒂亚斯·加拉尔萨", chineseName: "马蒂亚斯·加拉尔萨", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 }
   ];
 
 
 export const statsNotice = {
   title: "德国 32 强赛果更新",
-  body: "已按最新完赛比赛补入德国 1-1 巴拉圭，并同步更新进球榜。"
+  body: "已按最新完赛比赛补入德国 1-1 巴拉圭，并同步更新进球榜和助攻榜。"
 };
