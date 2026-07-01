@@ -9,6 +9,7 @@ type SvgLine = {
   id: number;
   d: string;
   completed: boolean;
+  variant: "winner" | "loser";
   from: { x: number; y: number };
   to: { x: number; y: number };
 };
@@ -81,7 +82,7 @@ export default function KnockoutBracket() {
       };
     };
 
-    const connect = (fromId: number, toId: number) => {
+    const connect = (fromId: number, toId: number, variant: SvgLine["variant"] = "winner") => {
       const fromEl = matchRefs.current[fromId];
       const toEl = matchRefs.current[toId];
       if (!fromEl || !toEl) return;
@@ -95,6 +96,7 @@ export default function KnockoutBracket() {
         id: fromId * 100 + toId,
         d,
         completed: Boolean(fromMatch && isFinished(fromMatch)),
+        variant,
         from: { x: from.right, y: from.y },
         to: { x: to.left, y: to.y }
       });
@@ -103,22 +105,39 @@ export default function KnockoutBracket() {
     const roundChains: Array<[number, number]> = [];
 
     for (let index = 0; index < 8; index++) {
-      const sourceA = 73 + index * 2;
-      const sourceB = 74 + index * 2;
+      const round32Sources: Array<[number, number]> = [
+        [73, 75],
+        [74, 77],
+        [76, 78],
+        [79, 80],
+        [83, 84],
+        [81, 82],
+        [86, 88],
+        [85, 87]
+      ];
+      const [sourceA, sourceB] = round32Sources[index];
       const target = 89 + index;
       roundChains.push([sourceA, target], [sourceB, target]);
     }
 
     for (let index = 0; index < 4; index++) {
-      const sourceA = 89 + index * 2;
-      const sourceB = 90 + index * 2;
+      const round16Sources: Array<[number, number]> = [
+        [89, 90],
+        [93, 94],
+        [91, 92],
+        [95, 96]
+      ];
+      const [sourceA, sourceB] = round16Sources[index];
       const target = 97 + index;
       roundChains.push([sourceA, target], [sourceB, target]);
     }
 
     for (let index = 0; index < 2; index++) {
-      const sourceA = 97 + index * 2;
-      const sourceB = 98 + index * 2;
+      const roundQuarterSources: Array<[number, number]> = [
+        [97, 98],
+        [99, 100]
+      ];
+      const [sourceA, sourceB] = roundQuarterSources[index];
       const target = 101 + index;
       roundChains.push([sourceA, target], [sourceB, target]);
     }
@@ -127,7 +146,8 @@ export default function KnockoutBracket() {
 
     for (const [fromId, toId] of roundChains) {
       if (!matchMap.has(toId)) continue;
-      connect(fromId, toId);
+      const variant = toId === 103 ? "loser" : "winner";
+      connect(fromId, toId, variant);
     }
 
     setLines(newLines);
@@ -174,6 +194,22 @@ export default function KnockoutBracket() {
 
   const isFinished = (match: ScheduleMatch) =>
     match.homeScore !== undefined && match.awayScore !== undefined;
+
+  const getLineColors = (line: SvgLine) => {
+    if (line.variant === "loser") {
+      return {
+        outer: line.completed ? "rgba(251,146,60,0.22)" : "rgba(148,163,184,0.18)",
+        inner: line.completed ? "rgba(251,191,36,1)" : "rgba(148,163,184,0.92)",
+        glow: "drop-shadow-[0_0_10px_rgba(251,146,60,0.5)]"
+      };
+    }
+
+    return {
+      outer: line.completed ? "rgba(34,211,238,0.22)" : "rgba(148,163,184,0.18)",
+      inner: line.completed ? "rgba(103,232,249,1)" : "rgba(148,163,184,0.92)",
+      glow: "drop-shadow-[0_0_10px_rgba(34,211,238,0.55)]"
+    };
+  };
 
   const formatDateLabel = (beijingTime: string) => {
     const [monthDay] = beijingTime.split(" ");
@@ -425,7 +461,7 @@ export default function KnockoutBracket() {
                 <path
                   d={line.d}
                   fill="none"
-                  stroke={line.completed ? "rgba(34,211,238,0.22)" : "rgba(148,163,184,0.18)"}
+                  stroke={getLineColors(line).outer}
                   strokeWidth={line.completed ? 10 : 8}
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -434,11 +470,11 @@ export default function KnockoutBracket() {
                 <path
                   d={line.d}
                   fill="none"
-                  stroke={line.completed ? "rgba(103,232,249,1)" : "rgba(148,163,184,0.92)"}
+                  stroke={getLineColors(line).inner}
                   strokeWidth={line.completed ? 3.4 : 3}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className={line.completed ? "drop-shadow-[0_0_10px_rgba(34,211,238,0.55)]" : ""}
+                  className={line.completed ? getLineColors(line).glow : ""}
                 />
                 <circle
                   cx={line.from.x}
