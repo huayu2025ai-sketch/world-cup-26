@@ -158,7 +158,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`rounded-full px-3 py-2 text-xs font-bold transition sm:px-4 sm:text-sm ${
+                className={`whitespace-nowrap rounded-full px-3 py-2 text-xs font-bold transition sm:px-4 sm:text-sm ${
                   isActive
                     ? "bg-cyan-300 text-slate-950 shadow-glow"
                     : "text-slate-300 hover:bg-slate-700/70 hover:text-slate-100"
