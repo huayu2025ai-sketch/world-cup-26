@@ -23,7 +23,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 12, player: "伊斯梅拉·萨尔", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 3, matches: 2 },
   { rank: 13, player: "凯·哈弗茨", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 3, matches: 2 },
   { rank: 14, player: "科迪·加克波", chineseName: "科迪·加克波", team: "荷兰", teamCode: "NED", value: 3, matches: 2 },
-  { rank: 15, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 2, matches: 2 },
+  { rank: 15, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 3, matches: 3 },
   { rank: 16, player: "赛尔·拉林", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 2, matches: 2 },
   { rank: 17, player: "福拉林·巴洛贡", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 2, matches: 1 },
   { rank: 18, player: "镰田大地", chineseName: "镰田大地", team: "日本", teamCode: "JPN", value: 2, matches: 2 },
@@ -49,7 +49,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 38, player: "里亚德·马赫雷斯", chineseName: "里亚德·马赫雷斯", team: "阿尔及利亚", teamCode: "ALG", value: 2, matches: 1 },
   { rank: 39, player: "阿马德·迪亚洛", chineseName: "阿马德·迪亚洛", team: "科特迪瓦", teamCode: "CIV", value: 2, matches: 2 },
   { rank: 40, player: "布拉德利·巴尔科拉", chineseName: "布拉德利·巴尔科拉", team: "法国", teamCode: "FRA", value: 2, matches: 2 },
-  { rank: 41, player: "劳尔·希门尼斯", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 1, matches: 1 },
+  { rank: 41, player: "劳尔·希门尼斯", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 2, matches: 2 },
   { rank: 42, player: "黄仁范", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
   { rank: 43, player: "拉迪斯拉夫·克雷伊奇", chineseName: "拉迪斯拉夫·克雷伊奇", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
   { rank: 44, player: "吴贤揆", chineseName: "吴贤揆", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
@@ -230,6 +230,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "法国 3-0 瑞典",
-  body: "已按最新完赛比赛补入法国 3-0 瑞典，并同步更新进球榜。"
+  title: "墨西哥 2-0 厄瓜多尔",
+  body: "已按最新完赛比赛补入墨西哥 2-0 厄瓜多尔，并同步更新进球榜。"
 };
