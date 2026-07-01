@@ -27,6 +27,29 @@ const COLUMNS: Array<RoundColumn & { title: string; isFinalColumn?: boolean }> =
   { title: "决赛 / 季军赛", stage: "终局", matchIds: [104, 103], isFinalColumn: true }
 ];
 
+const ROUND32_TO_16_SOURCES: Array<[number, number]> = [
+  [73, 75],
+  [74, 77],
+  [76, 78],
+  [79, 80],
+  [83, 84],
+  [81, 82],
+  [86, 88],
+  [85, 87]
+];
+
+const ROUND16_TO_QF_SOURCES: Array<[number, number]> = [
+  [89, 90],
+  [93, 94],
+  [91, 92],
+  [95, 96]
+];
+
+const QF_TO_SEMI_SOURCES: Array<[number, number]> = [
+  [97, 98],
+  [99, 100]
+];
+
 const COLUMN_BODY_OFFSET = 32;
 const FINAL_CARD_SHIFT = 28;
 
@@ -102,47 +125,33 @@ export default function KnockoutBracket() {
       });
     };
 
-    const roundChains: Array<[number, number]> = [];
-
-    for (let index = 0; index < 8; index++) {
-      const round32Sources: Array<[number, number]> = [
-        [73, 75],
-        [74, 77],
-        [76, 78],
-        [79, 80],
-        [83, 84],
-        [81, 82],
-        [86, 88],
-        [85, 87]
-      ];
-      const [sourceA, sourceB] = round32Sources[index];
-      const target = 89 + index;
-      roundChains.push([sourceA, target], [sourceB, target]);
-    }
-
-    for (let index = 0; index < 4; index++) {
-      const round16Sources: Array<[number, number]> = [
-        [89, 90],
-        [93, 94],
-        [91, 92],
-        [95, 96]
-      ];
-      const [sourceA, sourceB] = round16Sources[index];
-      const target = 97 + index;
-      roundChains.push([sourceA, target], [sourceB, target]);
-    }
-
-    for (let index = 0; index < 2; index++) {
-      const roundQuarterSources: Array<[number, number]> = [
-        [97, 98],
-        [99, 100]
-      ];
-      const [sourceA, sourceB] = roundQuarterSources[index];
-      const target = 101 + index;
-      roundChains.push([sourceA, target], [sourceB, target]);
-    }
-
-    roundChains.push([101, 104], [102, 104], [101, 103], [102, 103]);
+    const roundChains: Array<[number, number]> = [
+      ...ROUND32_TO_16_SOURCES.flatMap(([sourceA, sourceB], index) => {
+        const target = 89 + index;
+        return [
+          [sourceA, target] as [number, number],
+          [sourceB, target] as [number, number]
+        ];
+      }),
+      ...ROUND16_TO_QF_SOURCES.flatMap(([sourceA, sourceB], index) => {
+        const target = 97 + index;
+        return [
+          [sourceA, target] as [number, number],
+          [sourceB, target] as [number, number]
+        ];
+      }),
+      ...QF_TO_SEMI_SOURCES.flatMap(([sourceA, sourceB], index) => {
+        const target = 101 + index;
+        return [
+          [sourceA, target] as [number, number],
+          [sourceB, target] as [number, number]
+        ];
+      }),
+      [101, 104],
+      [102, 104],
+      [101, 103],
+      [102, 103]
+    ];
 
     for (const [fromId, toId] of roundChains) {
       if (!matchMap.has(toId)) continue;
@@ -323,24 +332,25 @@ export default function KnockoutBracket() {
       };
     };
 
-    const round32 = COLUMNS[0].matchIds;
     const round16 = COLUMNS[1].matchIds;
     const roundQuarter = COLUMNS[2].matchIds;
     const roundSemi = COLUMNS[3].matchIds;
     const roundFinal = COLUMNS[4].matchIds;
 
-    const round32Metrics = round32.map(measureCard);
+    const round32Metrics = COLUMNS[0].matchIds.map(measureCard);
     if (round32Metrics.some((metric) => !metric)) return;
 
     const cardHeight =
       round32Metrics.reduce((sum, metric) => sum + (metric?.height ?? 0), 0) / round32Metrics.length;
-    const round32Centers = round32Metrics.map((metric) => metric!.centerY);
 
-    const setBetweenPairs = (sourceCenters: number[], targetIds: number[]) => {
+    const setBetweenPairs = (sourcePairs: Array<[number, number]>, targetIds: number[]) => {
       const targetCenters: number[] = [];
       for (let index = 0; index < targetIds.length; index++) {
-        const centerA = sourceCenters[index * 2];
-        const centerB = sourceCenters[index * 2 + 1];
+        const pair = sourcePairs[index];
+        if (!pair) continue;
+        const [sourceA, sourceB] = pair;
+        const centerA = measureCard(sourceA)?.centerY;
+        const centerB = measureCard(sourceB)?.centerY;
         if (centerA === undefined || centerB === undefined) continue;
         const center = (centerA + centerB) / 2;
         nextTops[targetIds[index]] = center - cardHeight / 2;
@@ -349,9 +359,9 @@ export default function KnockoutBracket() {
       return targetCenters;
     };
 
-    const round16Centers = setBetweenPairs(round32Centers, round16);
-    const roundQuarterCenters = setBetweenPairs(round16Centers, roundQuarter);
-    const roundSemiCenters = setBetweenPairs(roundQuarterCenters, roundSemi);
+    const round16Centers = setBetweenPairs(ROUND32_TO_16_SOURCES, round16);
+    const roundQuarterCenters = setBetweenPairs(ROUND16_TO_QF_SOURCES, roundQuarter);
+    const roundSemiCenters = setBetweenPairs(QF_TO_SEMI_SOURCES, roundSemi);
 
     if (roundSemiCenters[0] !== undefined && roundSemiCenters[1] !== undefined) {
       const mid = (roundSemiCenters[0] + roundSemiCenters[1]) / 2;
