@@ -14,17 +14,18 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 3, player: "埃尔林·哈兰德", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 5, matches: 3 },
   { rank: 4, player: "维尼修斯·儒尼奥尔", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 4, matches: 3 },
   { rank: 5, player: "奥斯曼·登贝莱", chineseName: "奥斯曼·登贝莱", team: "法国", teamCode: "FRA", value: 4, matches: 2 },
-  { rank: 6, player: "伊斯梅尔·塞巴里", chineseName: "伊斯梅尔·塞巴里", team: "摩洛哥", teamCode: "MAR", value: 3, matches: 3 },
-  { rank: 7, player: "德尼兹·翁达夫", chineseName: "德尼兹·翁达夫", team: "德国", teamCode: "GER", value: 3, matches: 2 },
-  { rank: 8, player: "约安·维萨", chineseName: "约安·维萨", team: "刚果民主共和国", teamCode: "COD", value: 3, matches: 2 },
-  { rank: 9, player: "约翰·曼赞比", chineseName: "约翰·曼赞比", team: "瑞士", teamCode: "SUI", value: 3, matches: 2 },
-  { rank: 10, player: "乔纳森·戴维", chineseName: "乔纳森·戴维", team: "加拿大", teamCode: "CAN", value: 3, matches: 1 },
-  { rank: 11, player: "马特乌斯·库尼亚", chineseName: "马特乌斯·库尼亚", team: "巴西", teamCode: "BRA", value: 3, matches: 2 },
-  { rank: 12, player: "伊斯梅拉·萨尔", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 3, matches: 2 },
-  { rank: 13, player: "凯·哈弗茨", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 3, matches: 2 },
-  { rank: 14, player: "科迪·加克波", chineseName: "科迪·加克波", team: "荷兰", teamCode: "NED", value: 3, matches: 2 },
-  { rank: 15, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 3, matches: 3 },
-  { rank: 16, player: "赛尔·拉林", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 2, matches: 2 },
+  { rank: 6, player: "哈里·凯恩", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 4, matches: 3 },
+  { rank: 7, player: "伊斯梅拉·塞巴里", chineseName: "伊斯梅拉·塞巴里", team: "摩洛哥", teamCode: "MAR", value: 3, matches: 3 },
+  { rank: 8, player: "德尼兹·翁达夫", chineseName: "德尼兹·翁达夫", team: "德国", teamCode: "GER", value: 3, matches: 2 },
+  { rank: 9, player: "约安·维萨", chineseName: "约安·维萨", team: "刚果民主共和国", teamCode: "COD", value: 3, matches: 2 },
+  { rank: 10, player: "约翰·曼赞比", chineseName: "约翰·曼赞比", team: "瑞士", teamCode: "SUI", value: 3, matches: 2 },
+  { rank: 11, player: "乔纳森·戴维", chineseName: "乔纳森·戴维", team: "加拿大", teamCode: "CAN", value: 3, matches: 1 },
+  { rank: 12, player: "马特乌斯·库尼亚", chineseName: "马特乌斯·库尼亚", team: "巴西", teamCode: "BRA", value: 3, matches: 2 },
+  { rank: 13, player: "伊斯梅拉·萨尔", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 3, matches: 2 },
+  { rank: 14, player: "凯·哈弗茨", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 3, matches: 2 },
+  { rank: 15, player: "科迪·加克波", chineseName: "科迪·加克波", team: "荷兰", teamCode: "NED", value: 3, matches: 2 },
+  { rank: 16, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 3, matches: 3 },
+  { rank: 17, player: "赛尔·拉林", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 2, matches: 2 },
   { rank: 17, player: "福拉林·巴洛贡", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 2, matches: 1 },
   { rank: 18, player: "镰田大地", chineseName: "镰田大地", team: "日本", teamCode: "JPN", value: 2, matches: 2 },
   { rank: 19, player: "克里森西奥·萨默维尔", chineseName: "克里森西奥·萨默维尔", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
@@ -158,7 +159,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 147, player: "斯蒂芬·尤斯塔基奥", chineseName: "斯蒂芬·尤斯塔基奥", team: "加拿大", teamCode: "CAN", value: 1, matches: 1 },
   { rank: 148, player: "胡利奥·恩西索", chineseName: "胡利奥·恩西索", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 },
   { rank: 149, player: "Issa Diop", chineseName: "伊萨·迪奥普", team: "摩洛哥", teamCode: "MAR", value: 1, matches: 1 },
-  { rank: 150, player: "安东尼奥·努萨", chineseName: "安东尼奥·努萨", team: "挪威", teamCode: "NOR", value: 1, matches: 1 }
+  { rank: 150, player: "安东尼奥·努萨", chineseName: "安东尼奥·努萨", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
+  { rank: 151, player: "Brian Cipenga", chineseName: "布赖恩·西彭加", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 }
   ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -230,6 +232,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "墨西哥 2-0 厄瓜多尔",
-  body: "已按最新完赛比赛补入墨西哥 2-0 厄瓜多尔，并同步更新进球榜。"
+  title: "英格兰 2-1 刚果民主共和国",
+  body: "已按最新完赛比赛补入英格兰 2-1 刚果民主共和国，并同步更新进球榜。"
 };

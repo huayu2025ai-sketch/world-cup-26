@@ -423,7 +423,11 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "胡利安·基尼奥内斯", team: "墨西哥", minute: "22'", type: "goal" },
     { player: "劳尔·希门尼斯", team: "墨西哥", minute: "31'", type: "goal" }
   ] },
-  { id: 80, stage: "32强", date: "2026-07-01", etTime: "12:00", home: "英格兰", away: "刚果民主共和国", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+  { id: 80, stage: "32强", date: "2026-07-01", etTime: "12:00", home: "英格兰", away: "刚果民主共和国", venue: "Mercedes-Benz Stadium", city: "Atlanta", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "布赖恩·西彭加", team: "刚果民主共和国", minute: "7'", type: "goal" },
+    { player: "哈里·凯恩", team: "英格兰", minute: "75'", type: "goal" },
+    { player: "哈里·凯恩", team: "英格兰", minute: "86'", type: "goal" }
+  ] },
   { id: 81, stage: "32强", date: "2026-07-01", etTime: "20:00", home: "美国", away: "波黑", venue: "Levi's Stadium", city: "Santa Clara" },
   { id: 82, stage: "32强", date: "2026-07-01", etTime: "13:00", home: "比利时", away: "塞内加尔", venue: "Lumen Field", city: "Seattle" },
   { id: 83, stage: "32强", date: "2026-07-02", etTime: "19:00", home: "葡萄牙", away: "克罗地亚", venue: "BMO Field", city: "Toronto" },
