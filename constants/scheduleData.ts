@@ -428,7 +428,10 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "哈里·凯恩", team: "英格兰", minute: "75'", type: "goal" },
     { player: "哈里·凯恩", team: "英格兰", minute: "86'", type: "goal" }
   ] },
-  { id: 81, stage: "32强", date: "2026-07-01", etTime: "20:00", home: "美国", away: "波黑", venue: "Levi's Stadium", city: "Santa Clara" },
+  { id: 81, stage: "32强", date: "2026-07-01", etTime: "20:00", home: "美国", away: "波黑", venue: "Levi's Stadium", city: "Santa Clara", homeScore: 2, awayScore: 0, goalScorers: [
+    { player: "福拉林·巴洛贡", team: "美国", minute: "45'", type: "goal" },
+    { player: "马利克·蒂尔曼", team: "美国", minute: "82'", type: "goal" }
+  ] },
   { id: 82, stage: "32强", date: "2026-07-01", etTime: "13:00", home: "比利时", away: "塞内加尔", venue: "Lumen Field", city: "Seattle", homeScore: 3, awayScore: 2, goalScorers: [
     { player: "哈比卜·迪亚拉", team: "塞内加尔", minute: "25'", type: "goal" },
     { player: "伊斯梅拉·萨尔", team: "塞内加尔", minute: "51'", type: "goal" },

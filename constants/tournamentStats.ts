@@ -25,8 +25,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 14, player: "凯·哈弗茨", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 3, matches: 2 },
   { rank: 15, player: "科迪·加克波", chineseName: "科迪·加克波", team: "荷兰", teamCode: "NED", value: 3, matches: 2 },
   { rank: 16, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 3, matches: 3 },
+  { rank: 17, player: "福拉林·巴洛贡", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 3, matches: 2 },
   { rank: 17, player: "赛尔·拉林", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 2, matches: 2 },
-  { rank: 17, player: "福拉林·巴洛贡", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 2, matches: 1 },
   { rank: 18, player: "镰田大地", chineseName: "镰田大地", team: "日本", teamCode: "JPN", value: 2, matches: 2 },
   { rank: 19, player: "克里森西奥·萨默维尔", chineseName: "克里森西奥·萨默维尔", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
   { rank: 20, player: "亚辛·阿亚里", chineseName: "亚辛·阿亚里", team: "瑞典", teamCode: "SWE", value: 2, matches: 1 },
@@ -159,7 +159,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 148, player: "胡利奥·恩西索", chineseName: "胡利奥·恩西索", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 },
   { rank: 149, player: "Issa Diop", chineseName: "伊萨·迪奥普", team: "摩洛哥", teamCode: "MAR", value: 1, matches: 1 },
   { rank: 150, player: "安东尼奥·努萨", chineseName: "安东尼奥·努萨", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
-  { rank: 151, player: "Brian Cipenga", chineseName: "布赖恩·西彭加", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 }
+  { rank: 151, player: "Brian Cipenga", chineseName: "布赖恩·西彭加", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 },
+  { rank: 152, player: "Malik Tillman", chineseName: "马利克·蒂尔曼", team: "美国", teamCode: "USA", value: 1, matches: 1 }
   ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -231,6 +232,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "比利时 3-2 塞内加尔",
-  body: "已按最新完赛比赛补入比利时 3-2 塞内加尔，并同步更新进球榜。"
+  title: "美国 2-0 波黑",
+  body: "已按最新完赛比赛补入美国 2-0 波黑，并同步更新进球榜。"
 };
