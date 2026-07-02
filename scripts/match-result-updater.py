@@ -31,15 +31,15 @@ def parse_schedule_data():
     matches = []
     
     # 解析每个比赛对象
-    # 格式: { id: N, stage: "...", group: "...", date: "...", etTime: "...", beijingTime: "...", home: "...", away: "...", venue: "...", city: "..." }
-    pattern = r'\{[^}]*id:\s*(\d+)[^}]*stage:\s*"([^"]+)"[^}]*group:\s*"([^"]*)"[^}]*date:\s*"([^"]+)"[^}]*etTime:\s*"([^"]+)"[^}]*beijingTime:\s*"([^"]+)"[^}]*home:\s*"([^"]+)"[^}]*away:\s*"([^"]+)"[^}]*venue:\s*"([^"]+)"[^}]*city:\s*"([^"]+)"[^}]*\}'
+    # 格式: { id: N, stage: "...", group: "...", date: "...", localTime: "...", beijingTime: "...", home: "...", away: "...", venue: "...", city: "..." }
+    pattern = r'\{[^}]*id:\s*(\d+)[^}]*stage:\s*"([^"]+)"[^}]*group:\s*"([^"]*)"[^}]*date:\s*"([^"]+)"[^}]*localTime:\s*"([^"]+)"[^}]*beijingTime:\s*"([^"]+)"[^}]*home:\s*"([^"]+)"[^}]*away:\s*"([^"]+)"[^}]*venue:\s*"([^"]+)"[^}]*city:\s*"([^"]+)"[^}]*\}'
     
     for m in re.finditer(pattern, array_content):
         match_id = int(m.group(1))
         stage = m.group(2)
         group = m.group(3) if m.group(3) else None
         date = m.group(4)
-        et_time = m.group(5)
+        local_time = m.group(5)
         beijing_time = m.group(6)
         home = m.group(7)
         away = m.group(8)
@@ -51,7 +51,7 @@ def parse_schedule_data():
             "stage": stage,
             "group": group,
             "date": date,
-            "etTime": et_time,
+            "localTime": local_time,
             "beijingTime": beijing_time,
             "home": home,
             "away": away,

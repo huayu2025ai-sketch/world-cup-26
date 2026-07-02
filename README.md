@@ -114,7 +114,7 @@ npm run start
 
 - 小组和球队数据：维护 `constants/worldcupData.ts` 中的 `worldCupGroups`。每组包含 `id`、`name`、`headline`、`detail`、`watchPoints` 和 `teams`。
 - 数据更新记录：维护 `constants/worldcupData.ts` 中的 `groupOverviewUpdates`。首页默认读取数组第一项作为最后更新时间。
-- 比赛时间表：维护 `constants/scheduleData.ts` 中的 `scheduleMatches` 和 `scheduleStages`。当前页面按 `stage`、`group`、`date`、`etTime`、`beijingTime`、`home`、`away`、`venue`、`city` 搜索。
+- 比赛时间表：维护 `constants/scheduleData.ts` 中的 `scheduleMatches` 和 `scheduleStages`。当前页面按 `stage`、`group`、`date`、`localTime`、`beijingTime`、`home`、`away`、`venue`、`city` 搜索。
 - 赔率预测：维护 `constants/oddsData.ts` 中的 `matchOddsById`。每场比赛按 `scheduleMatches` 的 `id` 录入 Pinnacle、Betfair Exchange、bet365、SBOBet、DraftKings 五家 `home/draw/away` 十进制赔率；`lib/oddsPrediction.ts` 会自动计算隐含概率、去水概率、平均概率、预测结果和置信度。
 - 球队阵容：维护 `constants/teamRosters.ts` 中的 `teamRosters`。每支球队包含 `teamCode`、`teamName`、`confirmed`、`publishedDate`、`source`、`sourceUrl`、`note` 和 `players`。
 - 阵容来源提示：维护 `constants/teamRosters.ts` 中的 `officialSquadsNotice`。首页阵容区域会显示该说明。

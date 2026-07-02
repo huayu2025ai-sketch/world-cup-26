@@ -4,7 +4,7 @@
 
 逻辑：
 1. 读取 constants/scheduleData.ts 中的赛程数据
-2. 对每个比赛，计算北京时间开始时间（date + etTime 转北京时间）
+2. 对每个比赛，计算北京时间开始时间（date + localTime 转北京时间）
 3. 判断：当前北京时间 > 比赛开始时间 + 90分钟（即比赛已结束）
 4. 检查该比赛是否已有比分（homeScore/awayScore 字段存在）
 5. 如果有比赛已结束但无比分 → 输出需要更新的比赛列表，exit code 1
@@ -56,7 +56,7 @@ def parse_schedule():
         
         # 提取字段
         date_m = re.search(r'date:\s*"([^"]+)"', match_text)
-        et_m = re.search(r'etTime:\s*"([^"]+)"', match_text)
+        et_m = re.search(r'localTime:\s*"([^"]+)"', match_text)
         home_m = re.search(r'home:\s*"([^"]+)"', match_text)
         away_m = re.search(r'away:\s*"([^"]+)"', match_text)
         stage_m = re.search(r'stage:\s*"([^"]+)"', match_text)

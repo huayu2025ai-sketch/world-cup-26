@@ -23,8 +23,8 @@ Prefer structured football data APIs when available. If no usable API is availab
    - Preserve unrelated user changes. Do not revert files outside the requested update.
 
 2. Establish the time window.
-   - Use the current local time and each match's `date` plus `etTime`.
-   - Convert ET kickoff to the user's relevant timezone when explaining timing.
+   - Use the current local time and each match's `date` plus `localTime`.
+   - Convert each local kickoff to the user's relevant timezone when explaining timing.
    - Only investigate matches that could reasonably have reached full time since the last update.
    - If a future match has not kicked off or cannot have finished, leave it untouched.
 

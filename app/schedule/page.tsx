@@ -128,7 +128,7 @@ export default function SchedulePage() {
         match.group ? `${match.group}组 Group ${match.group}` : "",
         match.date,
         getBeijingDateKey(match),
-        match.etTime,
+        match.localTime,
         match.beijingTime,
         match.home,
         match.away,

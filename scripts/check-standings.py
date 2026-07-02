@@ -14,7 +14,7 @@ with open(data_path, "r", encoding="utf-8") as f:
 
 matches = []
 for m in re.finditer(
-    r'\{\s*id:\s*(\d+)\s*,\s*stage:\s*"分组赛"\s*,\s*group:\s*"([^"]+)"\s*,\s*date:\s*"([^"]+)"\s*,\s*etTime:\s*"([^"]+)"\s*,\s*home:\s*"([^"]+)"\s*,\s*away:\s*"([^"]+)"[^}]*homeScore:\s*(\d+)\s*,\s*awayScore:\s*(\d+)',
+    r'\{\s*id:\s*(\d+)\s*,\s*stage:\s*"分组赛"\s*,\s*group:\s*"([^"]+)"\s*,\s*date:\s*"([^"]+)"\s*,\s*localTime:\s*"([^"]+)"\s*,\s*home:\s*"([^"]+)"\s*,\s*away:\s*"([^"]+)"[^}]*homeScore:\s*(\d+)\s*,\s*awayScore:\s*(\d+)',
     schedule
 ):
     matches.append({
