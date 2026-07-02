@@ -429,7 +429,13 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "哈里·凯恩", team: "英格兰", minute: "86'", type: "goal" }
   ] },
   { id: 81, stage: "32强", date: "2026-07-01", etTime: "20:00", home: "美国", away: "波黑", venue: "Levi's Stadium", city: "Santa Clara" },
-  { id: 82, stage: "32强", date: "2026-07-01", etTime: "13:00", home: "比利时", away: "塞内加尔", venue: "Lumen Field", city: "Seattle" },
+  { id: 82, stage: "32强", date: "2026-07-01", etTime: "13:00", home: "比利时", away: "塞内加尔", venue: "Lumen Field", city: "Seattle", homeScore: 3, awayScore: 2, goalScorers: [
+    { player: "哈比卜·迪亚拉", team: "塞内加尔", minute: "25'", type: "goal" },
+    { player: "伊斯梅拉·萨尔", team: "塞内加尔", minute: "51'", type: "goal" },
+    { player: "罗梅卢·卢卡库", team: "比利时", minute: "86'", type: "goal" },
+    { player: "尤里·蒂勒曼斯", team: "比利时", minute: "89'", type: "goal" },
+    { player: "尤里·蒂勒曼斯", team: "比利时", minute: "120+5'", type: "penalty" }
+  ] },
   { id: 83, stage: "32强", date: "2026-07-02", etTime: "19:00", home: "葡萄牙", away: "克罗地亚", venue: "BMO Field", city: "Toronto" },
   { id: 84, stage: "32强", date: "2026-07-02", etTime: "12:00", home: "西班牙", away: "奥地利", venue: "SoFi Stadium", city: "Inglewood" },
   { id: 85, stage: "32强", date: "2026-07-02", etTime: "20:00", home: "瑞士", away: "阿尔及利亚", venue: "BC Place", city: "Vancouver" },
