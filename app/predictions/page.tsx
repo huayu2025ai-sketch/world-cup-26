@@ -680,9 +680,15 @@ export default function PredictionsPage() {
                 const advancer = getPredictedAdvancer(match, prediction);
                 const actualOutcome = getActualOutcome(match);
                 const judgement = getPredictionJudgement(match, prediction);
+                const cardStateClass =
+                  judgement === "correct"
+                    ? "border-emerald-300/30 bg-emerald-300/[0.08] shadow-[0_0_0_1px_rgba(110,231,183,0.08),0_18px_50px_rgba(6,95,70,0.14)]"
+                    : judgement === "wrong"
+                      ? "border-rose-300/30 bg-rose-300/[0.08] shadow-[0_0_0_1px_rgba(252,165,165,0.08),0_18px_50px_rgba(127,29,29,0.16)]"
+                      : "border-slate-700 bg-slate-950/45";
 
                 return (
-                  <div key={match.id} className="rounded-lg border border-slate-700 bg-slate-950/45 p-3">
+                  <div key={match.id} className={`rounded-lg border p-3 transition ${cardStateClass}`}>
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">M{match.id}</p>
@@ -694,12 +700,12 @@ export default function PredictionsPage() {
                         </p>
                       </div>
                       <span
-                        className={`inline-flex shrink-0 items-center rounded-full border px-2 py-1 text-[10px] font-black ${
+                        className={`inline-flex shrink-0 items-center rounded-full border px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.16em] ${
                           judgement === "correct"
-                            ? "border-emerald-300/30 bg-emerald-300/12 text-emerald-100"
+                            ? "border-emerald-300/50 bg-emerald-400 text-slate-950 shadow-[0_0_0_1px_rgba(110,231,183,0.25)]"
                             : judgement === "wrong"
-                              ? "border-rose-300/30 bg-rose-300/12 text-rose-100"
-                              : "border-slate-700 bg-slate-900/60 text-slate-400"
+                              ? "border-rose-300/50 bg-rose-400 text-slate-950 shadow-[0_0_0_1px_rgba(252,165,165,0.25)]"
+                              : "border-slate-600 bg-slate-200 text-slate-950"
                         }`}
                         title={
                           judgement === "correct"
@@ -709,10 +715,18 @@ export default function PredictionsPage() {
                               : "比赛未结束"
                         }
                       >
-                        {judgement === "correct" ? "正确" : judgement === "wrong" ? "错误" : "未赛"}
+                        {judgement === "correct" ? "✓ 正确" : judgement === "wrong" ? "✕ 错误" : "未赛"}
                       </span>
                     </div>
-                    <p className="mt-2 text-sm font-black text-cyan-100">
+                    <p
+                      className={`mt-3 rounded-md border px-3 py-2 text-sm font-black ${
+                        judgement === "correct"
+                          ? "border-emerald-300/30 bg-emerald-300/12 text-emerald-50"
+                          : judgement === "wrong"
+                            ? "border-rose-300/30 bg-rose-300/12 text-rose-50"
+                            : "border-slate-700 bg-slate-900/60 text-cyan-100"
+                      }`}
+                    >
                       {advancer ? `${advancer} 进 16 强` : actualOutcome === null ? "待开赛" : "加时/点球待定"}
                     </p>
                   </div>
