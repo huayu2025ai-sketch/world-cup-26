@@ -116,6 +116,19 @@ const getPredictedAdvancer = (match: ScheduleMatch, prediction: MatchPrediction 
   return null;
 };
 
+const getPredictionJudgement = (match: ScheduleMatch, prediction: MatchPrediction | null) => {
+  if (!prediction) {
+    return "pending" as const;
+  }
+
+  const actualOutcome = getActualOutcome(match);
+  if (actualOutcome === null) {
+    return "pending" as const;
+  }
+
+  return prediction.predictedOutcome === actualOutcome ? "correct" : "wrong";
+};
+
 export default function PredictionsPage() {
   const [query, setQuery] = useState("");
   const [stage, setStage] = useState<(typeof scheduleStages)[number]>("32强");
@@ -665,18 +678,42 @@ export default function PredictionsPage() {
               .map((match) => {
                 const prediction = getMatchPrediction(matchOddsById[match.id] ?? []);
                 const advancer = getPredictedAdvancer(match, prediction);
+                const actualOutcome = getActualOutcome(match);
+                const judgement = getPredictionJudgement(match, prediction);
 
                 return (
                   <div key={match.id} className="rounded-lg border border-slate-700 bg-slate-950/45 p-3">
-                    <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">M{match.id}</p>
-                    <p className="mt-1 text-sm font-black text-slate-100">
-                      {match.home} vs {match.away}
-                    </p>
-                    <p className="mt-1 text-xs text-slate-400">
-                      {formatMonthDay(match.date)} · {match.venue}
-                    </p>
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">M{match.id}</p>
+                        <p className="mt-1 text-sm font-black text-slate-100">
+                          {match.home} vs {match.away}
+                        </p>
+                        <p className="mt-1 text-xs text-slate-400">
+                          {formatMonthDay(match.date)} · {match.venue}
+                        </p>
+                      </div>
+                      <span
+                        className={`inline-flex shrink-0 items-center rounded-full border px-2 py-1 text-[10px] font-black ${
+                          judgement === "correct"
+                            ? "border-emerald-300/30 bg-emerald-300/12 text-emerald-100"
+                            : judgement === "wrong"
+                              ? "border-rose-300/30 bg-rose-300/12 text-rose-100"
+                              : "border-slate-700 bg-slate-900/60 text-slate-400"
+                        }`}
+                        title={
+                          judgement === "correct"
+                            ? "预测正确"
+                            : judgement === "wrong"
+                              ? "预测错误"
+                              : "比赛未结束"
+                        }
+                      >
+                        {judgement === "correct" ? "正确" : judgement === "wrong" ? "错误" : "未赛"}
+                      </span>
+                    </div>
                     <p className="mt-2 text-sm font-black text-cyan-100">
-                      {advancer ? `${advancer} 进 16 强` : "加时/点球待定"}
+                      {advancer ? `${advancer} 进 16 强` : actualOutcome === null ? "待开赛" : "加时/点球待定"}
                     </p>
                   </div>
                 );
