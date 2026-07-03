@@ -509,9 +509,20 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "尤里·蒂勒曼斯", team: "比利时", minute: "89'", type: "goal" },
     { player: "尤里·蒂勒曼斯", team: "比利时", minute: "120+5'", type: "penalty" }
   ] },
-  { id: 83, stage: "32强", date: "2026-07-02", localTime: "19:00", home: "葡萄牙", away: "克罗地亚", venue: "BMO Field", city: "Toronto" },
-  { id: 84, stage: "32强", date: "2026-07-02", localTime: "12:00", home: "西班牙", away: "奥地利", venue: "SoFi Stadium", city: "Inglewood" },
-  { id: 85, stage: "32强", date: "2026-07-02", localTime: "20:00", home: "瑞士", away: "阿尔及利亚", venue: "BC Place", city: "Vancouver" },
+  { id: 83, stage: "32强", date: "2026-07-02", localTime: "19:00", home: "葡萄牙", away: "克罗地亚", venue: "BMO Field", city: "Toronto", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "伊万·佩里希奇", team: "克罗地亚", minute: "53'", type: "goal" },
+    { player: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", minute: "68'", type: "penalty" },
+    { player: "贡萨洛·拉莫斯", team: "葡萄牙", minute: "90+4'", type: "goal" }
+  ] },
+  { id: 84, stage: "32强", date: "2026-07-02", localTime: "12:00", home: "西班牙", away: "奥地利", venue: "SoFi Stadium", city: "Inglewood", homeScore: 3, awayScore: 0, goalScorers: [
+    { player: "米克尔·奥亚萨瓦尔", team: "西班牙", minute: "36'", type: "goal" },
+    { player: "佩德罗·波罗", team: "西班牙", minute: "66'", type: "goal" },
+    { player: "米克尔·奥亚萨瓦尔", team: "西班牙", minute: "89'", type: "goal" }
+  ] },
+  { id: 85, stage: "32强", date: "2026-07-02", localTime: "20:00", home: "瑞士", away: "阿尔及利亚", venue: "BC Place", city: "Vancouver", homeScore: 2, awayScore: 0, goalScorers: [
+    { player: "布雷尔·恩博洛", team: "瑞士", minute: "10'", type: "goal" },
+    { player: "丹·恩多耶", team: "瑞士", minute: "46'", type: "goal" }
+  ] },
   { id: 86, stage: "32强", date: "2026-07-03", localTime: "18:00", home: "阿根廷", away: "佛得角", venue: "Hard Rock Stadium", city: "Miami Gardens" },
   { id: 87, stage: "32强", date: "2026-07-03", localTime: "20:30", home: "哥伦比亚", away: "加纳", venue: "Arrowhead Stadium", city: "Kansas City" },
   { id: 88, stage: "32强", date: "2026-07-03", localTime: "13:00", home: "澳大利亚", away: "埃及", venue: "AT&T Stadium", city: "Arlington" },
