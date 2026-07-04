@@ -56,6 +56,11 @@ const resolveKnockoutPlace = (match: ScheduleMatch, side: "home" | "away") => {
   const isLoserSlot = slot.includes("负者");
   const winner = sourceMatch.homeScore > sourceMatch.awayScore ? sourceMatch.home : sourceMatch.away;
   const loser = sourceMatch.homeScore > sourceMatch.awayScore ? sourceMatch.away : sourceMatch.home;
+  if (sourceMatch.homeScore === sourceMatch.awayScore && sourceMatch.knockoutWinner) {
+    const resolvedWinner = sourceMatch.knockoutWinner === "home" ? sourceMatch.home : sourceMatch.away;
+    const resolvedLoser = sourceMatch.knockoutWinner === "home" ? sourceMatch.away : sourceMatch.home;
+    return isLoserSlot ? resolvedLoser : resolvedWinner;
+  }
   return isLoserSlot ? loser : winner;
 };
 

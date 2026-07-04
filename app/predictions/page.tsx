@@ -50,6 +50,10 @@ const getActualOutcome = (match: ScheduleMatch): OutcomeKey | null => {
     return null;
   }
 
+  if (match.homeScore === match.awayScore && match.knockoutWinner) {
+    return match.knockoutWinner;
+  }
+
   if (match.homeScore > match.awayScore) {
     return "home";
   }

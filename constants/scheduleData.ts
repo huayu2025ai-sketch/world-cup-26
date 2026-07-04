@@ -19,6 +19,11 @@ export type ScheduleMatch = {
   homeScore?: number;
   awayScore?: number;
   goalScorers?: GoalScorer[];
+  shootoutScore?: {
+    home: number;
+    away: number;
+  };
+  knockoutWinner?: "home" | "away";
 };
 
 type ScheduleMatchInput = Omit<ScheduleMatch, "beijingTime">;
@@ -469,11 +474,11 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 74, stage: "32强", date: "2026-06-29", localTime: "16:30", home: "德国", away: "巴拉圭", venue: "Gillette Stadium", city: "Foxborough", homeScore: 1, awayScore: 1, goalScorers: [
     { player: "胡利奥·恩西索", team: "巴拉圭", minute: "42'", type: "goal" },
     { player: "凯·哈弗茨", team: "德国", minute: "54'", type: "goal" },
-  ] },
+  ], shootoutScore: { home: 3, away: 4 }, knockoutWinner: "away" },
   { id: 75, stage: "32强", date: "2026-06-29", localTime: "21:00", home: "荷兰", away: "摩洛哥", venue: "Estadio BBVA", city: "Guadalupe", homeScore: 1, awayScore: 1, goalScorers: [
     { player: "科迪·加克波", team: "荷兰", minute: "72'", type: "goal" },
     { player: "伊萨·迪奥普", team: "摩洛哥", minute: "90+1'", type: "goal" },
-  ] },
+  ], shootoutScore: { home: 2, away: 3 }, knockoutWinner: "away" },
   { id: 76, stage: "32强", date: "2026-06-29", localTime: "13:00", home: "巴西", away: "日本", venue: "NRG Stadium", city: "Houston", homeScore: 2, awayScore: 1, goalScorers: [
     { player: "桑圣·桑诺", team: "日本", minute: "29'", type: "goal" },
     { player: "卡塞米罗", team: "巴西", minute: "55'", type: "goal" },
@@ -536,7 +541,7 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 88, stage: "32强", date: "2026-07-03", localTime: "13:00", home: "澳大利亚", away: "埃及", venue: "AT&T Stadium", city: "Arlington", homeScore: 1, awayScore: 1, goalScorers: [
     { player: "埃马姆·阿舒尔", team: "埃及", minute: "13'", type: "goal" },
     { player: "穆罕默德·哈尼", team: "埃及", minute: "55'", type: "ownGoal" },
-  ] },
+  ], shootoutScore: { home: 2, away: 4 }, knockoutWinner: "away" },
   { id: 89, stage: "16强", date: "2026-07-04", localTime: "17:00", home: "32强胜者", away: "32强胜者", venue: "Lincoln Financial Field", city: "Philadelphia" },
   { id: 90, stage: "16强", date: "2026-07-04", localTime: "13:00", home: "32强胜者", away: "32强胜者", venue: "NRG Stadium", city: "Houston" },
   { id: 91, stage: "16强", date: "2026-07-05", localTime: "16:00", home: "32强胜者", away: "32强胜者", venue: "MetLife Stadium", city: "East Rutherford" },

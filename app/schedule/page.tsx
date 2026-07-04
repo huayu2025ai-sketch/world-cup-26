@@ -342,6 +342,15 @@ export default function SchedulePage() {
                       {match.venue} · {match.city}
                     </p>
 
+                    {match.knockoutWinner && match.shootoutScore && (
+                      <p className="mt-1 text-center text-[11px] font-black text-cyan-200">
+                        点球：
+                        {match.knockoutWinner === "home"
+                          ? `${match.home} ${match.shootoutScore.home}-${match.shootoutScore.away}`
+                          : `${match.away} ${match.shootoutScore.away}-${match.shootoutScore.home}`}
+                      </p>
+                    )}
+
                     {match.homeScore !== undefined && match.awayScore !== undefined ? (
                       <div className="mt-2 rounded-md border border-cyan-300/20 bg-cyan-300/[0.04] p-2">
                         <p className="text-[10px] font-black uppercase tracking-[0.14em] text-cyan-200">进球记录</p>
