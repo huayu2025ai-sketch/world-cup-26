@@ -523,9 +523,20 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "布雷尔·恩博洛", team: "瑞士", minute: "10'", type: "goal" },
     { player: "丹·恩多耶", team: "瑞士", minute: "46'", type: "goal" }
   ] },
-  { id: 86, stage: "32强", date: "2026-07-03", localTime: "18:00", home: "阿根廷", away: "佛得角", venue: "Hard Rock Stadium", city: "Miami Gardens" },
-  { id: 87, stage: "32强", date: "2026-07-03", localTime: "20:30", home: "哥伦比亚", away: "加纳", venue: "Arrowhead Stadium", city: "Kansas City" },
-  { id: 88, stage: "32强", date: "2026-07-03", localTime: "13:00", home: "澳大利亚", away: "埃及", venue: "AT&T Stadium", city: "Arlington" },
+  { id: 86, stage: "32强", date: "2026-07-03", localTime: "18:00", home: "阿根廷", away: "佛得角", venue: "Hard Rock Stadium", city: "Miami Gardens", homeScore: 3, awayScore: 2, goalScorers: [
+    { player: "莱昂内尔·梅西", team: "阿根廷", minute: "28'", type: "goal" },
+    { player: "德罗伊·杜阿尔特", team: "佛得角", minute: "59'", type: "goal" },
+    { player: "利桑德罗·马丁内斯", team: "阿根廷", minute: "93'", type: "goal" },
+    { player: "西德尼·洛佩斯·卡布拉尔", team: "佛得角", minute: "104'", type: "goal" },
+    { player: "克里斯蒂安·罗梅罗", team: "阿根廷", minute: "111'", type: "goal" },
+  ] },
+  { id: 87, stage: "32强", date: "2026-07-03", localTime: "20:30", home: "哥伦比亚", away: "加纳", venue: "Arrowhead Stadium", city: "Kansas City", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "约翰·阿里亚斯", team: "哥伦比亚", minute: "14'", type: "goal" },
+  ] },
+  { id: 88, stage: "32强", date: "2026-07-03", localTime: "13:00", home: "澳大利亚", away: "埃及", venue: "AT&T Stadium", city: "Arlington", homeScore: 1, awayScore: 1, goalScorers: [
+    { player: "埃马姆·阿舒尔", team: "埃及", minute: "13'", type: "goal" },
+    { player: "穆罕默德·哈尼", team: "埃及", minute: "55'", type: "ownGoal" },
+  ] },
   { id: 89, stage: "16强", date: "2026-07-04", localTime: "17:00", home: "32强胜者", away: "32强胜者", venue: "Lincoln Financial Field", city: "Philadelphia" },
   { id: 90, stage: "16强", date: "2026-07-04", localTime: "13:00", home: "32强胜者", away: "32强胜者", venue: "NRG Stadium", city: "Houston" },
   { id: 91, stage: "16强", date: "2026-07-05", localTime: "16:00", home: "32强胜者", away: "32强胜者", venue: "MetLife Stadium", city: "East Rutherford" },
