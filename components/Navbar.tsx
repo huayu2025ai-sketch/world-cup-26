@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { scheduleMatches, type ScheduleMatch } from "@/constants/scheduleData";
+import { getDisplayMatchTeamLabel } from "@/lib/knockoutDisplay";
 
 const navItems = [
   { href: "/knockout", path: "/knockout", label: "对阵" },
@@ -107,6 +108,12 @@ const getTournamentStatus = (): TournamentStatus => {
 export default function Navbar() {
   const pathname = usePathname();
   const [tournamentStatus, setTournamentStatus] = useState<TournamentStatus>(() => getTournamentStatus());
+  const nextMatchHome = tournamentStatus.nextMatch
+    ? getDisplayMatchTeamLabel(tournamentStatus.nextMatch, "home")
+    : undefined;
+  const nextMatchAway = tournamentStatus.nextMatch
+    ? getDisplayMatchTeamLabel(tournamentStatus.nextMatch, "away")
+    : undefined;
 
   useEffect(() => {
     setTournamentStatus(getTournamentStatus());
@@ -143,8 +150,7 @@ export default function Navbar() {
           </span>
           {tournamentStatus.nextMatch && (
             <span className="hidden whitespace-nowrap text-xs font-bold text-slate-400 md:inline">
-              下一场 {tournamentStatus.nextMatchTimeLabel} {tournamentStatus.nextMatch.home} vs{" "}
-              {tournamentStatus.nextMatch.away}
+              下一场 {tournamentStatus.nextMatchTimeLabel} {nextMatchHome} vs {nextMatchAway}
             </span>
           )}
         </div>
