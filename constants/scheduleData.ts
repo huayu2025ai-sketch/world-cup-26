@@ -542,8 +542,14 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "埃马姆·阿舒尔", team: "埃及", minute: "13'", type: "goal" },
     { player: "穆罕默德·哈尼", team: "埃及", minute: "55'", type: "ownGoal" },
   ], shootoutScore: { home: 2, away: 4 }, knockoutWinner: "away" },
-  { id: 89, stage: "16强", date: "2026-07-04", localTime: "17:00", home: "32强胜者", away: "32强胜者", venue: "Lincoln Financial Field", city: "Philadelphia" },
-  { id: 90, stage: "16强", date: "2026-07-04", localTime: "13:00", home: "32强胜者", away: "32强胜者", venue: "NRG Stadium", city: "Houston" },
+  { id: 89, stage: "16强", date: "2026-07-04", localTime: "13:00", home: "加拿大", away: "摩洛哥", venue: "NRG Stadium", city: "Houston", homeScore: 0, awayScore: 3, goalScorers: [
+    { player: "阿泽丁·乌纳希", team: "摩洛哥", minute: "50'", type: "goal" },
+    { player: "阿泽丁·乌纳希", team: "摩洛哥", minute: "82'", type: "goal" },
+    { player: "苏菲安·拉希米", team: "摩洛哥", minute: "90+8'", type: "goal" },
+  ] },
+  { id: 90, stage: "16强", date: "2026-07-04", localTime: "17:00", home: "法国", away: "巴拉圭", venue: "Lincoln Financial Field", city: "Philadelphia", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "基利安·姆巴佩", team: "法国", minute: "69'", type: "penalty" },
+  ] },
   { id: 91, stage: "16强", date: "2026-07-05", localTime: "16:00", home: "32强胜者", away: "32强胜者", venue: "MetLife Stadium", city: "East Rutherford" },
   { id: 92, stage: "16强", date: "2026-07-05", localTime: "19:00", home: "32强胜者", away: "32强胜者", venue: "Estadio Azteca", city: "Mexico City" },
   { id: 93, stage: "16强", date: "2026-07-06", localTime: "15:00", home: "32强胜者", away: "32强胜者", venue: "AT&T Stadium", city: "Arlington" },
