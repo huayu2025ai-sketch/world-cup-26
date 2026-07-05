@@ -45,6 +45,11 @@ const outcomeShortLabel: Record<OutcomeKey, string> = {
   away: "右侧胜"
 };
 
+const knockoutAdvanceTargetByStage: Partial<Record<ScheduleMatch["stage"], string>> = {
+  "32强": "16 强",
+  "16强": "8 强"
+};
+
 const getActualOutcome = (match: ScheduleMatch): OutcomeKey | null => {
   if (match.homeScore === undefined || match.awayScore === undefined) {
     return null;
@@ -190,6 +195,17 @@ export default function PredictionsPage() {
     const prediction = getMatchPrediction(matchOddsById[match.id] ?? []);
     return Boolean(prediction && getPredictedAdvancer(match, prediction));
   }).length;
+  const knockout16PredictionCount = scheduleMatches.filter(
+    (match) => match.stage === "16强" && Boolean(matchOddsById[match.id]?.length)
+  ).length;
+  const knockout16PredictedAdvancers = scheduleMatches.filter((match) => {
+    if (match.stage !== "16强") {
+      return false;
+    }
+
+    const prediction = getMatchPrediction(matchOddsById[match.id] ?? []);
+    return Boolean(prediction && getPredictedAdvancer(match, prediction));
+  }).length;
 
   const accuracyStats = useMemo(() => {
     let judged = 0;
@@ -269,11 +285,11 @@ export default function PredictionsPage() {
             淘汰赛晋级预测
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
-            按阶段筛选比赛，默认打开 32 强晋级视图。32 强卡片会直接显示“谁进 16 强”，其余阶段继续保留胜平负预测与结果回溯。
+            按阶段筛选比赛，默认打开 32 强晋级视图。32 强和 16 强卡片会分别显示“谁进 16 强”和“谁进 8 强”，其余阶段继续保留胜平负预测与结果回溯。
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-5">
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xl font-black text-cyan-200">{predictionCount}</p>
             <p className="mt-1 text-xs text-slate-400">已录数据</p>
@@ -285,6 +301,10 @@ export default function PredictionsPage() {
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xl font-black text-cyan-200">{knockout32PredictedAdvancers}/16</p>
             <p className="mt-1 text-xs text-slate-400">32 强进 16 强</p>
+          </div>
+          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
+            <p className="text-xl font-black text-cyan-200">{knockout16PredictedAdvancers}/8</p>
+            <p className="mt-1 text-xs text-slate-400">16 强进 8 强</p>
           </div>
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xs font-black text-cyan-200">
@@ -377,6 +397,8 @@ export default function PredictionsPage() {
               {stage !== "全部" ? ` · ${stage}` : ""}
               {stage === "32强"
                 ? ` · 赔率 ${knockout32PredictionCount}/16 · 已补全 ${knockout32PredictedAdvancers}/16 场晋级预测`
+                : stage === "16强"
+                  ? ` · 赔率 ${knockout16PredictionCount}/8 · 已补全 ${knockout16PredictedAdvancers}/8 场晋级预测`
                 : ""}
               {query ? ` · ${query}` : ""}
             </p>
@@ -666,77 +688,99 @@ export default function PredictionsPage() {
         ))}
       </section>
 
-      {stage === "32强" && predictionRows.length > 0 && (
-        <section className="mt-4 rounded-lg border border-cyan-300/15 bg-cyan-300/[0.06] p-4 backdrop-blur-md">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <div>
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-cyan-200">32 强晋级 16 强</p>
-              <h2 className="mt-1 text-lg font-black text-slate-50">32 强晋级摘要</h2>
-            </div>
-            <p className="text-sm text-slate-300">按当前赔率模型，下面 16 场已经可以直接给出晋级方向。</p>
-          </div>
+      {["32强", "16强"].includes(stage) && (
+        <section className="mt-4 space-y-4">
+          {(["32强", "16强"] as const).map((summaryStage) => {
+            if (stage !== summaryStage) return null;
 
-          <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
-            {scheduleMatches
-              .filter((match) => match.stage === "32强")
-              .map((match) => {
-                const prediction = getMatchPrediction(matchOddsById[match.id] ?? []);
-                const advancer = getPredictedAdvancer(match, prediction);
-                const actualOutcome = getActualOutcome(match);
-                const judgement = getPredictionJudgement(match, prediction);
-                const cardStateClass =
-                  judgement === "correct"
-                    ? "border-emerald-300/30 bg-emerald-300/[0.08] shadow-[0_0_0_1px_rgba(110,231,183,0.08),0_18px_50px_rgba(6,95,70,0.14)]"
-                    : judgement === "wrong"
-                      ? "border-rose-300/30 bg-rose-300/[0.08] shadow-[0_0_0_1px_rgba(252,165,165,0.08),0_18px_50px_rgba(127,29,29,0.16)]"
-                      : "border-slate-700 bg-slate-950/45";
+            const summaryMatches = scheduleMatches.filter((match) => match.stage === summaryStage);
+            const nextRoundLabel = knockoutAdvanceTargetByStage[summaryStage] ?? "下一轮";
+            const summaryTitle = summaryStage === "32强" ? "32 强晋级摘要" : "16 强晋级摘要";
+            const summaryLead =
+              summaryStage === "32强"
+                ? "按当前赔率模型，下面 16 场已经可以直接给出晋级方向。"
+                : "按当前赔率模型，下面 8 场已经可以直接给出晋级方向。";
+            const summaryKicker =
+              summaryStage === "32强" ? "32 强晋级 16 强" : "16 强晋级 8 强";
+            const summaryGridClass = summaryStage === "32强" ? "sm:grid-cols-2 xl:grid-cols-4" : "sm:grid-cols-2 xl:grid-cols-4";
 
-                return (
-                  <div key={match.id} className={`rounded-lg border p-3 transition ${cardStateClass}`}>
-                    <div className="flex items-start justify-between gap-2">
-                      <div>
-                        <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">M{match.id}</p>
-                        <p className="mt-1 text-sm font-black text-slate-100">
-                          {match.home} vs {match.away}
-                        </p>
-                        <p className="mt-1 text-xs text-slate-400">
-                          {formatMonthDay(match.date)} · {match.venue}
+            return (
+              <section
+                key={summaryStage}
+                className="rounded-lg border border-cyan-300/15 bg-cyan-300/[0.06] p-4 backdrop-blur-md"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div>
+                    <p className="text-[11px] font-black uppercase tracking-[0.28em] text-cyan-200">{summaryKicker}</p>
+                    <h2 className="mt-1 text-lg font-black text-slate-50">{summaryTitle}</h2>
+                  </div>
+                  <p className="text-sm text-slate-300">{summaryLead}</p>
+                </div>
+
+                <div className={`mt-3 grid gap-2 ${summaryGridClass}`}>
+                  {summaryMatches.map((match) => {
+                    const prediction = getMatchPrediction(matchOddsById[match.id] ?? []);
+                    const advancer = getPredictedAdvancer(match, prediction);
+                    const actualOutcome = getActualOutcome(match);
+                    const judgement = getPredictionJudgement(match, prediction);
+                    const cardStateClass =
+                      judgement === "correct"
+                        ? "border-emerald-300/30 bg-emerald-300/[0.08] shadow-[0_0_0_1px_rgba(110,231,183,0.08),0_18px_50px_rgba(6,95,70,0.14)]"
+                        : judgement === "wrong"
+                          ? "border-rose-300/30 bg-rose-300/[0.08] shadow-[0_0_0_1px_rgba(252,165,165,0.08),0_18px_50px_rgba(127,29,29,0.16)]"
+                          : "border-slate-700 bg-slate-950/45";
+
+                    return (
+                      <div key={match.id} className={`rounded-lg border p-3 transition ${cardStateClass}`}>
+                        <div className="flex items-start justify-between gap-2">
+                          <div>
+                            <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">
+                              M{match.id}
+                            </p>
+                            <p className="mt-1 text-sm font-black text-slate-100">
+                              {match.home} vs {match.away}
+                            </p>
+                            <p className="mt-1 text-xs text-slate-400">
+                              {formatMonthDay(match.date)} · {match.venue}
+                            </p>
+                          </div>
+                          <span
+                            className={`inline-flex shrink-0 items-center rounded-full border px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.16em] ${
+                              judgement === "correct"
+                                ? "border-emerald-300/50 bg-emerald-400 text-slate-950 shadow-[0_0_0_1px_rgba(110,231,183,0.25)]"
+                                : judgement === "wrong"
+                                  ? "border-rose-300/50 bg-rose-400 text-slate-950 shadow-[0_0_0_1px_rgba(252,165,165,0.25)]"
+                                  : "border-slate-600 bg-slate-200 text-slate-950"
+                            }`}
+                            title={
+                              judgement === "correct"
+                                ? "预测正确"
+                                : judgement === "wrong"
+                                  ? "预测错误"
+                                  : "比赛未结束"
+                            }
+                          >
+                            {judgement === "correct" ? "✓ 正确" : judgement === "wrong" ? "✕ 错误" : "未赛"}
+                          </span>
+                        </div>
+                        <p
+                          className={`mt-3 rounded-md border px-3 py-2 text-sm font-black ${
+                            judgement === "correct"
+                              ? "border-emerald-300/30 bg-emerald-300/12 text-emerald-50"
+                              : judgement === "wrong"
+                                ? "border-rose-300/30 bg-rose-300/12 text-rose-50"
+                                : "border-slate-700 bg-slate-900/60 text-cyan-100"
+                          }`}
+                        >
+                          {advancer ? `${advancer} 进 ${nextRoundLabel}` : actualOutcome === null ? "待开赛" : "加时/点球待定"}
                         </p>
                       </div>
-                      <span
-                        className={`inline-flex shrink-0 items-center rounded-full border px-3 py-1.5 text-[11px] font-black uppercase tracking-[0.16em] ${
-                          judgement === "correct"
-                            ? "border-emerald-300/50 bg-emerald-400 text-slate-950 shadow-[0_0_0_1px_rgba(110,231,183,0.25)]"
-                            : judgement === "wrong"
-                              ? "border-rose-300/50 bg-rose-400 text-slate-950 shadow-[0_0_0_1px_rgba(252,165,165,0.25)]"
-                              : "border-slate-600 bg-slate-200 text-slate-950"
-                        }`}
-                        title={
-                          judgement === "correct"
-                            ? "预测正确"
-                            : judgement === "wrong"
-                              ? "预测错误"
-                              : "比赛未结束"
-                        }
-                      >
-                        {judgement === "correct" ? "✓ 正确" : judgement === "wrong" ? "✕ 错误" : "未赛"}
-                      </span>
-                    </div>
-                    <p
-                      className={`mt-3 rounded-md border px-3 py-2 text-sm font-black ${
-                        judgement === "correct"
-                          ? "border-emerald-300/30 bg-emerald-300/12 text-emerald-50"
-                          : judgement === "wrong"
-                            ? "border-rose-300/30 bg-rose-300/12 text-rose-50"
-                            : "border-slate-700 bg-slate-900/60 text-cyan-100"
-                      }`}
-                    >
-                      {advancer ? `${advancer} 进 16 强` : actualOutcome === null ? "待开赛" : "加时/点球待定"}
-                    </p>
-                  </div>
-                );
-              })}
-          </div>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
         </section>
       )}
 
