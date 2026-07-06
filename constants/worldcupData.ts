@@ -42,6 +42,16 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-07-06T21:07:38+08:00",
+    updatedAtLabel: "北京时间 2026年7月6日 21:07",
+    title: "16强第92场赛果更新",
+    summary: "本次按北京时间 2026-07-06 21:07 复核并补入第 92 场终场结果：英格兰 3-2 墨西哥；第 93-104 场本次未改动，小组积分榜也未受影响。",
+    changes: [
+      "赛程第 92 场补入英格兰 3-2 墨西哥：裘德·贝林厄姆 36'、38'，胡利安·基尼奥内斯 42'，哈里·凯恩 60'（点球），劳尔·希门尼斯 69'（点球）。",
+      "本次不涉及任何小组积分榜改动，第 93-104 场保持不变。"
+    ]
+  },
+  {
     updatedAt: "2026-07-06T09:17:38+08:00",
     updatedAtLabel: "北京时间 2026年7月6日 09:17",
     title: "16强首场赛果更新",
