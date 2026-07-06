@@ -550,7 +550,11 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 90, stage: "16强", date: "2026-07-04", localTime: "17:00", home: "法国", away: "巴拉圭", venue: "Lincoln Financial Field", city: "Philadelphia", homeScore: 1, awayScore: 0, goalScorers: [
     { player: "基利安·姆巴佩", team: "法国", minute: "69'", type: "penalty" },
   ] },
-  { id: 91, stage: "16强", date: "2026-07-05", localTime: "16:00", home: "32强胜者", away: "32强胜者", venue: "MetLife Stadium", city: "East Rutherford" },
+  { id: 91, stage: "16强", date: "2026-07-05", localTime: "16:00", home: "巴西", away: "挪威", venue: "MetLife Stadium", city: "East Rutherford", homeScore: 1, awayScore: 2, goalScorers: [
+    { player: "埃尔林·哈兰德", team: "挪威", minute: "79'", type: "goal" },
+    { player: "埃尔林·哈兰德", team: "挪威", minute: "89'", type: "goal" },
+    { player: "内马尔", team: "巴西", minute: "90+10'", type: "penalty" },
+  ] },
   { id: 92, stage: "16强", date: "2026-07-05", localTime: "19:00", home: "32强胜者", away: "32强胜者", venue: "Estadio Azteca", city: "Mexico City" },
   { id: 93, stage: "16强", date: "2026-07-06", localTime: "15:00", home: "32强胜者", away: "32强胜者", venue: "AT&T Stadium", city: "Arlington" },
   { id: 94, stage: "16强", date: "2026-07-06", localTime: "20:00", home: "32强胜者", away: "32强胜者", venue: "Lumen Field", city: "Seattle" },

@@ -42,6 +42,16 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-07-06T09:17:38+08:00",
+    updatedAtLabel: "北京时间 2026年7月6日 09:17",
+    title: "16强首场赛果更新",
+    summary: "本次按北京时间 2026-07-06 09:17 复核并补入第 91 场终场结果：巴西 1-2 挪威；第 92 场及之后的 16 强赛本次未改动，小组积分榜也未受影响。",
+    changes: [
+      "赛程第 91 场补入巴西 1-2 挪威：埃尔林·哈兰德 79'、89'，内马尔 90+10'（点球）。",
+      "本次不涉及任何小组积分榜改动，第 92 场及之后的 16 强赛保持不变。"
+    ]
+  },
+  {
     updatedAt: "2026-07-05T08:31:17+08:00",
     updatedAtLabel: "北京时间 2026年7月5日 08:31",
     title: "16强首日赛果更新",
