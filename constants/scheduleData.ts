@@ -562,7 +562,9 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "哈里·凯恩", team: "英格兰", minute: "60'", type: "penalty" },
     { player: "劳尔·希门尼斯", team: "墨西哥", minute: "69'", type: "penalty" },
   ] },
-  { id: 93, stage: "16强", date: "2026-07-06", localTime: "15:00", home: "32强胜者", away: "32强胜者", venue: "AT&T Stadium", city: "Arlington" },
+  { id: 93, stage: "16强", date: "2026-07-06", localTime: "15:00", home: "葡萄牙", away: "西班牙", venue: "AT&T Stadium", city: "Arlington", homeScore: 0, awayScore: 1, goalScorers: [
+    { player: "米克尔·梅里诺", team: "西班牙", minute: "90+1'", type: "goal" },
+  ] },
   { id: 94, stage: "16强", date: "2026-07-06", localTime: "20:00", home: "32强胜者", away: "32强胜者", venue: "Lumen Field", city: "Seattle" },
   { id: 95, stage: "16强", date: "2026-07-07", localTime: "12:00", home: "32强胜者", away: "32强胜者", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { id: 96, stage: "16强", date: "2026-07-07", localTime: "16:00", home: "32强胜者", away: "32强胜者", venue: "BC Place", city: "Vancouver" },

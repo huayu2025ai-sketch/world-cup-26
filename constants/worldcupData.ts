@@ -42,6 +42,17 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-07-07T09:24:33+08:00",
+    updatedAtLabel: "北京时间 2026年7月7日 09:24",
+    title: "16强第93场赛果更新",
+    summary: "本次按北京时间 2026-07-07 09:24 复核并补入第 93 场终场结果：葡萄牙 0-1 西班牙；第 94 场仍在进行中，第 95-104 场本次未改动，小组积分榜也未受影响。",
+    changes: [
+      "赛程第 93 场补入葡萄牙 0-1 西班牙：米克尔·梅里诺 90+1'；助攻为费兰·托雷斯。",
+      "第 94 场已开赛但未到终场，本次未写入；第 95-104 场保持不变。",
+      "本次不涉及任何小组积分榜改动。"
+    ]
+  },
+  {
     updatedAt: "2026-07-06T21:07:38+08:00",
     updatedAtLabel: "北京时间 2026年7月6日 21:07",
     title: "16强第92场赛果更新",

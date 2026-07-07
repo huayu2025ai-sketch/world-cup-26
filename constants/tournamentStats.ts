@@ -176,6 +176,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "克里斯蒂安·罗梅罗", chineseName: "克里斯蒂安·罗梅罗", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
   { rank: 49, player: "约翰·阿里亚斯", chineseName: "约翰·阿里亚斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 49, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
+  { rank: 49, player: "米克尔·梅里诺", chineseName: "米克尔·梅里诺", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -246,14 +247,15 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 64, player: "马蒂亚斯·加拉尔萨", chineseName: "马蒂亚斯·加拉尔萨", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 },
   { rank: 65, player: "亚历克斯·巴埃纳", chineseName: "亚历克斯·巴埃纳", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
   { rank: 66, player: "马克·库库雷利亚", chineseName: "马克·库库雷利亚", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
-  { rank: 67, player: "拉斐尔·莱奥", chineseName: "拉斐尔·莱奥", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
-  { rank: 68, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
-  { rank: 69, player: "路易斯·苏亚雷斯", chineseName: "路易斯·苏亚雷斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
-  { rank: 70, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 }
+  { rank: 67, player: "费兰·托雷斯", chineseName: "费兰·托雷斯", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
+  { rank: 68, player: "拉斐尔·莱奥", chineseName: "拉斐尔·莱奥", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
+  { rank: 69, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
+  { rank: 70, player: "路易斯·苏亚雷斯", chineseName: "路易斯·苏亚雷斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
+  { rank: 71, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 }
   ];
 
 
 export const statsNotice = {
-  title: "16强第92场赛果更新",
-  body: "已按最新完赛比赛补入英格兰 3-2 墨西哥，并同步更新进球榜和总览说明。"
+  title: "16强第93场赛果更新",
+  body: "已按最新完赛比赛补入葡萄牙 0-1 西班牙，并同步更新进球榜、助攻榜和总览说明。"
 };
