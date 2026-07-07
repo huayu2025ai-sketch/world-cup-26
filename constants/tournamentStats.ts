@@ -9,9 +9,9 @@ export type PlayerStat = {
 };
 
 export const goalsRanking: PlayerStat[] = [
-  { rank: 1, player: "基利安·姆巴佩", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 7, matches: 4 },
-  { rank: 1, player: "埃尔林·哈兰德", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 7, matches: 4 },
-  { rank: 1, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 7, matches: 4 },
+  { rank: 1, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 8, matches: 5 },
+  { rank: 2, player: "基利安·姆巴佩", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 7, matches: 4 },
+  { rank: 2, player: "埃尔林·哈兰德", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 7, matches: 4 },
   { rank: 4, player: "哈里·凯恩", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 5, matches: 4 },
   { rank: 5, player: "维尼修斯·儒尼奥尔", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 4, matches: 3 },
   { rank: 5, player: "米克尔·奥亚萨瓦尔", chineseName: "米克尔·奥亚萨瓦尔", team: "西班牙", teamCode: "ESP", value: 4, matches: 2 },
@@ -28,6 +28,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 11, player: "乔纳森·戴维", chineseName: "乔纳森·戴维", team: "加拿大", teamCode: "CAN", value: 3, matches: 1 },
   { rank: 11, player: "马特乌斯·库尼亚", chineseName: "马特乌斯·库尼亚", team: "巴西", teamCode: "BRA", value: 3, matches: 2 },
   { rank: 11, player: "科迪·加克波", chineseName: "科迪·加克波", team: "荷兰", teamCode: "NED", value: 3, matches: 2 },
+  { rank: 11, player: "罗梅卢·卢卡库", chineseName: "罗梅卢·卢卡库", team: "比利时", teamCode: "BEL", value: 3, matches: 3 },
   { rank: 11, player: "克里斯蒂亚诺·罗纳尔多", chineseName: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", teamCode: "POR", value: 3, matches: 2 },
   { rank: 11, player: "劳尔·希门尼斯", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 3, matches: 3 },
   { rank: 22, player: "赛尔·拉林", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 2, matches: 2 },
@@ -53,11 +54,11 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 22, player: "尼古拉·佩佩", chineseName: "尼古拉·佩佩", team: "科特迪瓦", teamCode: "CIV", value: 2, matches: 1 },
   { rank: 22, player: "哈比卜·迪亚拉", chineseName: "哈比卜·迪亚拉", team: "塞内加尔", teamCode: "SEN", value: 2, matches: 2 },
   { rank: 22, player: "莱安德罗·特罗萨德", chineseName: "莱安德罗·特罗萨德", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
-  { rank: 22, player: "罗梅卢·卢卡库", chineseName: "罗梅卢·卢卡库", team: "比利时", teamCode: "BEL", value: 3, matches: 3 },
   { rank: 22, player: "里亚德·马赫雷斯", chineseName: "里亚德·马赫雷斯", team: "阿尔及利亚", teamCode: "ALG", value: 2, matches: 1 },
   { rank: 22, player: "尤里·蒂勒曼斯", chineseName: "尤里·蒂勒曼斯", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
   { rank: 22, player: "阿泽丁·乌纳希", chineseName: "阿泽丁·乌纳希", team: "摩洛哥", teamCode: "MAR", value: 2, matches: 1 },
   { rank: 22, player: "夏尔·德克特拉勒", chineseName: "夏尔·德克特拉勒", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
+  { rank: 22, player: "克里斯蒂安·罗梅罗", chineseName: "克里斯蒂安·罗梅罗", team: "阿根廷", teamCode: "ARG", value: 2, matches: 2 },
   { rank: 49, player: "拉迪斯拉夫·克雷伊奇", chineseName: "拉迪斯拉夫·克雷伊奇", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
   { rank: 49, player: "黄仁范", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
   { rank: 49, player: "吴贤揆", chineseName: "吴贤揆", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
@@ -174,10 +175,12 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "德罗伊·杜阿尔特", chineseName: "德罗伊·杜阿尔特", team: "佛得角", teamCode: "CPV", value: 1, matches: 1 },
   { rank: 49, player: "利桑德罗·马丁内斯", chineseName: "利桑德罗·马丁内斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
   { rank: 49, player: "西德尼·洛佩斯·卡布拉尔", chineseName: "西德尼·洛佩斯·卡布拉尔", team: "佛得角", teamCode: "CPV", value: 1, matches: 1 },
-  { rank: 49, player: "克里斯蒂安·罗梅罗", chineseName: "克里斯蒂安·罗梅罗", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
   { rank: 49, player: "约翰·阿里亚斯", chineseName: "约翰·阿里亚斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 49, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
   { rank: 49, player: "米克尔·梅里诺", chineseName: "米克尔·梅里诺", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
+  { rank: 49, player: "恩佐·费尔南德斯", chineseName: "恩佐·费尔南德斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
+  { rank: 49, player: "亚西尔·易卜拉欣", chineseName: "亚西尔·易卜拉欣", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
+  { rank: 49, player: "穆斯塔法·齐科", chineseName: "穆斯塔法·齐科", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "汉斯·范阿肯", chineseName: "汉斯·范阿肯", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
   { rank: 49, player: "马利克·蒂尔曼", chineseName: "马利克·蒂尔曼", team: "美国", teamCode: "USA", value: 1, matches: 1 },
 ];
@@ -228,6 +231,7 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 42, player: "布鲁诺·费尔南德斯", chineseName: "布鲁诺·费尔南德斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
   { rank: 43, player: "克里斯蒂亚诺·罗纳尔多", chineseName: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
   { rank: 44, player: "约西普·斯塔尼希奇", chineseName: "约西普·斯塔尼希奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
+  { rank: 45, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
   { rank: 46, player: "布雷尔·恩博洛", chineseName: "布雷尔·恩博洛", team: "瑞士", teamCode: "SUI", value: 1, matches: 3 },
   { rank: 47, player: "阿泽丁·乌纳希", chineseName: "阿泽丁·乌纳希", team: "摩洛哥", teamCode: "MAR", value: 2, matches: 1 },
   { rank: 47, player: "阿什拉夫·哈基米", chineseName: "阿什拉夫·哈基米", team: "摩洛哥", teamCode: "MAR", value: 2, matches: 2 },
@@ -253,13 +257,12 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 66, player: "马克·库库雷利亚", chineseName: "马克·库库雷利亚", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
   { rank: 67, player: "费兰·托雷斯", chineseName: "费兰·托雷斯", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
   { rank: 68, player: "拉斐尔·莱奥", chineseName: "拉斐尔·莱奥", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
-  { rank: 69, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
   { rank: 70, player: "路易斯·苏亚雷斯", chineseName: "路易斯·苏亚雷斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 71, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 }
   ];
 
 
 export const statsNotice = {
-  title: "16强第94场赛果更新",
-  body: "已按最新完赛比赛补入比利时 4-1 美国，并同步更新进球榜、助攻榜和总览说明。"
+  title: "16强第95场赛果更新",
+  body: "已按最新完赛比赛补入阿根廷 3-2 埃及，并同步更新进球榜、助攻榜和总览说明。"
 };

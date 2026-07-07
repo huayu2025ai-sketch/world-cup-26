@@ -572,7 +572,13 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "汉斯·范阿肯", team: "比利时", minute: "57'", type: "goal" },
     { player: "罗梅卢·卢卡库", team: "比利时", minute: "90+3'", type: "goal" }
   ] },
-  { id: 95, stage: "16强", date: "2026-07-07", localTime: "12:00", home: "32强胜者", away: "32强胜者", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+  { id: 95, stage: "16强", date: "2026-07-07", localTime: "12:00", home: "阿根廷", away: "埃及", venue: "Mercedes-Benz Stadium", city: "Atlanta", homeScore: 3, awayScore: 2, goalScorers: [
+    { player: "亚西尔·易卜拉欣", team: "埃及", minute: "15'", type: "goal" },
+    { player: "穆斯塔法·齐科", team: "埃及", minute: "67'", type: "goal" },
+    { player: "克里斯蒂安·罗梅罗", team: "阿根廷", minute: "79'", type: "goal" },
+    { player: "莱昂内尔·梅西", team: "阿根廷", minute: "83'", type: "goal" },
+    { player: "恩佐·费尔南德斯", team: "阿根廷", minute: "90+2'", type: "goal" }
+  ] },
   { id: 96, stage: "16强", date: "2026-07-07", localTime: "16:00", home: "32强胜者", away: "32强胜者", venue: "BC Place", city: "Vancouver" },
   { id: 97, stage: "1/4决赛", date: "2026-07-09", localTime: "16:00", home: "16强胜者", away: "16强胜者", venue: "Gillette Stadium", city: "Foxborough" },
   { id: 98, stage: "1/4决赛", date: "2026-07-10", localTime: "15:00", home: "16强胜者", away: "16强胜者", venue: "SoFi Stadium", city: "Inglewood" },
