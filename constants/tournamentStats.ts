@@ -53,10 +53,11 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 22, player: "尼古拉·佩佩", chineseName: "尼古拉·佩佩", team: "科特迪瓦", teamCode: "CIV", value: 2, matches: 1 },
   { rank: 22, player: "哈比卜·迪亚拉", chineseName: "哈比卜·迪亚拉", team: "塞内加尔", teamCode: "SEN", value: 2, matches: 2 },
   { rank: 22, player: "莱安德罗·特罗萨德", chineseName: "莱安德罗·特罗萨德", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
-  { rank: 22, player: "罗梅卢·卢卡库", chineseName: "罗梅卢·卢卡库", team: "比利时", teamCode: "BEL", value: 2, matches: 2 },
+  { rank: 22, player: "罗梅卢·卢卡库", chineseName: "罗梅卢·卢卡库", team: "比利时", teamCode: "BEL", value: 3, matches: 3 },
   { rank: 22, player: "里亚德·马赫雷斯", chineseName: "里亚德·马赫雷斯", team: "阿尔及利亚", teamCode: "ALG", value: 2, matches: 1 },
   { rank: 22, player: "尤里·蒂勒曼斯", chineseName: "尤里·蒂勒曼斯", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
   { rank: 22, player: "阿泽丁·乌纳希", chineseName: "阿泽丁·乌纳希", team: "摩洛哥", teamCode: "MAR", value: 2, matches: 1 },
+  { rank: 22, player: "夏尔·德克特拉勒", chineseName: "夏尔·德克特拉勒", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
   { rank: 49, player: "拉迪斯拉夫·克雷伊奇", chineseName: "拉迪斯拉夫·克雷伊奇", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
   { rank: 49, player: "黄仁范", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
   { rank: 49, player: "吴贤揆", chineseName: "吴贤揆", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
@@ -177,6 +178,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "约翰·阿里亚斯", chineseName: "约翰·阿里亚斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 49, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
   { rank: 49, player: "米克尔·梅里诺", chineseName: "米克尔·梅里诺", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
+  { rank: 49, player: "汉斯·范阿肯", chineseName: "汉斯·范阿肯", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
+  { rank: 49, player: "马利克·蒂尔曼", chineseName: "马利克·蒂尔曼", team: "美国", teamCode: "USA", value: 1, matches: 1 },
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -240,6 +243,7 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 57, player: "拉明·卡马拉", chineseName: "拉明·卡马拉", team: "塞内加尔", teamCode: "SEN", value: 1, matches: 1 },
   { rank: 58, player: "凯文·德布劳内", chineseName: "凯文·德布劳内", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
   { rank: 59, player: "尼古拉·拉斯金", chineseName: "尼古拉·拉斯金", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
+  { rank: 59, player: "莱安德罗·特罗萨德", chineseName: "莱安德罗·特罗萨德", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
   { rank: 60, player: "裘德·贝林厄姆", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 1, matches: 1 },
   { rank: 61, player: "卢卡·莫德里奇", chineseName: "卢卡·莫德里奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
   { rank: 62, player: "伊赫桑·哈达德", chineseName: "伊赫桑·哈达德", team: "约旦", teamCode: "JOR", value: 1, matches: 1 },
@@ -256,6 +260,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "16强第93场赛果更新",
-  body: "已按最新完赛比赛补入葡萄牙 0-1 西班牙，并同步更新进球榜、助攻榜和总览说明。"
+  title: "16强第94场赛果更新",
+  body: "已按最新完赛比赛补入比利时 4-1 美国，并同步更新进球榜、助攻榜和总览说明。"
 };

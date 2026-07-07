@@ -565,7 +565,13 @@ const matchInputs: ScheduleMatchInput[] = [
   { id: 93, stage: "16强", date: "2026-07-06", localTime: "15:00", home: "葡萄牙", away: "西班牙", venue: "AT&T Stadium", city: "Arlington", homeScore: 0, awayScore: 1, goalScorers: [
     { player: "米克尔·梅里诺", team: "西班牙", minute: "90+1'", type: "goal" },
   ] },
-  { id: 94, stage: "16强", date: "2026-07-06", localTime: "20:00", home: "32强胜者", away: "32强胜者", venue: "Lumen Field", city: "Seattle" },
+  { id: 94, stage: "16强", date: "2026-07-06", localTime: "20:00", home: "比利时", away: "美国", venue: "Lumen Field", city: "Seattle", homeScore: 4, awayScore: 1, goalScorers: [
+    { player: "夏尔·德克特拉勒", team: "比利时", minute: "9'", type: "goal" },
+    { player: "马利克·蒂尔曼", team: "美国", minute: "31'", type: "goal" },
+    { player: "夏尔·德克特拉勒", team: "比利时", minute: "33'", type: "goal" },
+    { player: "汉斯·范阿肯", team: "比利时", minute: "57'", type: "goal" },
+    { player: "罗梅卢·卢卡库", team: "比利时", minute: "90+3'", type: "goal" }
+  ] },
   { id: 95, stage: "16强", date: "2026-07-07", localTime: "12:00", home: "32强胜者", away: "32强胜者", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { id: 96, stage: "16强", date: "2026-07-07", localTime: "16:00", home: "32强胜者", away: "32强胜者", venue: "BC Place", city: "Vancouver" },
   { id: 97, stage: "1/4决赛", date: "2026-07-09", localTime: "16:00", home: "16强胜者", away: "16强胜者", venue: "Gillette Stadium", city: "Foxborough" },
