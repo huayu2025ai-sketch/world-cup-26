@@ -59,6 +59,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 22, player: "阿泽丁·乌纳希", chineseName: "阿泽丁·乌纳希", team: "摩洛哥", teamCode: "MAR", value: 2, matches: 1 },
   { rank: 22, player: "夏尔·德克特拉勒", chineseName: "夏尔·德克特拉勒", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
   { rank: 22, player: "克里斯蒂安·罗梅罗", chineseName: "克里斯蒂安·罗梅罗", team: "阿根廷", teamCode: "ARG", value: 2, matches: 2 },
+  { rank: 22, player: "马利克·蒂尔曼", chineseName: "马利克·蒂尔曼", team: "美国", teamCode: "USA", value: 2, matches: 2 },
   { rank: 49, player: "拉迪斯拉夫·克雷伊奇", chineseName: "拉迪斯拉夫·克雷伊奇", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
   { rank: 49, player: "黄仁范", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
   { rank: 49, player: "吴贤揆", chineseName: "吴贤揆", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
@@ -167,7 +168,6 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "加布里埃尔·马丁内利", chineseName: "加布里埃尔·马丁内利", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
   { rank: 49, player: "安东尼奥·努萨", chineseName: "安东尼奥·努萨", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
   { rank: 49, player: "布赖恩·西彭加", chineseName: "布赖恩·西彭加", team: "刚果民主共和国", teamCode: "COD", value: 1, matches: 1 },
-  { rank: 49, player: "马利克·蒂尔曼", chineseName: "马利克·蒂尔曼", team: "美国", teamCode: "USA", value: 1, matches: 1 },
   { rank: 49, player: "伊万·佩里希奇", chineseName: "伊万·佩里希奇", team: "克罗地亚", teamCode: "CRO", value: 1, matches: 1 },
   { rank: 49, player: "贡萨洛·拉莫斯", chineseName: "贡萨洛·拉莫斯", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
   { rank: 49, player: "佩德罗·波罗", chineseName: "佩德罗·波罗", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
@@ -182,7 +182,6 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "亚西尔·易卜拉欣", chineseName: "亚西尔·易卜拉欣", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "穆斯塔法·齐科", chineseName: "穆斯塔法·齐科", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "汉斯·范阿肯", chineseName: "汉斯·范阿肯", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
-  { rank: 49, player: "马利克·蒂尔曼", chineseName: "马利克·蒂尔曼", team: "美国", teamCode: "USA", value: 1, matches: 1 },
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -263,6 +262,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "16强第95场赛果更新",
-  body: "已按最新完赛比赛补入阿根廷 3-2 埃及，并同步更新进球榜、助攻榜和总览说明。"
+  title: "16强第96场赛果更新",
+  body: "已按最新完赛比赛补入瑞士 0-0 哥伦比亚（点球 4-3），本次未新增进球或助攻统计，并同步更新总览说明。"
 };

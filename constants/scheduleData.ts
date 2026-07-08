@@ -579,7 +579,7 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "莱昂内尔·梅西", team: "阿根廷", minute: "83'", type: "goal" },
     { player: "恩佐·费尔南德斯", team: "阿根廷", minute: "90+2'", type: "goal" }
   ] },
-  { id: 96, stage: "16强", date: "2026-07-07", localTime: "16:00", home: "32强胜者", away: "32强胜者", venue: "BC Place", city: "Vancouver" },
+  { id: 96, stage: "16强", date: "2026-07-07", localTime: "16:00", home: "瑞士", away: "哥伦比亚", venue: "BC Place", city: "Vancouver", homeScore: 0, awayScore: 0, goalScorers: [], shootoutScore: { home: 4, away: 3 }, knockoutWinner: "home" },
   { id: 97, stage: "1/4决赛", date: "2026-07-09", localTime: "16:00", home: "16强胜者", away: "16强胜者", venue: "Gillette Stadium", city: "Foxborough" },
   { id: 98, stage: "1/4决赛", date: "2026-07-10", localTime: "15:00", home: "16强胜者", away: "16强胜者", venue: "SoFi Stadium", city: "Inglewood" },
   { id: 99, stage: "1/4决赛", date: "2026-07-11", localTime: "17:00", home: "16强胜者", away: "16强胜者", venue: "Hard Rock Stadium", city: "Miami Gardens" },
