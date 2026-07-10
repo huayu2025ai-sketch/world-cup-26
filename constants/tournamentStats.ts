@@ -9,16 +9,16 @@ export type PlayerStat = {
 };
 
 export const goalsRanking: PlayerStat[] = [
-  { rank: 1, player: "基利安·姆巴佩", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 7, matches: 4 },
-  { rank: 2, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 7, matches: 5 },
+  { rank: 1, player: "基利安·姆巴佩", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 8, matches: 5 },
+  { rank: 2, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 8, matches: 5 },
   { rank: 3, player: "埃尔林·哈兰德", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 7, matches: 4 },
-  { rank: 4, player: "哈里·凯恩", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 6, matches: 4 },
-  { rank: 5, player: "奥斯曼·登贝莱", chineseName: "奥斯曼·登贝莱", team: "法国", teamCode: "FRA", value: 4, matches: 2 },
-  { rank: 6, player: "伊斯梅拉·萨尔", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 4, matches: 3 },
-  { rank: 7, player: "米克尔·奥亚萨瓦尔", chineseName: "米克尔·奥亚萨瓦尔", team: "西班牙", teamCode: "ESP", value: 4, matches: 2 },
-  { rank: 8, player: "裘德·贝林厄姆", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 4, matches: 3 },
-  { rank: 9, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 4, matches: 4 },
-  { rank: 10, player: "维尼修斯·儒尼奥尔", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 4, matches: 3 },
+  { rank: 4, player: "哈里·凯恩", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 5, matches: 4 },
+  { rank: 5, player: "奥斯曼·登贝莱", chineseName: "奥斯曼·登贝莱", team: "法国", teamCode: "FRA", value: 5, matches: 3 },
+  { rank: 6, player: "米克尔·奥亚萨瓦尔", chineseName: "米克尔·奥亚萨瓦尔", team: "西班牙", teamCode: "ESP", value: 4, matches: 2 },
+  { rank: 7, player: "裘德·贝林厄姆", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 4, matches: 3 },
+  { rank: 8, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 4, matches: 4 },
+  { rank: 9, player: "维尼修斯·儒尼奥尔", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 4, matches: 3 },
+  { rank: 10, player: "伊斯梅拉·萨尔", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 4, matches: 3 },
   { rank: 11, player: "福拉林·巴洛贡", chineseName: "福拉林·巴洛贡", team: "美国", teamCode: "USA", value: 3, matches: 2 },
   { rank: 11, player: "伊斯梅尔·塞巴里", chineseName: "伊斯梅尔·塞巴里", team: "摩洛哥", teamCode: "MAR", value: 3, matches: 3 },
   { rank: 11, player: "凯·哈弗茨", chineseName: "凯·哈弗茨", team: "德国", teamCode: "GER", value: 3, matches: 2 },
@@ -262,6 +262,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "16强第96场赛果更新",
-  body: "已按最新完赛比赛补入瑞士 0-0 哥伦比亚（点球 4-3），本次未新增进球或助攻统计，并同步更新总览说明。"
+  title: "1/4决赛第97场赛果更新",
+  body: "已按北京时间 2026-07-10 10:14 复核并补入摩洛哥 0-2 法国，姆巴佩和登贝莱各入一球；进球榜同步更新，助攻榜未新增可靠确认记录。"
 };

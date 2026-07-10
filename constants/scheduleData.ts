@@ -580,7 +580,10 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "恩佐·费尔南德斯", team: "阿根廷", minute: "90+2'", type: "goal" }
   ] },
   { id: 96, stage: "16强", date: "2026-07-07", localTime: "16:00", home: "瑞士", away: "哥伦比亚", venue: "BC Place", city: "Vancouver", homeScore: 0, awayScore: 0, goalScorers: [], shootoutScore: { home: 4, away: 3 }, knockoutWinner: "home" },
-  { id: 97, stage: "1/4决赛", date: "2026-07-09", localTime: "16:00", home: "16强胜者", away: "16强胜者", venue: "Gillette Stadium", city: "Foxborough" },
+  { id: 97, stage: "1/4决赛", date: "2026-07-09", localTime: "16:00", home: "摩洛哥", away: "法国", venue: "Gillette Stadium", city: "Foxborough", homeScore: 0, awayScore: 2, goalScorers: [
+    { player: "基利安·姆巴佩", team: "法国", minute: "60'", type: "goal" },
+    { player: "奥斯曼·登贝莱", team: "法国", minute: "66'", type: "goal" }
+  ], knockoutWinner: "away" },
   { id: 98, stage: "1/4决赛", date: "2026-07-10", localTime: "15:00", home: "16强胜者", away: "16强胜者", venue: "SoFi Stadium", city: "Inglewood" },
   { id: 99, stage: "1/4决赛", date: "2026-07-11", localTime: "17:00", home: "16强胜者", away: "16强胜者", venue: "Hard Rock Stadium", city: "Miami Gardens" },
   { id: 100, stage: "1/4决赛", date: "2026-07-11", localTime: "21:00", home: "16强胜者", away: "16强胜者", venue: "Arrowhead Stadium", city: "Kansas City" },
