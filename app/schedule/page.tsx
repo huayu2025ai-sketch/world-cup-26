@@ -102,7 +102,7 @@ const NEWS_WINDOW_MS = 48 * 60 * 60 * 1000;
 
 export default function SchedulePage() {
   const [query, setQuery] = useState("");
-  const [stage, setStage] = useState<(typeof scheduleStages)[number]>("16强");
+  const [stage, setStage] = useState<(typeof scheduleStages)[number]>("1/4决赛");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [newsIndexMap, setNewsIndexMap] = useState<Record<number, number>>({});
   const [now, setNow] = useState(() => Date.now());
