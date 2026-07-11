@@ -214,11 +214,14 @@ export default function KnockoutBracket() {
     };
     window.addEventListener("resize", handleResize);
 
-    const observer = new ResizeObserver(() => {
-      recomputeCardTops();
-    });
+    const observer =
+      typeof ResizeObserver === "undefined"
+        ? null
+        : new ResizeObserver(() => {
+            recomputeCardTops();
+          });
     if (innerRef.current) {
-      observer.observe(innerRef.current);
+      observer?.observe(innerRef.current);
     }
 
     const raf1 = requestAnimationFrame(() => {
@@ -230,13 +233,18 @@ export default function KnockoutBracket() {
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      observer.disconnect();
+      observer?.disconnect();
       cancelAnimationFrame(raf1);
       cancelAnimationFrame(raf2);
     };
   }, []);
 
   useLayoutEffect(() => {
+    if (typeof requestAnimationFrame === "undefined") {
+      drawLines();
+      return;
+    }
+
     const raf = requestAnimationFrame(drawLines);
     return () => cancelAnimationFrame(raf);
   }, [cardTops]);
