@@ -584,7 +584,11 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "基利安·姆巴佩", team: "法国", minute: "60'", type: "goal" },
     { player: "奥斯曼·登贝莱", team: "法国", minute: "66'", type: "goal" }
   ], knockoutWinner: "away" },
-  { id: 98, stage: "1/4决赛", date: "2026-07-10", localTime: "15:00", home: "16强胜者", away: "16强胜者", venue: "SoFi Stadium", city: "Inglewood" },
+  { id: 98, stage: "1/4决赛", date: "2026-07-10", localTime: "15:00", home: "西班牙", away: "比利时", venue: "SoFi Stadium", city: "Inglewood", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "法比安·鲁伊斯", team: "西班牙", minute: "30'", type: "goal" },
+    { player: "夏尔·德克特拉勒", team: "比利时", minute: "41'", type: "goal" },
+    { player: "米克尔·梅里诺", team: "西班牙", minute: "88'", type: "goal" }
+  ], knockoutWinner: "home" },
   { id: 99, stage: "1/4决赛", date: "2026-07-11", localTime: "17:00", home: "16强胜者", away: "16强胜者", venue: "Hard Rock Stadium", city: "Miami Gardens" },
   { id: 100, stage: "1/4决赛", date: "2026-07-11", localTime: "21:00", home: "16强胜者", away: "16强胜者", venue: "Arrowhead Stadium", city: "Kansas City" },
   { id: 101, stage: "半决赛", date: "2026-07-14", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "AT&T Stadium", city: "Arlington" },

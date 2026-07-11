@@ -31,6 +31,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 11, player: "罗梅卢·卢卡库", chineseName: "罗梅卢·卢卡库", team: "比利时", teamCode: "BEL", value: 3, matches: 3 },
   { rank: 11, player: "克里斯蒂亚诺·罗纳尔多", chineseName: "克里斯蒂亚诺·罗纳尔多", team: "葡萄牙", teamCode: "POR", value: 3, matches: 2 },
   { rank: 11, player: "劳尔·希门尼斯", chineseName: "劳尔·希门尼斯", team: "墨西哥", teamCode: "MEX", value: 3, matches: 3 },
+  { rank: 11, player: "夏尔·德克特拉勒", chineseName: "夏尔·德克特拉勒", team: "比利时", teamCode: "BEL", value: 3, matches: 2 },
   { rank: 22, player: "赛尔·拉林", chineseName: "赛尔·拉林", team: "加拿大", teamCode: "CAN", value: 2, matches: 2 },
   { rank: 22, player: "布雷尔·恩博洛", chineseName: "布雷尔·恩博洛", team: "瑞士", teamCode: "SUI", value: 2, matches: 2 },
   { rank: 22, player: "克里森西奥·萨默维尔", chineseName: "克里森西奥·萨默维尔", team: "荷兰", teamCode: "NED", value: 2, matches: 2 },
@@ -57,8 +58,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 22, player: "里亚德·马赫雷斯", chineseName: "里亚德·马赫雷斯", team: "阿尔及利亚", teamCode: "ALG", value: 2, matches: 1 },
   { rank: 22, player: "尤里·蒂勒曼斯", chineseName: "尤里·蒂勒曼斯", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
   { rank: 22, player: "阿泽丁·乌纳希", chineseName: "阿泽丁·乌纳希", team: "摩洛哥", teamCode: "MAR", value: 2, matches: 1 },
-  { rank: 22, player: "夏尔·德克特拉勒", chineseName: "夏尔·德克特拉勒", team: "比利时", teamCode: "BEL", value: 2, matches: 1 },
   { rank: 22, player: "克里斯蒂安·罗梅罗", chineseName: "克里斯蒂安·罗梅罗", team: "阿根廷", teamCode: "ARG", value: 2, matches: 2 },
+  { rank: 22, player: "米克尔·梅里诺", chineseName: "米克尔·梅里诺", team: "西班牙", teamCode: "ESP", value: 2, matches: 2 },
   { rank: 22, player: "马利克·蒂尔曼", chineseName: "马利克·蒂尔曼", team: "美国", teamCode: "USA", value: 2, matches: 2 },
   { rank: 49, player: "拉迪斯拉夫·克雷伊奇", chineseName: "拉迪斯拉夫·克雷伊奇", team: "捷克", teamCode: "CZE", value: 1, matches: 1 },
   { rank: 49, player: "黄仁范", chineseName: "黄仁范", team: "韩国", teamCode: "KOR", value: 1, matches: 1 },
@@ -177,7 +178,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "西德尼·洛佩斯·卡布拉尔", chineseName: "西德尼·洛佩斯·卡布拉尔", team: "佛得角", teamCode: "CPV", value: 1, matches: 1 },
   { rank: 49, player: "约翰·阿里亚斯", chineseName: "约翰·阿里亚斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 49, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
-  { rank: 49, player: "米克尔·梅里诺", chineseName: "米克尔·梅里诺", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
+  { rank: 49, player: "法比安·鲁伊斯", chineseName: "法比安·鲁伊斯", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
   { rank: 49, player: "恩佐·费尔南德斯", chineseName: "恩佐·费尔南德斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
   { rank: 49, player: "亚西尔·易卜拉欣", chineseName: "亚西尔·易卜拉欣", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "穆斯塔法·齐科", chineseName: "穆斯塔法·齐科", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
@@ -262,6 +263,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "1/4决赛第97场赛果更新",
-  body: "已按北京时间 2026-07-10 10:14 复核并补入摩洛哥 0-2 法国，姆巴佩和登贝莱各入一球；进球榜同步更新，助攻榜未新增可靠确认记录。"
+  title: "1/4决赛第98场赛果更新",
+  body: "已按北京时间 2026-07-11 09:15 复核并补入西班牙 2-1 比利时，法比安·鲁伊斯、夏尔·德克特拉勒和米克尔·梅里诺各入一球；进球榜同步更新，助攻榜未新增可靠确认记录。"
 };
