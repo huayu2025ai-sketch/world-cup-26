@@ -188,7 +188,7 @@ const getDefaultDate = () => {
     return todayWithMatches;
   }
 
-  return dates.find((date) => date >= today) ?? dates[0];
+  return dates.find((date) => date >= today) ?? dates[0] ?? today;
 };
 
 const getDefaultMatchId = () => {
