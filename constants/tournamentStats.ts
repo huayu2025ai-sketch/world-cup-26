@@ -160,7 +160,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "马塞尔·萨比策", chineseName: "马塞尔·萨比策", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
   { rank: 49, player: "萨沙·卡拉季奇", chineseName: "萨沙·卡拉季奇", team: "奥地利", teamCode: "AUT", value: 1, matches: 1 },
   { rank: 49, player: "吉奥瓦尼·洛塞尔索", chineseName: "吉奥瓦尼·洛塞尔索", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
-  { rank: 49, player: "劳塔罗·马丁内斯", chineseName: "劳塔罗·马丁内斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
+  { rank: 22, player: "劳塔罗·马丁内斯", chineseName: "劳塔罗·马丁内斯", team: "阿根廷", teamCode: "ARG", value: 2, matches: 2 },
   { rank: 49, player: "斯蒂芬·尤斯塔基奥", chineseName: "斯蒂芬·尤斯塔基奥", team: "加拿大", teamCode: "CAN", value: 1, matches: 1 },
   { rank: 49, player: "胡利奥·恩西索", chineseName: "胡利奥·恩西索", team: "巴拉圭", teamCode: "PAR", value: 1, matches: 1 },
   { rank: 49, player: "伊萨·迪奥普", chineseName: "伊萨·迪奥普", team: "摩洛哥", teamCode: "MAR", value: 1, matches: 1 },
@@ -184,6 +184,8 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "穆斯塔法·齐科", chineseName: "穆斯塔法·齐科", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "汉斯·范阿肯", chineseName: "汉斯·范阿肯", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
   { rank: 49, player: "安德烈亚斯·施耶尔德鲁普", chineseName: "安德烈亚斯·施耶尔德鲁普", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
+  { rank: 49, player: "亚历克西斯·麦卡利斯特", chineseName: "亚历克西斯·麦卡利斯特", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
+  { rank: 49, player: "胡利安·阿尔瓦雷斯", chineseName: "胡利安·阿尔瓦雷斯", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 },
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -259,11 +261,12 @@ export const assistsRanking: PlayerStat[] = [
   { rank: 67, player: "费兰·托雷斯", chineseName: "费兰·托雷斯", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
   { rank: 68, player: "拉斐尔·莱奥", chineseName: "拉斐尔·莱奥", team: "葡萄牙", teamCode: "POR", value: 1, matches: 1 },
   { rank: 70, player: "路易斯·苏亚雷斯", chineseName: "路易斯·苏亚雷斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
-  { rank: 71, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 }
+  { rank: 71, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
+  { rank: 49, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 1, matches: 1 }
   ];
 
 
 export const statsNotice = {
-  title: "1/4决赛第99场赛果更新",
-  body: "已按北京时间 2026-07-12 08:58 复核并补入挪威 1-2 英格兰（加时），安德烈亚斯·施耶尔德鲁普和裘德·贝林厄姆（2球）取得进球；进球榜同步更新，助攻榜未新增可靠确认记录。"
+  title: "1/4决赛第100场赛果更新",
+  body: "已按北京时间 2026-07-12 17:32 复核并补入阿根廷 3-1 瑞士（加时），亚历克西斯·麦卡利斯特、胡利安·阿尔瓦雷斯和劳塔罗·马丁内斯取得进球；梅西的角球助攻有可靠来源确认，进球榜和助攻榜同步更新。"
 };

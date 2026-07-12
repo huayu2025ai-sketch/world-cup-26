@@ -594,7 +594,12 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "裘德·贝林厄姆", team: "英格兰", minute: "45+2'", type: "goal" },
     { player: "裘德·贝林厄姆", team: "英格兰", minute: "93'", type: "goal" }
   ], knockoutWinner: "away" },
-  { id: 100, stage: "1/4决赛", date: "2026-07-11", localTime: "21:00", home: "16强胜者", away: "16强胜者", venue: "Arrowhead Stadium", city: "Kansas City" },
+  { id: 100, stage: "1/4决赛", date: "2026-07-11", localTime: "21:00", home: "阿根廷", away: "瑞士", venue: "Arrowhead Stadium", city: "Kansas City", homeScore: 3, awayScore: 1, goalScorers: [
+    { player: "亚历克西斯·麦卡利斯特", team: "阿根廷", minute: "10'", type: "goal" },
+    { player: "丹·恩多耶", team: "瑞士", minute: "67'", type: "goal" },
+    { player: "胡利安·阿尔瓦雷斯", team: "阿根廷", minute: "112'", type: "goal" },
+    { player: "劳塔罗·马丁内斯", team: "阿根廷", minute: "120+1'", type: "goal" }
+  ], knockoutWinner: "home" },
   { id: 101, stage: "半决赛", date: "2026-07-14", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "AT&T Stadium", city: "Arlington" },
   { id: 102, stage: "半决赛", date: "2026-07-15", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
   { id: 103, stage: "季军赛", date: "2026-07-18", localTime: "17:00", home: "半决赛负者", away: "半决赛负者", venue: "Hard Rock Stadium", city: "Miami Gardens" },
