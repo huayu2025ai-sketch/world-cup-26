@@ -9,9 +9,7 @@ import { getDisplayMatchTeamLabel } from "@/lib/knockoutDisplay";
 const navItems = [
   { href: "/knockout", path: "/knockout", label: "对阵" },
   { href: "/schedule", path: "/schedule", label: "赛程" },
-  { href: "/predictions#pending-prediction", path: "/predictions", label: "预测" },
   { href: "/teams", path: "/teams", label: "球队" },
-  { href: "/export", path: "/export", label: "素材" },
   { href: "/stats", path: "/stats", label: "数据" }
 ];
 
