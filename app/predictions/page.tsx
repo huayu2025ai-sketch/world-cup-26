@@ -47,7 +47,8 @@ const outcomeShortLabel: Record<OutcomeKey, string> = {
 
 const knockoutAdvanceTargetByStage: Partial<Record<ScheduleMatch["stage"], string>> = {
   "32强": "16 强",
-  "16强": "8 强"
+  "16强": "8 强",
+  "半决赛": "决赛"
 };
 
 const getActualOutcome = (match: ScheduleMatch): OutcomeKey | null => {
@@ -140,7 +141,7 @@ const getPredictionJudgement = (match: ScheduleMatch, prediction: MatchPredictio
 
 export default function PredictionsPage() {
   const [query, setQuery] = useState("");
-  const [stage, setStage] = useState<(typeof scheduleStages)[number]>("32强");
+  const [stage, setStage] = useState<(typeof scheduleStages)[number]>("半决赛");
   const [coverage, setCoverage] = useState<"有数据" | "全部">("有数据");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [championIndex, setChampionIndex] = useState(0);
@@ -200,6 +201,17 @@ export default function PredictionsPage() {
   ).length;
   const knockout16PredictedAdvancers = scheduleMatches.filter((match) => {
     if (match.stage !== "16强") {
+      return false;
+    }
+
+    const prediction = getMatchPrediction(matchOddsById[match.id] ?? []);
+    return Boolean(prediction && getPredictedAdvancer(match, prediction));
+  }).length;
+  const knockoutSemiPredictionCount = scheduleMatches.filter(
+    (match) => match.stage === "半决赛" && Boolean(matchOddsById[match.id]?.length)
+  ).length;
+  const knockoutSemiPredictedAdvancers = scheduleMatches.filter((match) => {
+    if (match.stage !== "半决赛") {
       return false;
     }
 
@@ -285,11 +297,11 @@ export default function PredictionsPage() {
             淘汰赛晋级预测
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">
-            按阶段筛选比赛，默认打开 32 强晋级视图。32 强和 16 强卡片会分别显示“谁进 16 强”和“谁进 8 强”，其余阶段继续保留胜平负预测与结果回溯。
+            按阶段筛选比赛，默认打开半决赛胜负预测视图。32 强、16 强和半决赛卡片会分别显示“谁进 16 强”“谁进 8 强”和“谁进决赛”，其余阶段继续保留胜平负预测与结果回溯。
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-5">
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-6">
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xl font-black text-cyan-200">{predictionCount}</p>
             <p className="mt-1 text-xs text-slate-400">已录数据</p>
@@ -305,6 +317,10 @@ export default function PredictionsPage() {
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xl font-black text-cyan-200">{knockout16PredictedAdvancers}/8</p>
             <p className="mt-1 text-xs text-slate-400">16 强进 8 强</p>
+          </div>
+          <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
+            <p className="text-xl font-black text-cyan-200">{knockoutSemiPredictedAdvancers}/2</p>
+            <p className="mt-1 text-xs text-slate-400">半决赛进决赛</p>
           </div>
           <div className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-center backdrop-blur-md">
             <p className="text-xs font-black text-cyan-200">
@@ -399,6 +415,8 @@ export default function PredictionsPage() {
                 ? ` · 赔率 ${knockout32PredictionCount}/16 · 已补全 ${knockout32PredictedAdvancers}/16 场晋级预测`
                 : stage === "16强"
                   ? ` · 赔率 ${knockout16PredictionCount}/8 · 已补全 ${knockout16PredictedAdvancers}/8 场晋级预测`
+                  : stage === "半决赛"
+                    ? ` · 赔率 ${knockoutSemiPredictionCount}/2 · 已补全 ${knockoutSemiPredictedAdvancers}/2 场胜负预测`
                 : ""}
               {query ? ` · ${query}` : ""}
             </p>
@@ -529,19 +547,23 @@ export default function PredictionsPage() {
                           {prediction ? (
                             <div
                               className={`rounded-lg border p-3 ${
-                                match.stage === "32强"
+                                match.stage === "32强" || match.stage === "16强" || match.stage === "半决赛"
                                   ? "border-cyan-300/20 bg-cyan-300/10"
                                   : "border-cyan-300/20 bg-cyan-300/10"
                               }`}
                             >
                               <p className="text-[11px] font-black uppercase tracking-[0.2em] text-cyan-200">
-                                {match.stage === "32强" ? "晋级预测" : "Prediction"}
+                                {match.stage === "32强" || match.stage === "16强"
+                                  ? "晋级预测"
+                                  : match.stage === "半决赛"
+                                    ? "胜负预测"
+                                    : "Prediction"}
                               </p>
                               <div className="mt-1 flex flex-wrap items-center gap-3">
                                 <p className="text-lg font-black text-cyan-50">
-                                  {match.stage === "32强"
+                                  {match.stage === "32强" || match.stage === "16强" || match.stage === "半决赛"
                                     ? predictedAdvancer
-                                      ? `${predictedAdvancer} 进 16 强`
+                                      ? `${predictedAdvancer} 进 ${knockoutAdvanceTargetByStage[match.stage] ?? "下一轮"}`
                                       : "加时/点球待定"
                                     : outcomeLabel(prediction.predictedOutcome, match)}
                                 </p>
@@ -688,21 +710,33 @@ export default function PredictionsPage() {
         ))}
       </section>
 
-      {["32强", "16强"].includes(stage) && (
+      {["32强", "16强", "半决赛"].includes(stage) && (
         <section className="mt-4 space-y-4">
-          {(["32强", "16强"] as const).map((summaryStage) => {
+          {(["32强", "16强", "半决赛"] as const).map((summaryStage) => {
             if (stage !== summaryStage) return null;
 
             const summaryMatches = scheduleMatches.filter((match) => match.stage === summaryStage);
             const nextRoundLabel = knockoutAdvanceTargetByStage[summaryStage] ?? "下一轮";
-            const summaryTitle = summaryStage === "32强" ? "32 强晋级摘要" : "16 强晋级摘要";
+            const summaryTitle =
+              summaryStage === "32强"
+                ? "32 强晋级摘要"
+                : summaryStage === "16强"
+                  ? "16 强晋级摘要"
+                  : "半决赛胜负预测";
             const summaryLead =
               summaryStage === "32强"
                 ? "按当前赔率模型，下面 16 场已经可以直接给出晋级方向。"
-                : "按当前赔率模型，下面 8 场已经可以直接给出晋级方向。";
+                : summaryStage === "16强"
+                  ? "按当前赔率模型，下面 8 场已经可以直接给出晋级方向。"
+                  : "按当前赔率模型，下面 2 场已经可以直接给出决赛名额判断。";
             const summaryKicker =
-              summaryStage === "32强" ? "32 强晋级 16 强" : "16 强晋级 8 强";
-            const summaryGridClass = summaryStage === "32强" ? "sm:grid-cols-2 xl:grid-cols-4" : "sm:grid-cols-2 xl:grid-cols-4";
+              summaryStage === "32强"
+                ? "32 强晋级 16 强"
+                : summaryStage === "16强"
+                  ? "16 强晋级 8 强"
+                  : "半决赛胜负预测";
+            const summaryGridClass =
+              summaryStage === "半决赛" ? "sm:grid-cols-2" : "sm:grid-cols-2 xl:grid-cols-4";
 
             return (
               <section

@@ -39,7 +39,7 @@ export const recommendedBookmakers: Bookmaker[] = [
   { key: "draftkings", name: "数据源 E", marketRole: "北美市场样本" }
 ];
 
-export const oddsDataUpdatedAt = "2026-06-29";
+export const oddsDataUpdatedAt = "2026-07-11";
 
 export const championFavoritesUpdatedAt = "2026-06-29";
 
@@ -406,5 +406,19 @@ export const matchOddsById: Record<number, MatchBookmakerOdds[]> = {
   88: [
     { bookmaker: "pinnacle", odds: { home: 3.2, draw: 3.05, away: 2.25 }, capturedAt: "2026-06-28" },
     { bookmaker: "betfair", odds: { home: 3.1, draw: 3, away: 2.2 }, capturedAt: "2026-06-28" }
+  ],
+  101: [
+    { bookmaker: "pinnacle", odds: { home: 2.7, draw: 3.1, away: 2.55 }, capturedAt: "2026-07-11" },
+    { bookmaker: "betfair", odds: { home: 2.75, draw: 3.05, away: 2.5 }, capturedAt: "2026-07-11" },
+    { bookmaker: "bet365", odds: { home: 2.7, draw: 3.1, away: 2.45 }, capturedAt: "2026-07-11" },
+    { bookmaker: "sbobet", odds: { home: 2.65, draw: 3, away: 2.55 }, capturedAt: "2026-07-11" },
+    { bookmaker: "draftkings", odds: { home: 2.8, draw: 3, away: 2.5 }, capturedAt: "2026-07-11" }
+  ],
+  102: [
+    { bookmaker: "pinnacle", odds: { home: 2.35, draw: 3.2, away: 2.85 }, capturedAt: "2026-07-11" },
+    { bookmaker: "betfair", odds: { home: 2.3, draw: 3.15, away: 2.9 }, capturedAt: "2026-07-11" },
+    { bookmaker: "bet365", odds: { home: 2.4, draw: 3.2, away: 2.8 }, capturedAt: "2026-07-11" },
+    { bookmaker: "sbobet", odds: { home: 2.38, draw: 3.1, away: 2.88 }, capturedAt: "2026-07-11" },
+    { bookmaker: "draftkings", odds: { home: 2.3, draw: 3.05, away: 2.9 }, capturedAt: "2026-07-11" }
   ]
 };
