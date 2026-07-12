@@ -183,6 +183,20 @@ export default function PredictionsPage() {
 
   const groupedMatches = useMemo(() => groupRowsByDate(predictionRows), [predictionRows]);
   const dateKeys = Object.keys(groupedMatches).sort();
+  const semiFinalSpotlightMatches = useMemo(
+    () =>
+      scheduleMatches
+        .filter((match) => match.stage === "半决赛")
+        .map((match) => {
+          const prediction = getMatchPrediction(matchOddsById[match.id] ?? []);
+          return {
+            match,
+            prediction,
+            advancer: getPredictedAdvancer(match, prediction)
+          };
+        }),
+    []
+  );
 
   const predictionCount = Object.keys(matchOddsById).length;
   const knockout32PredictionCount = scheduleMatches.filter(
@@ -332,6 +346,105 @@ export default function PredictionsPage() {
           </div>
         </div>
       </section>
+
+      {stage === "半决赛" && (
+        <section className="rounded-2xl border border-cyan-300/15 bg-[linear-gradient(180deg,rgba(8,47,73,0.58),rgba(2,6,23,0.56))] p-4 shadow-[0_20px_70px_rgba(8,145,178,0.14)] backdrop-blur-md">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <p className="text-[11px] font-black uppercase tracking-[0.3em] text-cyan-200">Semi-final Spotlight</p>
+              <h2 className="mt-1 text-lg font-black text-slate-50">101 / 102 半决赛预测</h2>
+            </div>
+            <p className="text-sm text-slate-300">默认页优先展示这两场，方便直接查看谁更可能进决赛。</p>
+          </div>
+
+          <div className="mt-3 grid gap-3 md:grid-cols-2">
+            {semiFinalSpotlightMatches.map(({ match, prediction, advancer }) => {
+              const actualOutcome = getActualOutcome(match);
+              const predictionResult =
+                prediction && actualOutcome
+                  ? prediction.predictedOutcome === actualOutcome
+                    ? "correct"
+                    : "wrong"
+                  : null;
+
+              return (
+                <article
+                  key={match.id}
+                  className="rounded-2xl border border-cyan-300/15 bg-slate-950/55 p-4 shadow-[0_16px_40px_rgba(2,6,23,0.35)]"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-slate-500">M{match.id}</p>
+                      <h3 className="mt-1 text-base font-black text-slate-50">
+                        {match.home} vs {match.away}
+                      </h3>
+                      <p className="mt-1 text-xs text-slate-400">
+                        {formatDate(match.date)} · {match.venue} · {match.city}
+                      </p>
+                    </div>
+                    <span className="rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-1 text-[11px] font-black text-cyan-100">
+                      半决赛
+                    </span>
+                  </div>
+
+                  <div className="mt-4 rounded-xl border border-slate-700/80 bg-slate-900/60 p-3">
+                    <p className="text-[11px] font-black uppercase tracking-[0.18em] text-cyan-200">当前预测</p>
+                    <p className="mt-1 text-lg font-black text-cyan-50">
+                      {advancer ? `${advancer} 进 决赛` : "加时 / 点球待定"}
+                    </p>
+                    {prediction ? (
+                      <div className="mt-2 flex flex-wrap items-center gap-2">
+                        <span className="rounded-full bg-slate-950/60 px-2 py-1 text-xs font-black text-cyan-100">
+                          {formatPercent(prediction.predictedProbability)}
+                        </span>
+                        <span className={`rounded-full border px-2 py-1 text-xs font-black ${confidenceClass[prediction.confidence]}`}>
+                          {prediction.confidence}置信度
+                        </span>
+                        <span className="rounded-full border border-slate-700 bg-slate-950/60 px-2 py-1 text-xs font-black text-slate-300">
+                          {prediction.sourceCount}/{prediction.maxSourceCount} 来源
+                        </span>
+                        {predictionResult && (
+                          <span
+                            className={`rounded-full border px-2 py-1 text-xs font-black ${
+                              predictionResult === "correct"
+                                ? "border-emerald-300/30 bg-emerald-300/12 text-emerald-100"
+                                : "border-rose-300/30 bg-rose-300/12 text-rose-100"
+                            }`}
+                          >
+                            {predictionResult === "correct" ? "已命中" : "已失准"}
+                          </span>
+                        )}
+                      </div>
+                    ) : (
+                      <p className="mt-2 text-xs text-slate-500">暂无可用赔率数据。</p>
+                    )}
+                  </div>
+
+                  {prediction && (
+                    <div className="mt-3 grid grid-cols-3 gap-2">
+                      {(["home", "draw", "away"] as OutcomeKey[]).map((key) => (
+                        <div
+                          key={key}
+                          className={`rounded-lg border p-2 ${
+                            prediction.predictedOutcome === key
+                              ? "border-cyan-300/40 bg-cyan-300/10"
+                              : "border-slate-700 bg-slate-950/40"
+                          }`}
+                        >
+                          <p className="text-[10px] font-black text-slate-400">{outcomeShortLabel[key]}</p>
+                          <p className="mt-1 font-mono text-sm font-black text-slate-100">
+                            {formatPercent(prediction.average[key])}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       <section className="rounded-lg border border-slate-700 bg-slate-800/50 p-3 backdrop-blur-md">
         <div className="grid gap-3 lg:grid-cols-[1fr_auto] lg:items-end">
