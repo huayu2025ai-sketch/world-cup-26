@@ -12,10 +12,10 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 1, player: "基利安·姆巴佩", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 8, matches: 5 },
   { rank: 2, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 8, matches: 5 },
   { rank: 3, player: "埃尔林·哈兰德", chineseName: "埃尔林·哈兰德", team: "挪威", teamCode: "NOR", value: 7, matches: 4 },
-  { rank: 4, player: "哈里·凯恩", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 5, matches: 4 },
-  { rank: 5, player: "奥斯曼·登贝莱", chineseName: "奥斯曼·登贝莱", team: "法国", teamCode: "FRA", value: 5, matches: 3 },
-  { rank: 6, player: "米克尔·奥亚萨瓦尔", chineseName: "米克尔·奥亚萨瓦尔", team: "西班牙", teamCode: "ESP", value: 4, matches: 2 },
-  { rank: 7, player: "裘德·贝林厄姆", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 4, matches: 3 },
+  { rank: 4, player: "裘德·贝林厄姆", chineseName: "裘德·贝林厄姆", team: "英格兰", teamCode: "ENG", value: 6, matches: 4 },
+  { rank: 5, player: "哈里·凯恩", chineseName: "哈里·凯恩", team: "英格兰", teamCode: "ENG", value: 5, matches: 4 },
+  { rank: 6, player: "奥斯曼·登贝莱", chineseName: "奥斯曼·登贝莱", team: "法国", teamCode: "FRA", value: 5, matches: 3 },
+  { rank: 7, player: "米克尔·奥亚萨瓦尔", chineseName: "米克尔·奥亚萨瓦尔", team: "西班牙", teamCode: "ESP", value: 4, matches: 2 },
   { rank: 8, player: "胡利安·基尼奥内斯", chineseName: "胡利安·基尼奥内斯", team: "墨西哥", teamCode: "MEX", value: 4, matches: 4 },
   { rank: 9, player: "维尼修斯·儒尼奥尔", chineseName: "维尼修斯·儒尼奥尔", team: "巴西", teamCode: "BRA", value: 4, matches: 3 },
   { rank: 10, player: "伊斯梅拉·萨尔", chineseName: "伊斯梅拉·萨尔", team: "塞内加尔", teamCode: "SEN", value: 4, matches: 3 },
@@ -183,6 +183,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "亚西尔·易卜拉欣", chineseName: "亚西尔·易卜拉欣", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "穆斯塔法·齐科", chineseName: "穆斯塔法·齐科", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "汉斯·范阿肯", chineseName: "汉斯·范阿肯", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
+  { rank: 49, player: "安德烈亚斯·施耶尔德鲁普", chineseName: "安德烈亚斯·施耶尔德鲁普", team: "挪威", teamCode: "NOR", value: 1, matches: 1 },
 ];
 
 export const assistsRanking: PlayerStat[] = [
@@ -263,6 +264,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "1/4决赛第98场赛果更新",
-  body: "已按北京时间 2026-07-11 09:15 复核并补入西班牙 2-1 比利时，法比安·鲁伊斯、夏尔·德克特拉勒和米克尔·梅里诺各入一球；进球榜同步更新，助攻榜未新增可靠确认记录。"
+  title: "1/4决赛第99场赛果更新",
+  body: "已按北京时间 2026-07-12 08:58 复核并补入挪威 1-2 英格兰（加时），安德烈亚斯·施耶尔德鲁普和裘德·贝林厄姆（2球）取得进球；进球榜同步更新，助攻榜未新增可靠确认记录。"
 };

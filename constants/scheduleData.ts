@@ -589,7 +589,11 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "夏尔·德克特拉勒", team: "比利时", minute: "41'", type: "goal" },
     { player: "米克尔·梅里诺", team: "西班牙", minute: "88'", type: "goal" }
   ], knockoutWinner: "home" },
-  { id: 99, stage: "1/4决赛", date: "2026-07-11", localTime: "17:00", home: "16强胜者", away: "16强胜者", venue: "Hard Rock Stadium", city: "Miami Gardens" },
+  { id: 99, stage: "1/4决赛", date: "2026-07-11", localTime: "17:00", home: "挪威", away: "英格兰", venue: "Hard Rock Stadium", city: "Miami Gardens", homeScore: 1, awayScore: 2, goalScorers: [
+    { player: "安德烈亚斯·施耶尔德鲁普", team: "挪威", minute: "36'", type: "goal" },
+    { player: "裘德·贝林厄姆", team: "英格兰", minute: "45+2'", type: "goal" },
+    { player: "裘德·贝林厄姆", team: "英格兰", minute: "93'", type: "goal" }
+  ], knockoutWinner: "away" },
   { id: 100, stage: "1/4决赛", date: "2026-07-11", localTime: "21:00", home: "16强胜者", away: "16强胜者", venue: "Arrowhead Stadium", city: "Kansas City" },
   { id: 101, stage: "半决赛", date: "2026-07-14", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "AT&T Stadium", city: "Arlington" },
   { id: 102, stage: "半决赛", date: "2026-07-15", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
