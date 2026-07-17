@@ -609,8 +609,8 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "恩佐·费尔南德斯", team: "阿根廷", minute: "85'", type: "goal" },
     { player: "劳塔罗·马丁内斯", team: "阿根廷", minute: "90+2'", type: "goal" }
   ] },
-  { id: 103, stage: "季军赛", date: "2026-07-18", localTime: "17:00", home: "半决赛负者", away: "半决赛负者", venue: "Hard Rock Stadium", city: "Miami Gardens" },
-  { id: 104, stage: "决赛", date: "2026-07-19", localTime: "15:00", home: "半决赛胜者", away: "半决赛胜者", venue: "MetLife Stadium", city: "East Rutherford" }
+  { id: 103, stage: "季军赛", date: "2026-07-18", localTime: "17:00", home: "法国", away: "英格兰", venue: "Hard Rock Stadium", city: "Miami Gardens" },
+  { id: 104, stage: "决赛", date: "2026-07-19", localTime: "15:00", home: "西班牙", away: "阿根廷", venue: "MetLife Stadium", city: "East Rutherford" }
 ];
 
 export const scheduleMatches: ScheduleMatch[] = matchInputs.map(withBeijingTime);
