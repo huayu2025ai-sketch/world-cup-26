@@ -99,10 +99,11 @@ const severityBadge = (severity: MatchNewsItem["severity"]) => {
 };
 
 const NEWS_WINDOW_MS = 48 * 60 * 60 * 1000;
+const schedulePageStages = [...scheduleStages, "终局"] as const;
 
 export default function SchedulePage() {
   const [query, setQuery] = useState("");
-  const [stage, setStage] = useState<(typeof scheduleStages)[number]>("半决赛");
+  const [stage, setStage] = useState<(typeof schedulePageStages)[number]>("终局");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [newsIndexMap, setNewsIndexMap] = useState<Record<number, number>>({});
   const [now, setNow] = useState(() => Date.now());
@@ -121,7 +122,9 @@ export default function SchedulePage() {
     const normalizedQuery = query.trim().toLowerCase();
 
     return scheduleMatches.filter((match) => {
-      const stageMatched = stage === "全部" || match.stage === stage;
+      const stageMatched =
+        stage === "全部" ||
+        (stage === "终局" ? match.stage === "季军赛" || match.stage === "决赛" : match.stage === stage);
       const text = [
         match.id,
         match.stage,
@@ -261,7 +264,7 @@ export default function SchedulePage() {
             </div>
 
             <div className="flex flex-wrap gap-1.5">
-              {scheduleStages.map((item) => (
+              {schedulePageStages.map((item) => (
                 <button
                   key={item}
                   type="button"
