@@ -600,8 +600,15 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "胡利安·阿尔瓦雷斯", team: "阿根廷", minute: "112'", type: "goal" },
     { player: "劳塔罗·马丁内斯", team: "阿根廷", minute: "120+1'", type: "goal" }
   ], knockoutWinner: "home" },
-  { id: 101, stage: "半决赛", date: "2026-07-14", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "AT&T Stadium", city: "Arlington" },
-  { id: 102, stage: "半决赛", date: "2026-07-15", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "Mercedes-Benz Stadium", city: "Atlanta" },
+  { id: 101, stage: "半决赛", date: "2026-07-14", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "AT&T Stadium", city: "Arlington", homeScore: 2, awayScore: 0, goalScorers: [
+    { player: "米克尔·奥亚萨瓦尔", team: "西班牙", minute: "22'", type: "penalty" },
+    { player: "佩德罗·波罗", team: "西班牙", minute: "58'", type: "goal" }
+  ] },
+  { id: 102, stage: "半决赛", date: "2026-07-15", localTime: "15:00", home: "1/4决赛胜者", away: "1/4决赛胜者", venue: "Mercedes-Benz Stadium", city: "Atlanta", homeScore: 2, awayScore: 1, goalScorers: [
+    { player: "安东尼·戈登", team: "英格兰", minute: "55'", type: "goal" },
+    { player: "恩佐·费尔南德斯", team: "阿根廷", minute: "85'", type: "goal" },
+    { player: "劳塔罗·马丁内斯", team: "阿根廷", minute: "90+2'", type: "goal" }
+  ] },
   { id: 103, stage: "季军赛", date: "2026-07-18", localTime: "17:00", home: "半决赛负者", away: "半决赛负者", venue: "Hard Rock Stadium", city: "Miami Gardens" },
   { id: 104, stage: "决赛", date: "2026-07-19", localTime: "15:00", home: "半决赛胜者", away: "半决赛胜者", venue: "MetLife Stadium", city: "East Rutherford" }
 ];
