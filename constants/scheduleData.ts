@@ -609,7 +609,18 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "恩佐·费尔南德斯", team: "阿根廷", minute: "85'", type: "goal" },
     { player: "劳塔罗·马丁内斯", team: "阿根廷", minute: "90+2'", type: "goal" }
   ] },
-  { id: 103, stage: "季军赛", date: "2026-07-18", localTime: "17:00", home: "法国", away: "英格兰", venue: "Hard Rock Stadium", city: "Miami Gardens" },
+  { id: 103, stage: "季军赛", date: "2026-07-18", localTime: "17:00", home: "法国", away: "英格兰", venue: "Hard Rock Stadium", city: "Miami Gardens", homeScore: 4, awayScore: 6, goalScorers: [
+    { player: "德克兰·赖斯", team: "英格兰", minute: "3'", type: "goal" },
+    { player: "埃兹里·孔萨", team: "英格兰", minute: "19'", type: "goal" },
+    { player: "布卡约·萨卡", team: "英格兰", minute: "37'", type: "goal" },
+    { player: "布卡约·萨卡", team: "英格兰", minute: "45+1'", type: "goal" },
+    { player: "基利安·姆巴佩", team: "法国", minute: "48'", type: "goal" },
+    { player: "布拉德利·巴尔科拉", team: "法国", minute: "54'", type: "goal" },
+    { player: "基利安·姆巴佩", team: "法国", minute: "67'", type: "goal" },
+    { player: "布卡约·萨卡", team: "英格兰", minute: "86'", type: "penalty" },
+    { player: "奥斯曼·登贝莱", team: "法国", minute: "90+6'", type: "goal" },
+    { player: "裘德·贝林厄姆", team: "英格兰", minute: "90+8'", type: "goal" }
+  ] },
   { id: 104, stage: "决赛", date: "2026-07-19", localTime: "15:00", home: "西班牙", away: "阿根廷", venue: "MetLife Stadium", city: "East Rutherford" }
 ];
 
