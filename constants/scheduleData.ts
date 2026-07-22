@@ -621,7 +621,9 @@ const matchInputs: ScheduleMatchInput[] = [
     { player: "奥斯曼·登贝莱", team: "法国", minute: "90+6'", type: "goal" },
     { player: "裘德·贝林厄姆", team: "英格兰", minute: "90+8'", type: "goal" }
   ] },
-  { id: 104, stage: "决赛", date: "2026-07-19", localTime: "15:00", home: "西班牙", away: "阿根廷", venue: "MetLife Stadium", city: "East Rutherford" }
+  { id: 104, stage: "决赛", date: "2026-07-19", localTime: "15:00", home: "西班牙", away: "阿根廷", venue: "MetLife Stadium", city: "East Rutherford", homeScore: 1, awayScore: 0, goalScorers: [
+    { player: "费兰·托雷斯", team: "西班牙", minute: "106'", type: "goal" }
+  ], knockoutWinner: "home" }
 ];
 
 export const scheduleMatches: ScheduleMatch[] = matchInputs.map(withBeijingTime);

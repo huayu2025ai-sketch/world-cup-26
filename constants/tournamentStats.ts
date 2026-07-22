@@ -8,6 +8,34 @@ export type PlayerStat = {
   matches: number;
 };
 
+export type TournamentAward = {
+  title: string;
+  winner: string;
+  chineseName: string;
+  team: string;
+  teamCode: string;
+  note: string;
+};
+
+export const tournamentAwards: TournamentAward[] = [
+  {
+    title: "金球奖",
+    winner: "罗德里",
+    chineseName: "罗德里",
+    team: "西班牙",
+    teamCode: "ESP",
+    note: "官方赛事最佳球员"
+  },
+  {
+    title: "金靴奖",
+    winner: "基利安·姆巴佩",
+    chineseName: "基利安·姆巴佩",
+    team: "法国",
+    teamCode: "FRA",
+    note: "全赛事最佳射手"
+  }
+];
+
 export const goalsRanking: PlayerStat[] = [
   { rank: 1, player: "基利安·姆巴佩", chineseName: "基利安·姆巴佩", team: "法国", teamCode: "FRA", value: 10, matches: 6 },
   { rank: 2, player: "莱昂内尔·梅西", chineseName: "莱昂内尔·梅西", team: "阿根廷", teamCode: "ARG", value: 8, matches: 5 },
@@ -183,6 +211,7 @@ export const goalsRanking: PlayerStat[] = [
   { rank: 49, player: "约翰·阿里亚斯", chineseName: "约翰·阿里亚斯", team: "哥伦比亚", teamCode: "COL", value: 1, matches: 1 },
   { rank: 49, player: "内马尔", chineseName: "内马尔", team: "巴西", teamCode: "BRA", value: 1, matches: 1 },
   { rank: 49, player: "法比安·鲁伊斯", chineseName: "法比安·鲁伊斯", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
+  { rank: 49, player: "费兰·托雷斯", chineseName: "费兰·托雷斯", team: "西班牙", teamCode: "ESP", value: 1, matches: 1 },
   { rank: 49, player: "亚西尔·易卜拉欣", chineseName: "亚西尔·易卜拉欣", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "穆斯塔法·齐科", chineseName: "穆斯塔法·齐科", team: "埃及", teamCode: "EGY", value: 1, matches: 1 },
   { rank: 49, player: "汉斯·范阿肯", chineseName: "汉斯·范阿肯", team: "比利时", teamCode: "BEL", value: 1, matches: 1 },
@@ -271,6 +300,6 @@ export const assistsRanking: PlayerStat[] = [
 
 
 export const statsNotice = {
-  title: "季军赛第103场赛果更新",
-  body: "已按北京时间 2026-07-19 10:06 复核并补入法国 4-6 英格兰；第104场决赛暂未到终场，本次未改动。进球榜与助攻榜已同步到第103场的确认结果。"
+  title: "世界杯赛季已完结",
+  body: "已按北京时间 2026-07-20 10:52 复核并补入西班牙 1-0 阿根廷（加时）作为最终赛果；西班牙夺冠，罗德里拿下金球奖，基利安·姆巴佩拿下金靴奖。"
 };

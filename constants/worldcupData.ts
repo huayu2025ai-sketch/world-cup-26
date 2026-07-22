@@ -42,6 +42,17 @@ export type GroupOverviewUpdate = {
 
 export const groupOverviewUpdates: GroupOverviewUpdate[] = [
   {
+    updatedAt: "2026-07-20T10:52:40+08:00",
+    updatedAtLabel: "北京时间 2026年7月20日 10:52",
+    title: "决赛第104场赛果更新",
+    summary: "本次按北京时间 2026-07-20 10:52 复核并补入第 104 场终场结果：西班牙 1-0 阿根廷（加时）；第 103 场季军赛保持不变，本次也未涉及任何小组积分榜改动。",
+    changes: [
+      "赛程第 104 场补入西班牙 1-0 阿根廷（加时）：费兰·托雷斯 106'。",
+      "西班牙夺得冠军，阿根廷获得亚军。",
+      "第 103 场季军赛保持不变，本次不涉及任何小组积分榜改动。"
+    ]
+  },
+  {
     updatedAt: "2026-07-19T10:06:30+08:00",
     updatedAtLabel: "北京时间 2026年7月19日 10:06",
     title: "季军赛第103场赛果更新",
